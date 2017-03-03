@@ -2,7 +2,17 @@
  * Import various partials. Ordering is important here.
  */
 
+
+//tools (like mixins and placeholders)
+
+@import "tools.placeholders";
+
+ @import "tools.mixins";
+
 @import "generic.normalize";
+
+//base framework-wide styles and class
+@import "shared.styles";
 
 //@import "settings.global";
 
