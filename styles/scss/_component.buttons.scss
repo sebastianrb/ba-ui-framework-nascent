@@ -1,9 +1,100 @@
-/*
-  buttons start
- */
+body {
+  padding: 3rem;
+}
 
-/* css or scss here */
+/* removes padding and border added by Firefox  */
 
-/*
-  buttons end
- */
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner {
+  border: 0 none !important;
+  padding: 0 !important;
+}
+
+.c-na-btn {
+  background-color: transparent; /* reset default; change to add it back or add a color class */
+  border-color: currentColor;
+  // border-style: none;
+  border-width: 0;
+  color: inherit;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 1rem;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.45rem;
+  min-width: 1.5rem;
+  outline: none;
+  padding: .55em 1.25em;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+
+  &.is-disabled {
+    color: $grey-med;
+  }
+
+  /* targets any icons in a button */
+  & i {
+    margin-right: .06em;
+  }
+
+  &.u-cta-bg {
+    background-color: $primary-dark;
+    color: $white;
+
+    &:hover {
+      background-color: $primary-light;
+      color: $primary-dark;
+    }
+  }
+}
+
+.c-na-btn--primary {
+  background-color: $primary-base;
+  color: $primary-light;
+}
+
+.c-na-btn--flat {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.c-na-btn--bd-thin {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.c-na-btn--bd {
+  border-style: solid;
+  border-width: .13em;
+}
+
+.c-na-btn--bd-thick {
+  border-style: solid;
+  border-width: .25em;
+}
+
+
+
+.u-cta-bg {
+  &.is-disabled {
+    background-color: $grey-med;
+    color: $white;
+  }
+}
+
+
+/* demo styles for button groups */
+.site-btn__groups {
+  text-align: center;
+}
+
+.site-btn__group {
+  flex-basis: 100%;
+  &:not(:first-of-type) {
+    margin-left: 1em;
+  }
+}

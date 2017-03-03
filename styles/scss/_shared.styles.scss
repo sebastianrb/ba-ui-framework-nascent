@@ -9,7 +9,7 @@ body {
 
 body {
   margin: 0;
-  padding: 0:
+  padding: 0;
 }
 
 p {
@@ -27,6 +27,15 @@ ul {
 
 ol {
   margin: 0;
+}
+
+/*
+  STATES
+*/
+
+[disabled],
+.is-disabled {
+  cursor: not-allowed;
 }
 
 /*

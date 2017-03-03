@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <title>Buttons</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="../styles/css/nascent.css">
   </head>
@@ -14,9 +12,89 @@
   <body>
     <div class="generic-wrapper" style="padding: 2em">
       <h2>Buttons</h2>
+      <h3>Basic Buttons (default)</h3>
+      <section>
+        <h4>Background and no Border</h4>
+        <p>To add the background color, append the class <code>u-cta-bg</code> and change the color of that class in your stylesheet. By default all elements with the class <code>c-na-btn</code> have a background color of transparent.</p>
 
-    </div> <!-- end .generic-wrapper -->
+        <div class="site-btn__groups">
+          <button class="c-na-btn c-na-btn--primary">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn c-na-btn--primary">A link</a>
+          <button class="c-na-btn c-na-btn--primary is-disabled">disabled</button>
+        </div>
+      </section>
 
-    <script src="../javascript/filename.js" type="text/javascript"></script>
+      <section>
+        <h4>No background color and no border</h4>
+        <p>Append the class <code>c-na-btn--flat</code></p>
+        <div class="site-btn__groups">
+          <button class="c-na-btn c-na-btn--flat" style="color: dodgerblue;">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn c-na-btn--flat" style="color: dodgerblue;">A link</a>
+          <a href="#" class="c-na-btn c-na-btn--flat is-disabled">disabled</a>
+        </div>
+      </section>
+
+      <section>
+        <h4>With a thin borderr</h4>
+        <p>Append the class <code>c-na-btn--bd-thin</code></p>
+        <div class="site-btn__groups">
+          <button class="c-na-btn c-na-btn--bd-thin">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn c-na-btn--bd-thin">A link</a>
+          <a href="#" class="c-na-btn c-na-btn--bd-thin is-disabled">disabled</a>
+        </div>
+      </section>
+
+      <section>
+        <h4>With a normal border</h4>
+        <p>Append the class <code>c-na-btn--bd</code></p>
+        <div class="site-btn__groups">
+          <button class="c-na-btn c-na-btn--bd">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn c-na-btn--bd">A link</a>
+          <a href="#" class="c-na-btn c-na-btn--bd is-disabled">disabled</a>
+        </div>
+      </section>
+
+      <section>
+        <h4>With a thick border</h4>
+        <p>Append the class <code>c-na-btn--bd-thick</code></p>
+
+        <div class="site-btn__groups">
+          <button class="c-na-btn c-na-btn--bd-thick">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn c-na-btn--bd-thick">A link</a>
+          <a href="#" class="c-na-btn c-na-btn--bd-thick is-disabled">disabled</a>
+        </div>
+      </section>
+
+      <section>
+        <h4>With slightly rounded corners</h4>
+        <p>Append the class <code>u-na-br</code></p>
+
+        <div class="site-btn__groups">
+          <button class="c-na-btn c-na-btn--bd u-na-br--pill">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn u-cta-bg u-na-br--pill">A link</a>
+          <a href="#" class="c-na-btn u-cta-bg is-disabled u-na-br--pill">disabled</a>
+        </div>
+      </section>
+
+    </div> <!-- end generic wrapper -->
+
   </body>
 </html>
