@@ -1,3 +1,5 @@
+**Revised:** 3/3/2017 6:40PM
+
 #PROJECT SCOPE STATEMENT
 
 **Name:** Nascent, a UI Framework 
@@ -16,7 +18,7 @@
 
 **Project Objective:** To create at least 20 elements by March 5, 2017, both standard and innovative.
 
-**Required Deliverables:** 12-column grid, typography, lists, forms, tables, buttons, modals, scrollspy, tabs, accordion, cards, carousels, pagination, and one innovate element from each teammate.
+**Required Deliverables:** 12-column grid, typography, lists, forms, tables, buttons, modals, scrollspy, tabs, accordion, cards, carousels, pagination, and one innovative element from each teammate.
 
 **Constraints/Risks:** Some teammates have limited knowledge and are here for the experience, and therefore may not be able to produce as many elements. Additionally, some members have time constraints. A risk is the introduction of new teammates at last minute.
 
