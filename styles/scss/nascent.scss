@@ -1,0 +1,54 @@
+/*
+ * Import various partials. Ordering is important here.
+ */
+
+@import "generic.normalize";
+
+//@import "settings.global";
+
+@import "settings.colors";
+
+//@import "generic.reset";
+
+@import "generic.box-sizing";
+
+@import 'component.accordion';
+
+@import 'component.ripple';
+
+@import 'component.scrollspy';
+
+@import 'component.tabs';
+
+@import 'component.footer';
+
+@import 'component.grid';
+
+@import 'component.progress-bar';
+
+@import 'component.tables';
+
+@import 'component.typography';
+
+@import 'component.alerts';
+
+@import 'component.buttons';
+
+@import 'component.list-groups';
+
+@import 'component.modals';
+
+@import 'component.pagination';
+
+@import 'component.breadcrumbs';
+
+@import 'component.carousels';
+
+@import 'component.forms';
+
+@import 'component.badges';
+
+@import 'component.cards';
+
+
+

@@ -1,0 +1,21 @@
+# Ignore settings folders from the Webstorm IDE
+.idea
+*.iml
+
+# Ignore settings folder from the Sublime Text editor
+*.sublime-workspace
+
+# Ignore all .DS_Store files created by OS X Finder
+.DS_Store
+
+# Ignore cache files from SASS Parser
+.sass-cache*
+
+# Ignore the .gitignore
+# .gitignore
+
+# Ignore compiled css and map files
+styles/css/*.css
+styles/css/*.css.map
+styles/*.css
+styles/*.css.map
