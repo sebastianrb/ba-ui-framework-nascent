@@ -5,11 +5,14 @@
 
 //tools (like mixins and placeholders)
 
-@import "tools.placeholders.scss";
+@import "tools.placeholders";
 
- @import "tools.mixins.scss";
+ @import "tools.mixins";
 
 @import "generic.normalize";
+
+//base framework-wide styles and class
+@import "shared.styles";
 
 //@import "settings.global";
 
