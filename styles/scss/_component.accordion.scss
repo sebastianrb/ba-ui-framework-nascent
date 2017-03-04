@@ -2,7 +2,75 @@
   accordion start
  */
 
-/* css or scss here */
+.c-na-accordion {
+  color: $black;
+  padding: 0;
+  width: 50%;
+  min-width: 18rem;
+  margin: 0 auto;
+  box-shadow: 0 2px 3px 3px $grey-med;
+  box-shadow: 0 2px 3px 3px rgba($grey-med, 0.5);
+}
+
+.c-na-accordion__header {
+  cursor: pointer;
+  position: relative;
+  padding: 0.5rem;
+  height: 2.5rem;
+  transition: all 0.35s ease;
+  border-bottom: 1px solid $grey-med;
+
+    & i {
+      text-align: center;
+      width: 2.5rem;
+      /*height: 2.5rem;*/
+    }
+
+    & i:not(:last-child) {
+      padding-right: 0.5rem;
+    }
+
+    & i:last-child {
+      position: absolute;
+      right: 0;
+    }
+
+    &:hover {
+     background-color: $primary-light;
+     color: $black;
+    }
+
+}
+
+.c-na-accordion__header--active {
+  background-color: $primary-dark;
+  color: $white;
+}
+
+/* ?? */
+.c-na-accordion__header:not(:last-child) {
+  border-bottom: 1px solid $grey-med;
+}
+
+.c-na-accordion__body {
+  border-bottom: 1px solid $grey-med;
+  padding: 0 1rem;
+}
+
+.c-na-accordion__body--open {
+  height: auto;
+  height: 10rem;
+  overflow-y: scroll;
+  transition: all 0.35s ease;
+  border-bottom: 1px solid $grey-med;
+}
+
+.c-na-accordion__body--closed {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  border-bottom: none;
+}
 
 /*
   accordion end
