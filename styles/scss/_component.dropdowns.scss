@@ -4,8 +4,24 @@
 
 /* css or scss here */
 section {
-  border: 1px solid yellow;
   padding-bottom: 3em;
+}
+
+table {
+  font-weight: 300;
+  font-size: .8em;
+  text-align: left;
+  border: 1px solid lightgray;
+  margin-bottom: 2em;
+}
+tr, th, td {
+    border: 1px solid lightgray;
+    padding: .4em;
+}
+
+thead > tr > th {
+  text-transform: uppercase;
+  background-color: lightgray;
 }
 
 .dropdown__wrapper {
@@ -13,49 +29,7 @@ section {
   width: 12em;
 }
 
-.dropdown__arrow-down {
-  border-left: .4em solid transparent;
-  border-right: .4em solid transparent;
-  border-top: .4em solid black;
-  display: inline-block;
-  width: 0;
-  height: 0;
-  position: absolute;
-  right: .5em;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-
-.dropdown__arrow-left {
-  border-right: .4em solid black;
-  border-bottom: .4em solid transparent;
-  border-top: .4em solid transparent;
-  display: inline-block;
-  width: 0;
-  height: 0;
-  position: absolute;
-  right: .5em;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-
-.dropdown__arrow-right {
-  border-left: .4em solid black;
-  border-bottom: .4em solid transparent;
-  border-top: .4em solid transparent;
-  display: inline-block;
-  width: 0;
-  height: 0;
-  position: absolute;
-  right: .5em;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-
-.dropdown__arrow-up {
-  border-left: .4em solid transparent;
-  border-right: .4em solid transparent;
-  border-bottom: .4em solid black;
+.dropdown__button > span {
   display: inline-block;
   width: 0;
   height: 0;
@@ -68,22 +42,53 @@ section {
 .dropdown__button {
   background-color: white;
   border: 1px solid gray;
-  border-radius: 6px;
+  border-radius: 3px;
   padding: .6em 1em;
   position: relative;
   text-align: left;
   width: 100%;
+
+  &:hover {
+    background-color: lightgray;
+  }
+}
+
+.dropdown__arrow-down {
+  border-left: .4em solid transparent;
+  border-right: .4em solid transparent;
+  border-top: .4em solid black;
+}
+
+.dropdown__arrow-left {
+  border-right: .4em solid black;
+  border-bottom: .4em solid transparent;
+  border-top: .4em solid transparent;
+  left: .3em;
+}
+
+.dropdown__arrow-right {
+  border-left: .4em solid black;
+  border-bottom: .4em solid transparent;
+  border-top: .4em solid transparent;
+}
+
+.dropdown__arrow-up {
+  border-left: .4em solid transparent;
+  border-right: .4em solid transparent;
+  border-bottom: .4em solid black;
 }
 
 .dropdown__menu {
+  background: white;
   border: 1px solid gray;
-  border-radius: 6px;
+  border-radius: 3px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   width: 100%;
   display: block;
   visibility: hidden;
+  z-index: 1;
 }
 
 .dropdown__menu-show {
@@ -93,13 +98,13 @@ section {
 .dropdown__menu-show-left {
   position: absolute;
   top: 0;
-  left: 100%;
+  right: 100%;
 }
 
 .dropdown__menu-show-right {
   position: absolute;
   top: 0;
-  right: 100%;
+  left: 100%;
 }
 
 .dropdown__menu-show-top {
@@ -126,9 +131,10 @@ section {
 }
 
 .dropdown__header {
-  font-size: .8em;
-  font-weight: 400;
   color: purple;
+  font-size: .8em;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .dropdown__separator {
@@ -136,20 +142,7 @@ section {
   padding: .8em 1em;
 }
 
-.dropdown__menu-left {
-
-}
-
 .dropdown__alignment {
-  display: inline-block;
-  border: 1px solid red;
   float:left;
-  margin: 0em 8em 8em;
+  margin: 0em 1em ;
 }
-
-.dropdown__alignment:nth-child(4) {
-  clear: both;
-}
-/*
-  dropdown end
- */
