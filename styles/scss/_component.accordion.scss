@@ -18,9 +18,10 @@
   padding: 0.5rem;
   height: 2.5rem;
   transition: all 0.35s ease;
-  border-bottom: 1px solid $grey-med;
 
     & i {
+      display: inline-block;
+      vertical-align: middle;
       text-align: center;
       width: 2.5rem;
       /*height: 2.5rem;*/
@@ -47,8 +48,7 @@
   color: $white;
 }
 
-/* ?? */
-.c-na-accordion__header:not(:last-child) {
+.c-na-accordion li:not(:last-of-type) .c-na-accordion__header {
   border-bottom: 1px solid $grey-med;
 }
 
