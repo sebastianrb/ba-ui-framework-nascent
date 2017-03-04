@@ -29,6 +29,15 @@ ol {
   margin: 0;
 }
 
+/* visually hides content but allows it to be rendered for screenreaders */
+.sr-only {
+  clip: rect(1px 1px 1px 1px);
+  overflow: hidden;
+  height: 1px;
+  position: absolute;
+  width: 1px;
+}
+
 /*
   STATES
 */
