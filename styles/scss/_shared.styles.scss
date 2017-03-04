@@ -49,6 +49,16 @@ ol {
 }
 
 /*
+  BACKGROUNDS
+*/
+
+/* removes backgrounds (in case of bg color or bg image) */
+.u-na--no-bg {
+  background-color: transparent;
+  background: none;
+}
+
+/*
   BORDERS
 */
 
@@ -78,6 +88,10 @@ ol {
   border-radius: 20em;
 }
 
+.u-na-br--rounded {
+  border-radius: .2em;
+}
+
 /*
   GENERIC HOVER STATES
 */
@@ -88,6 +102,14 @@ ol {
   transition: opacity 200ms ease-in-out;
 
   &:hover {
-    opacity: .6;
+    opacity: .5;
   }
+}
+
+/*
+  TEXT TRANSFORMS
+*/
+
+.u-na--uppercase {
+  text-transform: uppercase;
 }

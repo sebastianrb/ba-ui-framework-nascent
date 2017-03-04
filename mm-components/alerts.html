@@ -4,19 +4,300 @@
   <head>
     <meta charset="UTF-8">
     <title>Alerts</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="../styles/css/nascent.css">
   </head>
 
   <body>
     <div class="generic-wrapper" style="padding: 2em">
-      <h2>Alerts</h2>
+      <section id="alerts">
+        <h2>Alerts</h2>
+        <p>There are 4 types of alerts: basic, warning, serious (failure of something, something that should not happen, or something serious like a tornado warning for a weather site), and success. No matter which variations you choose from below (borders, no border, with icons, etc.), the type of alert displayed is changed with one simple class on the alert container.</p>
+
+        <ul>
+          <li><strong class="u-na--uppercase">minimal:</strong> use the class <code>c-na-alert--minimal</code></li>
+          <li><strong class="u-na--uppercase">basic:</strong> use the class <code>c-na-alert--basic</code></li>
+          <li><strong class="u-na--uppercase">warning:</strong> use the class <code>c-na-alert--warning</code></li>
+          <li><strong class="u-na--uppercase">something serious / failure:</strong> use the class <code>c-na-alert--serious</code></li>
+          <li><strong class="u-na--uppercase">success:</strong> use the class <code>c-na-alert--success</code></li>
+        </ul>
+
+        <p>
+          <strong class="u-na--uppercase">Note:</strong> By default, alerts have a max-width set so they will never take up the full page. To have them take up the full width of their container, add the class <code>u-na-fw</code> to the alert container.
+        </p>
+
+        <p>
+          <strong class="u-na--uppercase">Accessibility:</strong> The alerts are a11y friendly. Out of the box, all of the alerts use colors which meet the color contrast requirements to be considered accessible. They all have <code>role="alert"</code>, and the content will be read by a screenreader even if the content within the alert (<em>the text or links, for example</em>) changes dynamically. The dismiss button uses a native <code>button</code> element, which means it can be dismissed by keyboard events when the button is in focus using the <kbd>ENTER</kbd> key or <kbd>SPACEBAR</kbd> without having to add any more JavaScript to do so. The dismiss button has a <code>title</code> attribute so that when sighted users hover over it, they can be sure what it does. It also has an <code>aria-label</code> of "dismiss alert" for screenreaders that do not read <code>title</code> attributes.. Finally, the dismiss button and links within the alert have a very clear focus state, which is the same as the hover state. (They should vary in the future as they can be both focused and hovered at the same time.)
+        </p>
+
+        <p>For the basic and icon alert sections, you will see the default state for each type of alert. Following that will just be two examples showing variations, but every alert type can be customized in the same way.</p>
+
+        <h3>Basic (no icons)</h3>
+        <h4>With a border (default)</h3>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--minimal" role="alert">
+          <p class="c-na-alert__text">
+            Just between us, I'm a bit color shy.
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--basic" role="alert">
+          <p class="c-na-alert__text">
+            It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, look at the roses instead.)
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--warning" role="alert">
+          <p class="c-na-alert__text">
+            <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+            <strong class="c-na-alert--attn">Be careful!</strong> Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">practice those reflexes</a>.
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--serious" role="alert">
+          <p class="c-na-alert__text">
+            <strong class="c-na-alert--attn">Oh no!</strong> It turns out the quick brown fox did not jump over the lazy dog. She <em>ran</em> over the poor thing. Witnesses say the fox fled the scene. Be on the lookout.
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--success" role="alert">
+          <p class="c-na-alert__text">
+            <strong class="c-na-alert--attn">Great news!</strong> That sly quick fox has been caught thanks to a tip from a bird who wishes to remain anonymous.
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <h4>Without a border</h4>
+        <p>Add the class <code>u-na--no-bd </code> to your alert element.</p>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--basic u-na--no-bd " role="alert">
+          <p class="c-na-alert__text">
+            It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, look at the roses instead.)
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--warning u-na--no-bd " role="alert">
+          <p class="c-na-alert__text">
+            <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+            <strong class="c-na-alert--attn">Be careful!</strong> Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">practice those reflexes</a>
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <h3>With icons</h3>
+
+        <p>These are quite customizable. In this framework, we're using , but you can use icons from other font systems or you own custom icons. These are just for demonstration. You can remove the border from the alert and remove the background color from the icon container, though they are there by default.</p>
+
+        <h4>With a border (default) and with a background color for the icon container (default)</h4>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--minimal" role="alert">
+          <span class="c-na-alert__icon--minimal">
+            <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+            <i class="fa fa-lemon-o" aria-hidden="true"></i>
+          </span>
+          <p class="c-na-alert__text">
+            <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+            <strong class="c-na-alert--attn">When Beyonce hands us lemons,</strong> we make lemonade.
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--basic" role="alert">
+          <span class="c-na-alert__icon--basic">
+            <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </span>
+          <p class="c-na-alert__text">
+            It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, look at the roses instead.)
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--warning" role="alert">
+          <span class="c-na-alert__icon--warning">
+            <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          </span>
+          <p class="c-na-alert__text">
+            <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+            <strong class="c-na-alert--attn">Be careful!</strong> Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">practice those reflexes</a>
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--serious" role="alert">
+          <span class="c-na-alert__icon--serious">
+            <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          </span>
+          <p class="c-na-alert__text">
+            <strong class="c-na-alert--attn">Oh no!</strong> It turns out the quick brown fox did not jump over the lazy dog. She <em>ran</em> over the poor thing. Witnesses say the fox fled the scene. Be on the lookout.
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--success" role="alert">
+          <span class="c-na-alert__icon--success">
+            <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+          </span>
+          <p class="c-na-alert__text">
+            <strong class="c-na-alert--attn">Great news!</strong> That sly quick fox has been caught thanks to a tip from a bird who wishes to remain anonymous.
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <h4>Without a border, but with a background color for the icon container</h4>
+        <p>Add the class <code>u-na--no-bd </code> to your alert container to remove the border.</p>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--warning u-na--no-bd " role="alert">
+          <span class="c-na-alert__icon--warning">
+            <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          </span>
+          <p class="c-na-alert__text">
+            <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+            <strong class="c-na-alert--attn">Be careful!</strong> Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so practice those reflexes.
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--minimal u-na--no-bd " role="alert">
+          <span class="c-na-alert__icon--minimal">
+            <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+            <i class="fa fa-lemon-o" aria-hidden="true"></i>
+          </span>
+          <p class="c-na-alert__text">
+            <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+            <strong class="c-na-alert--attn">When Beyonce hands us lemons,</strong> we make lemonade.
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <h4>With no border and no background color for the icon container</h4>
+        <p>Add the class u-na--no-bd  to your alert element to remove the border.</p>
+        <p>Add the class <code>u-na--no-bg</code> to the icon container (the <code>span</code> with a class of <code>c-na-alert__icon</code>) to remove the background color of the icon container</p>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--serious u-na--no-bd " role="alert">
+          <span class="c-na-alert__icon--serious u-na--no-bg">
+            <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          </span>
+          <p class="c-na-alert__text">
+            <strong class="c-na-alert--attn">Oh no!</strong> It turns out the quick brown fox did not jump over the lazy dog. She <em>ran</em> over the poor thing. Witnesses say the fox fled the scene. Be on the lookout.
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--minimal u-na--no-bd " role="alert">
+          <span class="c-na-alert__icon--minimal u-na--no-bg">
+            <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+            <i class="fa fa-lemon-o" aria-hidden="true"></i>
+          </span>
+          <p class="c-na-alert__text">
+            <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+            When Beyonce hands us lemons, we make lemonade.
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--basic u-na--no-bd " role="alert">
+          <span class="c-na-alert__icon u-na--no-bg">
+            <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </span>
+          <p class="c-na-alert__text">
+            It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, look at the roses instead.)
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <h3>Alerts that take up the size of their content</h3>
+
+        <div class="site-alert__wrap">
+          <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+          <div class="c-na-alert--minimal c-na-alert--small" role="alert">
+            <p class="c-na-alert__text">
+              <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+              <a href="#">Make lemonade</a>.
+            </p>
+            <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+          </div>
+
+          <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+          <div class="c-na-alert--success u-na--no-bd  c-na-alert--small" role="alert">
+            <p class="c-na-alert__text">
+              <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+              <strong class="c-na-alert--attn">Success!</strong> The fox has been caught.
+            </p>
+            <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+          </div>
+
+          <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+          <div class="c-na-alert--warning u-na--no-bd  c-na-alert--small" role="alert">
+            <span class="c-na-alert__icon--warning">
+              <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+              <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            </span>
+            <p class="c-na-alert__text">
+              <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+              <strong class="c-na-alert--attn">Be careful!</strong> Foxes eat people. I think.
+            </p>
+            <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+          </div>
+        </div>
+
+        <h3>Full width alert</h3>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--success u-na--no-bd  u-na-fw" role="alert">
+          <span class="c-na-alert__icon--success">
+            <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+          </span>
+          <p class="c-na-alert__text">
+            <strong class="c-na-alert--attn">Great news!</strong> That sly quick fox has been caught thanks to a tip from a bird who wishes to remain anonymous.
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+
+        <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+        <div class="c-na-alert--basic u-na-fw" role="alert">
+          <span class="c-na-alert__icon u-na--no-bg">
+            <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </span>
+          <p class="c-na-alert__text">
+            It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, <a href="#">look at the roses instead</a>.)
+          </p>
+          <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+        </div>
+      </section>
 
     </div> <!-- end .generic-wrapper -->
-
-    <script src="../javascript/filename.js" type="text/javascript"></script>
+    <script src="../javascript/alerts.js"></script>
   </body>
 </html>

@@ -1,9 +1,218 @@
-/*
-  alerts start
- */
+$minimal-light: #f9f9fa;
+$minimal-base: #9e9eab;
+$minimal-dark: #626270;
 
-/* css or scss here */
+$basic-light: #E7FCFF;
+$basic-base: #019ab3;
+$basic-dark: #017D91;
+
+$warn-light: #FEF9EA;
+$warn-base: #F7CF58;
+$warn-dark: #805B10;
+
+$success-light: #E4FFEE;
+$success-base: #02C04A;
+$success-dark: #017D30;
+
+$serious-light: #FFE2E0;
+$serious-base: #ff5147;
+$serious-dark: #AD0900;
 
 /*
-  alerts end
- */
+    styles that apply to all alerts
+*/
+
+// basic alert styles
+@mixin fm-alert() {
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  margin: 0.8em auto;
+  max-width: 50rem;
+  position: relative;
+
+  &.u-na--no-bd {
+    border: none;
+  }
+
+  &.c-na-alert--small {
+    display: inline-flex;
+    margin: 0.8em;
+  }
+}
+
+/* alert link base styles */
+[class^="c-na-alert--"] a {
+  border-bottom: 1px solid;
+  color: inherit;
+  font-weight: bold;
+  padding: .05em .2em;
+  text-decoration: none;
+  transition:  background-color 250ms ease-in-out,
+               color 250ms ease-in-out;
+}
+
+/* styles for the text in the body of the alert */
+.c-na-alert__text {
+  line-height: 1.4;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 1em;
+}
+
+/* for text that should stand out as important */
+.c-na-alert--attn {
+  font-weight: bold;
+  margin-right: 0.25em;
+  text-transform: uppercase;
+}
+
+/* styling the icon container */
+[class^="c-na-alert__icon"] {
+  @include flex($align: center, $justify: center);
+  min-width: 6rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/* styles for the dismiss / close button */
+.c-na-alert__btn--close {
+  align-self: flex-start;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 2em;
+  margin-left: auto;
+  padding: .25em .5em;
+  transition: transform 200ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.4);
+  }
+
+  &:focus {
+    outline: 0.08rem dotted;
+    outline-offset: -.3em;
+  }
+}
+
+/* warning-specific styling */
+.c-na-alert--minimal {
+  @include fm-alert();
+  background-color: $minimal-light;
+  border-color: $minimal-dark;
+  color: $minimal-dark;
+
+  & a:hover,
+  & a:focus {
+    background-color: $minimal-dark;
+    color: $minimal-light;
+  }
+}
+
+/* basic-specific styling */
+.c-na-alert--basic {
+  @include fm-alert();
+  background-color: $basic-light;
+  border-color: $basic-dark;
+  color: $basic-dark;
+
+  & a:hover,
+  & a:focus {
+    background-color: $basic-dark;
+    color: $basic-light;
+  }
+}
+
+/* warning-specific styling */
+.c-na-alert--warning {
+  @include fm-alert();
+  background-color: $warn-light;
+  border-color: $warn-dark;
+  color: $warn-dark;
+
+  & a:hover,
+  & a:focus {
+    background-color: $warn-dark;
+    color: $warn-light;
+  }
+}
+
+/* serious-specific styling */
+.c-na-alert--serious {
+  @include fm-alert();
+  background-color: $serious-light;
+  border-color: $serious-dark;
+  color: $serious-dark;
+
+  & a:hover,
+  & a:focus {
+    background-color: $serious-dark;
+    color: $serious-light;
+  }
+}
+
+/* success-specific styling*/
+.c-na-alert--success {
+  @include fm-alert();
+  background-color: $success-light;
+  border-color: $success-dark;
+  color: $success-dark;
+
+  & a:hover,
+  & a:focus {
+    background-color: $success-dark;
+    color: $success-light;
+  }
+}
+
+
+/* minimal icon container styles */
+.c-na-alert__icon--minimal:not(.u-na--no-bg) {
+  background-color: $minimal-base;
+  color: $minimal-light;
+}
+
+/* basic icon container styles */
+.c-na-alert__icon--basic:not(.u-na--no-bg) {
+  background-color: $basic-base;
+  color: $basic-light;
+}
+
+/* basic icon container styles */
+.c-na-alert__icon--warning:not(.u-na--no-bg) {
+  background-color: $warn-base;
+  color: $warn-light;
+}
+
+/* serious icon container styles */
+.c-na-alert__icon--serious:not(.u-na--no-bg) {
+  background-color: $serious-base;
+  color: $serious-light;
+}
+
+/* success icon container styles */
+.c-na-alert__icon--success:not(.u-na--no-bg) {
+  background-color: $success-base;
+  color: $success-light;
+}
+
+
+.dismissing-alert {
+  animation: alert-fade 800ms;
+}
+
+/* for demo site only */
+.site-alert__wrap {
+  @include flex($align: center, $justify: center, $wrap: wrap);
+}
+
+
+@keyframes alert-fade {
+  to {
+    opacity: 0;
+  }
+}
