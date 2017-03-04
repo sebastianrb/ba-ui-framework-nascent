@@ -66,6 +66,16 @@ input[type="reset"] {
     }
   }
 
+  &--secondary-bg {
+    background-color: $secondary-base;
+    color: $white;
+
+    &.is-disabled {
+      background-color: $grey-med;
+      color: $white;
+    }
+  }
+
   &--underline {
     background-color: transparent;
     border-bottom: .25em solid;
