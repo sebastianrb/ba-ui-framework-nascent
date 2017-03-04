@@ -13,12 +13,12 @@ This will be the scrollspy UI for the menu, click on a menu item and go to that 
   var goTo = 0;
 
 //here we're going through each item in the prototype array to identify each section
-//which we then call the function() on. Note el = element (shoter & makes it sound more spanish \o/)
+//which we then call the function() on. Note el = element (shorter & makes it sound more spanish \o/)
   Array.prototype.forEach.call(section, function(el) {
     sections[el.id] = el.offsetTop;
   });
 
-//citing the window object, we can use the onscroll method to position our fuction
+//citing the window object, we can use the onScroll method to position our function
   window.onscroll = function() {
     var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
