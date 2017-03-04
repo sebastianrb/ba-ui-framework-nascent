@@ -1,7 +1,3 @@
-body {
-  padding: 3rem;
-}
-
 /* removes padding and border added by Firefox  */
 
 button::-moz-focus-inner,
@@ -12,11 +8,16 @@ input[type="reset"]::-moz-focus-inner {
   padding: 0 !important;
 }
 
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  border-width: 0;
+}
+
 .c-na-btn {
   background-color: transparent; /* reset default; change to add it back or add a color class */
   border-color: currentColor;
-  // border-style: none;
-  border-width: 0;
   color: inherit;
   display: inline-block;
   font-family: inherit;
@@ -27,9 +28,19 @@ input[type="reset"]::-moz-focus-inner {
   min-width: 1.5rem;
   outline: none;
   padding: .55em 1.25em;
+  position: relative;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
+  transition: all 250ms ease-in-out;
   vertical-align: middle;
+  will-change: opacity;
+  will-change: transform;
+
+
+  &:not(.is-disabled) {
+    cursor: pointer;
+  }
 
   &.is-disabled {
     color: $grey-med;
@@ -40,55 +51,80 @@ input[type="reset"]::-moz-focus-inner {
     margin-right: .06em;
   }
 
-  &.u-cta-bg {
-    background-color: $primary-dark;
+  &:not(.is-disabled):focus {
+    outline: 1px dotted $grey-dark;
+    transform: scale(1.05);
+  }
+
+  &--primary-bg {
+    background-color: $primary-base;
     color: $white;
 
-    &:hover {
-      background-color: $primary-light;
-      color: $primary-dark;
+    &.is-disabled {
+      background-color: $grey-med;
+      color: $white;
     }
   }
-}
 
-.c-na-btn--primary {
-  background-color: $primary-base;
-  color: $primary-light;
-}
+  &--underline {
+    background-color: transparent;
+    border-bottom: .25em solid;
+    box-shadow: none;
 
-.c-na-btn--flat {
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
+    &::after {
+      background-color: $secondary-light;
+      bottom: -.25em;
+      content: '';
+      height: .25em;
+      left: 0;
+      position: absolute;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 250ms ease-in-out;
+      width: 100%;
+    }
 
-.c-na-btn--bd-thin {
-  border-style: solid;
-  border-width: 1px;
-}
+    &:not(.is-disabled):hover {
+      opacity: .7;
+    }
 
-.c-na-btn--bd {
-  border-style: solid;
-  border-width: .13em;
-}
+    &:not(.is-disabled):hover::after {
+     transform: scaleX(1);
+    }
 
-.c-na-btn--bd-thick {
-  border-style: solid;
-  border-width: .25em;
-}
-
-
-
-.u-cta-bg {
-  &.is-disabled {
-    background-color: $grey-med;
-    color: $white;
+    &.is-disabled::after {
+      background-color: $grey-dark;
+    }
   }
-}
 
+  &--bd-thin {
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  &--bd {
+    border-style: solid;
+    border-width: .13em;
+  }
+
+  &--bd-thick {
+    border-style: solid;
+    border-width: .25em;
+  }
+
+  &--primary-copy {
+    color: $primary-base;
+  }
+
+  &--secondary-copy {
+    color: $secondary-base;
+  }
+
+}
 
 /* demo styles for button groups */
 .site-btn__groups {
+  color: $black;
   text-align: center;
 }
 

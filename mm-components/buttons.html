@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Buttons</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="../styles/css/nascent.css">
   </head>
@@ -15,41 +15,41 @@
       <h3>Basic Buttons (default)</h3>
       <section>
         <h4>Background and no Border</h4>
-        <p>To add the background color, append the class <code>u-cta-bg</code> and change the color of that class in your stylesheet. By default all elements with the class <code>c-na-btn</code> have a background color of transparent.</p>
+        <p>To add the background color, append the class <code>c-na-btn--primary-bg-bg</code> and change the color of that class in your stylesheet. By default all elements with the class <code>c-na-btn</code> have a background color of transparent.</p>
 
         <div class="site-btn__groups">
-          <button class="c-na-btn c-na-btn--primary">
+          <button class="c-na-btn u-na--dim u-na--dim c-na-btn--primary-bg">
             <i class="fa fa-download" aria-hidden="true"></i>
             Download
           </button>
-          <a href="#" class="c-na-btn c-na-btn--primary">A link</a>
-          <button class="c-na-btn c-na-btn--primary is-disabled">disabled</button>
+          <a href="#" class="c-na-btn u-na--dim u-na--dim c-na-btn--primary-bg">A link</a>
+          <button class="c-na-btn u-na--dim u-na--dim c-na-btn--primary-bg is-disabled">disabled</button>
         </div>
       </section>
 
       <section>
         <h4>No background color and no border</h4>
-        <p>Append the class <code>c-na-btn--flat</code></p>
-        <div class="site-btn__groups">
-          <button class="c-na-btn c-na-btn--flat" style="color: dodgerblue;">
+        <p>Append the class <code>c-na-btn--underline</code></p>
+        <div class="site-btn__groups u-na--uppercase">
+          <button class="c-na-btn u-na--dim c-na-btn--primary-copy c-na-btn--underline">
             <i class="fa fa-download" aria-hidden="true"></i>
             Download
           </button>
-          <a href="#" class="c-na-btn c-na-btn--flat" style="color: dodgerblue;">A link</a>
-          <a href="#" class="c-na-btn c-na-btn--flat is-disabled">disabled</a>
+          <a href="#" class="c-na-btn u-na--dim c-na-btn--secondary-copy c-na-btn--underline">A link</a>
+          <button class="c-na-btn u-na--dim c-na-btn--underline is-disabled">disabled</button>
         </div>
       </section>
 
       <section>
-        <h4>With a thin borderr</h4>
+        <h4>With a thin border</h4>
         <p>Append the class <code>c-na-btn--bd-thin</code></p>
         <div class="site-btn__groups">
-          <button class="c-na-btn c-na-btn--bd-thin">
+          <button class="c-na-btn u-na--dim c-na-btn--bd-thin">
             <i class="fa fa-download" aria-hidden="true"></i>
             Download
           </button>
-          <a href="#" class="c-na-btn c-na-btn--bd-thin">A link</a>
-          <a href="#" class="c-na-btn c-na-btn--bd-thin is-disabled">disabled</a>
+          <a href="#" class="c-na-btn u-na--dim c-na-btn--bd-thin">A link</a>
+          <a href="#" class="c-na-btn u-na--dim c-na-btn--bd-thin is-disabled">disabled</a>
         </div>
       </section>
 
@@ -57,12 +57,12 @@
         <h4>With a normal border</h4>
         <p>Append the class <code>c-na-btn--bd</code></p>
         <div class="site-btn__groups">
-          <button class="c-na-btn c-na-btn--bd">
+          <button class="c-na-btn u-na--dim c-na-btn--secondary-copy c-na-btn--bd">
             <i class="fa fa-download" aria-hidden="true"></i>
             Download
           </button>
-          <a href="#" class="c-na-btn c-na-btn--bd">A link</a>
-          <a href="#" class="c-na-btn c-na-btn--bd is-disabled">disabled</a>
+          <a href="#" class="c-na-btn u-na--dim c-na-btn--bd">A link</a>
+          <a href="#" class="c-na-btn u-na--dim c-na-btn--bd is-disabled">disabled</a>
         </div>
       </section>
 
@@ -71,26 +71,40 @@
         <p>Append the class <code>c-na-btn--bd-thick</code></p>
 
         <div class="site-btn__groups">
-          <button class="c-na-btn c-na-btn--bd-thick">
+          <button class="c-na-btn u-na--dim c-na-btn--primary-copy c-na-btn--bd-thick">
             <i class="fa fa-download" aria-hidden="true"></i>
             Download
           </button>
-          <a href="#" class="c-na-btn c-na-btn--bd-thick">A link</a>
-          <a href="#" class="c-na-btn c-na-btn--bd-thick is-disabled">disabled</a>
+          <a href="#" class="c-na-btn u-na--dim c-na-btn--secondary-copy c-na-btn--bd-thick">A link</a>
+          <a href="#" class="c-na-btn u-na--dim c-na-btn--bd-thick is-disabled">disabled</a>
         </div>
       </section>
 
       <section>
         <h4>With slightly rounded corners</h4>
-        <p>Append the class <code>u-na-br</code></p>
+        <p>Append the class <code>u-na-br--pill</code></p>
 
         <div class="site-btn__groups">
-          <button class="c-na-btn c-na-btn--bd u-na-br--pill">
+          <button class="c-na-btn u-na--dim c-na-btn--bd u-na-br--pill">
             <i class="fa fa-download" aria-hidden="true"></i>
             Download
           </button>
-          <a href="#" class="c-na-btn u-cta-bg u-na-br--pill">A link</a>
-          <a href="#" class="c-na-btn u-cta-bg is-disabled u-na-br--pill">disabled</a>
+          <a href="#" class="c-na-btn u-na--dim c-na-btn--primary-bg u-na-br--pill">A link</a>
+          <a href="#" class="c-na-btn u-na--dim c-na-btn--primary-bg is-disabled u-na-br--pill">disabled</a>
+        </div>
+      </section>
+
+      <section>
+        <h4>With slightly rounded corners</h4>
+        <p>Append the class <code>u-na-br--rounded</code></p>
+
+        <div class="site-btn__groups">
+          <button class="c-na-btn u-na--dim c-na-btn--primary-bg u-na--bd u-na-br--rounded">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn u-na--dim u-na--bd u-na-br--rounded">A link</a>
+          <a href="#" class="c-na-btn u-na--dim u-na--bd-thin is-disabled u-na-br--rounded">disabled</a>
         </div>
       </section>
 
