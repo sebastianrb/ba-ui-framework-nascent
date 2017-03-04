@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>UI Framework</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <style>
+      body {
+        padding: 2em;
+      }
+
+      .container {
+        max-width: 360px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <style>
+      /*
+        hc-list-group UI component styles
+      */
+      .hc-list-group {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .hc-list-group__subheader {
+        box-sizing: border-box;
+        color: rgba(0, 0, 0, 0.54);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 48px;
+        margin: 0;
+        padding: 0;
+        padding-left: 16px;
+        width: 100%;
+      }
+
+      .hc-list-group__item {
+        list-style: none;
+        margin: 0;
+        padding: 1em;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .hc-list-group__item .fa {
+        padding-right: 0.5em;
+      }
+
+      .hc-list__item--icon-right .fa {
+        float: right;
+        padding-left: 0.5em;
+        padding-right: 0;
+      }
+
+      .hc-list-group__item:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    </style>
+
+    <section class='container'>
+      <ul class='hc-list-group'>
+        <h2 class='hc-list-group__subheader'>Subheader</h2>
+        <li class='hc-list-group__item'>
+          <i class='fa fa-telegram' aria-hidden='true'></i>
+          List item 1
+        </li>
+        <li class='hc-list-group__item'>
+          <i class='fa fa-telegram' aria-hidden='true'></i>
+          List item 2
+        </li>
+        <li class='hc-list-group__item'>
+          <i class='fa fa-telegram' aria-hidden='true'></i>
+          List item 3
+        </li>
+        <li class='hc-list-group__item hc-list__item--icon-right'>
+          <i class='fa fa-telegram' aria-hidden='true'></i>
+          List item 4
+        </li>
+        <li class='hc-list-group__item hc-list__item--icon-right'>
+          <i class='fa fa-telegram' aria-hidden='true'></i>
+          List item 5
+        </li>
+        <li class='hc-list-group__item hc-list__item--icon-right'>
+          <i class='fa fa-telegram' aria-hidden='true'></i>
+          List item 6
+        </li>
+      </ul>
+    </section>
+
+  </body>
+
+</html>
