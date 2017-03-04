@@ -1,18 +1,21 @@
 /* Framework wide variables for color
  */
- 
-$primary-light: #b3e5fc;
-$primary-base: #03a9f4;
-$primary-dark: #01579b;
 
-$secondary-light: #ffab91;
-$secondary-base: #ff5722;
-$secondary-dark: #dd2c00;
+$primary-base: #363c6f;
+$primary-light: lighten($primary-base, 50%);
+$primary-dark: darken($primary-base, 10%);
 
-$accent-light: #fcf4a3;
-$accent-base: #FFDC00;
-$accent-dark: #a27500;
+$secondary-base: #a670ca;
+$secondary-light: lighten($secondary-base, 25%);
+$secondary-dark: darken($secondary-base, 40%);
 
+$accent-base: #bb1f9c;
+$accent-light: lighten($accent-base, 40%);
+$accent-dark: darken($accent-base, 20%);
+
+$lav-light: #ccd3fa;
+$lav-base: darken($lav-light, 20%);
+$lav-dark: darken($lav-base, 40%);
 
 $black: #111;
 $grey-light: #eee;
