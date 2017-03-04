@@ -58,7 +58,7 @@ input[type="reset"] {
 
   &--primary-bg {
     background-color: $primary-base;
-    color: $white;
+    color: $primary-light;
 
     &.is-disabled {
       background-color: $grey-med;
@@ -68,6 +68,16 @@ input[type="reset"] {
 
   &--secondary-bg {
     background-color: $secondary-base;
+    color: $white;
+
+    &.is-disabled {
+      background-color: $grey-med;
+      color: $white;
+    }
+  }
+
+  &--accent-bg {
+    background-color: $accent-base;
     color: $white;
 
     &.is-disabled {
