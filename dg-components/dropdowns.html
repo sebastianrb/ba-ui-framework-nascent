@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Dropdowns</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/css/nascent.css">
+  </head>
+
+  <body>
+    <div class="generic-wrapper" style="padding: 2em">
+      <h2>Dropdowns</h2>
+      <section>
+        <h3>Basic DropDown (default)</h3>
+        <div class="dropdown__wrapper">
+          <button type="button" class="dropdown__button" id="button">
+            Select an Option...
+            <span class="dropdown__arrow-down"></span>
+          </button>
+          <ul class="dropdown__menu">
+            <li class="dropdown__item">Option 1</li>
+            <li class="dropdown__item">Option 2</li>
+            <li class="dropdown__item">Option 3</li>
+            <li class="dropdown__item">Option 4</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h3>DropDown with Headers</h3>
+        <div class="dropdown__wrapper">
+          <button type="button" class="dropdown__button" id="button">Select an Option...
+            <span class="dropdown__arrow-down"></span>
+          </button>
+          <ul class="dropdown__menu">
+            <li class="dropdown__header">Header 1</li>
+            <li class="dropdown__item">Option 1</li>
+            <li class="dropdown__item">Option 2</li>
+            <li class="dropdown__item">Option 3</li>
+            <li class="dropdown__header">Header 2</li>
+            <li class="dropdown__item">Option 4</li>
+            <li class="dropdown__item">Option 5</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h3>DropDown with Dividers</h3>
+        <div class="dropdown__wrapper">
+          <button type="button" class="dropdown__button" id="button">
+            Select an Option...
+            <span class="dropdown__arrow-down"></span>
+          </button>
+          <ul class="dropdown__menu">
+            <li class="dropdown__item">Option 1</li>
+            <li class="dropdown__item">Option 2</li>
+            <li class="dropdown__item">Option 3</li>
+            <li class="dropdown__item">Option 4</li>
+            <li class="dropdown__item dropdown__separator">Separated Option</li>
+            <li class="dropdown__item">Option 5</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h3>DropDown Selection(default)</h3>
+        <div class="dropdown__wrapper">
+          <button type="button" class="dropdown__button" id="button">
+            Select an Option...
+            <span class="dropdown__arrow-down"></span>
+          </button>
+          <ul class="dropdown__menu" id="select">
+            <li class="dropdown__item">Option 1</li>
+            <li class="dropdown__item">Option 2</li>
+            <li class="dropdown__item">Option 3</li>
+            <li class="dropdown__item">Option 4</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h3>DropDown Alignment</h3>
+        <div class="dropdown__alignment">
+          <div class="dropdown__wrapper">
+            <button type="button" class="dropdown__button" id="button">
+              Select an Option...
+              <span class="dropdown__arrow-down"></span>
+            </button>
+            <ul class="dropdown__menu">
+              <li class="dropdown__item">Option 1</li>
+              <li class="dropdown__item">Option 2</li>
+              <li class="dropdown__item">Option 3</li>
+              <li class="dropdown__item">Option 4</li>
+            </ul>
+          </div>
+        </div>
+
+      <div class="dropdown__alignment">
+        <div class="dropdown__wrapper">
+          <button type="button" class="dropdown__button" id="button">
+            Select an Option...
+            <span class="dropdown__arrow-left"></span>
+          </button>
+          <ul class="dropdown__menu dropdown__menu-show-top">
+            <li class="dropdown__item">Option 1</li>
+            <li class="dropdown__item">Option 2</li>
+            <li class="dropdown__item">Option 3</li>
+            <li class="dropdown__item">Option 4</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dropdown__alignment">
+        <div class="dropdown__wrapper">
+          <button type="button" class="dropdown__button" id="button">
+            Select an Option...
+            <span class="dropdown__arrow-right"></span>
+          </button>
+          <ul class="dropdown__menu dropdown__menu-show-right">
+            <li class="dropdown__item">Option 1</li>
+            <li class="dropdown__item">Option 2</li>
+            <li class="dropdown__item">Option 3</li>
+            <li class="dropdown__item">Option 4</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dropdown__alignment">
+        <div class="dropdown__wrapper">
+          <button type="button" class="dropdown__button" id="button">
+            Select an Option...
+            <span class="dropdown__arrow-up"></span>
+          </button>
+          <ul class="dropdown__menu dropdown__menu-show-top">
+            <li class="dropdown__item">Option 1</li>
+            <li class="dropdown__item">Option 2</li>
+            <li class="dropdown__item">Option 3</li>
+            <li class="dropdown__item">Option 4</li>
+          </ul>
+        </div>
+      </div>
+      </section>
+    </div> <!-- end .generic-wrapper -->
+
+    <script src="../javascript/dropdowns.js" type="text/javascript"></script>
+  </body>
+</html>
