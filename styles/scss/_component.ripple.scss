@@ -2,7 +2,69 @@
   ripple start
  */
 
-/* css or scss here */
+/* for version ripple-child */
+.ripple {
+  width: 0; /* just for explicitness, actually not necessary */
+  height: 0; /* just for explicitness, actually not necessary */
+  border-radius: 50%;
+  /* can use border below, and long animation time, when tweaking */
+  /*border: 1px solid black;*/
+  /* white is the default ripple color;
+      you can use any rgba, or hsla you want by adding the data attribute:
+      data-ripple-color="rgba(redHex, greenHex, blueHex, opacity)"
+      or
+      data-ripple-color="hsla(hueDegrees, saturation%, lightness%, opacity)"
+      to the element for which the ripple effect will be applied (this is the
+      element that has the ripple-element class)
+  */
+  background-color: rgba(255, 255, 255, 0.5);
+  /* below, along with border-radius: 50%; will cause effect to be circular
+      and expand from its center outward */
+  transform: scale(0);
+  /* below, along with no border-radius, will cause effect to expand only in
+      width */
+  /* http://www.w3schools.com/css/css3_2dtransforms.asp */
+  /*transform: scale(0, 1);*/
+  position: absolute;
+  opacity: 1;
+}
+
+/* if you don't want the ripple animation to extend past the parent element
+    border, then add this class to the parent element, which is the element
+    to which the effect will be applied - the element with class 'ripple-element'; */
+.ripple-clip {
+  overflow: hidden;
+}
+
+.ripple-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*border: 1px solid red;*/
+}
+
+/* this class will be added via JavaScript to run the animation */
+.ripple-effect {
+    animation: ripplePropagate 0.5s linear;
+}
+
+@keyframes ripplePropagate {
+  100% {
+    /* below, along with border-radius: 50%;, will cause effect to be circular
+      and expand from its center outward to 2x its specified width and height */
+    transform: scale(2);
+
+    /* below, along with border-radius: 50%;, will cause the effect to look
+        elliptical with the long-axis horizontal */
+    /*transform: scale(2, 1);*/
+
+    /* below, along with no border-radius, will cause effect to expand only in
+      width, from zero width (initial .ripple scale) to scale 1, when used
+      with transform: scale(0, 1); on .ripple above */
+    /*transform: scale(1, 1);*/
+    opacity: 0;
+  }
+}
 
 /*
   ripple end
