@@ -18,6 +18,8 @@
   padding: 0.5rem;
   height: 2.5rem;
   transition: all 0.35s ease;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
 
     & i {
       display: inline-block;
@@ -25,6 +27,8 @@
       text-align: center;
       width: 2.5rem;
       /*height: 2.5rem;*/
+      /*position: relative;
+      z-index: -1;*/
     }
 
     & i:not(:last-child) {
