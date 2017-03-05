@@ -4,6 +4,7 @@
 
 
 //tools (like mixins and placeholders)
+@import "settings.colors";
 
 @import "tools.placeholders";
 
@@ -15,8 +16,6 @@
 @import "shared.styles";
 
 //@import "settings.global";
-
-@import "settings.colors";
 
 //@import "generic.reset";
 
@@ -44,6 +43,8 @@
 
 @import 'component.buttons';
 
+@import 'component.dropdowns';
+
 @import 'component.list-groups';
 
 @import 'component.modals';
@@ -59,6 +60,3 @@
 @import 'component.badges';
 
 @import 'component.cards';
-
-
-

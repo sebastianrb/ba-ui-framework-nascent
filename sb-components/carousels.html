@@ -4,7 +4,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Carousels</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://use.fontawesome.com/3c2bdfb862.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
@@ -12,11 +13,77 @@
   </head>
 
   <body>
+
     <div class="generic-wrapper" style="padding: 2em">
-      <h2>Carousels</h2>
+      <div class="component-intro">
+        <h2 class="component-intro__header">Carousel Component</h2>
+        <p class="component-intro__description">This is a carousel component.</p>
+        <h3 class="component-intro__carousel-type">Fading Carousel</h3>
+        <p class="component-intro__description">Description.</p>
+        <h3 class="component-intro__carousel-type">Sliding Carousel</h3>
+        <p class="component-intro__description">Description.</p>
+      </div>
+
+      <!-- fading carousel -->
+      <div class="carousel carousel--fade">
+        <div class="carousel--fade__arrow-prev carousel--fade__nav-button">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </div>
+        <div class="carousel--fade__image-view">
+          <div class="carousel--fade__image-container carousel--fade__image-container-selected">
+            <img src="../images/mountain-1.jpeg" class="carousel--fade__image">
+          </div>
+          <div class="carousel--fade__image-container">
+            <img src="../images/mountain-2.jpg" class="carousel--fade__image">
+          </div>
+          <div class="carousel--fade__image-container">
+            <img src="../images/mountain-3.jpeg" class="carousel--fade__image">
+          </div>
+        </div>
+        <div class="carousel--fade__arrow-next carousel--fade__nav-button">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </div>
+        <div class="carousel--fade__bullets">
+          <div class="carousel--fade__bullet-container">
+            <div class="carousel--fade__bullet carousel--fade__bullet--bullet carousel--fade__bullet--bullet--1 carousel--fade__bullet--bullet-selected"></div>
+            <div class="carousel--fade__bullet carousel--fade__bullet--bullet carousel--fade__bullet--bullet--2"></div>
+            <div class="carousel--fade__bullet carousel--fade__bullet--bullet carousel--fade__bullet--bullet--3"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- sliding carousel -->
+      <div class="carousel carousel--slide">
+        <div class="carousel--slide__arrow-prev carousel--slide__nav-button">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </div>
+        <div class="carousel--slide__image-view">
+          <div class="carousel--slide__image-container carousel--slide__image-container-selected">
+            <img src="../images/mountain-1.jpeg" class="carousel--slide__image">
+          </div>
+          <div class="carousel--slide__image-container">
+            <img src="../images/mountain-2.jpg" class="carousel--slide__image">
+          </div>
+          <div class="carousel--slide__image-container">
+            <img src="../images/mountain-3.jpeg" class="carousel--slide__image">
+          </div>
+        </div>
+        <div class="carousel--slide__arrow-next carousel--slide__nav-button">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </div>
+        <div class="carousel--slide__bullets">
+          <div class="carousel--slide__bullet-container">
+            <div class="carousel--slide__bullet carousel--slide__bullet--bullet carousel--slide__bullet--bullet--1 carousel--slide__bullet--bullet-selected"></div>
+            <div class="carousel--slide__bullet carousel--slide__bullet--bullet carousel--slide__bullet--bullet--2"></div>
+            <div class="carousel--slide__bullet carousel--slide__bullet--bullet carousel--slide__bullet--bullet--3"></div>
+          </div>
+        </div>
+      </div>
 
     </div> <!-- end .generic-wrapper -->
 
-    <script src="../javascript/filename.js" type="text/javascript"></script>
+    <script src="../javascript/carousel-fade.js" type="text/javascript"></script>
+    <script src="../javascript/carousel-slide.js" type="text/javascript"></script>
+
   </body>
 </html>

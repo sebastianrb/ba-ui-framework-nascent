@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Dropdowns</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/css/nascent.css">
+  </head>
+
+  <body>
+    <div class="generic-wrapper" style="padding: 2em">
+      <h2>Dropdowns</h2>
+        <h3>Basic DropDown (default)</h3>
+        <section>
+        <p>You can quickly create a dropdown element.  It is important that the parent element div <strong><code>dropdown__wrapper</code></strong> and the <strong><code>button</code></strong> <strong><code>dropdown__button</code></strong> must be <strong><code>positioned:relative</code></strong> in order to align the dropdown properly</p>
+        <div class="dropdown__wrapper">
+          <button type="button" class="dropdown__button" id="button">
+            Select an Option...
+            <span class="dropdown__arrow--down"></span>
+          </button>
+          <ul class="dropdown__menu">
+            <li class="dropdown__item">Option 1</li>
+            <li class="dropdown__item">Option 2</li>
+            <li class="dropdown__item">Option 3</li>
+            <li class="dropdown__item">Option 4</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h3>Color Schemes</h3>
+        <p>There are two color schemes.  The default nae blue and a burgundy color scheme. To apply the burgundy color scheme just add the class <strong><code>dropdown__burgundy</code></strong> to you <strong><code>dropdown__wrapper</code></strong></p>
+        <div class="dropdown__container">
+          <div class="dropdown__wrapper">
+            <button type="button" class="dropdown__button" id="button">
+              Select an Option...
+              <span class="dropdown__arrow--down"></span>
+            </button>
+            <ul class="dropdown__menu">
+              <li class="dropdown__item">Option 1</li>
+              <li class="dropdown__item">Option 2</li>
+              <li class="dropdown__item">Option 3</li>
+              <li class="dropdown__item">Option 4</li>
+            </ul>
+          </div>
+
+          <div class="dropdown__wrapper dropdown__burgundy">
+            <button type="button" class="dropdown__button" id="button">
+              Select an Option...
+              <span class="dropdown__arrow--down"></span>
+            </button>
+            <ul class="dropdown__menu">
+              <li class="dropdown__item">Option 1</li>
+              <li class="dropdown__item">Option 2</li>
+              <li class="dropdown__item">Option 3</li>
+              <li class="dropdown__item">Option 4</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <h3>DropDown with Headers</h3>
+        <p>You can include Headers in the dropdown to separate categories of select option. Add the class <strong><code>dropdown__header</code></strong> to any <strong><code>li</code></strong> element that you want Header or Category</p>
+        <div class="dropdown__wrapper">
+          <button type="button" class="dropdown__button" id="button">Select an Option...
+            <span class="dropdown__arrow--down"></span>
+          </button>
+          <ul class="dropdown__menu">
+            <li class="dropdown__header">Header 1</li>
+            <li class="dropdown__item">Option 1</li>
+            <li class="dropdown__item">Option 2</li>
+            <li class="dropdown__item">Option 3</li>
+            <li class="dropdown__header">Header 2</li>
+            <li class="dropdown__item">Option 4</li>
+            <li class="dropdown__item">Option 5</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h3>DropDown with Dividers</h3>
+        <p>You can add dividers to separate option selectinss. Add the class <strong><code>dropdown__separator</code></strong> to any <strong><code>li</code></strong> element that you want Header or Category</p>
+        <div class="dropdown__wrapper">
+          <button type="button" class="dropdown__button" id="button">
+            Select an Option...
+            <span class="dropdown__arrow--down"></span>
+          </button>
+          <ul class="dropdown__menu">
+            <li class="dropdown__item">Option 1</li>
+            <li class="dropdown__item">Option 2</li>
+            <li class="dropdown__item">Option 3</li>
+            <li class="dropdown__item">Option 4</li>
+            <li class="dropdown__item dropdown__separator">Separated Option</li>
+            <li class="dropdown__item">Option 5</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h3>DropDown with Selection</h3>
+        <p>When you select your option you can show that selection as the text on the dropdown button.  Add the <strong><code>id="select"</code></strong> to the ul element  <strong><code>dropdown__menu</code></strong>.</p>
+        <div class="dropdown__wrapper">
+          <button type="button" class="dropdown__button" id="button">
+            Select an Option...
+            <span class="dropdown__arrow--down"></span>
+          </button>
+          <ul class="dropdown__menu" id="select">
+            <li class="dropdown__item">Option 1</li>
+            <li class="dropdown__item">Option 2</li>
+            <li class="dropdown__item">Option 3</li>
+            <li class="dropdown__item">Option 4</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h3>DropDown Alignment</h3>
+        <p>You can position/align the dropdown menu to the top, right, left or bottom. by adding a class <strong><code>.dropdown__menu-show-(direction)</code></strong> to the ul element.  You can also change the direction of the arrow of the dropdown toggle by adding the class <strong><code>.dropdown__arrow-(direction)</code></strong> to the span that contains the arrow. Below is a list of the possible classes that you can use to align the dropment and set the direction of the arrow. Also it is important to add the class <strong><code>dropdown__button-left</code></strong> to the button where you want to align the dropdown to the left</p>
+        <table class="dropdowns__table">
+          <thead>
+            <tr>
+              <th>Arrow Parameter</th>
+              <th>Arrow Description</th>
+              <th>Dropdown Parameter</th>
+              <th>DropDown Description</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><code>.dropdown__arrow--down</code></td>
+              <td>Arrow points down</td>
+              <td><code>.dropdown__menu</code></td>
+              <td>The default state. The dropdown menu aligned to the bottom of the button toggle</td>
+            </tr>
+
+            <tr>
+              <td><code>.dropdown__arrow--left</code></td>
+              <td>Arrow points left</td>
+              <td><code>.dropdown__menu--show-left</code></td>
+              <td>The dropdown menu will be aligned to the left of the toggle button</td>
+            </tr>
+
+            <tr>
+              <td><code>.dropdown__arrow--up</code></td>
+              <td>Arrow points up</td>
+              <td><code>.dropdown__menu--show-top</code></td>
+              <td>The dropdown menu will be aligned to the top of the toggle button</td>
+            </tr>
+
+            <tr>
+              <td><code>.dropdown__arrow--right</code></td>
+              <td>Arrow points right</td>
+              <td><code>.dropdown__menu--show-right</code></td>
+              <td>The dropdown menu will be aligned to the right of the toggle button</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="dropdown__alignment">
+          <div class="dropdown__wrapper">
+            <button type="button" class="dropdown__button" id="button">
+              Dropdown Bottom
+              <span class="dropdown__arrow--down"></span>
+            </button>
+            <ul class="dropdown__menu">
+              <li class="dropdown__item">Option 1</li>
+              <li class="dropdown__item">Option 2</li>
+              <li class="dropdown__item">Option 3</li>
+              <li class="dropdown__item">Option 4</li>
+            </ul>
+          </div>
+
+          <div class="dropdown__wrapper">
+            <button type="button" class="dropdown__button dropdown__button--left" id="button">
+              Dropdown Left
+              <span class="dropdown__arrow--left"></span>
+            </button>
+            <ul class="dropdown__menu dropdown__menu--show-left">
+              <li class="dropdown__item">Option 1</li>
+              <li class="dropdown__item">Option 2</li>
+              <li class="dropdown__item">Option 3</li>
+              <li class="dropdown__item">Option 4</li>
+            </ul>
+          </div>
+
+          <div class="dropdown__wrapper">
+            <button type="button" class="dropdown__button" id="button">
+              Dropdown Right
+              <span class="dropdown__arrow--right"></span>
+            </button>
+            <ul class="dropdown__menu dropdown__menu--show-right">
+              <li class="dropdown__item">Option 1</li>
+              <li class="dropdown__item">Option 2</li>
+              <li class="dropdown__item">Option 3</li>
+              <li class="dropdown__item">Option 4</li>
+            </ul>
+          </div>
+
+          <div class="dropdown__wrapper">
+            <button type="button" class="dropdown__button" id="button">
+              Drop-up Top
+              <span class="dropdown__arrow--up"></span>
+            </button>
+            <ul class="dropdown__menu dropdown__menu--show-top">
+              <li class="dropdown__item">Option 1</li>
+              <li class="dropdown__item">Option 2</li>
+              <li class="dropdown__item">Option 3</li>
+              <li class="dropdown__item">Option 4</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div> <!-- end .generic-wrapper -->
+
+    <script src="../javascript/dropdowns.js" type="text/javascript"></script>
+  </body>
+</html>

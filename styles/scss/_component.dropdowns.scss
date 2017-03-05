@@ -1,0 +1,310 @@
+/*
+  dropdown start
+ */
+
+/* css or scss here */
+section {
+  clear: both;
+  padding: 1em 0;
+}
+
+//tables
+.dropdowns__table {
+  border: 1px solid $grey-light;
+  font-weight: 300;
+  font-size: .8em;
+  margin: 2em auto;
+  text-align: left;
+}
+
+.dropdowns__table > thead > tr,
+.dropdowns__table > tbody > tr > td {
+  border: 1px solid $grey-light;
+  padding: .4em;
+}
+
+.dropdowns__table > thead > tr > th {
+  background-color: $grey-light;
+  border: 1px solid $grey-light;
+  color: $grey-dark;
+  padding: .4em;
+  text-transform: uppercase;
+}
+
+.dropdowns__table > tbody > tr > td {
+  color: $primary-base;
+  font-weight: 500;
+
+  &:nth-child(1),
+  &:nth-child(3), {
+    color: $accent-base;
+    text-align: center;
+  }
+}
+
+// basic wrapper styles
+.dropdown__wrapper {
+  position: relative;
+  width: 12em;
+}
+
+.dropdown__container > .dropdown__wrapper {
+  display: inline-block;
+  float: left;
+  margin-right: 10em;
+}
+.dropdown__container > .dropdown__lavendar {
+  display: inline;
+  float: left;
+  margin-right: 10em;
+}
+
+// button styles and hover state for arrowss
+.dropdown__button,
+.dropdown__button--selected {
+  background-color: $white;
+  border: 1px solid $primary-light;
+  border-radius: 3px;
+  color: $grey-med;
+  padding: .6em 1em;
+  position: relative;
+  text-align: left;
+  width: 100%;
+
+  &:hover {
+    background-color: $primary-dark;
+    color: $white;
+
+    .dropdown__arrow--down {
+      border-top: .4em solid $white;
+    }
+
+    .dropdown__arrow--left {
+      border-right: .4em solid $white;
+    }
+
+    .dropdown__arrow--right {
+      border-left: .4em solid $white;
+    }
+
+    .dropdown__arrow--up {
+      border-bottom: .4em solid $white;
+    }
+  }
+}
+
+.dropdown__button--selected {
+  background-color: $primary-dark;
+  color: $white;
+  position: relative;
+
+    .dropdown__arrow--down {
+      border-top: .4em solid $white;
+    }
+
+    .dropdown__arrow--left {
+      border-right: .4em solid $white;
+    }
+
+    .dropdown__arrow--right {
+      border-left: .4em solid $white;
+    }
+
+    .dropdown__arrow--up {
+      border-bottom: .4em solid $white;
+    }
+}
+
+.dropdown__button > span,
+.dropdown__button--selected > span {
+  display: inline-block;
+  height: 0;
+  position: absolute;
+  right: .75em;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 0;
+}
+
+.dropdown__button--left {
+  padding-left: 2em;
+}
+
+// dropdown arrow styles
+.dropdown__arrow--down {
+  border-left: .4em solid transparent;
+  border-right: .4em solid transparent;
+  border-top: .4em solid $primary-dark;
+}
+
+.dropdown__arrow--left {
+  border-right: .4em solid $primary-dark;
+  border-bottom: .4em solid transparent;
+  border-top: .4em solid transparent;
+  left: .75em;
+}
+
+.dropdown__arrow--right {
+  border-left: .4em solid $primary-dark;
+  border-bottom: .4em solid transparent;
+  border-top: .4em solid transparent;
+}
+
+.dropdown__arrow--up {
+  border-left: .4em solid transparent;
+  border-right: .4em solid transparent;
+  border-bottom: .4em solid $primary-dark;
+}
+
+// dropdown menu styles
+.dropdown__menu {
+  background: white;
+  border: 1px solid $primary-light;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: $grey-med;
+  display: block;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  transition:opacity 0.5s linear;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1;
+
+  @include transition(
+    opacity 500ms linear,
+    visibility 3s linear 500ms
+  )
+}
+
+.dropdown__menu--show {
+  opacity: 1;
+  visibility: visible;
+  @include transition (
+    opacity 500ms linear,
+    visibility 3s linear
+  )
+}
+
+.dropdown__menu--show-left {
+  position: absolute;
+  top: 0;
+  right: 100%;
+}
+
+.dropdown__menu--show-right {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.dropdown__menu--show-top {
+  bottom: 100%;
+  position: absolute;
+}
+
+// dropdown list (select option) styles
+.dropdown__item,
+.dropdown__header,
+.dropdown__separator {
+  list-style-type: none;
+  padding: .6em 1em;
+  width: 100%;
+}
+
+.dropdown__item:hover {
+  background-color: $primary-light;
+  color: $white;
+}
+
+.dropdown__item--selected {
+  background-color: $primary-base;
+  color: $white;
+  font-weight: bold;
+}
+
+.dropdown__header {
+  color: $secondary-base;
+  font-size: .8em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.dropdown__separator {
+  border-top: 1px solid $grey-light;
+  padding: .8em 1em;
+}
+
+.dropdown__alignment {
+  clear: both;
+  margin: 5em auto;
+  width: 75%;
+}
+
+.dropdown__alignment > .dropdown__wrapper {
+  float: left;
+  margin: 0em 2em ;
+}
+
+//color schemes
+.dropdown__burgundy {
+  float: left;
+  .dropdown__button {
+    background-color: $white;
+    border: 1px solid $accent-dark;
+    border-radius: 3px;
+    padding: .6em 1em;
+    position: relative;
+    text-align: left;
+    width: 100%;
+
+    &:hover {
+      background-color: $accent-dark;
+      color: $white;
+    }
+  }
+
+  .dropdown__arrow--down {
+    border-top: .4em solid $accent-dark;
+  }
+
+  .dropdown__arrow--left {
+    border-right: .4em solid $accent-dark;
+    left: .75em;
+  }
+
+  .dropdown__arrow--right {
+    border-left: .4em solid $accent-dark;
+  }
+
+  .dropdown__arrow--up {
+    border-bottom: .4em solid $accent-dark;
+  }
+
+  .dropdown__menu {
+    border: 1px solid $accent-dark;
+  }
+
+  .dropdown__item:hover {
+    background-color: $accent-base;
+    color: $white;
+  }
+
+  .dropdown__item--selected {
+    background-color: $accent-dark;
+    color: $white;
+    font-weight: bold;
+  }
+
+  .dropdown__header {
+    color: $secondary-base;
+    font-size: .8em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+/*
+  dropdown end
+ */

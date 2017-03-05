@@ -9,7 +9,7 @@ body {
 
 body {
   margin: 0;
-  padding: 0:
+  padding: 0;
 }
 
 p {
@@ -29,6 +29,24 @@ ol {
   margin: 0;
 }
 
+/* visually hides content but allows it to be rendered for screenreaders */
+.sr-only {
+  clip: rect(1px 1px 1px 1px);
+  overflow: hidden;
+  height: 1px;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+  STATES
+*/
+
+[disabled],
+.is-disabled {
+  cursor: not-allowed;
+}
+
 /*
   SIZING
 */
@@ -37,6 +55,16 @@ ol {
 .u-na--fw {
   max-width: 100%;
   width: 100%;
+}
+
+/*
+  BACKGROUNDS
+*/
+
+/* removes backgrounds (in case of bg color or bg image) */
+.u-na--no-bg {
+  background-color: transparent;
+  background: none;
 }
 
 /*
@@ -69,6 +97,10 @@ ol {
   border-radius: 20em;
 }
 
+.u-na-br--rounded {
+  border-radius: .2em;
+}
+
 /*
   GENERIC HOVER STATES
 */
@@ -79,6 +111,14 @@ ol {
   transition: opacity 200ms ease-in-out;
 
   &:hover {
-    opacity: .6;
+    opacity: .5;
   }
+}
+
+/*
+  TEXT TRANSFORMS
+*/
+
+.u-na--uppercase {
+  text-transform: uppercase;
 }

@@ -1,9 +1,165 @@
-/*
-  buttons start
- */
+/* removes padding and border added by Firefox  */
 
-/* css or scss here */
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner {
+  border: 0 none !important;
+  padding: 0 !important;
+}
 
-/*
-  buttons end
- */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  border-width: 0;
+}
+
+.c-na-btn {
+  background-color: $white; /* reset default; change to add it back or add a color class */
+  border-color: currentColor;
+  color: inherit;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 1rem;
+  margin: .4em .5em;
+  min-width: 1.5rem;
+  outline: none;
+  padding: .75em 1.15em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 250ms ease-in-out;
+  vertical-align: middle;
+  will-change: opacity;
+  will-change: transform;
+
+
+  &:not(.is-disabled) {
+    cursor: pointer;
+  }
+
+  &.is-disabled {
+    color: $grey-med;
+  }
+
+  /* targets any icons in a button */
+  & i {
+    display: inline-block;
+    margin-right: .06em;
+    vertical-align: middle;
+  }
+
+  &:not(.is-disabled):focus {
+    outline: 1px dotted $grey-dark;
+    transform: scale(1.05);
+  }
+
+  &--primary-bg {
+    background-color: $primary-base;
+    color: $primary-light;
+
+    &.is-disabled {
+      background-color: $grey-med;
+      color: $white;
+    }
+  }
+
+  &--secondary-bg {
+    background-color: $secondary-light;
+    color: $primary-base;
+
+    &.is-disabled {
+      background-color: $grey-med;
+      color: $white;
+    }
+  }
+
+  &--accent-bg {
+    background-color: $accent-base;
+    color: $white;
+
+    &.is-disabled {
+      background-color: $grey-med;
+      color: $white;
+    }
+  }
+
+  &--underline {
+    border-bottom: .25em solid;
+    box-shadow: none;
+
+    &::after {
+      background-color: $accent-base;
+      bottom: -.25em;
+      content: '';
+      height: .25em;
+      left: 0;
+      position: absolute;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 300ms ease-in-out;
+      width: 100%;
+    }
+
+    &:not(.is-disabled):hover {
+      opacity: .7;
+    }
+
+    &:not(.is-disabled):hover::after {
+     transform: scaleX(1);
+    }
+
+    &.is-disabled::after {
+      background-color: $grey-dark;
+    }
+
+  }
+
+  &--bd-thin {
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  &--bd {
+    border-style: solid;
+    border-width: .13em;
+  }
+
+  &--bd-thick {
+    border-style: solid;
+    border-width: .25em;
+  }
+
+  /* setting font colors to override the default which is inherit */
+  &--primary-copy {
+    color: $primary-base;
+  }
+
+  &--secondary-copy {
+    color: $secondary-base;
+  }
+
+  &--accent-copy {
+    color: $accent-base;
+  }
+
+  &--lg {
+    font-size: 1.2rem;
+  }
+
+}
+
+/* demo styles for button containers */
+.site-btn__groups {
+  color: lighten($grey-dark, 20%);
+  text-align: center;
+}
+
+.site-btn__group {
+  flex-basis: 100%;
+  &:not(:first-of-type) {
+    margin-left: 1em;
+  }
+}
