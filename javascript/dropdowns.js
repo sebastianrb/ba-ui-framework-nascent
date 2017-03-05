@@ -7,7 +7,7 @@
     // check if button is clicked and toggle showing dropdown menu
     if(e.target.nodeName === 'BUTTON') {
       ul = e.target.nextElementSibling;
-      ul.classList.toggle('dropdown__menu-show');
+      ul.classList.toggle('dropdown__menu--show');
     }
 
     // check if dropdown item is a selected add class to seleted item
@@ -20,7 +20,7 @@
             }
         });
         e.target.classList.add('dropdown__item--selected');
-        ul.classList.toggle('dropdown__menu-show');
+        ul.classList.toggle('dropdown__menu--show');
     }
 
     // check if dropdown is a select dropdown and append selection name to button.
@@ -28,12 +28,12 @@
         var li;
         var selection;
         var button;
-        ul.classList.toggle('dropdown__menu-show');
+        ul.classList.toggle('dropdown__menu--show');
         li = e.target;
         selection = e.target.innerText;
         button = e.target.parentNode.previousElementSibling;
         button.firstChild.textContent = selection;
-        ul.classList.toggle('dropdown__menu-show');
+        ul.classList.toggle('dropdown__menu--show');
     }
 
     // check if clicked anywhere on the body close the dropdown.

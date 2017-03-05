@@ -53,30 +53,30 @@ thead > tr > th {
   width: 0;
 }
 
-.dropdown__button-left {
+.dropdown__button--left {
   padding-left: 2em;
 }
 
-.dropdown__arrow-down {
+.dropdown__arrow--down {
   border-left: .4em solid transparent;
   border-right: .4em solid transparent;
   border-top: .4em solid black;
 }
 
-.dropdown__arrow-left {
+.dropdown__arrow--left {
   border-right: .4em solid black;
   border-bottom: .4em solid transparent;
   border-top: .4em solid transparent;
   left: .75em;
 }
 
-.dropdown__arrow-right {
+.dropdown__arrow--right {
   border-left: .4em solid black;
   border-bottom: .4em solid transparent;
   border-top: .4em solid transparent;
 }
 
-.dropdown__arrow-up {
+.dropdown__arrow--up {
   border-left: .4em solid transparent;
   border-right: .4em solid transparent;
   border-bottom: .4em solid black;
@@ -95,23 +95,23 @@ thead > tr > th {
   z-index: 1;
 }
 
-.dropdown__menu-show {
+.dropdown__menu--show {
   visibility: visible;
 }
 
-.dropdown__menu-show-left {
+.dropdown__menu--show-left {
   position: absolute;
   top: 0;
   right: 100%;
 }
 
-.dropdown__menu-show-right {
+.dropdown__menu--show-right {
   position: absolute;
   top: 0;
   left: 100%;
 }
 
-.dropdown__menu-show-top {
+.dropdown__menu--show-top {
   position: absolute;
   bottom: 100%;
 }
