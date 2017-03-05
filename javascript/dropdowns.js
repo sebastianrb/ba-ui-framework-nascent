@@ -1,8 +1,9 @@
 (function dropdowns() {
-  var select = document.getElementById('select');
   var ul;
   var li;
   var button;
+  var selection;
+
   document.addEventListener('click', function(e) {
     // check if button is clicked and toggle showing dropdown menu
     if(e.target.nodeName === 'BUTTON') {
@@ -25,9 +26,6 @@
 
     // check if dropdown is a select dropdown and append selection name to button.
     if(e.target.parentNode.id === 'select' &&  e.target.nodeName === 'LI') {
-        var li;
-        var selection;
-        var button;
         ul.classList.toggle('dropdown__menu--show');
         li = e.target;
         selection = e.target.innerText;
@@ -40,7 +38,7 @@
     // check if clicked anywhere on the body close the dropdown.
     if(e.target.classList.length === 0) {
       ul.classList.toggle('dropdown__menu--show');
-    };
+    }
 
     e.preventDefault();
     e.stopPropagation();
