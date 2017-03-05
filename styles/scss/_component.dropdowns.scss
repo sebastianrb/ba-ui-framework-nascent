@@ -24,11 +24,13 @@ thead > tr > th {
   background-color: lightgray;
 }
 
+// basic wrapper styles
 .dropdown__wrapper {
   position: relative;
   width: 12em;
 }
 
+// button styles
 .dropdown__button {
   background-color: white;
   border: 1px solid gray;
@@ -57,6 +59,7 @@ thead > tr > th {
   padding-left: 2em;
 }
 
+// dropdown arrow styles
 .dropdown__arrow--down {
   border-left: .4em solid transparent;
   border-right: .4em solid transparent;
@@ -82,6 +85,7 @@ thead > tr > th {
   border-bottom: .4em solid black;
 }
 
+// dropdown menu styles
 .dropdown__menu {
   background: white;
   border: 1px solid gray;
@@ -116,6 +120,7 @@ thead > tr > th {
   bottom: 100%;
 }
 
+// dropdown list (select option) styles
 .dropdown__item,
 .dropdown__header,
 .dropdown__separator {
