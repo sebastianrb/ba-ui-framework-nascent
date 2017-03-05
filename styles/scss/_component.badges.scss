@@ -1,8 +1,113 @@
+$alert-base: #FFD700;
+
+$success-base: #008000;
+
+$warning-base: #e60000;
 /*
   badges start
  */
 
 /* css or scss here */
+.badge__section {
+  padding: 1em 0;
+}
+.badge__section > span {
+  display: block;
+}
+
+.badge__section > span > code > strong {
+ color: $accent-base;
+}
+
+.badge__default {
+  color: $white;
+  background-color: $primary-base;
+  border: .25em double $white;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: .9em;
+  letter-spacing: .1em;
+  padding: .2em .5em;
+}
+
+.badge__default > span {
+  display: inline-block;
+  font-size: .8em;
+}
+
+.badge__pill {
+  border-radius: 50px;
+  height: 2em;
+}
+
+.badge__icon {
+  border-radius: 50%;
+  height: 2em;
+  width: 2em;
+}
+
+.badge__icon > i {
+  display: inline-block;
+  font-size: .8em;
+  padding: 0;
+  position: relative;
+  right: 20%;
+}
+
+//colors
+.badge__primary {
+  background-color: $grey-med;
+}
+
+.badge__secondary {
+  background-color: $secondary-base;
+}
+.badge__accent {
+  background-color: $accent-base;
+}
+.badge__tertiary {
+  background-color: $lav-base;
+}
+.badge__success {
+  background-color: $success-dark;
+}
+.badge__alert {
+  background-color: $alert-base;
+}
+.badge__warning {
+  background-color: $warning-base;
+}
+
+// table
+.badges__table {
+  border: 1px solid $grey-light;
+  font-weight: 300;
+  font-size: .8em;
+  text-align: left;
+}
+
+.badges__table > thead > tr,
+.badges__table > tbody > tr > td {
+  border: 1px solid $grey-light;
+  padding: .4em;
+}
+
+.badges__table > thead > tr > th {
+  background-color: $grey-light;
+  border: 1px solid $grey-light;
+  color: $grey-dark;
+  padding: .4em;
+  text-transform: uppercase;
+}
+
+.badges__table > tbody > tr > td {
+  color: $primary-base;
+  font-weight: 500;
+
+  &:nth-child(2) {
+    color: $accent-base;
+  }
+}
 
 /*
   badges end
