@@ -4,8 +4,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Ripple</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="../styles/css/nascent.css">
@@ -13,10 +13,85 @@
 
   <body>
     <div class="generic-wrapper" style="padding: 2em">
-      <h2>Ripple</h2>
+
+      <div class="site-btn__groups">
+
+        <h2>Ripple - an effect</h2>
+        <br>
+
+        <h3>A Nascent UI Framework &lt;button> with effect clipping</h3>
+        <button class="c-na-btn c-na-btn--primary-bg u-na--dim u-na--dim ripple-element" data-ripple-clip="true" data-ripple-color="rgba(255, 87, 34, 0.7)">
+          <i class="fa fa-download" aria-hidden="true"></i>
+          Download
+        </button>
+
+        <br><br><br>
+
+        <h3>A Nascent UI Framework &lt;button> without effect clipping</h3>
+        <button class="c-na-btn c-na-btn--secondary-copy c-na-btn--bd u-na--dim ripple-element" data-ripple-color="rgba(3,169,244,0.7)">
+          <i class="fa fa-download" aria-hidden="true"></i>
+          Download
+        </button>
+
+        <div style="width: 75%; margin: 1rem auto; text-align: left;">
+        <h3>Requirements and Notes</h3>
+        <p>
+          <ul>
+            <li>The ripple effect can be set on most any element that can
+             receive a click event, <strong>as long as it is non-statically positioned.</strong> That requirement is one of two reasons that there
+              is another version of this effect ( ripple-body-child ) which does
+              not have that requirement.
+            </li>
+            <li>In order for the ripple effect to be set on an element, the
+             element must be given a <code>class="ripple-element"</code>.
+            </li>
+            <li>You must also include the ripple.js, and ripple.css files in
+             your application for the effect to be applied.</li>
+            <li>NOTE: with this version of ripple, if and element receiving the
+              ripple effect has an accessibility outline on focus, that outline
+              will expand with the scaling of the effect. For this reason, there
+              is another version of this effect ( ripple-body-child ) which does
+              not have this side-effect.
+                <br>Other than that, this method works as expected.
+            </li>
+          </ul>
+        </p>
+        <h3>Defaults</h3>
+          <ul>
+            <li>The default color for the ripple effect is white with
+             transparency - <code>rgba(255, 255, 255, 0.5)</code>.
+             <br>You can customize the color with any valid hsla, or
+              rgba color - see "Customizations" below.
+            </li>
+            <li>The <strong>default</strong> effect will:
+              <br> - be circular;
+              <br> - emanate from where the mouse was clicked, and extend beyond
+               the boundaries of the element to which the effect was applied;
+              <br> - terminate in a size twice that of the largest dimension of
+              the width and height of the element to which it is applied;
+              <br>If you're comfortable with CSS properties, you can
+              easily modify the scale property to produce different effect sizes
+               and elliptical shapes by changing the values and number of
+                parameters for the scale property in ripple.js.
+            </li>
+          </ul>
+        <h3>Customizations</h3>
+          <ol>
+            <li><strong>Color:</strong> you can specify a custom hsla, or rgba color by including
+              the custom data attribute
+               <code>data-ripple-color="hsla(h, s%, l%, a)/rgba(r, g, b, a)"</code>
+                 to the element on which the effect is to be applied.
+            </li>
+            <li><strong>Effect Clipping:</strong> you can specify that the effect be clipped, i.e., not extend past the boundaries of the element to which the
+              effect will be applied, by simply adding the custom data attribute
+               <code>data-ripple-clip="true"</code> to the element on which the
+                effect is to be applied.</li>
+          </ol>
+
+      </div>
 
     </div> <!-- end .generic-wrapper -->
 
-    <script src="../javascript/filename.js" type="text/javascript"></script>
+    <script src="../javascript/ripple.js" type="text/javascript"></script>
   </body>
 </html>
