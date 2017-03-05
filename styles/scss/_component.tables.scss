@@ -1,19 +1,19 @@
-div{
+.div-table{
   border: 1px solid #01579b;
   display: inline-block;
 }
 
-table, td{
-  background-color: #e0cdec;
+.table-class, .td-class{
   border-bottom: 1px solid #01579b;
   border-collapse: collapse;
   padding: 8px 20px 8px;
+  background-color: #e0cdec;
 }
 
-thead td{
+.table-head .td-class{
   background-color: #641053;
-  color: #e0cdec;
   font-weight: bold;
+  color: #e0cdec;
 }
 
 .row-a:hover,
