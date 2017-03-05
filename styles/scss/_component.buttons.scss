@@ -16,18 +16,16 @@ input[type="reset"] {
 }
 
 .c-na-btn {
-  background-color: transparent; /* reset default; change to add it back or add a color class */
+  background-color: $white; /* reset default; change to add it back or add a color class */
   border-color: currentColor;
   color: inherit;
   display: inline-block;
   font-family: inherit;
   font-size: 1rem;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  margin-bottom: 0.45rem;
+  margin: .4em .5em;
   min-width: 1.5rem;
   outline: none;
-  padding: .55em 1.25em;
+  padding: .75em 1.15em;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -48,7 +46,9 @@ input[type="reset"] {
 
   /* targets any icons in a button */
   & i {
+    display: inline-block;
     margin-right: .06em;
+    vertical-align: middle;
   }
 
   &:not(.is-disabled):focus {
@@ -58,7 +58,7 @@ input[type="reset"] {
 
   &--primary-bg {
     background-color: $primary-base;
-    color: $white;
+    color: $primary-light;
 
     &.is-disabled {
       background-color: $grey-med;
@@ -67,7 +67,17 @@ input[type="reset"] {
   }
 
   &--secondary-bg {
-    background-color: $secondary-base;
+    background-color: $secondary-light;
+    color: $primary-base;
+
+    &.is-disabled {
+      background-color: $grey-med;
+      color: $white;
+    }
+  }
+
+  &--accent-bg {
+    background-color: $accent-base;
     color: $white;
 
     &.is-disabled {
@@ -77,12 +87,11 @@ input[type="reset"] {
   }
 
   &--underline {
-    background-color: transparent;
     border-bottom: .25em solid;
     box-shadow: none;
 
     &::after {
-      background-color: $secondary-light;
+      background-color: $accent-base;
       bottom: -.25em;
       content: '';
       height: .25em;
@@ -90,7 +99,7 @@ input[type="reset"] {
       position: absolute;
       transform: scaleX(0);
       transform-origin: left;
-      transition: transform 250ms ease-in-out;
+      transition: transform 300ms ease-in-out;
       width: 100%;
     }
 
@@ -105,6 +114,7 @@ input[type="reset"] {
     &.is-disabled::after {
       background-color: $grey-dark;
     }
+
   }
 
   &--bd-thin {
@@ -122,6 +132,7 @@ input[type="reset"] {
     border-width: .25em;
   }
 
+  /* setting font colors to override the default which is inherit */
   &--primary-copy {
     color: $primary-base;
   }
@@ -130,11 +141,19 @@ input[type="reset"] {
     color: $secondary-base;
   }
 
+  &--accent-copy {
+    color: $accent-base;
+  }
+
+  &--lg {
+    font-size: 1.2rem;
+  }
+
 }
 
-/* demo styles for button groups */
+/* demo styles for button containers */
 .site-btn__groups {
-  color: $black;
+  color: lighten($grey-dark, 20%);
   text-align: center;
 }
 

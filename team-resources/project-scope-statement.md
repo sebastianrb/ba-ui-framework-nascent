@@ -1,4 +1,4 @@
-**Revised:** 3/3/2017 6:40PM
+**Revised:** 3/5/2017 2:11PM
 
 #PROJECT SCOPE STATEMENT
 
@@ -34,13 +34,14 @@
 
 **Teammate Deliverables:** Each individual teammate and their promised elements are listed below:
 
-	- Melissa Miller: alerts, buttons, list groups, modals, and pagination
+	- Melissa Miller: alerts, buttons, modals, and pagination
 	- Hannah Herbst: tables, typography, progress bar, and footer
 	- Bobby Stewart: accordion, tabs, n/a
-	- Wissam Salem: 12-column grid, cards, and display page
-	- Sebastian Ramirez-Brunner: breadcrumbs, form, carousels
+	- Wissam Salem: 12-column grid and display page
+	- Sebastian Ramirez-Brunner: form, carousels
+	- Lukas Andersen - list groups
 	- Nik O'Donnel: scrollspy, n/a
-	- Denine Guy: n/a
+	- Denine Guy: breadcrumbs, dropdown, badges
 
 This is subject to change. 
 

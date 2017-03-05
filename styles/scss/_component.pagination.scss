@@ -1,9 +1,160 @@
-/*
-  pagination start
- */
+%pagination {
+  color: $primary-base;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 44rem;
+  padding: 1rem;
+  text-align: center;
+}
 
-/* css or scss here */
+/**
+  STYLING FOR PREVIOUS AND NEXT ICONS
+**/
+.c-na-pagination__icon {
+  width: 1rem;
 
-/*
-  pagination end
- */
+  /* until I can figure out how to write the SVG for the opposite direction ;) */
+  &--prev {
+    transform: scaleX(-1);
+  }
+
+  &:hover path {
+    stroke: $secondary-base;
+  }
+}
+
+.c-na-pagination__icon path {
+  fill: none;
+  stroke: currentColor; /* fallback */
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+
+.c-na-pagination__list {
+  @include flex($align: center, $justify: space-around);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  &.tight {
+    justify-content: center;
+  }
+}
+
+.c-na-pagination__link {
+  color: inherit;
+  display: block;
+  position: relative;
+  padding: .5em;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+
+  /* this is the "focus" indicator */
+  &::after {
+    background-color: $secondary-base;
+    bottom: -.7em;
+    content: '';
+    height: .15em;
+    left: 50%;
+    position: absolute;
+    transform: scaleX(0) translateX(-50%);
+    transform-origin: -50%;
+    transition: transform 300ms ease-in-out;
+    width: 2.1em;
+  }
+
+  &:hover {
+    background-color: lighten($secondary-base, 30%);
+    color: $primary-dark;
+  }
+
+  &:focus {
+    outline: none;
+
+    &::after {
+      transform: scaleX(1) translateX(-50%);
+    }
+
+    & path {
+      stroke: #777;
+    }
+  }
+}
+
+/* basic default pagination */
+.c-na-pagination {
+  @extend %pagination;
+}
+
+/* rounded page numbers */
+.c-na-pagination--round {
+  @extend %pagination;
+
+  /* makes sure the next and previous arrows are not targeted */
+  & .c-na-pagination__link:not(.c-na-pagination__link--dir) {
+    border: 1px solid $primary-base;
+    border-radius: 50%;
+    height: 2.3em;
+    line-height: 2.3em;
+    padding: 0;
+    width: 2.3em;
+  }
+}
+
+/* squared page numbers */
+.c-na-pagination--square {
+  @extend %pagination;
+
+  /* makes sure the next and previous arrows are not targeted */
+  & .c-na-pagination__link:not(.c-na-pagination__link--dir) {
+    border: 1px solid $primary-base;
+    min-height: 2.15em;
+    min-width: 2.15em;
+  }
+
+}
+
+/**
+  STYLING FOR ELEMENTS WHICH CONTAIN THE PAGE LINKS
+**/
+
+/* containing elements for each page's link */
+.c-na-pagination__item {
+  @include flex($align: center, $justify: center);
+  display: inline-flex;
+  transition: all 300ms ease-in-out;
+
+  /* targets the element for previous and next pages */
+  &--dir {
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+
+    &:hover path {
+      stroke: $secondary-base;
+    }
+
+    & .c-na-pagination__link {
+      @include flex($align: center, $justify: center);
+      transition: all 300ms ease-in-out;
+    }
+    & .c-na-pagination__link:hover {
+      background-color: transparent;
+    }
+  }
+
+}
+
+/* currently active page */
+.c-na-pagination--current {
+  color: #fff;
+  background: $primary-base;
+}
+
+/* for items that should represent a group of links and display ... */
+.c-na-pagination__link--collection::before {
+  content: '...';
+}

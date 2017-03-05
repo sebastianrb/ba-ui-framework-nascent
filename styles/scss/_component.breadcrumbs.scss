@@ -3,7 +3,176 @@
  */
 
 /* css or scss here */
+section {
+  padding-bottom: 3em;
+}
 
+// table
+.breadcrumbs__table {
+  border: 1px solid $grey-light;
+  font-weight: 300;
+  font-size: .8em;
+  margin: 2em auto;
+  text-align: left;
+}
+
+.breadcrumbs__table > thead > tr,
+.breadcrumbs__table > tbody > tr > td {
+  border: 1px solid $grey-light;
+  padding: .4em;
+}
+
+.breadcrumbs__table > thead > tr > th {
+  background-color: $grey-light;
+  border: 1px solid $grey-light;
+  color: $grey-dark;
+  padding: .4em;
+  text-transform: uppercase;
+}
+
+.breadcrumbs__table > tbody > tr > td {
+  color: $primary-base;
+  font-weight: 500;
+
+  &:nth-child(2) {
+    text-align: center;
+  }
+
+  &:nth-child(3) {
+    color: $accent-base;
+  }
+}
+
+// wrapper
+.breadcrumbs__wrapper {
+  background-color: $white;
+  border: 1px solid $grey-light;
+  border-radius: 3px;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+// breadcrumb list items
+.breadcrumbs__list > li {
+  display: inline-block;
+  position: relative;
+
+  &::after,
+  &::before {
+    padding: 0 .5em 0 .5em;
+  }
+
+  &:last-child > a {
+    color: $grey-dark;
+    font-weight: 600;
+  }
+
+  &:last-child::after {
+    content: '';
+  }
+
+  &::after {
+    color: $grey-med;
+  }
+}
+
+// breadcrumb dividers
+.breadcrumbs__list--slash > li {
+  &::after {
+    content: '/';
+  }
+
+  &:last-child::after {
+    content: '';
+  }
+
+  &:hover {
+    color: red;
+  }
+}
+
+.breadcrumbs__list--greater > li {
+  &::after {
+    content: '\276F';
+  }
+}
+
+.breadcrumbs__list--arrow > li {
+  &::after {
+    content: '\25B8';
+  }
+}
+
+.breadcrumbs__list--separator > li {
+  &::after {
+    content: '|';
+  }
+}
+
+.breadcrumbs__list--double > li {
+  &::after {
+    content: "\226B";
+  }
+}
+
+// color schemes
+.breadcrumbs__item > a {
+  color: $lav-base;
+  font-weight: 200;
+  text-decoration: none;
+
+  &:hover {
+    color: $lav-light;
+  }
+}
+
+.breadcrumbs__pink {
+  .breadcrumbs__item > a {
+    color: $accent-base;
+    font-weight: 200;
+    text-decoration: none;
+
+    &:hover {
+      color: $accent-light;
+    }
+  }
+
+  .breadcrumbs__item::after {
+    color: $accent-dark;
+  }
+}
+
+.breadcrumbs__lavendar {
+  .breadcrumbs__item > a {
+    color: $secondary-base;
+    font-weight: 200;
+    text-decoration: none;
+
+    &:hover {
+      color: $secondary-light;
+    }
+  }
+
+  .breadcrumbs__item::after {
+    color: $secondary-dark;
+  }
+}
+
+.breadcrumbs__blue {
+  .breadcrumbs__item > a {
+    color: $primary-base;
+    font-weight: 200;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary-light;
+    }
+  }
+
+  .breadcrumbs__item::after {
+    color: $accent-base;
+  }
+}
 /*
   breadcrumbs end
  */
