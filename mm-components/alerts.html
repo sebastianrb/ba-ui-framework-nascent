@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="../styles/css/nascent.css">
+    <!-- just temp style tag for the demo page -->
+    <style>
+      body {
+        font-family: 'Roboto';
+        font-weight: 300;
+      }
+    </style>
+  </head>
+
   </head>
 
   <body>
@@ -16,19 +25,19 @@
         <p>There are 4 types of alerts: basic, warning, serious (failure of something, something that should not happen, or something serious like a tornado warning for a weather site), and success. No matter which variations you choose from below (borders, no border, with icons, etc.), the type of alert displayed is changed with one simple class on the alert container.</p>
 
         <ul>
-          <li><strong class="u-na--uppercase">minimal:</strong> use the class <code>c-na-alert--minimal</code></li>
-          <li><strong class="u-na--uppercase">basic:</strong> use the class <code>c-na-alert--basic</code></li>
-          <li><strong class="u-na--uppercase">warning:</strong> use the class <code>c-na-alert--warning</code></li>
-          <li><strong class="u-na--uppercase">something serious / failure:</strong> use the class <code>c-na-alert--serious</code></li>
-          <li><strong class="u-na--uppercase">success:</strong> use the class <code>c-na-alert--success</code></li>
+          <li><strong>minimal:</strong> use the class <code>c-na-alert--minimal</code></li>
+          <li><strong>basic:</strong> use the class <code>c-na-alert--basic</code></li>
+          <li><strong>warning:</strong> use the class <code>c-na-alert--warning</code></li>
+          <li><strong>something serious / failure:</strong> use the class <code>c-na-alert--serious</code></li>
+          <li><strong>success:</strong> use the class <code>c-na-alert--success</code></li>
         </ul>
 
         <p>
-          <strong class="u-na--uppercase">Note:</strong> By default, alerts have a max-width set so they will never take up the full page. To have them take up the full width of their container, add the class <code>u-na-fw</code> to the alert container.
+          <strong>Note:</strong> By default, alerts have a max-width set so they will never take up the full page. To have them take up the full width of their container, add the class <code>u-na-fw</code> to the alert container.
         </p>
 
         <p>
-          <strong class="u-na--uppercase">Accessibility:</strong> The alerts are a11y friendly. Out of the box, all of the alerts use colors which meet the color contrast requirements to be considered accessible. They all have <code>role="alert"</code>, and the content will be read by a screenreader even if the content within the alert (<em>the text or links, for example</em>) changes dynamically. The dismiss button uses a native <code>button</code> element, which means it can be dismissed by keyboard events when the button is in focus using the <kbd>ENTER</kbd> key or <kbd>SPACEBAR</kbd> without having to add any more JavaScript to do so. The dismiss button has a <code>title</code> attribute so that when sighted users hover over it, they can be sure what it does. It also has an <code>aria-label</code> of "dismiss alert" for screenreaders that do not read <code>title</code> attributes.. Finally, the dismiss button and links within the alert have a very clear focus state, which is the same as the hover state. (They should vary in the future as they can be both focused and hovered at the same time.)
+          <strong>Accessibility:</strong> The alerts are a11y friendly. Out of the box, all of the alerts use colors which meet the color contrast requirements to be considered accessible. They all have <code>role="alert"</code>, and the content will be read by a screenreader even if the content within the alert (<em>the text or links, for example</em>) changes dynamically. The dismiss button uses a native <code>button</code> element, which means it can be dismissed by keyboard events when the button is in focus using the <kbd>ENTER</kbd> key or <kbd>SPACEBAR</kbd> without having to add any more JavaScript to do so. The dismiss button has a <code>title</code> attribute so that when sighted users hover over it, they can be sure what it does. It also has an <code>aria-label</code> of "dismiss alert" for screenreaders that do not read <code>title</code> attributes.. Finally, the dismiss button and links within the alert have a very clear focus state, which is the same as the hover state. (They should vary in the future as they can be both focused and hovered at the same time.)
         </p>
 
         <p>For the basic and icon alert sections, you will see the default state for each type of alert. Following that will just be two examples showing variations, but every alert type can be customized in the same way.</p>
@@ -111,7 +120,7 @@
           </span>
           <p class="c-na-alert__text">
             <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
-            <strong class="c-na-alert--attn">When Beyonce hands us lemons,</strong> we make lemonade.
+            <strong class="c-na-alert--attn">When Beyoncé hands us lemons,</strong> we make lemonade.
           </p>
           <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
         </div>
@@ -189,7 +198,7 @@
           </span>
           <p class="c-na-alert__text">
             <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
-            <strong class="c-na-alert--attn">When Beyonce hands us lemons,</strong> we make lemonade.
+            <strong class="c-na-alert--attn">When Beyoncé hands us lemons,</strong> we make lemonade.
           </p>
           <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
         </div>
@@ -218,7 +227,7 @@
           </span>
           <p class="c-na-alert__text">
             <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
-            When Beyonce hands us lemons, we make lemonade.
+            When Beyoncé hands us lemons, we make lemonade.
           </p>
           <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
         </div>
