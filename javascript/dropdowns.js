@@ -38,7 +38,7 @@
 
     // check if clicked anywhere on the body close the dropdown.
     if(e.target.classList.length === 0) {
-      ul.setAttribute('class', 'dropdown__menu');
+      ul.classList.toggle('dropdown__menu--show');
     };
 
     e.preventDefault();

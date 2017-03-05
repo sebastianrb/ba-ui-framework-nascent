@@ -5,23 +5,22 @@
 /* css or scss here */
 section {
   clear: both;
-  padding-bottom: 3em;
-  margin-bottom: 3em;
+  padding: 1em 0;
 }
 
 //tables
 .dropdowns__table {
+  border: 1px solid $grey-light;
   font-weight: 300;
   font-size: .8em;
-  text-align: left;
-  border: 1px solid $grey-light;
   margin-bottom: 2em;
+  text-align: left;
 }
 
 .dropdowns__table > thead > tr,
 .dropdowns__table > tbody > tr > td {
-    border: 1px solid $grey-light;
-    padding: .4em;
+  border: 1px solid $grey-light;
+  padding: .4em;
 }
 
 .dropdowns__table > thead > tr > th {
@@ -38,8 +37,8 @@ section {
 
   &:nth-child(1),
   &:nth-child(3), {
-    text-align: center;
     color: $accent-base;
+    text-align: center;
   }
 }
 
@@ -51,8 +50,8 @@ section {
 
 .dropdown__container > .dropdown__wrapper {
   display: inline-block;
-  margin-right: 10em;
   float: left;
+  margin-right: 10em;
 }
 .dropdown__container > .dropdown__lavendar {
   display: inline;
@@ -141,24 +140,26 @@ section {
   color: $grey-dark;
   display: block;
   margin: 0;
+  opacity: 0;
   padding: 0;
+  transition:opacity 0.5s linear;
   visibility: hidden;
   width: 100%;
   z-index: 1;
-  opacity: 0;
+
   @include transition(
     opacity 500ms linear,
-    visibility 10s linear 500ms
+    visibility 3s linear 500ms
   )
 }
 
 .dropdown__menu--show {
   opacity: 1;
   visibility: visible;
-  @include transition(
-   opacity 500ms linear,
-   visibility 0s linear
- )
+  @include transition (
+    opacity 500ms linear,
+    visibility 3s linear
+  )
 }
 
 .dropdown__menu--show-left {
@@ -174,8 +175,8 @@ section {
 }
 
 .dropdown__menu--show-top {
-  position: absolute;
   bottom: 100%;
+  position: absolute;
 }
 
 // dropdown list (select option) styles
@@ -220,17 +221,17 @@ section {
 .dropdown__burgundy {
   float: left;
   .dropdown__button {
-      background-color: $white;
-      border: 1px solid $accent-dark;
-      border-radius: 3px;
-      padding: .6em 1em;
-      position: relative;
-      text-align: left;
-      width: 100%;
+    background-color: $white;
+    border: 1px solid $accent-dark;
+    border-radius: 3px;
+    padding: .6em 1em;
+    position: relative;
+    text-align: left;
+    width: 100%;
 
-      &:hover {
-        background-color: $accent-dark;
-        color: $white;
+    &:hover {
+      background-color: $accent-dark;
+      color: $white;
     }
   }
 
