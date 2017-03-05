@@ -1,9 +1,251 @@
-/*
-  modals start
- */
+/* prevents the body from being scrollable while a modal is open */
+body.modal-open {
+  overflow: hidden;
+}
 
-/* css or scss here */
+$mod-bright: #563dd9; /* needed a bright color amongst all of the grey */
+$modal-gradient: linear-gradient(30deg, $mod-bright, #8bb8ef);
 
-/*
-  modals end
- */
+.c-na-modal {
+
+  &__overlay {
+    @include flex($align: center, $justify: center);
+    background-color: rgba($grey-light, .8);
+    // background-color: darken(desaturate(rgba($primary-dark, .6), 5%), 15%);
+    bottom: 0;
+    color: lighten($grey-dark, 15%);
+    left: 0;
+    opacity: 0;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    transition: opacity 400ms ease-in-out;
+    width: 100%;
+    z-index: 1000;
+
+    &.is-closed {
+      display: none;
+    }
+  }
+
+  &__container {
+    background-color: $white;
+    box-shadow: 0 .0625rem .4rem rgba(20, 20, 20, .1), 0 .5rem .9rem 0 rgba(0, 0, 0, .1);
+    max-height: 100%;
+    max-width: 40rem;
+    opacity: 0;
+    position: relative;
+    transform: translateY(35%);
+    transition: opacity 400ms 100ms ease-in-out, transform 400ms 100ms ease-in-out;
+
+    & a {
+      border-bottom: .125rem solid $mod-bright;
+      color: $primary-base;
+      text-decoration: none;
+      transition: all 300ms ease-in-out;
+    }
+
+    & a:hover {
+      border-bottom-color: $primary-base;
+      color: $accent-base;
+    }
+
+    & :focus {
+      outline-color: $primary-base;
+      outline-offset: .125rem;
+      outline-width: 1.5px;
+    }
+  }
+
+  &__header {
+    background-color: $grey-light;
+  }
+
+  &__heading {
+    color: lighten($grey-dark, 20%);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+    padding: .5em 1em;
+    text-transform: capitalize;
+  }
+
+  &__body {
+    line-height: 1.5;
+    overflow-y: scroll;
+    padding: 1em 1.3em;
+  }
+
+  &__figure {
+    margin: 0;
+    // max-height: 100%;
+    padding: 0;
+  }
+
+  &__img {
+    display: block;
+    margin: .5rem auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__footer {
+    @include flex($align: center, $justify: space-around);
+    border-top: .0625rem solid darken($grey-light, 10%);
+
+    & p {
+      padding: 0 1rem;
+    }
+  }
+
+  &__user {
+    @include flex($align: center, $justify: space-between);
+    padding: .5rem;
+    border-left: .0625rem solid darken($grey-light, 10%);
+    text-align: center;
+  }
+
+  &__user-img {
+    border-radius: 50%;
+    display: inline-block;
+    height: 5rem;
+    margin: 0.5rem;
+    width: 5rem;
+  }
+
+  &__u-name {
+
+  }
+
+
+  &__prompts {
+    @include flex($justify: center);
+    padding: 1em;
+    text-align: center;
+
+    &--right {
+      @include flex($justify: flex-end);
+    }
+  }
+
+  &__close {
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.75rem;
+    padding: .15em;
+    position: absolute;
+    right: .3rem;
+    top: .2rem;
+    transition: all 250ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: $mod-bright;
+      transform: scale(1.15);
+    }
+  }
+}
+
+.c-na-modal__btn {
+  font-weight: 400;
+  text-transform: capitalize;
+
+  &:hover {
+    background-color: $white;
+    box-shadow: 0 0 0 .125rem;
+  }
+
+  &.c-na-modal--grad-bg {
+    background-image: $modal-gradient;
+    color: $white;
+
+    &:hover {
+      box-shadow: none;
+      opacity: .8;
+    }
+  }
+
+  &.c-na-modal--grad-bd {
+    border-image: $modal-gradient;
+    border-width: .15rem;
+    border-image-slice: 1;
+    color: $mod-bright;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &::before {
+    background-color: $lav-base;
+    content: '';
+    height: .25em;
+    left: 0;
+    position: absolute;
+    bottom: -.5em;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 200ms ease-in-out;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &:focus::before {
+    transform: scaleY(1);
+  }
+
+}
+
+/* different style for photo container button */
+
+.c-na-modal__container--pho {
+  & .c-na-modal__close {
+    background-color: $grey-dark;
+    border-radius: 50%;
+    color: $grey-light;
+    font-size: 1.5rem;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0;
+    right: -1rem;
+    text-align: center;
+    top: -1rem;
+    width: 2rem;
+  }
+}
+
+
+.mod-fade-in {
+  opacity: 1;
+
+  & .c-na-modal__container {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 100ms;
+  }
+}
+
+/* override btn focus for modals */
+
+.c-na-btn {
+
+  &.c-na-modal__btn:focus {
+    transform: none;
+  }
+}
+
+
+/* demo page styles */
+
+.sitedemo-flex--row {
+  @include flex($justify: space-around, $wrap: wrap);
+  margin: 1.5rem .5rem;
+}
+
+.sitedemo-modal__triggers {
+  margin: .25rem;
+}
+
+.sitedemo-modal_list {
+  list-style: circle;
+}
