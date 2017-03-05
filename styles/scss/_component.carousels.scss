@@ -11,7 +11,8 @@ img {
 }
 
 .carousel.carousel--fade,
-.carousel.carousel--slide {
+.carousel.carousel--slide,
+.carousel.carousel--fade-tn {
     width: 50%;
     position: relative;
     height: auto;
@@ -38,7 +39,8 @@ img {
 }
 
 .carousel--fade__image-view,
-.carousel--slide__image-view {
+.carousel--slide__image-view,
+.carousel--fade-tn__image-view {
     width: 100%;
     position: relative;
     height: auto;
@@ -56,7 +58,8 @@ img {
 
 
 .carousel--fade__image-container,
-.carousel--slide__image-container {
+.carousel--slide__image-container,
+.carousel--fade-tn__image-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -66,7 +69,8 @@ img {
     z-index: 10;
 }
 
-.carousel--fade__image-container {
+.carousel--fade__image-container,
+.carousel--fade-tn__image-container {
     opacity: 0;
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -79,6 +83,7 @@ img {
 }
 
 .carousel--fade__image,
+.carousel--fade-tn__image,
 .carousel--slide__image {
     border-style: none;
     vertical-align: top;
@@ -132,7 +137,9 @@ img {
 .carousel--fade__arrow-prev,
 .carousel--fade__arrow-next,
 .carousel--slide__arrow-prev,
-.carousel--slide__arrow-next {
+.carousel--slide__arrow-next,
+.carousel--fade-tn__arrow-prev,
+.carousel--fade-tn__arrow-next {
     font-size: 1.5em;
     top: 50%;
     position: absolute;
@@ -150,7 +157,13 @@ img {
     align-items: center;
 }
 
-[class^="carousel--fade__arrow-"]:hover {
+.carousel--fade-tn__arrow-prev,
+.carousel--fade-tn__arrow-next {
+    top: 36%
+}
+
+[class^="carousel--fade__arrow-"]:hover,
+[class^="carousel--fade-tn__arrow-"]:hover {
     background: $secondary-light;
 }
 
@@ -159,12 +172,14 @@ img {
 }
 
 .carousel--fade__arrow-prev,
-.carousel--slide__arrow-prev {
+.carousel--slide__arrow-prev,
+.carousel--fade-tn__arrow-prev {
     left: 4%;
 }
 
 .carousel--fade__arrow-next,
-.carousel--slide__arrow-next {
+.carousel--slide__arrow-next,
+.carousel--fade-tn__arrow-next {
     right: 4%;
 }
 
@@ -177,9 +192,46 @@ img {
 }
 
 
-//variable classes
+//thumbnails
+
+.carousel--fade-tn__thumbnails {
+    width: 100%;
+    height: 100px;
+    margin-top: 40px;
+}
+
+.carousel--fade-tn__thumbnails-container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.carousel--fade-tn__thumbnail {
+    width: 25%;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    border: 3px solid $secondary-base;
+}
+
+// .carousel--fade-tn__thumbnail:hover {
+//     transform: scale(1.1);
+// }
+
+.carousel--fade-tn__thumbnail-image {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+
+//variable/javascript classes
 .carousel--fade__image-container-selected,
-.carousel--slide__image-container-selected {
+.carousel--slide__image-container-selected,
+.carousel--fade-tn__image-container-selected {
     position: static;
     z-index: 20;
     opacity: 1;
@@ -189,6 +241,14 @@ img {
 .carousel--slide__bullet--bullet-selected {
     background: $secondary-dark;
 }
+
+.carousel--fade-tn__thumbnail--selected {
+    border: 3px solid $accent-base;
+    transform: translateY(-20px);
+}
+
+
+//animation classes
 
 .slide-to-left {
     animation: toLeft .8s ease;
