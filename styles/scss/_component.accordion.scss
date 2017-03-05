@@ -48,28 +48,25 @@
   color: $white;
 }
 
-.c-na-accordion li:not(:last-of-type) .c-na-accordion__header {
-  border-bottom: 1px solid $grey-med;
+.c-na-accordion__body {
+  transition: all 0.35s ease;
+  padding: 0 1rem;
 }
 
-.c-na-accordion__body {
+.c-na-accordion li:not(:last-child) .c-na-accordion__body {
   border-bottom: 1px solid $grey-med;
-  padding: 0 1rem;
 }
 
 .c-na-accordion__body--open {
   height: auto;
   height: 10rem;
   overflow-y: scroll;
-  transition: all 0.35s ease;
-  border-bottom: 1px solid $grey-med;
+  border-top: 1px solid $grey-med;
 }
 
 .c-na-accordion__body--closed {
   height: 0;
   overflow: hidden;
-  transition: all 0.35s ease;
-  border-bottom: none;
 }
 
 /*
