@@ -1,12 +1,12 @@
 (function() {
     //caceh DOM elements
-    var carouselView = document.querySelector(".carousel--slide");
+    // var carouselView = document.querySelector(".carousel--slide");
     var carouselSlides = Array.from(document.querySelectorAll(".carousel--slide__image-container"));
     var prevButton = document.querySelector(".carousel--slide__arrow-prev");
     var nextButton = document.querySelector(".carousel--slide__arrow-next");
     var navButtons = Array.from(document.querySelectorAll(".carousel--slide__nav-button"));
     var bullets = Array.from(document.querySelectorAll(".carousel--slide__bullet"));
-    var selectedSlide;
+    // var selectedSlide;
     var selectedIndex;
 
     //find selected index based on which slide has the "selected" class
@@ -24,12 +24,12 @@
     setBullet(selectedIndex);
 
     //set event handlers
-    for(var i = 0; i < navButtons.length; i++) {
-        navButtons[i].addEventListener("click", _slideNavigation);
+    for(var k = 0; k < navButtons.length; k++) {
+        navButtons[k].addEventListener("click", _slideNavigation);
     }
 
-    for(var i = 0; i < bullets.length; i++) {
-        bullets[i].addEventListener("click", _bulletNavigation);
+    for(var j = 0; j < bullets.length; j++) {
+        bullets[j].addEventListener("click", _bulletNavigation);
     }
 
     function _slideNavigation(event) {
