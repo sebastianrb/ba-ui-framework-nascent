@@ -25,7 +25,7 @@
  .scrollspy__li {
    color: grey;
    display: inline;
-   font-family: 'futura', serif;
+   font-family: 'Inconsolata', serif;
    font-size: 18px;
    height: 75px;
    line-height: 50px;
@@ -37,7 +37,7 @@
  .scrollspy__a {
    color: grey;
    display: inline;
-   font-family: 'futura', serif;
+   font-family: 'Inconsolata', serif;
    font-size: 18px;
    height: 75px;
    line-height: 50px;
@@ -49,7 +49,7 @@
 .scrollspy__active {
   color: white;
   display: inline;
-  font-family: 'futura', serif;
+  font-family: 'Inconsolata', serif;
   font-size: 18px;
   height: 75px;
   line-height: 50px;
@@ -58,37 +58,48 @@
 }
 //feel free to overwrite if clashes with main pages
 .scrollspy__h2{
-  font-family: Roboto, monospace;
-  margin-top:80px;
+  font-family: 'Inconsolata', serif;
+  margin-top: 80px;
 }
+
+/* these styles will apply to all of the containers of scrollspy demo text */
+/* then you don't need to declare the same properties over and over for each container*/
+.scrollspy__copy {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto; /* left and right auto margin will center it on a page when it reaches max width */
+  max-width: 1000px; /* if someone has a large screen, infinitely wide copy becomes impossible to read */
+  padding: 2rem;
+}
+
 .scrollspy__lorum {
   background-color: $primary-light;
-  height: 100%;
+  // height: 100%;
   overflow: hidden;
-  padding-top:60px;
-  width: 100%;
+  // padding-top:60px;
+  // width: 100%;
 }
 
 .scrollspy__aliquam {
   background-color: $white;
-  height: 100%;
-  padding-top:60px;
-  width: 100%;
+  // height: 100%;
+  // padding-top:60px;
+  // width: 100%;
 }
 
 .scrollspy__morbi {
   background-color: $secondary-light;
-  height: 100%;
-  padding-top:60px;
-  width: 100%;
+  // height: 100%;
+  // padding-top:60px;
+  // width: 100%;
 }
 
 .scrollspy__pellentesque {
   background-color: $lav-light;
-  height: 100%;
+  // height: 100%;
   overflow: hidden;
-  padding-top:60px;
-  width: 100%;
+  // padding-top:60px;
+  // width: 100%;
 }
 /*
   scrollspy end
