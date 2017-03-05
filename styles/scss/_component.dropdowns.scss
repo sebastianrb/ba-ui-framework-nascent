@@ -7,21 +7,37 @@ section {
   padding-bottom: 3em;
 }
 
-table {
+.dropdowns__table {
   font-weight: 300;
   font-size: .8em;
   text-align: left;
-  border: 1px solid lightgray;
+  border: 1px solid $grey-light;
   margin-bottom: 2em;
 }
-tr, th, td {
-    border: 1px solid lightgray;
+
+.dropdowns__table > thead > tr,
+.dropdowns__table > tbody > tr > td {
+    border: 1px solid $grey-light;
     padding: .4em;
 }
 
-thead > tr > th {
+.dropdowns__table > thead > tr > th {
+  background-color: $grey-light;
+  border: 1px solid $grey-light;
+  color: $grey-dark;
+  padding: .4em;
   text-transform: uppercase;
-  background-color: lightgray;
+}
+
+.dropdowns__table > tbody > tr > td {
+  color: $primary-base;
+  font-weight: 500;
+
+  &:nth-child(1),
+  &:nth-child(3), {
+    text-align: center;
+    color: $accent-base;
+  }
 }
 
 // basic wrapper styles
@@ -41,7 +57,7 @@ thead > tr > th {
   width: 100%;
 
   &:hover {
-    background-color: lightgray;
+    background-color: $grey-light;
   }
 }
 
@@ -130,7 +146,7 @@ thead > tr > th {
 }
 
 .dropdown__item:hover {
-  background-color: lightgray;
+  background-color: $grey-light;
 }
 
 .dropdown__item--selected {
@@ -147,7 +163,7 @@ thead > tr > th {
 }
 
 .dropdown__separator {
-  border-top: 1px solid lightgray;
+  border-top: 1px solid $grey-light;
   padding: .8em 1em;
 }
 

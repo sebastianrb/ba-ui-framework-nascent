@@ -3,6 +3,47 @@
  */
 
 /* css or scss here */
+section {
+  padding-bottom: 3em;
+}
+
+// table
+.breadcrumbs__table {
+  font-weight: 300;
+  font-size: .8em;
+  text-align: left;
+  border: 1px solid $grey-light;
+  margin-bottom: 2em;
+}
+
+.breadcrumbs__table > thead > tr,
+.breadcrumbs__table > tbody > tr > td {
+    border: 1px solid $grey-light;
+    padding: .4em;
+}
+
+.breadcrumbs__table > thead > tr > th {
+  background-color: $grey-light;
+  border: 1px solid $grey-light;
+  color: $grey-dark;
+  padding: .4em;
+  text-transform: uppercase;
+}
+
+.breadcrumbs__table > tbody > tr > td {
+  color: $primary-base;
+  font-weight: 500;
+
+  &:nth-child(2) {
+    text-align: center;
+  }
+
+  &:nth-child(3) {
+    color: $accent-base;
+  }
+}
+
+// wrapper
 .breadcrumbs__wrapper {
   background-color: $white;
   border: 1px solid $grey-light;
@@ -11,6 +52,7 @@
   padding: 1em;
 }
 
+// breadcrumb list items
 .breadcrumbs__list > li {
   display: inline-block;
   position: relative;
@@ -34,7 +76,8 @@
   }
 }
 
-.breadcrumbs__list-slash > li {
+// breadcrumb dividers
+.breadcrumbs__list--slash > li {
   &::after {
     content: '/';
   }
@@ -48,33 +91,31 @@
   }
 }
 
-.breadcrumbs__list-greater > li {
+.breadcrumbs__list--greater > li {
   &::after {
     content: '\276F';
   }
 }
 
-
-.breadcrumbs__list-arrow > li {
+.breadcrumbs__list--arrow > li {
   &::after {
     content: '\25B8';
   }
 }
 
-
-.breadcrumbs__list-separator > li {
+.breadcrumbs__list--separator > li {
   &::after {
     content: '|';
   }
 }
 
-
-.breadcrumbs__list-double > li {
+.breadcrumbs__list--double > li {
   &::after {
     content: "\226B";
   }
 }
 
+// color schemes
 .breadcrumbs__item > a {
   color: $lav-base;
   font-weight: 200;
