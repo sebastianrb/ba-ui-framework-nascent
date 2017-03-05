@@ -47,6 +47,9 @@
     var eventTarget = event.target;
     var clickedAccordionHeader = eventTarget; // maybe not, we'll discover
     var parentAccordion;
+    var accordionHeaders;
+    var accordionBodys;
+    var nextSiblingAccordionBody;
     console.log("eventTarget:", eventTarget);
     /* only want to act if .c-na-accordion__header or a direct
         child was clicked */
@@ -76,9 +79,9 @@
       /* should have found the actual .c-na-accordion here */
       /* now get all child .c-na-accordion__header, and c-na-accordion__body
           elements */
-      var accordionHeaders = parentAccordion.querySelectorAll('.c-na-accordion__header');
+      accordionHeaders = parentAccordion.querySelectorAll('.c-na-accordion__header');
       console.log('accordionHeaders:', accordionHeaders);
-      var accordionBodys = parentAccordion.querySelectorAll('.c-na-accordion__body');
+      accordionBodys = parentAccordion.querySelectorAll('.c-na-accordion__body');
       console.log('accordionBodys:', accordionBodys);
       if (parentAccordion.dataset.accordionType == 'accordion') {
         console.log("BINGO ... accordion!");
@@ -86,7 +89,7 @@
             .c-na-accordion__body can be open, and the clicked
             .c-na-accordion__body can be toggled open/closed */
         for (var i=0; i<accordionHeaders.length; i++) {
-          var nextSiblingAccordionBody = accordionHeaders[i].nextElementSibling;
+          nextSiblingAccordionBody = accordionHeaders[i].nextElementSibling;
           console.log('nextSiblingAccordionBody:', nextSiblingAccordionBody);
           if (accordionHeaders[i] == clickedAccordionHeader) {
             console.log('accordionHeaders[i] == clickedAccordionHeader');
@@ -107,8 +110,27 @@
         }
 
       } else if (parentAccordion.dataset.accordionType == 'expandable') {
-
+        console.log("BINGO ... expandable!");
+        /* for the 'expandable' data-accordion-type, all
+            .c-na-accordion__body can be opened regardless of others'
+            state, and the clicked .c-na-accordion__body can be toggled
+            open/closed */
+        for (var i=0; i<accordionHeaders.length; i++) {
+          nextSiblingAccordionBody = accordionHeaders[i].nextElementSibling;
+          console.log('nextSiblingAccordionBody:', nextSiblingAccordionBody);
+          if (accordionHeaders[i] == clickedAccordionHeader) {
+            console.log('accordionHeaders[i] == clickedAccordionHeader');
+            if (nextSiblingAccordionBody.classList.contains('c-na-accordion__body--closed')) {
+              _swapClass(nextSiblingAccordionBody, 'c-na-accordion__body--closed', 'c-na-accordion__body--open');
+              accordionHeaders[i].classList.add('c-na-accordion__header--active');
+            } else if (nextSiblingAccordionBody.classList.contains('c-na-accordion__body--open')) {
+              _swapClass(nextSiblingAccordionBody, 'c-na-accordion__body--open', 'c-na-accordion__body--closed');
+              accordionHeaders[i].classList.remove('c-na-accordion__header--active');
+            }
+          }
+        }
       }
+
     } else {
       /* neither .c-na-accordion__header, nor direct child was clicked */
       return;
