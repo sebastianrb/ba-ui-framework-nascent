@@ -3,7 +3,104 @@
  */
 
 /* css or scss here */
+.scrollspy__body{
+  height: 100%;
+  margin-top: 0;
+  padding: 0;
+  width: 100%;
+}
 
+.scollspy__nav {
+  background-color: $accent-base;
+  height: 75px;
+  margin-top: 0;
+  position: fixed;
+  width: 100%;
+ }
+
+ .scollspy__ul {
+   margin: 15px 0 0 0;
+ }
+
+ .scrollspy__li {
+   color: grey;
+   display: inline;
+   font-family: 'Inconsolata', serif;
+   font-size: 18px;
+   height: 75px;
+   line-height: 50px;
+   list-style: none;
+   margin: 0 50px 0 0;
+   text-decoration: none;
+ }
+
+ .scrollspy__a {
+   color: grey;
+   display: inline;
+   font-family: 'Inconsolata', serif;
+   font-size: 18px;
+   height: 75px;
+   line-height: 50px;
+   list-style: none;
+   margin: 0 50px 0 0;
+   text-decoration: none;
+ }
+
+.scrollspy__active {
+  color: white;
+  display: inline;
+  font-family: 'Inconsolata', serif;
+  font-size: 18px;
+  height: 75px;
+  line-height: 50px;
+  margin: 0 50px 0 0;
+  text-decoration: none;
+}
+//feel free to overwrite if clashes with main pages
+.scrollspy__h2{
+  font-family: 'Inconsolata', serif;
+  margin-top: 80px;
+}
+
+/* these styles will apply to all of the containers of scrollspy demo text */
+/* then you don't need to declare the same properties over and over for each container*/
+.scrollspy__copy {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto; /* left and right auto margin will center it on a page when it reaches max width */
+  max-width: 1000px; /* if someone has a large screen, infinitely wide copy becomes impossible to read */
+  padding: 2rem;
+}
+
+.scrollspy__lorum {
+  background-color: $primary-light;
+  // height: 100%;
+  overflow: hidden;
+  // padding-top:60px;
+  // width: 100%;
+}
+
+.scrollspy__aliquam {
+  background-color: $white;
+  // height: 100%;
+  // padding-top:60px;
+  // width: 100%;
+}
+
+.scrollspy__morbi {
+  background-color: $secondary-light;
+  // height: 100%;
+  // padding-top:60px;
+  // width: 100%;
+}
+
+.scrollspy__pellentesque {
+  background-color: $lav-light;
+  // height: 100%;
+  overflow: hidden;
+  // padding-top:60px;
+  // width: 100%;
+}
 /*
   scrollspy end
  */
