@@ -1,9 +1,50 @@
-/*
-  typography start
- */
+.display-font{
+  font-family: 'Inconsolata';
+}
 
-/* css or scss here */
+.body-font{
+  font-family: 'Montserrat';
+}
 
-/*
-  typography end
- */
+.display-xtralarge{
+  font-size: 30px;
+}
+
+.display-large{
+  font-size: 26px;
+}
+
+.display-medium{
+  font-size: 24px;
+}
+
+.display-small{
+  font-size: 20px;
+}
+
+.body-xtralarge{
+  font-size: 24px;
+}
+
+.body-large{
+  font-size: 21px;
+}
+
+.body-medium{
+  font-size: 17px;
+}
+
+.body-small{
+  font-size: 14px;
+}
+
+.typography-box{
+  border: 1px solid black;
+  display: block;
+  margin: auto;
+  max-width: 500px;
+  padding: 5px;
+  text-align: center;
+}
+
+
