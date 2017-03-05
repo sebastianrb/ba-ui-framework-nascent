@@ -1,9 +1,29 @@
-/*
-  tables start
- */
+div{
+  border: 1px solid #01579b;
+  display: inline-block;
+}
 
-/* css or scss here */
+table, td{
+  background-color: #e0cdec;
+  border-bottom: 1px solid #01579b;
+  border-collapse: collapse;
+  padding: 8px 20px 8px;
+}
 
-/*
-  tables end
- */
+thead td{
+  background-color: #641053;
+  color: #e0cdec;
+  font-weight: bold;
+}
+
+.row-a:hover,
+.row-b:hover,
+.row-c:hover{
+  color: #6f83f1 !important;
+}
+
+.column-a:hover,
+.column-b:hover,
+.column-c:hover{
+  color: blue;
+}

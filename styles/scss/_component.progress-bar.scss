@@ -1,9 +1,74 @@
-/*
-  progress-bar start
- */
+.progress-bar{
+  background-color: white;
+  display: inline-block;
+  padding: 25px;
+  position: relative;
+}
 
-/* css or scss here */
+.bar{
+  background-color: #641053;
+  border: 1px solid black;
+  bottom: 1px;
+  color: blue;
+  display: inline-block;
+  height: 8px;
+  position: relative;
+  width: 80px;
+}
 
-/*
-  progress-bar end
- */
+.hidden{
+  background-color: #f2b4e6;
+  border-radius: 20px;
+  height: 8px;
+  opacity: 0.6;
+  position: absolute;
+  right: 30px;
+  top: 33px;
+  width: 10px;
+  z-index: 1000;
+}
+
+#bar-one{
+  left: 26px;
+}
+
+#bar-two{
+  left: 133px;
+}
+
+#bar-three{
+  left: 240px;
+}
+
+#bar-four{
+  left: 347px;
+}
+
+.circle{
+  color: #6f83f1;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+/* *** *** *** *** *** *** */
+
+.percentage-bar{
+  padding: 25px;
+}
+
+#progress {
+  background-color: #363c6f;
+  border: 1px solid gray;
+  width: 30%;
+
+}
+
+#progress-bar {
+  background-color: #ccd3fa;
+  border-radius: 20px;
+  color: white;
+  height: 10px;
+  line-height: 30px;
+  text-align: center;
+  width: 0%;
+}
