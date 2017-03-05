@@ -13,7 +13,7 @@ section {
   border: 1px solid $grey-light;
   font-weight: 300;
   font-size: .8em;
-  margin-bottom: 2em;
+  margin: 2em auto;
   text-align: left;
 }
 
@@ -59,11 +59,13 @@ section {
   margin-right: 10em;
 }
 
-// button styles
-.dropdown__button {
+// button styles and hover state for arrowss
+.dropdown__button,
+.dropdown__button--selected {
   background-color: $white;
-  border: 1px solid $primary-dark;
+  border: 1px solid $primary-light;
   border-radius: 3px;
+  color: $grey-med;
   padding: .6em 1em;
   position: relative;
   text-align: left;
@@ -91,7 +93,30 @@ section {
   }
 }
 
-.dropdown__button > span {
+.dropdown__button--selected {
+  background-color: $primary-dark;
+  color: $white;
+  position: relative;
+
+    .dropdown__arrow--down {
+      border-top: .4em solid $white;
+    }
+
+    .dropdown__arrow--left {
+      border-right: .4em solid $white;
+    }
+
+    .dropdown__arrow--right {
+      border-left: .4em solid $white;
+    }
+
+    .dropdown__arrow--up {
+      border-bottom: .4em solid $white;
+    }
+}
+
+.dropdown__button > span,
+.dropdown__button--selected > span {
   display: inline-block;
   height: 0;
   position: absolute;
@@ -134,10 +159,10 @@ section {
 // dropdown menu styles
 .dropdown__menu {
   background: white;
-  border: 1px solid $primary-dark;
+  border: 1px solid $primary-light;
   border-radius: 3px;
   box-sizing: border-box;
-  color: $grey-dark;
+  color: $grey-med;
   display: block;
   margin: 0;
   opacity: 0;
@@ -212,10 +237,15 @@ section {
 }
 
 .dropdown__alignment {
-  float:left;
-  margin: 0em 1em ;
+  clear: both;
+  margin: 5em auto;
+  width: 75%;
 }
 
+.dropdown__alignment > .dropdown__wrapper {
+  float: left;
+  margin: 0em 2em ;
+}
 
 //color schemes
 .dropdown__burgundy {
@@ -274,3 +304,7 @@ section {
     text-transform: uppercase;
   }
 }
+
+/*
+  dropdown end
+ */

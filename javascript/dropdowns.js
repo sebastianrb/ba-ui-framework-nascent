@@ -33,6 +33,7 @@
         selection = e.target.innerText;
         button = e.target.parentNode.previousElementSibling;
         button.firstChild.textContent = selection;
+        button.setAttribute('class', 'dropdown__button--selected');
         ul.classList.toggle('dropdown__menu--show');
     }
 

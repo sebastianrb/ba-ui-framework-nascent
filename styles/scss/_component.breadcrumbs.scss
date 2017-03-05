@@ -9,17 +9,17 @@ section {
 
 // table
 .breadcrumbs__table {
+  border: 1px solid $grey-light;
   font-weight: 300;
   font-size: .8em;
+  margin: 2em auto;
   text-align: left;
-  border: 1px solid $grey-light;
-  margin-bottom: 2em;
 }
 
 .breadcrumbs__table > thead > tr,
 .breadcrumbs__table > tbody > tr > td {
-    border: 1px solid $grey-light;
-    padding: .4em;
+  border: 1px solid $grey-light;
+  padding: .4em;
 }
 
 .breadcrumbs__table > thead > tr > th {
@@ -173,32 +173,6 @@ section {
     color: $accent-base;
   }
 }
-
-
-// .breadcrumbs__item::before,
-// .breadcrumbs__item::after {
-//     border-right: 1px solid #666666;
-//     content: '';
-// /*     display: block; */
-//     height: 50%;
-//     position: absolute;
-//     left: 50;
-//     right: 20;
-//     top: 0;
-//     z-index: -1;
-//     transform: skewX(45deg);
-// }
-// .breadcrumbs__item::after {
-//     bottom: 0;
-//     top: auto;
-//     transform: skewX(-45deg);
-// }
-//
-// .breadcrumbs__item:last-of-type::before,
-// .arrows li:last-of-type::after {
-//     display: none;
-// }
-
 /*
   breadcrumbs end
  */
