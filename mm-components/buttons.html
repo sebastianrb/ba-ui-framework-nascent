@@ -4,19 +4,147 @@
   <head>
     <meta charset="UTF-8">
     <title>Buttons</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="../styles/css/nascent.css">
+    <!-- just temp style tag for the demo page -->
+    <style>
+      body {
+        font-family: 'Roboto';
+        font-weight: 300;
+      }
+    </style>
+  </head>
+
   </head>
 
   <body>
     <div class="generic-wrapper" style="padding: 2em">
       <h2>Buttons</h2>
+      <h3>Basic Buttons (default)</h3>
+      <section>
+        <h4>Background and no Border</h4>
+        <p>To add the background color, append the class <code>c-na-btn--primary-bg</code>, <code>c-na-btn--secondary-bg</code>, or <code>c-na-btn--accent-bg</code> and change those colors in your stylesheet to match your project. By default all elements with the class <code>c-na-btn</code> have a background color of white.</p>
 
-    </div> <!-- end .generic-wrapper -->
+        <div class="site-btn__groups">
+          <button class="c-na-btn c-na-btn--primary-bg u-na--dim">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn c-na-btn--accent-bg u-na--dim">Accent</a>
+          <button class="c-na-btn c-na-btn--primary-bg u-na--dim is-disabled" disabled>disabled</button>
+        </div>
+      </section>
 
-    <script src="../javascript/filename.js" type="text/javascript"></script>
+      <section>
+        <h4>Underlined</h4>
+        <p>Append the class <code>c-na-btn--underline</code></p>
+        <div class="site-btn__groups u-na--uppercase">
+          <button class="c-na-btn c-na-btn--primary-copy c-na-btn--underline u-na--dim">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn c-na-btn--secondary-copy c-na-btn--underline u-na--dim">A link</a>
+          <button class="c-na-btn c-na-btn--underline is-disabled u-na--dim" disabled>disabled</button>
+        </div>
+      </section>
+
+      <section>
+        <h4>With a thin border</h4>
+        <p>Append the class <code>c-na-btn--bd-thin</code></p>
+        <div class="site-btn__groups">
+          <button class="c-na-btn c-na-btn--bd-thin c-na-btn--accent-copy u-na--dim">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn c-na-btn--bd-thin u-na--dim">A link</a>
+          <button class="c-na-btn u-na--dim c-na-btn--bd-thin is-disabled" disabled>disabled</button>
+        </div>
+      </section>
+
+      <section>
+        <h4>With a normal border</h4>
+        <p>Append the class <code>c-na-btn--bd</code></p>
+        <div class="site-btn__groups">
+          <button class="c-na-btn c-na-btn--secondary-copy c-na-btn--bd u-na--dim">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn c-na-btn--bd u-na--dim">A link</a>
+          <button class="c-na-btn c-na-btn--bd u-na--dim is-disabled" disabled>disabled</button>
+        </div>
+      </section>
+
+      <section>
+        <h4>With a thick border</h4>
+        <p>Append the class <code>c-na-btn--bd-thick</code></p>
+
+        <div class="site-btn__groups">
+          <button class="c-na-btn c-na-btn--primary-copy c-na-btn--bd-thick u-na--dim">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn c-na-btn--secondary-copy c-na-btn--bd-thick u-na--dim">A link</a>
+          <button class="c-na-btn c-na-btn--bd-thick u-na--dim is-disabled" disabled>disabled</button>
+        </div>
+      </section>
+
+      <section>
+        <h4>Pill-shaped buttons</h4>
+        <p>Append the class <code>u-na-br--pill</code></p>
+
+        <div class="site-btn__groups">
+          <button class="c-na-btn c-na-btn--bd  u-na--dim u-na-br--pill">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn c-na-btn--primary-bg u-na--dim u-na-br--pill">A link</a>
+          <button class="c-na-btn c-na-btn--primary-bg u-na--dim u-na-br--pill is-disabled" disabled>disabled</button>
+        </div>
+      </section>
+
+      <section>
+        <h4>With slightly rounded corners</h4>
+        <p>Append the class <code>u-na-br--rounded</code></p>
+
+        <div class="site-btn__groups">
+          <button class="c-na-btn c-na-btn--primary-bg u-na--dim u-na--bd u-na-br--rounded">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn u-na--dim u-na--bd u-na-br--rounded">A link</a>
+          <button class="c-na-btn u-na--dim u-na--bd-thin u-na-br--rounded is-disabled" disabled>disabled</button>
+        </div>
+      </section>
+
+      <section>
+        <h4>Larger buttons</h4>
+        <p>Append the class <code>c-na-btn--lg</code></p>
+
+        <div class="site-btn__groups">
+          <button class="c-na-btn c-na-btn--primary-bg c-na-btn--underline c-na-btn--lg u-na--dim">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <a href="#" class="c-na-btn  c-na-btn--accent-copy c-na-btn--lg c-na-btn--bd u-na--dim u-na-br--pill">Publish</a>
+          <button class="c-na-btn c-na-btn--underline  c-na-btn--secondary-copy c-na-btn--lg u-na--dim">Cancel</button>
+        </div>
+      </section>
+
+      <section>
+        <h4>Full width buttons</h4>
+        <p>Append the class <code>u-na--fw</code></p>
+
+        <div class="site-btn__groups">
+          <button class="c-na-btn c-na-btn--bd-thick c-na-btn--primary-copy c-na-btn--lg u-na-br--rounded u-na--dim u-na--fw">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            Download
+          </button>
+          <button class="c-na-btn c-na-btn--underline c-na-btn--primary-copy c-na-btn--lg u-na--dim u-na--fw">Submit Your Order</button>
+        </div>
+      </section>
+
+    </div> <!-- end generic wrapper -->
+
   </body>
 </html>

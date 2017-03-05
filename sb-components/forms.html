@@ -13,12 +13,62 @@
 
   <body>
     <div class="generic-wrapper" style="padding: 2em">
-      <h2>Forms</h2>
-      <form class="">
-      <p>derp</p>
-            <div class="form-row"></div>
-          <label></label>
-          <input type="text" name="text-input" id="text-input">
+      <div class="component-intro">
+        <h2 class="component-intro__header">Form Component</h2>
+        <p class="component-intro__description">This is a form component, exhibiting an array of different form elements.</p>
+        <p class="component-intro__description">Each input should be wrapped in a div with class <code>form__row</code>. New inputs can be added easily simply by creating a new row and then building out the appropriate form controls.</p>
+        <p class="component-intro__description">Checkboxes and radio buttons should be wrapped in label elements. In addition, there should be a span and check div inside each of these wrapper labels.</p>
+      </div>
+      <form class="form">
+            <div class="form__row">
+              <label class="form__label" for="text-input">Text Field</label>
+              <input type="text" name="text-input" id="text-input" class="form__text-input">
+            </div>
+            <div class="form__row">
+              <label class="form__label" for="text-area">Text Area</label>
+              <textarea id="text-area" class="form__text-area" rows="6"></textarea>
+            </div>
+            <div class="form__row">
+              <label class="form__label" for="select-input">Select Input</label>
+              <select name="select-input" id="select-input" class="form__select-input">
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
+              </select>
+            </div>
+            <div class="form__row">
+              <label class="form__label form__label--radio-caption">Radio Input</label>
+              <label class="form__label form__label--radio-wrapper" for="radio-input-1">
+                <span class="form__radio-span">Option 1</span>
+                <input type="radio" name="radio-input" class="form__radio-input" id="radio-input-1">
+                <div class="form__radio-button-div">
+                  <div class="form__radio-button-check"></div>
+                </div>
+              </label>
+              <label class="form__label form__label--radio-wrapper" for="radio-input-2">
+                <span class="form__radio-span">Option 2</span>
+                <input type="radio" name="radio-input" class="form__radio-input" id="radio-input-2">
+                <div class="form__radio-button-div">
+                  <div class="form__radio-button-check"></div>
+                </div>
+              </label>
+              <label class="form__label form__label--radio-wrapper" for="radio-input-3">
+                <span class="form__radio-span">Option 3</span>
+                <input type="radio" name="radio-input" class="form__radio-input" id="radio-input-3">
+                <div class="form__radio-button-div">
+                  <div class="form__radio-button-check"></div>
+                </div>
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="form__label form__label--checkbox-wrapper" for="checkbox-input">
+                <span class="form__checkbox-span">Checkbox Input</span>
+                <input type="checkbox" name="checkbox-input" class="form__checkbox-input" id="checkbox-input">
+                <div class="form__checkbox-div">
+                  <div class="form__checkbox-check"></div>
+                </div>
+              </label>
+            </div>
       </form>
     </div> <!-- end .generic-wrapper -->
 

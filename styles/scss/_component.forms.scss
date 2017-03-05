@@ -1,1 +1,166 @@
+//intro styles
+.component-intro {
+    margin-bottom: 50px;
+}
 
+
+//general form styles
+.form {
+    border-top: 8px solid $primary-base;
+    width: 50%;
+    max-width: 800px;
+    padding: 60px 35px 20px;
+    background: radial-gradient(circle, white, $grey-light);
+    color: $primary-dark;
+    font-weight: 100;
+    font-size: 1.1rem;
+    min-width: 670px;
+    @include shadow(2px, 2px, 4px, 0, rgba(128, 128, 128, 0.28));
+}
+
+.form__row {
+    margin: 0 auto 45px;
+    width: 85%;
+}
+
+.form,
+.form__row
+.form__label, {
+    vertical-align: top;
+}
+
+
+//text input styles
+.form__text-input,
+.form__text-area {
+    @extend %text-field;
+}
+
+
+.form__text-input:focus,
+.form__text-area:focus {
+    border-bottom: 4px solid $primary-dark;
+    outline: none;
+}
+
+
+.form__text-input,
+.form__text-area,
+.form__select-input {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+}
+
+//labels
+
+.form__label {
+    display: inline-block;
+    font-size: 1.3rem;
+}
+
+.form__label--radio-caption {
+    display: block;
+    margin-bottom: 15px;
+}
+
+//selects
+
+.form__select-input {
+    // border: none;
+    border: 1px solid $grey-light;
+    background: $secondary-base;
+    height: 2rem;
+    color: white;
+}
+
+.form__select-input:focus {
+    outline: none;
+}
+
+
+//radios
+.form__radio-span {
+    margin-right: 15px;
+    font-size: 1.1rem;
+}
+
+.form__radio-input {
+    display: none;
+}
+
+.form__label--radio-wrapper {
+    margin-bottom: 20px;
+    display: block;
+    width: 25%;
+    position: relative;
+    cursor: pointer;
+}
+
+.form__radio-button-div {
+    width: 19px;
+    height: 19px;
+    border: 2px solid $secondary-base;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.form__radio-button-check {
+    opacity: 0;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    border-radius: 50%;
+    background: $primary-base;
+}
+
+.form__radio-input:checked + .form__radio-button-div .form__radio-button-check {
+    opacity: 1;
+}
+
+//checkboxes
+
+.form__checkbox-input {
+    display: none;
+}
+
+
+.form__label--checkbox-wrapper {
+    display: block;
+    width: 40%;
+    position: relative;
+    cursor: pointer;
+}
+
+.form__checkbox-div {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    border-radius: 3px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid $secondary-base;
+}
+
+.form__checkbox-check {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../images/checked.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    top: -6px;
+}
+
+// .form__checkbox-input:checked + .form__checkbox-div {
+//     background: $secondary-base;
+// }
+
+.form__checkbox-input:checked + .form__checkbox-div .form__checkbox-check {
+    opacity: 1;
+}
