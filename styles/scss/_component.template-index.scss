@@ -1,0 +1,134 @@
+.nascent-header{
+    padding: 0.5em;
+ background-color: black;
+ //position: fixed;
+ width: 100%;
+
+    
+}
+.nascent-header__logo{
+//width: 30em;
+//height: 20em;
+}
+.nascent-header__logo-image{
+	width: 7em;
+	margin-right: 1.5em; 
+}
+.nascent-header__logo-text{
+width: 50%;
+//height: 10em;
+}
+.nascent-header__logo-text--top{
+ color: red;
+}
+.nascent-header__logo-text--bottom{
+ color: white;
+}
+.main-content{
+
+}
+.nav{
+	list-style: none;
+    list-style-position: outside; 
+
+ text-align: right;
+ background-color: #aeaca8;
+margin: 0; 
+ padding: 1em 0.9375em 30em 8em;
+ display: block;
+  float: left;
+ height: 100%;
+ 
+}
+.nav__item{
+ 	list-style-type: none;
+	margin-right: 1em;
+	padding: 1em;
+	position: relative;
+	text-align: right;
+}
+.nav__link{
+text-decoration: none;
+margin-bottom: 100%;
+}
+.website-components{
+
+}
+.website-components__component{
+
+}
+.nascent-footer{
+background-color: #30353b;
+padding: 5em .05em 2em 7em;
+
+   -webkit-column-count: 6; /* Chrome, Safari, Opera */
+   -moz-column-count: 6; /* Firefox */
+   column-count: 6;
+   -webkit-column-gap: 2.5em; /* Chrome, Safari, Opera */
+   -moz-column-gap: 2.5em; /* Firefox */
+   column-gap: 2.5em; 
+   display: block;
+}
+.nascent-footer__text{
+//width: 100%;
+margin-right: 100%;
+list-style-type: none;
+text-decoration: none;
+display: inline;
+width: 100;
+text-align: center;
+color: #f3f3f3;
+font-weight: bold; 
+
+text-align: center;
+color: #f3f3f3;
+font-weight: bold;
+
+}
+.authors{
+/* display: flex;
+-webkit-box-pack: center;
+-moz-box-pack: center;
+justify-content: center;
+padding: 0 0 0 0; */
+
+/* display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: center;
+-moz-box-pack: center;
+-webkit-justify-content: center;
+-ms-flex-pack: center;
+justify-content: center;
+list-style-type: none;
+padding: 0; */
+
+list-style: none;
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: outside;
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+margin: 0;
+}
+.authors__author{
+//list-style-type: none;
+padding: 2em 1em 2em 1em;
+text-align: center;
+}
+.authors__image{
+//line-height:1.5625em;
+height: 5em;
+width: 5em;
+border-radius: 50%
+
+}
+.authors__author-name{
+color: #f3f3f3;
+}
+
+
+
