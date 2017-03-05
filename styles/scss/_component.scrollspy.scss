@@ -3,72 +3,93 @@
  */
 
 /* css or scss here */
-body, html {
-  margin: 0;
+
+
+.scrollspy__body{
   padding: 0;
+  margin-top: 0;
   height: 100%;
   width: 100%;
 }
 
-nav {
+.scollspy__nav {
   width: 100%;
   height: 75px;
   position: fixed;
-  background-color: coral;
-
+  background-color: $accent-base;
+  margin-top: 0;
  }
 
-nav ul {
-  margin: 15px 0 0 0;
-}
-nav ul li {
-  list-style: none;
+ .scollspy__ul {
+   margin: 15px 0 0 0;
+ }
+
+ .scrollspy__li {
+   list-style: none;
+   margin: 0 50px 0 0;
+   display: inline;
+   font-family: 'futura', serif;
+   font-size: 18px;
+   color: grey;
+   text-decoration: none;
+   line-height: 50px;
+   height: 75px;
+ }
+
+ .scrollspy__a {
+   list-style: none;
+   margin: 0 50px 0 0;
+   display: inline;
+   font-family: 'futura', serif;
+   font-size: 18px;
+   color: grey;
+   text-decoration: none;
+   line-height: 50px;
+   height: 75px;
+ }
+
+.scrollspy__active {
+  color: white;
+  height: 75px;
   margin: 0 50px 0 0;
   display: inline;
-}
-
-.active {
   font-family: 'futura', serif;
   font-size: 18px;
-  color: #fff;
   text-decoration: none;
   line-height: 50px;
 }
-
-a {
-  font-family: 'futura', serif;
-  font-size: 18px;
-  color: grey;
-  text-decoration: none;
-  line-height: 50px;
+//feel free to overwrite if clashes with main pages
+.scrollspy__h2{
+  margin-top:80px;
+  font-family: Roboto, monospace;
 }
-
-#lorum {
-  background-color: #1BF3B5;
+.scrollspy__lorum {
+  background-color: $primary-light;
   height: 100%;
   overflow: hidden;
   padding-top:60px;
   width: 100%;
 }
 
-#aliquam {
-   background-color: white;
+.scrollspy__aliquam {
+  background-color: $white;
   height: 100%;
   padding-top:60px;
   width: 100%;
 }
 
-#morbi {
-  background-color: #F4F999;
+.scrollspy__morbi {
+  background-color: $secondary-light;
   height: 100%;
   padding-top:60px;
   width: 100%;
 }
 
-#pellentesque {
-  background-color: #99F99E;
+.scrollspy__pellentesque {
+  background-color: $lav-light;
   height: 100%;
   padding-top:60px;
+  overflow: hidden;
   width: 100%;
 }
 /*

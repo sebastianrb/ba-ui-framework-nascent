@@ -4,7 +4,7 @@ This will be the scrollspy UI for the menu, click on a menu item and go to that 
 //create enclosed function so to not leak variables to the global scope.
 
 (function() {
-  //have been advised to use 'strct js'
+//have been advised to use 'strict js'
   'use strict';
 
 //set up variables. Capture section elements, make empty object to contain sections
@@ -27,9 +27,9 @@ This will be the scrollspy UI for the menu, click on a menu item and go to that 
 //check if the scroll position is less than the top of the page
       if (sections[goTo] <= scrollPosition) {
 //remove active class (could also do with a .remove)
-        document.querySelector('.active').setAttribute('class', ' ');
+        document.querySelector('.scrollspy__active').setAttribute('class', 'scrollspy__li scrollspy__a');
 //add next active class
-        document.querySelector('a[href*=' + goTo + ']').setAttribute('class', 'active');
+        document.querySelector('a[href*=' + goTo + ']').setAttribute('class', 'scrollspy__active');
       }
     }
   };
