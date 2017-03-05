@@ -1,9 +1,65 @@
-/*
-  cards start
- */
+.card{
+    background-color: $accent-light;
+    box-shadow: 0 0.5em 0.5em 0 rgba(0,0,0,0.5);
+    float: left;
+    height: 38em;
+    margin: 1.5625em;
+    width: 24em;
+    word-wrap: break-word;
+} 
+.card--button{
+    background-color: rgba(0,0,0,0);
+    border: 0.1em solid;
+    color: #3C1E50;
+    cursor: pointer;
+    font-size: 1.3em;
+    margin: 1em 1em;
+    padding: 0.5em 1.2em;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+}
+.card--button:hover{
+    background-color: #EBE0F3;
+    color: #FFFFFF;
+}
+.card--button__round{
+    background-color: rgba(0,0,0,0);
+    border: 0.125em solid;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 3.225em;
+     margin: 0.4em 0.4em;
+    width: 3.225em;
+    -webkit-transition-duration: 0.4s;
+}
+.card--button__round:hover{
+    background: #A670CA;
+}
+.card--columns{
+    -webkit-column-count: 3; 
+    -moz-column-count: 3;
+    column-count: 3;
+}   
+.card:hover {
+    box-shadow: 0 0.25em 0.5em 0 ;
+}
+.card--image{
+    background-color: rgba(0,0,0,0);
+    height: 15em;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.card--table{
+    border-collapse: collapse;
+}
+.card--text{
+    padding: 0 1em 1.525em 1.5em;
+}
+.link--columns{
+    -webkit-column-count: 2; 
+    -moz-column-count: 2;
+    column-count: 2;
 
-/* css or scss here */
-
-/*
-  cards end
- */
+}
