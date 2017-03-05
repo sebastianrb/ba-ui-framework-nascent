@@ -19,9 +19,11 @@
         <h2 class="component-intro__header">Carousel Component</h2>
         <p class="component-intro__description">This is a carousel component.</p>
         <h3 class="component-intro__carousel-type">Fading Carousel</h3>
-        <p class="component-intro__description">Description.</p>
+        <p class="component-intro__description">The first carousel fades from one image to the next. </p>
         <h3 class="component-intro__carousel-type">Sliding Carousel</h3>
-        <p class="component-intro__description">Description.</p>
+        <p class="component-intro__description">The second carousel is a bit more complex, and slides from one image to the next.</p>
+        <h3 class="component-intro__carousel-type">Fade Carousel with Thumbnails</h3>
+        <p class="component-intro__description">The third carousel exhbits image sliding and uses image thumbnail navigation rather than a set of bullets.</p>
       </div>
 
       <!-- fading carousel -->
@@ -80,10 +82,42 @@
         </div>
       </div>
 
+      <!-- fade carousel with thumbnails -->
+      <div class="carousel carousel--fade-tn">
+        <div class="carousel--fade-tn__arrow-prev carousel--fade-tn__nav-button">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </div>
+        <div class="carousel--fade-tn__image-view">
+          <div class="carousel--fade-tn__image-container carousel--fade-tn__image-container-selected">
+            <img src="../images/mountain-1.jpeg" class="carousel--fade-tn__image">
+          </div>
+          <div class="carousel--fade-tn__image-container">
+            <img src="../images/mountain-2.jpg" class="carousel--fade-tn__image">
+          </div>
+          <div class="carousel--fade-tn__image-container">
+            <img src="../images/mountain-3.jpeg" class="carousel--fade-tn__image">
+          </div>
+        </div>
+        <div class="carousel--fade-tn__arrow-next carousel--fade-tn__nav-button">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </div>
+        <div class="carousel--fade-tn__thumbnails">
+          <div class="carousel--fade-tn__thumbnails-container">
+            <div class="carousel--fade-tn__thumbnail carousel--slide__thumbnail--selected">
+              <img src="../images/mountain-1.jpeg" alt="" class="carousel--fade-tn__thumbnail-image"></div>
+            <div class="carousel--fade-tn__thumbnail">
+              <img src="../images/mountain-2.jpg" alt="" class="carousel--fade-tn__thumbnail-image"></div>
+            <div class="carousel--fade-tn__thumbnail">
+              <img src="../images/mountain-3.jpeg" alt="" class="carousel--fade-tn__thumbnail-image"></div>
+          </div>
+        </div>
+      </div>
+
     </div> <!-- end .generic-wrapper -->
 
     <script src="../javascript/carousel-fade.js" type="text/javascript"></script>
     <script src="../javascript/carousel-slide.js" type="text/javascript"></script>
+    <script src="../javascript/carousel-fade-tn.js" type="text/javascript"></script>
 
   </body>
 </html>
