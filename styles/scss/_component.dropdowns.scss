@@ -4,8 +4,9 @@
 
 /* css or scss here */
 section {
-  overflow: hidden;
+  clear: both;
   padding-bottom: 3em;
+  margin-bottom: 3em;
 }
 
 //tables
@@ -46,7 +47,6 @@ section {
 .dropdown__wrapper {
   position: relative;
   width: 12em;
-  overflow: hidden;
 }
 
 .dropdown__container > .dropdown__wrapper {
@@ -138,17 +138,27 @@ section {
   border: 1px solid $primary-dark;
   border-radius: 3px;
   box-sizing: border-box;
+  color: $grey-dark;
+  display: block;
   margin: 0;
   padding: 0;
-  width: 100%;
-  display: block;
   visibility: hidden;
+  width: 100%;
   z-index: 1;
-  color: $grey-dark;
+  opacity: 0;
+  @include transition(
+    opacity 500ms linear,
+    visibility 10s linear 500ms
+  )
 }
 
 .dropdown__menu--show {
+  opacity: 1;
   visibility: visible;
+  @include transition(
+   opacity 500ms linear,
+   visibility 0s linear
+ )
 }
 
 .dropdown__menu--show-left {
