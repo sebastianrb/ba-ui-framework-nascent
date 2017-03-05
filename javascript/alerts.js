@@ -1,4 +1,4 @@
-(function alerts() {
+(function naAlerts() {
   /*
   FOR DEMO PURPOSES ONLY
   The event listener and target of the listener will have to be changed for each project
