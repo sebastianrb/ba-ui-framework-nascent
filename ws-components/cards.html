@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="../styles/css/nascent.css">
-    <!-- <link href="scss/_gift-card.scss" rel="stylesheet" type="text/css">  -->
 </head>
 
 <body>
@@ -17,54 +16,42 @@
         <h3>Cards</h3>
         <span>This section contains cards.</span>
     </div>
-    <div class="card--columns card--table">
-        <div class="card">
-            <div class="card-image-text">
-                <!--  <span>Testing text Gift Card</span> -->
-                <img class="card--image" src="http://i.imgur.com/2vPJ62R.jpg" />
-            </div>
-            <button class="card--button card--button:hover">Action</button>
-            <div class="card--text">
-                <h1>Gift Card</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, repudiandae velit! Ad aperiam, blanditiis delectus repudiandae velit?</p>
-                <hr />
-                <div class="link--columns">
-                    <button class="card--button__round card--button__round:hover"><a href="#">$25</a></button>
-                    <button class="card--button__round"><a href="#">$50</a></button>
-                    <button class="card--button__round"><a href="#">$75</a></button>
-                    <button class="card--button__round"><a href="#">$100</a></button>
-                </div>
+    <div class="basic--card">
+        <div class="card--text">
+            <h1>Basic Card</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, repudiandae velit! Ad aperiam, blanditiis delectus repudiandae velit?</p>
+            <hr />
+            <div class="link--columns">
+                <div><a href="#" class="basic--card__button--link">Link here</a></div>
+                <div><a href="#" class="basic--card__button--link">Link here</a></div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-image-text">
-                <!--  <span>Testing text Gift Card</span> -->
-                <img class="card--image" src="http://i.imgur.com/PvDBz3Z.jpg" />
-            </div>
-            <div class="card--text">
-                <h1>Gift Card</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, repudiandae velit! Ad aperiam, blanditiis delectus repudiandae velit?</p>
-                <hr />
-                <div class="link--columns">
-                    <div>Link here</div>
-                    <div>Link here</div>
-                </div>
+    </div>
+    <div class="card">
+        <div>
+            <img class="card--image" src="http://i.imgur.com/2vPJ62R.jpg" />
+        </div>
+        <button class="card--button card--button:hover">Action</button>
+        <div class="card--text">
+            <h1>Gift Card</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, repudiandae velit! Ad aperiam, blanditiis delectus repudiandae velit?</p>
+            <hr />
+            <div class="link--columns">
+                <button class="card--button__round card--button__round:hover"><a href="#" class="card--button__link">$25</a></button>
+                <button class="card--button__round"><a href="#" class="card--button__link">$50</a></button>
+                <button class="card--button__round"><a href="#" class="card--button__link">$75</a></button>
+                <button class="card--button__round"><a href="#" class="card--button__link">$100</a></button>
             </div>
         </div>
-        <div class="card">
-            <div class="card-image-text">
-                <!--  <span>Testing text Gift Card</span> -->
-                <img class="card--image" src="http://i.imgur.com/PvDBz3Z.jpg" />
+    </div>
+    <div class="memo--card card--rotate memo--card:hover">
+        <div class="card--text">
+            <div>
+                <img class="memo--card__image" src="http://i.imgur.com/1iS2y06.png" />
             </div>
-            <div class="card--text">
-                <h1>Gift Card</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, repudiandae velit! Ad aperiam, blanditiis delectus repudiandae velit?</p>
-                <hr />
-                <div class="link--columns">
-                    <div>Link here</div>
-                    <div>Link here</div>
-                </div>
-            </div>
+            <h1>Memo Card</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, repudiandae velit! Ad aperiam, blanditiis delectus repudiandae velit?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, repudiandae velit! Ad aperiam, blanditiis delectus repudiandae velit?</p>
         </div>
     </div>
     </div>
