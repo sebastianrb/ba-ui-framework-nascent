@@ -22,9 +22,16 @@
     for (var i=0; i<tabAnchorTargets.length; i++) {
       tabAnchorTargets[i].classList.remove('show');
       tabAnchorTargets[i].classList.remove('hide');
+      tabAnchorTargets[i].classList.add('hide');
       console.log('tabAnchorTargets[i]:', tabAnchorTargets[i]);
     }
+    anchorTarget.classList.remove('hide');
     anchorTarget.classList.add('show');
+
+    for (i=0; i<tabAnchors.length; i++) {
+      tabAnchors[i].classList.remove('active');
+    }
+    event.target.classList.add('active');
   } // end _tabAnchorClicked
 
   function _addListeners() {
