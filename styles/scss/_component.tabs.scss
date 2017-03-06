@@ -2,14 +2,6 @@
   tabs start
  */
 
-.active {
-  
-}
-
-.inactive {
-  
-}
-
 .tabwrapper {
   position: relative;
   width: 50%;
@@ -60,7 +52,6 @@
   position: relative;
   margin: 0;
   padding: 0;
-  height: 20rem;
 }
 
 .c-na-tab-content__tab-pane {
@@ -72,15 +63,14 @@
   background-color: $white;
   transition: all 0.35s ease;
   padding: 1rem;
+  height: 20rem;
 
     &.show {
       /*padding: 1rem;*/
-      height: 20rem;
       opacity: 1;
     }
 
     &.hide {
-      height: 0;
       opacity: 0;
       /*padding: 0;*/
     }
