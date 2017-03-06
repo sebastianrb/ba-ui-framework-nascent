@@ -21,9 +21,14 @@ Issues:
 ---
 
 Highlights:
-Most of the team was very collaborative and helpful. Each individual has their own strengths and together we made an interesting team. Sebastian Ramirez-Brunner had a really strong understanding of GitHub and was able to show us how to use things properly. Additionally, he hosted the repository and put together everything to create as little work for us as possible, embedding scripts and creating the appropriate file hierarchy as necessary, with a good naming convention for each person and the files they had promised. Bobby Stewart helped unify the team with his positive energy and kept communication going, especially beforehand, before diligently setting to work on his elements. His biggest contribution, however, was setting up the repo files before sending them to Sebastian. Denine was very helpful to each teammate that needed help, checking in at appropriate times and reporting to me things she observed, with a good attitude. Melissa was a fantastic product manager and made sure that all of our sass compiled and the final work was beautiful, meticulously going over every single line of code committed. Wissam is an ambitious newcomer and graciously accepted every technology/challenge we threw at him. He put together the placeholder site, quite a task for a newcomer. 
+
+
+Most of the team was very collaborative and helpful. Each individual has their own strengths and together we made an interesting team. Sebastian Ramirez-Brunner had a really strong understanding of GitHub and was able to show us how to use things properly. Additionally, he hosted the repository, and set up GitHub pages. Bobby Stewart helped unify the team with his positive energy and kept communication going, especially beforehand, before diligently setting to work on his elements. His biggest contribution, however, was setting up the repo files before sending them to Sebastian, embedding scripts and creating the appropriate file hierarchy as necessary, with a good naming convention for each person and the files they had promised. Denine was very helpful to each teammate that needed help, checking in at appropriate times and reporting to me things she observed, with a good attitude. Melissa was a fantastic product manager and made sure that all of our sass compiled and the final work was beautiful, meticulously going over every single line of code committed. Wissam is an ambitious newcomer and graciously accepted every technology/challenge we threw at him. He put together the placeholder site, quite a task for a newcomer.
+
 
 ---
 
 Next Step:
+
+
 Each teammate still has several components to finish. We will be working on that over the next few days. Additionally, there are certain elements we need to redo. I will discuss that matter with Richard in private. A little unhappy with how some things turned out but it's something that will be resolved!
