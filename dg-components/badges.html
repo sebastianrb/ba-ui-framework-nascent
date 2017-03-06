@@ -3,9 +3,9 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Progress Bar</title>
+    <title>Badges</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="../styles/css/nascent.css">
@@ -13,7 +13,163 @@
 
   <body>
     <div class="generic-wrapper" style="padding: 2em">
-      <h2>Progress Bar</h2>
+      <h2>Badges</h2>
+      <section class="badge__section">
+        <h3>Basic Message Badges</h3>
+
+        <p>
+          To create a badge you just need to add <strong><code>badge__default</code></strong> to your div element
+        </p>
+
+        <div class="badge__default">
+          <span>Default</span>
+        </div>
+        <div class="badge__default">
+          <span>Message</span>
+        </div>
+        <div class="badge__default">
+          <span>Primary</span>
+        </div>
+      </section>
+
+      <section class="badge__section">
+        <h3>Pill Badges</h3>
+
+        <p>
+          To create a pill badge you just need to add <strong><code>badge__pill</code></strong> to your parent div element.  You can add <em>text</em> or an <em>icon</em> to the badge
+        </p>
+
+        <h4>Number</h4>
+          <div class="badge__default badge__pill">
+            <span>1</span>
+          </div>
+          <div class="badge__default badge__pill">
+            <span>10</span>
+          </div>
+          <div class="badge__default badge__pill">
+            <span>100</span>
+          </div>
+        <h4>Icon</h4>
+          <div class="badge__default badge__pill badge__icon">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </div>
+          <div class="badge__default badge__pill badge__icon">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </div>
+          <div class="badge__default badge__pill badge__icon">
+            <i class="fa fa-star" aria-hidden="true"></i>
+          </div>
+      </section>
+
+      <section class="badge__section">
+        <h3>Color</h3>
+        <p>
+          To add color to you you just need to add the corresponding class to the parent div element. Below are a list of the classes.
+        </p>
+
+        <table class="badges__table">
+          <thead>
+            <tr>
+              <th>Color Name</th>
+              <th>Color Class</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Default</td>
+              <td><code>.badges__default</code></td>
+            </tr>
+
+            <tr>
+              <td>Primary</td>
+              <td><code>.badges__primary</code></td>
+            </tr>
+
+            <tr>
+              <td>Secondary</td>
+              <td><code>.badges__secondary</code></td>
+            </tr>
+
+            <tr>
+              <td>Accent</td>
+              <td><code>.badges__accent</code></td>
+            </tr>
+
+            <tr>
+              <td>Tertiary</td>
+              <td><code>.badges__tertiary</code></td>
+            </tr>
+
+            <tr>
+              <td>Success</td>
+              <td><code>.badges__success</code></td>
+            </tr>
+
+            <tr>
+              <td>Alert</td>
+              <td><code>.badges__alert</code></td>
+            </tr>
+
+            <tr>
+              <td>Warning</td>
+              <td><code>.badges__warning</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Message</h4>
+        <div class="badge__default">
+          <span>Default</span>
+        </div>
+        <div class="badge__default badge__primary">
+          <span>Primary</span>
+        </div>
+        <div class="badge__default badge__secondary">
+          <span>Secondary</span>
+        </div>
+        <div class="badge__default badge__accent">
+          <span>Accent</span>
+        </div>
+        <div class="badge__default badge__tertiary">
+          <span>Tertiary</span>
+        </div>
+        <div class="badge__default badge__success">
+          <span>Success</span>
+        </div>
+        <div class="badge__default badge__alert">
+          <span>Alert</span>
+        </div>
+        <div class="badge__default badge__warning">
+          <span>Warning</span>
+        </div>
+
+        <h4>Pill</h4>
+        <div class="badge__default badge__pill">
+          <span>1</span>
+        </div>
+        <div class="badge__default badge__pill badge__primary">
+          <span>1</span>
+        </div>
+        <div class="badge__default badge__pill badge__secondary">
+          <span>1</span>
+        </div>
+        <div class="badge__default badge__pill badge__accent">
+          <span>1</span>
+        </div>
+        <div class="badge__default badge__pill badge__tertiary">
+          <span>1</span>
+        </div>
+        <div class="badge__default badge__pill badge__success">
+          <span>1</span>
+        </div>
+        <div class="badge__default badge__pill badge__alert">
+          <span>1</span>
+        </div>
+        <div class="badge__default badge__pill badge__warning">
+          <span>1</span>
+        </div>
+      </section>
 
     </div> <!-- end .generic-wrapper -->
 

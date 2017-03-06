@@ -1,9 +1,29 @@
-/*
-  tables start
- */
+.div-table{
+  border: 1px solid #01579b;
+  display: inline-block;
+}
 
-/* css or scss here */
+.table-class, .td-class{
+  border-bottom: 1px solid #01579b;
+  border-collapse: collapse;
+  padding: 8px 20px 8px;
+  background-color: #e0cdec;
+}
 
-/*
-  tables end
- */
+.table-head .td-class{
+  background-color: #641053;
+  font-weight: bold;
+  color: #e0cdec;
+}
+
+.row-a:hover,
+.row-b:hover,
+.row-c:hover{
+  color: #6f83f1 !important;
+}
+
+.column-a:hover,
+.column-b:hover,
+.column-c:hover{
+  color: blue;
+}
