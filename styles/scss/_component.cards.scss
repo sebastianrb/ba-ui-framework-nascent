@@ -1,9 +1,132 @@
-/*
-  cards start
- */
-
-/* css or scss here */
-
-/*
-  cards end
- */
+//
+// Start Gift Card  *****
+//
+.card{
+    background-color: $primary-light;
+    box-shadow: 0 0.5em 0.5em 0 rgba(0,0,0,0.5);
+    height: 33em;
+    margin: 1.5625em;
+    width: 24em;
+    word-wrap: break-word;
+} 
+.card--button{
+    background-color: rgba(0,0,0,0);
+    border: 0.1em solid;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 1.3em;
+    margin: 0 auto;
+    padding: 0.5em 1.2em;
+    text-align: center;
+}
+.card--button:hover{
+    background-color: #EBE0F3;
+    color: #FFFFFF;
+}
+.card--button__round{
+    background-color: rgba(0,0,0,0);
+    border: 0.125em solid;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 3.225em;
+    margin: 0.4em 0.4em;
+    width: 3.225em;
+    
+}
+.card--button__round:hover{
+    background: #EBE0F3;
+}
+/* .card--columns{
+    -webkit-column-count: 3; 
+    -moz-column-count: 3;
+    column-count: 3;
+} */   
+.card:hover {
+    box-shadow: 0 0.25em 0.5em 0 ;
+}
+.card--button__link{
+    color: #FF00FF;
+    font-weight: bold;
+    text-decoration: none;
+     
+}
+.card--image{
+    background-color: rgba(0,0,0,0);
+    height: 15em;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    padding: 0 0 1em 0;
+}
+.card--text{
+    padding: 0 1em 1.525em 1.5em;
+}
+.link--columns{
+    -webkit-column-count: 4; 
+    -moz-column-count: 4;
+    column-count: 4;
+}
+//
+// End Gift Card *****
+//
+//------------------------
+//
+// Start Basic Card  *****
+//
+.basic--card{
+    background-color: $primary-dark;
+    box-shadow: 0 0.5em 0.5em 0 rgba(0,0,0,0.5);
+    color: #FFFFFF;
+    height: 15em;
+    margin: 1.5625em;
+    padding: 1em 1em 1.525em 1.5em;
+    width: 24em;
+    word-wrap: break-word;
+}
+.link--columns{
+    -webkit-column-count: 2; 
+    -moz-column-count: 2;
+    column-count: 2;
+}
+.basic--card__button--link{
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none; 
+}
+//
+// End Basic Card *****
+//
+//
+// Start Memo Card *****
+//
+.memo--card{
+    background-color: $accent-base;
+    box-shadow: 0 0.5em 0.5em 0 rgba(0,0,0,0.5);
+    color: $primary-dark;
+    height: 25em;
+    margin: 6.5625em;
+    padding: 1em 1em 1.525em 1.5em;
+    width: 24em;
+    word-wrap: break-word;
+}
+.memo--card:hover{
+    box-shadow: 0 0.25em 0.5em 0 ;
+    transform: rotate(0deg);
+}
+.memo--card__image{
+    height: 20%;
+    position: relative;
+    width: 20%;
+    padding: 0 0 0 0;
+}
+.card--rotate{
+     transform: rotate(30deg);
+}
+.card--text{
+    padding: 0 1em 1.525em 1.5em;
+}
+//
+// End Memo Card *****
+//
