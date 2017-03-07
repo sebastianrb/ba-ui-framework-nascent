@@ -17,27 +17,35 @@
   position: relative;
   padding: 0.5rem;
   height: 2.5rem;
-  transition: all 0.35s ease;
+  transition: all 0.5s ease;
   font-weight: bold;
   letter-spacing: 0.05rem;
+
+    /* we don't want to respond to a click on anything nested in this
+        class; alternatively put, we need to know when this class is
+        the target of a click event without sifting through unknown
+        contained elements; */
+    & * {
+      pointer-events: none;
+    }
 
     & i {
       display: inline-block;
       vertical-align: middle;
       text-align: center;
       width: 2.5rem;
-      /*height: 2.5rem;*/
-      /*position: relative;
-      z-index: -1;*/
     }
 
     & i:not(:last-child) {
       padding-right: 0.5rem;
     }
 
-    & i:last-child {
+    & .c-na-accordion__arrow {
+      transform: scale(1.25);
       position: absolute;
       right: 0;
+      display: inline-block;
+      transition: transform 0.5s ease;
     }
 
     &:hover {
@@ -50,21 +58,22 @@
 .c-na-accordion__header--active {
   background-color: $primary-dark;
   color: $white;
+  border-bottom: 1px solid $grey-med;
+
+    & .c-na-accordion__arrow {
+      transform: scale(1.25) rotate(180deg);
+    }
 }
 
 .c-na-accordion__body {
   overflow-y: scroll;
-  transition: all 0.35s ease;
+  transition: all 0.5s ease;
   padding: 0 1rem;
+  height: 10rem;
 }
 
 .c-na-accordion li:not(:last-child) .c-na-accordion__body {
   border-bottom: 1px solid $grey-med;
-}
-
-.c-na-accordion__body--open {
-  height: 10rem;
-  border-top: 1px solid $grey-med;
 }
 
 .c-na-accordion__body--closed {
