@@ -1,4 +1,4 @@
- (function() {
+(function() {
 
     var accordions;
 
@@ -21,7 +21,7 @@
         currentAccordionBodys[j].classList.add('c-na-accordion__body--closed');
       }
     }
-  }
+  } // end _setUpOnLoad
 
   function _addListeners() {
     console.log("accordions:", accordions);
