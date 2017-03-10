@@ -5,9 +5,17 @@
 /* css or scss here */
 
 // ordered list
+.list-groups__section {
+  margin-bottom: 1em;
+}
+
+.list-groups__header {
+    margin: 2em 0 .5em 0;
+}
+
 .list-groups__ordered--decimal {
+  counter-reset: section;
   list-style-type: none;
-  counter-reset: section;      /* Set section to 0 */
 }
 
 .list-groups__ordered--decimal > li::before {
@@ -15,15 +23,69 @@
   content: counters(section, ".") ". ";
 }
 
+.list-groups__ordered--link {
+  color: $lav-base;
+  text-decoration: none;
+}
+
+.list-groups__ordered,
+.list-groups__unordered {
+  padding: 0;
+  margin-left: 1.5em;
+}
+
 // unordered list
 .list-groups__unordered {
   list-style-type: disc;
+}
+
+.list-groups__unordered--list {
+  color: $lav-base;
+}
+
+.list-groups__unordered--list-name {
+  color: $black;
 }
 
 .list-groups__unordered--square {
   list-style-type: square;
 }
 
+.list-groups__unordered--icons {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    box-sizing: border-box;
+    padding: .3em 0;
+
+    i {
+      color: $lav-base;
+      width: 1.5em;
+    }
+  }
+}
+
+.list-groups__unordered--image {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    box-sizing: border-box;
+    padding: .3em 0;
+  }
+}
+
+.list-groups__unordered--image > li > img  {
+  height: 25px;
+  margin-right: .5em;
+  transform: translateY(25%);
+  width: 25px;
+
+  span {
+    line-height: 40px;;
+  }
+}
 /*
   list-groups end
  */

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>List Groups</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="../styles/css/nascent.css">
@@ -15,70 +15,111 @@
     <div class="generic-wrapper" style="padding: 2em">
       <h2>List Groups</h2>
 
-      <section>
+      <section class="list-groups__section">
         <h3>Unordered Lists</h3>
-        <h4>Basic Unordered List</h4>
+        <h4 class="list-groups__header">Basic Unordered List</h4>
         <ul class="list-groups__unordered">
-          <li>Clothes</li>
-          <li>Shoes</li>
-          <li>Jewelry</li>
+          <li class="list-groups__unordered--list"><span class="list-groups__unordered--list-name">Clothes</span></li>
+          <li class="list-groups__unordered--list"><span class="list-groups__unordered--list-name">Shoes</span></li>
+          <li class="list-groups__unordered--list"><span class="list-groups__unordered--list-name">Jewelry</span></li>
           <ul class="list-groups__unordered">
-            <li>Earrings</li>
-            <li>Necklace</li>
-            <li>Rings</li>
+            <li class="list-groups__unordered--list"><span class="list-groups__unordered--list-name">Necklace</span></li>
+            <li class="list-groups__unordered--list"><span class="list-groups__unordered--list-name">Earrings</span></li>
+            <li class="list-groups__unordered--list"><span class="list-groups__unordered--list-name">Rings</span></li>
           </ul>
-          <li>Accessories</li>
+          <li class="list-groups__unordered--list"><span class="list-groups__unordered--list-name">Accessories</span></li>
         </ul>
 
-        <h4>Unordered List with Square</h4>
-        <ul class="list-groups__unordered--square">
-          <li>Clothes</li>
-          <li>Shoes</li>
-          <li>Jewelry</li>
-          <ul class="list-groups__unordered--square">
-            <li>Earrings</li>
-            <li>Necklace</li>
-            <li>Rings</li>
+        <h4 class="list-groups__header">Unordered List with Square</h4>
+        <ul class="list-groups__unordered list-groups__unordered--square">
+          <li class="list-groups__unordered--list"><span class="list-groups__unordered--list-name"></span><span class="list-groups__unordered--list-name">Clothes</span></li>
+          <li class="list-groups__unordered--list"><span class="list-groups__unordered--list-name">Shoes</span></li>
+          <li class="list-groups__unordered--list"><span class="list-groups__unordered--list-name">Jewelry</span></li>
+          <ul class="list-groups__unordered list-groups__unordered--square">
+            <li class="list-groups__unordered--list"><span class="list-groups__unordered--list-name">Necklace</span></li>
+            <li class="list-groups__unordered--list"><span class="list-groups__unordered--list-name">Earrings</span></li>
+            <li class="list-groups__unordered--list"><span class="list-groups__unordered--list-name">Rings</span></li>
           </ul>
-          <li>Accessories</li>
+          <li class="list-groups__unordered--list"><span class="list-groups__unordered--list-name">Accessories</span></li>
         </ul>
 
+        <h4 class="list-groups__header">Unordered List with Icon</h4>
+        <ul class="list-groups__unordered--icons">
+          <li><i class="fa fa-user" aria-hidden="true"></i>John Smith</li>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>1 Peachtree St Atlanta, GA 30301</li>
+          <li><i class="fa fa-phone" aria-hidden="true"></i>888-888-8888</li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i>john.smith@example.com
+          </li>
+          <li><i class="fa fa-globe" aria-hidden="true"></i></i>www.johnsmith.com
+          </li>
+        </ul>
 
+        <h4 class="list-groups__header">Unordered List with Image</h4>
+        <ul class="list-groups__unordered--image">
+          <li><img src="../images/avatar32.png" alt=""><span>Meryl Streep</span></li>
+          <li><img src="../images/avatar32.png" alt=""><span>Emma Watson</span></li>
+          <li><img src="../images/avatar32.png" alt=""><span>Viola Davis<span></li>
+            <li><img src="../images/avatar32.png" alt=""><span>Natalie Portman</span></li>
+            <li><img src="../images/avatar32.png" alt=""><span>Octavia Spencer</span></li>
+          </ul>
+      </section>
+
+      <section>
         <h3>Ordered Lists</h3>
-        <h4>Basic Ordered List</h4>
+        <h4 class="list-groups__header">Basic Ordered List</h4>
         <ol class="list-groups__ordered">
           <li>Clothes</li>
           <li>Shoes</li>
           <li>Jewelry
-            <ol>
-              <li>Earrings</li>
+            <ol class="list-groups__ordered">
               <li>Necklace</li>
+              <li>Earrings</li>
               <li>Rings</li>
             </ol>
           </li>
           <li>Accessories</li>
         </ol>
 
-        <h4>Decimal Ordered List</h4>
-        <ol class="list-groups__ordered--decimal">
-          <li>List Item</li>
-          <li>List Item</li>
-          <li>List Item
-            <ol class="list-groups__ordered--decimal">
-              <li>List Item</li>
-              <li>List Item
-                <ol class="list-groups__ordered--decimal">
-                  <li>List Item</li>
-                  <li>List Item</li>
-                  <li>List Item</li>
+        <h4 class="list-groups__header">Decimal Ordered List</h4>
+        <ol class="list-groups__ordered list-groups__ordered--decimal">
+          <li>Clothes</li>
+          <li>Shoes</li>
+          <li>Jewelry
+            <ol class="list-groups__ordered list-groups__ordered--decimal">
+              <li>Necklace</li>
+              <li>Earrings
+                <ol class="list-groups__ordered list-groups__ordered--decimal">
+                  <li>Hoops</li>
+                  <li>Studs</li>
+                  <li>Drop</li>
                 </ol>
               </li>
-              <li>List Item</li>
+              <li>Rings</li>
             </ol>
-            <li>List Item</li>
+            <li>Accessories</li>
           </li>
         </ol>
-      </section>
+
+      <h4 class="list-groups__header">Decimal Ordered List with Link</h4>
+      <ol class="list-groups__ordered">
+        <li><a href="#" class="list-groups__ordered--link">Clothes</a></li>
+        <li><a href="#" class="list-groups__ordered--link">Shoes</a></li>
+        <li><a href="#" class="list-groups__ordered--link">Jewelry</a>
+          <ol class="list-groups__ordered">
+            <li><a href="#" class="list-groups__ordered--link">Necklace</a></li>
+            <li><a href="#" class="list-groups__ordered--link">Earrings</a>
+              <ol class="list-groups__ordered">
+                <li><a href="#" class="list-groups__ordered--link">Hoops</a></li>
+                <li><a href="#" class="list-groups__ordered--link">Studs</a></li>
+                <li><a href="#" class="list-groups__ordered--link">Drop</a></li>
+              </ol>
+            </li>
+            <li><a href="#" class="list-groups__ordered--link">Rings</a></li>
+          </ol>
+          <li><a href="#" class="list-groups__ordered--link">Accessories</a></li>
+        </li>
+      </ol>
+    </section>
     </div> <!-- end .generic-wrapper -->
     <script src="../javascript/filename.js" type="text/javascript"></script>
   </body>
