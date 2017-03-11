@@ -14,8 +14,7 @@
   color: #212121;
   -webkit-transition: all .2s;
   transition: all .2s;
-  letter-spacing: 1px; 
-  }
+  letter-spacing: 1px; }
 
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -548,88 +547,44 @@ html {
   height: 2.5rem;
   transition: all 0.5s ease;
   font-weight: bold;
-<<<<<<< HEAD
-  letter-spacing: 0.05rem; }
+  letter-spacing: 0.05rem;
+  /* we don't want to respond to a click on anything nested in this
+      class; alternatively put, we need to know when this class is
+      the target of a click event without sifting through unknown
+      contained elements; */ }
+  .c-na-accordion__header * {
+    pointer-events: none; }
   .c-na-accordion__header i {
     display: inline-block;
     vertical-align: middle;
     text-align: center;
-    width: 2.5rem;
-    /*height: 2.5rem;*/
-    /*position: relative;
-    z-index: -1;*/ }
-  .c-na-accordion__header i:not(:last-child) {
-    padding-right: 0.5rem; }
-  .c-na-accordion__header i:last-child {
+    width: 2.5rem; }
+  .c-na-accordion__header .c-na-accordion__arrow {
+    transform: scale(1.25);
     position: absolute;
-    right: 0; }
+    right: 0;
+    display: inline-block;
+    transition: transform 0.5s ease; }
   .c-na-accordion__header:hover {
     background-color: #c2c6e2;
     color: #111; }
 
 .c-na-accordion__header--active {
   background-color: #25294d;
-  color: #fffffc; }
-
-.c-na-accordion__body {
-  overflow-y: scroll;
-  transition: all 0.35s ease;
-  padding: 0 1rem; }
-=======
-  letter-spacing: 0.05rem;
-  /* we don't want to respond to a click on anything nested in this
-      class; alternatively put, we need to know when this class is
-      the target of a click event without sifting through unknown
-      contained elements; */
-}
-.c-na-accordion__header * {
-  pointer-events: none;
-}
-.c-na-accordion__header i {
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  width: 2.5rem;
-}
-.c-na-accordion__header .c-na-accordion__arrow {
-  transform: scale(1.25);
-  position: absolute;
-  right: 0;
-  display: inline-block;
-  transition: transform 0.5s ease;
-}
-.c-na-accordion__header:hover {
-  background-color: #c2c6e2;
-  color: #111;
-}
-
-.c-na-accordion__header--active {
-  background-color: #25294d;
   color: #fffffc;
-  border-bottom: 1px solid #9e9e9e;
-}
-.c-na-accordion__header--active .c-na-accordion__arrow {
-  transform: scale(1.25) rotate(180deg);
-}
+  border-bottom: 1px solid #9e9e9e; }
+  .c-na-accordion__header--active .c-na-accordion__arrow {
+    transform: scale(1.25) rotate(180deg); }
 
 .c-na-accordion__body {
   overflow-y: scroll;
   transition: all 0.5s ease;
   padding: 0 1rem;
-  height: 10rem;
-}
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
+  height: 10rem; }
 
 .c-na-accordion li:not(:last-child) .c-na-accordion__body {
   border-bottom: 1px solid #9e9e9e; }
 
-<<<<<<< HEAD
-.c-na-accordion__body--open {
-  height: 10rem;
-  border-top: 1px solid #9e9e9e; }
-
-=======
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
 .c-na-accordion__body--closed {
   height: 0;
   overflow: hidden; }
@@ -748,21 +703,7 @@ html {
   font-family: 'Inconsolata', serif;
   font-size: 18px;
   height: 75px;
-t pull origin master
-remote: Counting objects: 80, done.
-remote: Compressing objects: 100% (28/28), done.
-remote: Total 80 (delta 35), reused 24 (delta 24), pack-reused 26
-Unpacking objects: 100% (80/80), done.
-From https://github.com/sebastianrb/ba-ui-framework-nascent
- * branch            master     -> FETCH_HEAD
-    e48b842..2618836  master     -> origin/master
-    Auto-merging styles/css/nascent.css
-    CONFLICT (content): Merge conflict in styles/css/nascent.css
-    Removing mm-components/list-groups.html
-    Removing javascript/styles/css/nascent.css
-    Removing dg-components/searchbox.html
-    Automatic merge failed; fix conflicts and then commit the result.
-    line-height: 50px;
+  line-height: 50px;
   margin: 0 50px 0 0;
   text-decoration: none; }
 
@@ -839,19 +780,10 @@ From https://github.com/sebastianrb/ba-ui-framework-nascent
   vertical-align: middle;
   text-decoration: none;
   color: #fffffc;
-<<<<<<< HEAD
   transition: all 0.35s ease; }
   .c-na-tabnav__tab a:hover, .c-na-tabnav__tab a.active {
     background-color: #bb1f9c;
-    color: #111; }
-=======
-  transition: all 0.35s ease;
-}
-.c-na-tabnav__tab a:hover, .c-na-tabnav__tab a.active {
-  background-color: #bb1f9c;
-  /*color: $black;*/
-}
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
+    /*color: $black;*/ }
 
 .c-na-tab-content {
   position: relative;
@@ -1608,81 +1540,64 @@ section {
  */
 /* css or scss here */
 .list-groups__section {
-  margin-bottom: 1em;
-}
+  margin-bottom: 1em; }
 
 .list-groups__header {
-  margin: 2em 0 .5em 0;
-}
+  margin: 2em 0 .5em 0; }
 
 .list-groups__ordered--decimal {
   counter-reset: section;
-  list-style-type: none;
-}
+  list-style-type: none; }
 
 .list-groups__ordered--decimal > li::before {
   counter-increment: section;
-  content: counters(section,".") ". ";
-}
+  content: counters(section,".") ". "; }
 
 .list-groups__ordered--link {
   color: #6f83f1;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .list-groups__ordered,
 .list-groups__unordered {
   padding: 0;
-  margin-left: 1.5em;
-}
+  margin-left: 1.5em; }
 
 .list-groups__unordered {
-  list-style-type: disc;
-}
+  list-style-type: disc; }
 
 .list-groups__unordered--list {
-  color: #6f83f1;
-}
+  color: #6f83f1; }
 
 .list-groups__unordered--list-name {
-  color: #111;
-}
+  color: #111; }
 
 .list-groups__unordered--square {
-  list-style-type: square;
-}
+  list-style-type: square; }
 
 .list-groups__unordered--icons {
   list-style-type: none;
-  padding: 0;
-}
-.list-groups__unordered--icons li {
-  box-sizing: border-box;
-  padding: .3em 0;
-}
-.list-groups__unordered--icons li i {
-  color: #6f83f1;
-  width: 1.5em;
-}
+  padding: 0; }
+  .list-groups__unordered--icons li {
+    box-sizing: border-box;
+    padding: .3em 0; }
+    .list-groups__unordered--icons li i {
+      color: #6f83f1;
+      width: 1.5em; }
 
 .list-groups__unordered--image {
   list-style-type: none;
-  padding: 0;
-}
-.list-groups__unordered--image li {
-  box-sizing: border-box;
-  padding: .3em 0;
-}
+  padding: 0; }
+  .list-groups__unordered--image li {
+    box-sizing: border-box;
+    padding: .3em 0; }
 
 .list-groups__unordered--image > li > img {
   height: 25px;
   margin-right: .5em;
   transform: translateY(25%);
-  width: 25px;
-}
-.list-groups__unordered--image > li > img span {
-  line-height: 40px;
-}
+  width: 25px; }
+  .list-groups__unordered--image > li > img span {
+    line-height: 40px; }
 
 /*
   list-groups end
@@ -2568,12 +2483,7 @@ section {
   height: 33em;
   margin: 1.5625em;
   width: 24em;
-<<<<<<< HEAD
   word-wrap: break-word; }
-=======
-  word-wrap: break-word;
-}
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
 
 .card--button {
   background-color: transparent;
@@ -2584,21 +2494,11 @@ section {
   font-size: 1.3em;
   margin: 0 auto;
   padding: 0.5em 1.2em;
-<<<<<<< HEAD
   text-align: center; }
 
 .card--button:hover {
   background-color: #EBE0F3;
   color: #FFFFFF; }
-=======
-  text-align: center;
-}
-
-.card--button:hover {
-  background-color: #EBE0F3;
-  color: #FFFFFF;
-}
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
 
 .card--button__round {
   background-color: transparent;
@@ -2608,19 +2508,10 @@ section {
   cursor: pointer;
   height: 3.225em;
   margin: 0.4em 0.4em;
-<<<<<<< HEAD
   width: 3.225em; }
 
 .card--button__round:hover {
   background: #EBE0F3; }
-=======
-  width: 3.225em;
-}
-
-.card--button__round:hover {
-  background: #EBE0F3;
-}
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
 
 /* .card--columns{
     -webkit-column-count: 3; 
@@ -2628,22 +2519,12 @@ section {
     column-count: 3;
 } */
 .card:hover {
-<<<<<<< HEAD
   box-shadow: 0 0.25em 0.5em 0; }
-=======
-  box-shadow: 0 0.25em 0.5em 0;
-}
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
 
 .card--button__link {
   color: #FF00FF;
   font-weight: bold;
-<<<<<<< HEAD
   text-decoration: none; }
-=======
-  text-decoration: none;
-}
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
 
 .card--image {
   background-color: transparent;
@@ -2651,29 +2532,15 @@ section {
   position: relative;
   width: 100%;
   z-index: 1;
-<<<<<<< HEAD
   padding: 0 0 1em 0; }
 
 .card--text {
   padding: 0 1em 1.525em 1.5em; }
-=======
-  padding: 0 0 1em 0;
-}
-
-.card--text {
-  padding: 0 1em 1.525em 1.5em;
-}
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
 
 .link--columns {
   -webkit-column-count: 4;
   -moz-column-count: 4;
-<<<<<<< HEAD
   column-count: 4; }
-=======
-  column-count: 4;
-}
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
 
 .basic--card {
   background-color: #25294d;
@@ -2683,32 +2550,17 @@ section {
   margin: 1.5625em;
   padding: 1em 1em 1.525em 1.5em;
   width: 24em;
-<<<<<<< HEAD
   word-wrap: break-word; }
-=======
-  word-wrap: break-word;
-}
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
 
 .link--columns {
   -webkit-column-count: 2;
   -moz-column-count: 2;
-<<<<<<< HEAD
   column-count: 2; }
-=======
-  column-count: 2;
-}
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
 
 .basic--card__button--link {
   color: #FFFFFF;
   font-weight: bold;
-<<<<<<< HEAD
   text-decoration: none; }
-=======
-  text-decoration: none;
-}
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
 
 .memo--card {
   background-color: #bb1f9c;
@@ -2718,27 +2570,16 @@ section {
   margin: 6.5625em;
   padding: 1em 1em 1.525em 1.5em;
   width: 24em;
-<<<<<<< HEAD
   word-wrap: break-word; }
 
 .memo--card:hover {
   box-shadow: 0 0.25em 0.5em 0;
   transform: rotate(0deg); }
-=======
-  word-wrap: break-word;
-}
-
-.memo--card:hover {
-  box-shadow: 0 0.25em 0.5em 0;
-  transform: rotate(0deg);
-}
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
 
 .memo--card__image {
   height: 20%;
   position: relative;
   width: 20%;
-<<<<<<< HEAD
   padding: 0 0 0 0; }
 
 .card--rotate {
@@ -2768,8 +2609,7 @@ section {
 .col {
   min-height: 40px;
   border-radius: 8px;
-  display: inline-block;
-  /*     margin-right: -4px; */ }
+  display: inline-block; }
 
 .col.one {
   width: 8.33333%; }
@@ -2943,17 +2783,5 @@ section {
 }
 
 */
-=======
-  padding: 0 0 0 0;
-}
-
-.card--rotate {
-  transform: rotate(30deg);
-}
-
-.card--text {
-  padding: 0 1em 1.525em 1.5em;
-}
->>>>>>> 26188363676e3c21a2299b64c94910d6b151b6e8
 
 /*# sourceMappingURL=nascent.css.map */
