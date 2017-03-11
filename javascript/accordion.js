@@ -1,6 +1,4 @@
- (function() {
-
-    console.log("running IIFE");
+(function() {
 
     var accordions;
 
@@ -23,20 +21,12 @@
         currentAccordionBodys[j].classList.add('c-na-accordion__body--closed');
       }
     }
-  }
-
-  function _swapClass(elem, classToRemove, classToAdd) {
-    /*
-    * Swaps an existing node's class with another
-    */
-    elem.classList.remove(classToRemove);
-    elem.classList.add(classToAdd);
-  } // end swapClass
+  } // end _setUpOnLoad
 
   function _addListeners() {
     console.log("accordions:", accordions);
     for (var i=0; i<accordions.length; i++) {
-      /* add a listener on each c-na-accordion */
+      /* add a listener on each .c-na-accordion */
       accordions[i].addEventListener('click', _checkAccordion);
     }
   } // end _addListeners
@@ -44,34 +34,27 @@
   function _checkAccordion(event) {
     /* can have data-accordion-type attribute values of "accordion",
         or "expandable" */
-    var eventTarget = event.target;
-    var clickedAccordionHeader = eventTarget; // maybe not, we'll discover
+    var clickedAccordionHeader = event.target; // ? maybe not, we'll discover
     var parentAccordion;
     var accordionHeaders;
     var accordionBodys;
     var nextSiblingAccordionBody;
-    console.log("eventTarget:", eventTarget);
-    /* only want to act if .c-na-accordion__header or a direct
-        child was clicked */
-    if (eventTarget.classList.contains('c-na-accordion__header')
-       || eventTarget.parentElement.classList.contains('c-na-accordion__header')) {
-      /* we want to identify the .c-na-accordion__header that was
-          clicked (or is the parent of the contained element that
-          was clicked) */
-      while (!clickedAccordionHeader.classList.contains('c-na-accordion__header')) {
-        clickedAccordionHeader = clickedAccordionHeader.parentElement;
-      }
+    console.log("clickedAccordionHeader:", clickedAccordionHeader);
+    /* only want to act if .c-na-accordion__header was clicked */
+    /* note: pointer-events: none; css was placed on .c-na-accordion
+        so, it's child elements should not respond to pointer events; */
+    if (clickedAccordionHeader.classList.contains('c-na-accordion__header')) {
       /* at this point, we should have found the .c-na-accordion__header
-          that the user intended to click */
+          that the user clicked */
       console.log('clickedAccordionHeader:', clickedAccordionHeader);
       /* at this point, parentAccordion is likely not the actual
           .c-na-accordion we seek;
           we will seek it by it's class name rather than strictly
-          using only successive  parentAccordion.parentElement queries */
-      parentAccordion = eventTarget.parentElement;
+          using only successive parentAccordion.parentElement queries */
+      parentAccordion = clickedAccordionHeader.parentElement;
 
       /* find the actual parentAccordion - we may have clicked on any
-          number of child elements */
+          number of child elements within a .c-na-accordion__body */
       while (!parentAccordion.classList.contains('c-na-accordion')) {
         parentAccordion = parentAccordion.parentElement;
       }
@@ -83,58 +66,56 @@
       console.log('accordionHeaders:', accordionHeaders);
       accordionBodys = parentAccordion.querySelectorAll('.c-na-accordion__body');
       console.log('accordionBodys:', accordionBodys);
-      if (parentAccordion.dataset.accordionType == 'accordion') {
-        console.log("BINGO ... accordion!");
+      // if (parentAccordion.dataset.accordionType == 'accordion') {
+      //   console.log("BINGO ... accordion!");
         /* for the 'accordion' data-accordion-type, only one
             .c-na-accordion__body can be open, and the clicked
             .c-na-accordion__body can be toggled open/closed */
         for (var i=0; i<accordionHeaders.length; i++) {
+          /* determine the next element sibling of the current accordionHeaders[i] */
           nextSiblingAccordionBody = accordionHeaders[i].nextElementSibling;
-          console.log('nextSiblingAccordionBody:', nextSiblingAccordionBody);
           if (accordionHeaders[i] == clickedAccordionHeader) {
+            /* for all 'accordion' types, .c-na-accordion__body associated with
+                the clickedAccordionHeader can be toggled open/closed; */
             console.log('accordionHeaders[i] == clickedAccordionHeader');
+            nextSiblingAccordionBody.classList.toggle('c-na-accordion__body--closed');
             if (nextSiblingAccordionBody.classList.contains('c-na-accordion__body--closed')) {
-              _swapClass(nextSiblingAccordionBody, 'c-na-accordion__body--closed', 'c-na-accordion__body--open');
+              accordionHeaders[i].classList.remove('c-na-accordion__header--active');
+            } else {
               accordionHeaders[i].classList.add('c-na-accordion__header--active');
-            } else if (nextSiblingAccordionBody.classList.contains('c-na-accordion__body--open')) {
-              _swapClass(nextSiblingAccordionBody, 'c-na-accordion__body--open', 'c-na-accordion__body--closed');
-              accordionHeaders[i].classList.remove('c-na-accordion__header--active');
             }
-          } else {
-            /* close everything other than the selected one */
-            if (nextSiblingAccordionBody.classList.contains('c-na-accordion__body--open')) {
-              _swapClass(nextSiblingAccordionBody, 'c-na-accordion__body--open', 'c-na-accordion__body--closed');
-              accordionHeaders[i].classList.remove('c-na-accordion__header--active');
-            }
-          }
-        }
-
-      } else if (parentAccordion.dataset.accordionType == 'expandable') {
-        console.log("BINGO ... expandable!");
-        /* for the 'expandable' data-accordion-type, all
-            .c-na-accordion__body can be opened regardless of others'
-            state, and the clicked .c-na-accordion__body can be toggled
-            open/closed */
-        for (var i=0; i<accordionHeaders.length; i++) {
-          nextSiblingAccordionBody = accordionHeaders[i].nextElementSibling;
+          } else switch (parentAccordion.dataset.accordionType) {
+                    case 'accordion':
+                    console.log("BINGO ... accordion!");
+                      /* for the 'accordion' data-accordion-type, only one
+                          .c-na-accordion__body can be open;
+                          all other .c-na-accordion__body elements should close */
+                      if (!nextSiblingAccordionBody.classList.contains('c-na-accordion__body--closed')) {
+                        nextSiblingAccordionBody.classList.add('c-na-accordion__body--closed');
+                        accordionHeaders[i].classList.remove('c-na-accordion__header--active');
+                      }
+                      break;
+                    case 'expandable':
+                    console.log("BINGO ... expandable!");
+                    /* for the 'expandable' data-accordion-type, all
+                      .c-na-accordion__body can be opened regardless of others'
+                      state; */
+                    /* we've already taken care of toggling the .c-na-accordion__body
+                        open/close state;
+                        for this type of accordion, that is all we need to do */
+                      break;
+                    default:
+                      console.error('Improperly defined data-accordion-type attribute.');
+          } // end else switch
+          console.log('accordionHeaders[', i, ']:', accordionHeaders[i]);
           console.log('nextSiblingAccordionBody:', nextSiblingAccordionBody);
-          if (accordionHeaders[i] == clickedAccordionHeader) {
-            console.log('accordionHeaders[i] == clickedAccordionHeader');
-            if (nextSiblingAccordionBody.classList.contains('c-na-accordion__body--closed')) {
-              _swapClass(nextSiblingAccordionBody, 'c-na-accordion__body--closed', 'c-na-accordion__body--open');
-              accordionHeaders[i].classList.add('c-na-accordion__header--active');
-            } else if (nextSiblingAccordionBody.classList.contains('c-na-accordion__body--open')) {
-              _swapClass(nextSiblingAccordionBody, 'c-na-accordion__body--open', 'c-na-accordion__body--closed');
-              accordionHeaders[i].classList.remove('c-na-accordion__header--active');
-            }
-          }
-        }
-      }
+        } // end for
 
     } else {
-      /* neither .c-na-accordion__header, nor direct child was clicked */
+      /* a .c-na-accordion__header was not clicked, so do not respond */
       return;
-    }
+
+    } // end if (clickedAccordionHeader.classList.contains('c-na-accordion__header') ...
 
   } // end _checkAccordion
 

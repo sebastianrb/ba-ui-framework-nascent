@@ -14,8 +14,7 @@
   color: #212121;
   -webkit-transition: all .2s;
   transition: all .2s;
-  letter-spacing: 1px; 
-  }
+  letter-spacing: 1px; }
 
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -748,21 +747,7 @@ html {
   font-family: 'Inconsolata', serif;
   font-size: 18px;
   height: 75px;
-t pull origin master
-remote: Counting objects: 80, done.
-remote: Compressing objects: 100% (28/28), done.
-remote: Total 80 (delta 35), reused 24 (delta 24), pack-reused 26
-Unpacking objects: 100% (80/80), done.
-From https://github.com/sebastianrb/ba-ui-framework-nascent
- * branch            master     -> FETCH_HEAD
-    e48b842..2618836  master     -> origin/master
-    Auto-merging styles/css/nascent.css
-    CONFLICT (content): Merge conflict in styles/css/nascent.css
-    Removing mm-components/list-groups.html
-    Removing javascript/styles/css/nascent.css
-    Removing dg-components/searchbox.html
-    Automatic merge failed; fix conflicts and then commit the result.
-    line-height: 50px;
+  line-height: 50px;
   margin: 0 50px 0 0;
   text-decoration: none; }
 
