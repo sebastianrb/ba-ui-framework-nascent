@@ -1,0 +1,114 @@
+/*
+  loaders start
+ */
+
+/* css or scss here */
+.loader__wrapper {
+  background-color: $grey-med;
+  border: 1px solid $black;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  width: 800px;
+}
+
+.loader {
+  animation: spinner 2s linear infinite;
+  -webkit-animation: spinner 2s linear infinite;
+  -moz-animation: spinner 2s linear infinite;
+  border: 3px solid $white;
+  border-top: 3px solid $primary-base;
+  border-radius: 50%;
+  height: 50px;
+  left: 45%;
+  position: absolute;
+  top: 40%;
+  width: 50px;
+}
+
+@keyframes spinner {
+  0% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.loader__dots {
+  color: $primary-base;
+  font-size: 50px;
+  left: 35%;
+  position: absolute;
+  top: 40%;
+  text-align: center;
+}
+
+.loader__dots > span {
+  -webkit-animation: 1.4s blink infinite;
+  -webkit-animation-fill-mode: backwards;
+  animation: 1.4s blink infinite;
+  animation-fill-mode: backwards;
+  color: $primary-base;
+  font-size: 60px;
+  text-align: center;
+}
+
+.loader__dots > span:nth-child(2) {
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
+}
+
+.loader__dots > span:nth-child(3) {
+  animation-delay: .4s;
+  -webkit-animation-delay: .4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: .3;
+    -webkit-opacity: .3;
+    -moz-opacity: .3;
+    -ms-opacity: .3;
+  }
+
+  30% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+  }
+
+  100% {
+    opacity: .3;
+    -webkit-opacity: .3;
+    -moz-opacity: .3;
+    -ms-opacity: .3;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: .3;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .3;
+  }
+}
+
+
+  /*
+  loaders end
+ */
