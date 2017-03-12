@@ -20,17 +20,35 @@
         <p>To include a loader create a div and add the class <strong><code>loader</code></strong> to that div.  Be sure to add the class <strong><code>loader__wrapper</code></strong> to the parent div element.
         </p>
         <div class="loader__wrapper">
-          <div class="loader"></div>
+          <div class="loader__spinner"></div>
         </div>
       </section>
 
       <section class="loader__section">
-        <h3>Loader Dots</h3>
+        <h3>Loader Loading Dots</h3>
         <p>To include a loader create a div and add the class <strong><code>loader__dots</code></strong> to that div.  Be sure to add the class <strong><code>loader__wrapper</code></strong> to the parent div element.
         </p>
         <div class="loader__wrapper">
-          <div class="loader__dots">
-            Loading <span>.</span><span>.</span><span>.</span>
+          <div class="loader__blinking--dots">
+            <span class="loader__dot1"></span>
+            <span class="loader__dot2"></span>
+            <span class="loader__dot3"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="loader__section">
+        <h3>Loader Stretch Bars</h3>
+        <p>
+          To include a loader create a div and add the class <strong><code>loader__bars</code></strong> to that div.  Be sure to add the class <strong><code>loader__wrapper</code></strong> to the parent div element.For each bar create a div or span and add a class <strong><code>loader_bars(number)</code></strong> to the element such as <strong><code>loader_bars1</code></strong>
+        </p>
+        <div class="loader__wrapper">
+          <div class="loader__bars">
+            <div class="loader__bar1"></div>
+            <div class="loader__bar2"></div>
+            <div class="loader__bar3"></div>
+            <div class="loader__bar4"></div>
+            <div class="loader__bar5"></div>
           </div>
         </div>
       </section>

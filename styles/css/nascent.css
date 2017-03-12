@@ -1876,27 +1876,28 @@ section {
  */
 /* css or scss here */
 .loader__wrapper {
-  background-color: #9e9e9e;
-  border: 1px solid #111;
-  height: 400px;
+  background-color: #25294d;
+  border: 1px solid #c2c6e2;
+  height: 500px;
   margin: 0 auto;
   position: relative;
-  text-align: center;
   width: 800px;
 }
 
-.loader {
+.loader__spinner {
   animation: spinner 2s linear infinite;
   -webkit-animation: spinner 2s linear infinite;
   -moz-animation: spinner 2s linear infinite;
-  border: 3px solid #fffffc;
-  border-top: 3px solid #363c6f;
-  border-radius: 50%;
-  height: 50px;
-  left: 45%;
+  border: 5px solid #363c6f;
+  border-top: 5px solid #fffffc;
+  border-radius: 100%;
+  height: 100px;
+  margin: 0 auto;
+  left: 43.7%;
   position: absolute;
   top: 40%;
-  width: 50px;
+  transform: translate(-50%, -50%);
+  width: 100px;
 }
 
 @keyframes spinner {
@@ -1913,64 +1914,119 @@ section {
     transform: rotate(360deg);
   }
 }
-.loader__dots {
+.loader__blinking--dots {
   color: #363c6f;
   font-size: 50px;
-  left: 35%;
+  left: 50%;
   position: absolute;
-  top: 40%;
-  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.loader__dots > span {
-  -webkit-animation: 1.4s blink infinite;
-  -webkit-animation-fill-mode: backwards;
-  animation: 1.4s blink infinite;
-  animation-fill-mode: backwards;
+.loader__blinking--dots > span {
+  -webkit-animation: 1.4s blink infinite both;
+  animation: 1.4s blink infinite both;
+  border: 10px solid #fffffc;
+  border-radius: 50%;
   color: #363c6f;
-  font-size: 60px;
+  display: inline-block;
+  height: 10px;
+  margin-right: 2px;
   text-align: center;
+  width: 10px;
 }
 
-.loader__dots > span:nth-child(2) {
-  -webkit-animation-delay: .2s;
-  animation-delay: .2s;
+.loader__blinking--dots > .loader__dot2 {
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
 }
 
-.loader__dots > span:nth-child(3) {
-  animation-delay: .4s;
-  -webkit-animation-delay: .4s;
+.loader__blinking--dots > .loader__dot3 {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
 }
 
 @keyframes blink {
   0% {
-    opacity: .3;
-    -webkit-opacity: .3;
-    -moz-opacity: .3;
-    -ms-opacity: .3;
+    opacity: .1;
+    -webkit-transform: scale(0);
+    transform: scale(0);
   }
   30% {
     opacity: 1;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-    -ms-opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
   100% {
-    opacity: .3;
-    -webkit-opacity: .3;
-    -moz-opacity: .3;
-    -ms-opacity: .3;
+    opacity: .1;
+    -webkit-transform: scale(0);
+    transform: scale(0);
   }
 }
-@-webkit-keyframes blink {
+.loader__bars {
+  color: #363c6f;
+  clear: both;
+  font-size: 50px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader__bars > div {
+  -webkit-animation: 1.4s stretch infinite ease-in-out both;
+  animation: 1.4s stretch infinite ease-in-out both;
+  border: 1px solid #fffffc;
+  background-color: #fffffc;
+  color: #363c6f;
+  display: inline-block;
+  float: left;
+  height: 20px;
+  margin: 2px;
+  padding: 0;
+  width: 8px;
+}
+
+.loader__bars > .loader__bar2 {
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
+}
+
+.loader__bars > .loader__bar3 {
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s;
+}
+
+.loader__bars > .loader__bar4 {
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s;
+}
+
+.loader__bars > .loader__bar5 {
+  -webkit-animation-delay: .8s;
+  animation-delay: .8s;
+}
+
+@keyframes stretch {
   0% {
-    opacity: .3;
+    opacity: .1;
+    -webkit-transform: scale(1);
+    transform: scaleY(1);
   }
-  30% {
+  40% {
+    opacity: .5;
+    -webkit-transform: scale(1);
+    transform: scaleY(1);
+  }
+  80% {
     opacity: 1;
+    -webkit-transform: scale(2);
+    transform: scaleY(2);
   }
   100% {
-    opacity: .3;
+    opacity: .1;
+    -webkit-transform: scale(1);
+    transform: scaleY(1);
   }
 }
  /*
