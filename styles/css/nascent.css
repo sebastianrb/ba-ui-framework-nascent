@@ -2082,7 +2082,7 @@ body.modal-open {
 .c-na-modal__container :focus {
   outline-color: #363c6f;
   outline-offset: .125rem;
-  outline-width: 1.5px;
+  outline-width: 1px;
 }
 .c-na-modal__header {
   background-color: #eee;
@@ -2197,10 +2197,10 @@ body.modal-open {
 .c-na-modal__btn::before {
   background-color: #6f83f1;
   content: '';
-  height: .25em;
+  height: .05em;
   left: 0;
   position: absolute;
-  bottom: -.5em;
+  bottom: -.4em;
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 200ms ease-in-out;
