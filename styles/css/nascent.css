@@ -3283,7 +3283,7 @@ section {
   background-color: #e0cdec;
 }
 
-.fa {
+.social-bar__icon {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 2.4rem;
