@@ -3286,10 +3286,11 @@ section {
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
-  font-size: 3rem;
+  font-size: 2.4rem;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-top: -20px;
 }
 
 .social-bar__icon.fa.fa-facebook-official {
