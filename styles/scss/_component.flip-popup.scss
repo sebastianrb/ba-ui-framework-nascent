@@ -13,14 +13,16 @@
     -ms-flex-align: center;
     align-items: center;
     z-index: 100;
-    margin: 300px auto;
+    margin: 150px auto;
     padding: 0;
 }
 
 .bio-info__list li {
     display: inline-block;
-    background: $primary-base;
-    color: $grey-light;
+    // background: $primary-base;
+    // color: $grey-light;
+    background: $grey-light;
+    color: $primary-base;
     padding: 13px 33px 13px 20px;
     font-weight: lighter;
     font-size: 1.1em;
@@ -48,7 +50,7 @@
     -webkit-transition-delay: .2s;
     transition-delay: .2s;
     opacity: 1;
-    color: $grey-light;
+    color: $primary-base;
     left: -5px;
 }
 
@@ -59,7 +61,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background: url(../images/popup-button-arrow.svg) no-repeat, $primary-dark;
+    background: url(../images/popup-button-arrow.svg) no-repeat, $secondary-base;
     background-size: 7px;
     background-position: 50% 50%;
     -webkit-transition: all .2s;
@@ -78,7 +80,9 @@
     transition: all .3s ease;
     -webkit-transition-delay: .1s;
     transition-delay: .1s;
-    background: $primary-base;
+    // background: $primary-base;
+    background-color: $lav-light;
+    color: $primary-base;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -155,17 +159,17 @@
     transform-style: preserve-3d;
     -webkit-transform-origin: bottom;
     transform-origin: bottom;
-    background-color: $accent-dark;
-    -webkit-transform: rotateX(92deg);
-    transform: rotateX(92deg);
+    background-color: $primary-base;
+    -webkit-transform: rotateX(91.7deg);
+    transform: rotateX(91.7deg);
 }
 
 .flip-card--bottom {
-    -webkit-transform: rotateX(-92deg);
-    transform: rotateX(-92deg);
+    -webkit-transform: rotateX(-91.7deg);
+    transform: rotateX(-91.7deg);
     -webkit-transform-origin: top;
     transform-origin: top;
-    background-color: $primary-base;
+    // background-color: $primary-base;
 }
 
 .flip-card__side {
