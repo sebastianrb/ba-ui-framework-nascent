@@ -2409,6 +2409,70 @@ body.modal-open {
 }
 
 /*
+  innovative pagination start
+ */
+/* css or scss here */
+form {
+  position: relative;
+  margin-top: 50px;
+}
+
+.innovative-pagination__slider {
+  background-color: blue;
+  color: white;
+  position: absolute;
+  width: 300px;
+  z-index: 1;
+}
+
+.innovative-pagination__input {
+  background-color: blue;
+  color: white;
+  font-size: 10px;
+  padding: .5em;
+  position: absolute;
+  opacity: .5;
+  width: 40px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  pointer-events: all;
+  z-index: 1;
+  outline: 0;
+  background: red;
+  background: -webkit-linear-gradient(#DBE1E3, #8A8E92);
+}
+
+.innovative-pagination__slider input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  pointer-events: all;
+  z-index: 1000;
+  outline: 0;
+  background: -moz-linear-gradient(#DBE1E3, #8A8E92);
+}
+
+.innovative-pagination__slider input[type=range]::-ms-thumb {
+  -ms-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  pointer-events: all;
+  z-index: 1;
+  outline: 0;
+  background: -ms-linear-gradient(#DBE1E3, #8A8E92);
+}
+
+/*
+innovative pagination end
+*/
+/*
   breadcrumbs start
  */
 /* css or scss here */
