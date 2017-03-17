@@ -121,11 +121,10 @@
 }
 
 // flex container boilerplate
-@mixin flex($dir: row, $align: auto, $justify: auto, $display: flex, $wrap: auto) {
+@mixin flex($dir: row, $align: stretch, $justify: flex-start, $display: flex, $wrap: nowrap) {
   align-items: $align;
   display: $display;
   flex-direction: $dir;
   flex-wrap: $wrap;
   justify-content: $justify;
 }
-
