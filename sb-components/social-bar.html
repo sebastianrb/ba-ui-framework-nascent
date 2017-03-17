@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Social Media Bar</title>
+    <script src="https://use.fontawesome.com/3c2bdfb862.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/css/nascent.css">
+  </head>
+
+  <body>
+    <div class="generic-wrapper" style="padding: 2em">
+      <div class="component-intro">
+        <h2 class="component-intro__header">Social Media Bar</h2>
+        <p class="component-intro__description">This is a Social Media-sharing bar. As you click the social media buttons, the number of shares below each button will increase, as will the total share count on the lefthand side.</p>
+      </div>
+    </div> <!-- end .generic-wrapper -->
+
+    <div class="generic-wrapper" style="padding: 2em">
+      <div class="social-bar">
+        <div class="social-bar__share-count-container">
+            <p class="social-bar__share-number">0</p>
+            <p class="social-bar__share-caption">shares</p>
+        </div>
+        <div class="social-bar__social-icons">
+            <div class="social-bar__social-icon-container">
+                <i class="social-bar__icon fa fa-facebook-official"></i>
+                <div class="social-bar__icon-count-container">
+                    <p class="social-bar__icon-count">0</p>
+                </div>
+            </div>
+            <div class="social-bar__social-icon-container">
+                <i class="social-bar__icon fa fa-twitter" aria-hidden="true"></i>
+                <div class="social-bar__icon-count-container">
+                    <p class="social-bar__icon-count">0</p>
+                </div>
+            </div>
+            <div class="social-bar__social-icon-container">
+                <i class="social-bar__icon fa fa-google-plus" aria-hidden="true"></i>
+                <div class="social-bar__icon-count-container">
+                    <p class="social-bar__icon-count">0</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../javascript/social-bar.js" type="text/javascript"></script>
+  </body>
+</html>

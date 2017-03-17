@@ -6,7 +6,7 @@
 
 //general form styles
 .form {
-    border-top: 8px solid $primary-base;
+    border-top: 9px solid $primary-base;
     width: 50%;
     max-width: 800px;
     padding: 60px 35px 20px;
@@ -15,7 +15,8 @@
     font-weight: 100;
     font-size: 1.1rem;
     min-width: 670px;
-    @include shadow(2px, 2px, 4px, 0, rgba(128, 128, 128, 0.28));
+    // @include shadow(2px, 2px, 4px, 0, rgba(128, 128, 128, 0.28));
+    box-shadow: $component-shadow;
 }
 
 .form__row {
@@ -61,7 +62,7 @@
 
 .form__label--radio-caption {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 //selects
@@ -72,6 +73,7 @@
     background: $secondary-base;
     height: 2rem;
     color: white;
+    cursor: pointer;
 }
 
 .form__select-input:focus {
@@ -115,10 +117,16 @@
     position: absolute;
     border-radius: 50%;
     background: $primary-base;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    -webkit-transform: scale(0);
+    transform: scale(0);
 }
 
 .form__radio-input:checked + .form__radio-button-div .form__radio-button-check {
     opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 //checkboxes
@@ -155,6 +163,10 @@
     background-position: 50% 50%;
     position: relative;
     top: -6px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    -webkit-transform: scale(0);
+    transform: scale(0);
 }
 
 // .form__checkbox-input:checked + .form__checkbox-div {
@@ -163,4 +175,6 @@
 
 .form__checkbox-input:checked + .form__checkbox-div .form__checkbox-check {
     opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }

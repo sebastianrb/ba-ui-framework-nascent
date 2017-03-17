@@ -1,0 +1,173 @@
+/*
+  loaders start
+ */
+
+/* css or scss here */
+// wrapper
+.loader__wrapper {
+  background-color: $primary-dark;
+  border: 1px solid $primary-light;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  width: 800px;
+}
+
+// spinner
+.loader__spinner {
+  animation: spinner 2s linear infinite;
+  -webkit-animation: spinner 2s linear infinite;
+  -moz-animation: spinner 2s linear infinite;
+  border: 5px solid $primary-base ;
+  border-top: 5px solid $white;
+  border-radius: 100%;
+  height: 100px;
+  margin: 0 auto;
+  left: 43.7%;
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+}
+
+@keyframes spinner {
+  0% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+// blinking dots
+.loader__blinking--dots {
+  color: $primary-base;
+  font-size: 50px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader__blinking--dots > span {
+  -webkit-animation: 1.4s blink infinite both;
+  animation: 1.4s blink infinite both;
+  border: 10px solid $white ;
+  border-radius: 50%;
+  color: $primary-base;
+  display: inline-block;
+  height: 10px;
+  margin-right: 2px;
+  text-align: center;
+  width: 10px;
+}
+
+.loader__blinking--dots > .loader__dot2 {
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+
+.loader__blinking--dots > .loader__dot3 {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: .1;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  30% {
+    opacity: 1;
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+
+  100% {
+    opacity: .1;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+
+// bars
+.loader__bars {
+  color: $primary-base;
+  clear: both;
+  font-size: 50px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader__bars > div {
+  -webkit-animation: 1.4s stretch infinite ease-in-out both;
+  animation: 1.4s stretch infinite ease-in-out both;
+  border: 1px solid $white ;
+  background-color: $white;
+  color: $primary-base;
+  display: inline-block;
+  float: left;
+  height: 20px;
+  margin: 2px;
+  padding: 0;
+  width: 8px;
+}
+
+.loader__bars > .loader__bar2 {
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
+}
+
+.loader__bars > .loader__bar3 {
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s;
+}
+
+.loader__bars > .loader__bar4 {
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s;
+}
+
+.loader__bars > .loader__bar5 {
+  -webkit-animation-delay: .8s;
+  animation-delay: .8s;
+}
+
+@keyframes stretch {
+  0% {
+    opacity: .1;
+    -webkit-transform: scale(1.0);
+    transform: scaleY(1.0);
+  }
+
+  40% {
+    opacity: .5;
+    -webkit-transform: scale(1.0);
+    transform: scaleY(1.0);
+  }
+
+  80% {
+    opacity: 1;
+    -webkit-transform: scale(2.0);
+    transform: scaleY(2.0);
+  }
+
+  100% {
+    opacity: .1;
+    -webkit-transform: scale(1.0);
+    transform: scaleY(1.0);
+  }
+}
+  /*
+  loaders end
+ */

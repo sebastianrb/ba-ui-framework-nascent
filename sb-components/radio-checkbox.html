@@ -3,8 +3,8 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Forms</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Radios and Checkboxes</title>
+    <script src="https://use.fontawesome.com/3c2bdfb862.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
@@ -14,30 +14,12 @@
   <body>
     <div class="generic-wrapper" style="padding: 2em">
       <div class="component-intro">
-        <h2 class="component-intro__header">Form Component</h2>
-        <p class="component-intro__description">This is a form component, exhibiting an array of different form elements.</p>
-        <p class="component-intro__description">Each input should be wrapped in a div with class <code>form__row</code>. New inputs can be added easily simply by creating a new row and then building out the appropriate form controls.</p>
-        <p class="component-intro__description">Checkboxes and radio buttons should be wrapped in label elements. In addition, there should be a span and check div inside each of these wrapper labels.</p>
+        <h2 class="component-intro__header">Radios and Checkboxes</h2>
+        <!-- <p class="component-intro__description">Here some radios and checkboxes.</p> -->
       </div>
-    </div>
+    </div> <!-- end .generic-wrapper -->
     <div class="generic-wrapper" style="padding: 2em">
-      <form class="form">
-            <div class="form__row">
-              <label class="form__label" for="text-input">Text Field</label>
-              <input type="text" name="text-input" id="text-input" class="form__text-input">
-            </div>
-            <div class="form__row">
-              <label class="form__label" for="text-area">Text Area</label>
-              <textarea id="text-area" class="form__text-area" rows="6"></textarea>
-            </div>
-            <div class="form__row">
-              <label class="form__label" for="select-input">Select Input</label>
-              <select name="select-input" id="select-input" class="form__select-input">
-                  <option value="option1">Option 1</option>
-                  <option value="option2">Option 2</option>
-                  <option value="option3">Option 3</option>
-              </select>
-            </div>
+        <form class="form">
             <div class="form__row">
               <label class="form__label form__label--radio-caption">Radio Input</label>
               <label class="form__label form__label--radio-wrapper" for="radio-input-1">
@@ -62,6 +44,10 @@
                 </div>
               </label>
             </div>
+        </form>
+    </div>
+    <div class="generic-wrapper" style="padding: 2em">
+        <form class="form">
             <div class="form__row">
               <label class="form__label form__label--checkbox-wrapper" for="checkbox-input">
                 <span class="form__checkbox-span">Checkbox Input</span>
@@ -71,9 +57,8 @@
                 </div>
               </label>
             </div>
-      </form>
-    </div> <!-- end .generic-wrapper -->
-
-    <script src="../javascript/filename.js" type="text/javascript"></script>
+        </form>
+    </div>
+    <script src="../javascript/social-bar.js" type="text/javascript"></script>
   </body>
 </html>
