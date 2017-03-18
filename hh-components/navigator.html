@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Grid</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/css/nascent.css">
+</head>
+
+<body>
+<div class="generic-wrapper" style="padding: 2em">
+  <h2>Navgiator Element</h2>
+
+  <p class="p-navigator">This navigator element will allow you to scroll either partially up and down the page,
+  or down to bottom/back to top.</p>
+
+  <div class="navigator-arrows">
+
+    <i class="fa fa-caret-up" id="partial-up" aria-hidden="true" onclick="scrollBy(0, -200)"></i>
+    <a href="#top" id="anchor-top"><i class="fa fa-long-arrow-up" id="full-up" aria-hidden="true"></i></a>
+    <br>
+    <i class="fa fa-caret-down" id="partial-down" aria-hidden="true" onclick="scrollBy(0, 200)"></i>
+    <a href="javascript: document.body.scrollIntoView(false);" id="anchor-bottom"><i class="fa fa-long-arrow-down" id="full-down" aria-hidden="true"></i></a>
+
+  </div>
+
+</div> <!-- end .generic-wrapper -->
+
+<script src="../javascript/filename.js" type="text/javascript"></script>
+</body>
+</html>

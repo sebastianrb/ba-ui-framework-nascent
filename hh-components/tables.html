@@ -12,46 +12,136 @@
   </head>
 
   <body>
-    <div class="generic-wrapper" style="padding: 2em">
-      <h2>Tables</h2>
+  <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Montserrat">
 
-      <div class="div-table">
-        <table class="table-class">
-          <thead class="table-head">
-          <tr>
-            <td class="td-class"></td>
-            <td class="column-a td-class">Course 1</td>
-            <td class="column-b td-class">Course 2</td>
-            <td class="column-c td-class">Course 3</td>
-          </tr>
-          </thead>
-          <tbody>
-          <tr class="row-a">
-            <td class="td-class"><input type="checkbox"></input></td>
-            <td class="column-a td-class">Specification 1</td>
-            <td class="column-b td-class">Specification 1</td>
-            <td class="column-c td-class">Specification 1</td>
-          </tr>
-          <tr class="row-b">
-            <td class="td-class"><input type="checkbox"></input></td>
-            <td class="column-a td-class">Specification 2</td>
-            <td class="column-b td-class">Specification 2</td>
-            <td class="column-c td-class">Specification 2</td>
-          </tr>
-          <tr class="row-c">
-            <td class="td-class"><input type="checkbox"></input></td>
-            <td class="column-a td-class">Specification 3</td>
-            <td class="column-b td-class">Specification 3</td>
-            <td class="column-c td-class">Specification 3</td>
-          </tr>
-          </tbody>
-          <tfoot>
-          <tr></tr>
-          </tfoot>
-        </table>
-      </div>
+  <p>The following table allows you to check off items for later reference, helpful for when you have a very long list. </p>
 
-    </div> <!-- end .generic-wrapper -->
+  <div class="table-border">
+    <table class="c-na-table">
+      <thead class="th-head">
+      <tr>
+        <td class="td-input"></td>
+        <td class="column-a-0a no-lite">Course 1</td>
+        <td class="column-b-0a no-lite">Course 2</td>
+        <td class="column-c-0a no-lite">Course 3</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="row-a tr-selected">
+        <td class="td-input"><input type="checkbox"></input></td>
+        <td class="column-a-1">Specification 1</td>
+        <td class="column-b-1">Specification 1</td>
+        <td class="column-c-1">Specification 1</td>
+      </tr>
+      <tr class="row-b tr-selected">
+        <td class="td-input"><input type="checkbox"></input></td>
+        <td class="column-a-1">Specification 2</td>
+        <td class="column-b-1">Specification 2</td>
+        <td class="column-c-1">Specification 2</td>
+      </tr>
+      <tr class="row-c tr-selected">
+        <td class="td-input"><input type="checkbox"></input></td>
+        <td class="column-a-1">Specification 3</td>
+        <td class="column-b-1">Specification 3</td>
+        <td class="column-c-1">Specification 3</td>
+      </tr>
+      </tbody>
+      <tfoot class="tf-foot">
+      <tr></tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <p>This table allows you to hide rows by checking them off. To show the content again, simply uncheck the checkbox.</p>
+
+  <div class="table-border">
+    <table class="c-na-table">
+      <thead class="th-head">
+      <tr>
+        <td class="td-input"></td>
+        <td class="column-a-0b no-lite">Course 1</td>
+        <td class="column-b-0b no-lite">Course 2</td>
+        <td class="column-c-0b no-lite">Course 3</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="row-a tr-deselected">
+        <td class="td-input"><input type="checkbox"></input></td>
+        <td class="column-a-2">Specification 1</td>
+        <td class="column-b-2">Specification 1</td>
+        <td class="column-c-2">Specification 1</td>
+      </tr>
+      <tr class="row-b tr-deselected">
+        <td class="td-input"><input type="checkbox"></input></td>
+        <td class="column-a-2">Specification 2</td>
+        <td class="column-b-2">Specification 2</td>
+        <td class="column-c-2">Specification 2</td>
+      </tr>
+      <tr class="row-c tr-deselected">
+        <td class="td-input"><input type="checkbox"></input></td>
+        <td class="column-a-2">Specification 3</td>
+        <td class="column-b-2">Specification 3</td>
+        <td class="column-c-2">Specification 3</td>
+      </tr>
+      </tbody>
+      <tfoot class="tf-foot">
+      <tr></tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <p>This table enables users to leave a comment in one of the cells.</p>
+
+  <div class="table-three table-border">
+    <table class="c-na-table">
+      <thead class="th-head">
+      <tr>
+        <td class="td-input"></td>
+        <td class="column-a-0c no-lite">Course 1</td>
+        <td class="column-b-0c no-lite">Course 2</td>
+        <td class="column-c-0c no-lite">Course 3</td>
+        <td class-"column-d">Comments &nbsp;&nbsp;</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="row-a">
+        <td class="td-input"><input type="checkbox"></input></td>
+        <td class="column-a-3">Specification 1</td>
+        <td class="column-b-3">Specification 1</td>
+        <td class="column-c-3">Specification 1</td>
+        <td class="column-d"><i class="fa fa-comment-o" aria-hidden="true"></i><div id="ta-one">
+          <button class="exit-button">&#215;</button>
+          <textarea row="4" col="20"></textarea>
+        </div></td>
+      </tr>
+      <tr class="row-b">
+        <td class="td-input"><input type="checkbox"></input></td>
+        <td class="column-a-3">Specification 2</td>
+        <td class="column-b-3">Specification 2</td>
+        <td class="column-c-3">Specification 2</td>
+        <td class="column-d"><i class="fa fa-comment-o" aria-hidden="true"></i><div id="ta-two">
+          <button class="exit-button">&#215;</button>
+          <textarea row="4" col="20"></textarea>
+        </div></td>
+      </tr>
+      <tr class="row-c">
+        <td class="td-input"><input type="checkbox"></input></td>
+        <td class="column-a-3">Specification 3</td>
+        <td class="column-b-3">Specification 3</td>
+        <td class="column-c-3">Specification 3</td>
+        <td class="column-d"><i class="fa fa-comment-o" aria-hidden="true"></i><div id="ta-three">
+          <button class="exit-button">&#215;</button>
+          <textarea row="4"col="20"></textarea>
+        </div></td>
+      </tr>
+      </tbody>
+      <tfoot class="tf-foot">
+      <tr></tr>
+      </tfoot>
+    </table>
+
+  </div>
 
     <script src="../javascript/tables.js" type="text/javascript"></script>
   </body>
