@@ -15,10 +15,24 @@
     <div class="generic-wrapper" style="padding: 2em">
       <h2>Innovative Pagination</h2>
 
-      <section class="">
-        <form>
-      		<input type="range" id="sliderRange" class="innovative-pagination__slider" name="amountRange" min="0" max="100" value="0"/>
-      		<input type="number" id="inputNumber" class="innovative-pagination__input" name="amountInput" min="0" max="100" value="0"/>
+      <p class="innovative-pagination__intro">
+         This is an <strong><code>innovative pagination</code></strong> element. While it might look like a regular slider it is slightly different.
+       </p>
+       <p>
+         As a user moves the slider the numbers in the tooltip will change to reflect the position.  A user can also enter the number on the tooltip and change the position or click the arrows in the tooltip to change the position.  That is what makes this innovative because a user has three ways to change the page (slide the thumb, click the arrows or enter a number)
+       </p>
+       <p>
+        Create a form with two inputs. For the form add a class <strong><code>innovative-pagination__form</code></strong>.  The first input should be an <strong><code>input[type=range]</code></strong>be sure to add the id <strong><code>sliderRange</code></strong>.  The second input should be input[type=number] add the id <strong><code>inputNumber</code></strong>.
+        Add <strong><code>min</code></strong>, <strong><code>max</code></strong> and <strong><code>value</code></strong> attributes to each element.  All thre values should match for both inputs
+      </p>
+
+       <p>
+         in Firefox and IE the slider track color will change to show the progress of the slider.
+       </p>
+      <section class="innovative-pagination__section">
+        <form class="innovative-pagination__form">
+      		<input type="range" id="sliderRange" class="innovative-pagination__slider" name="amountRange" min="1" max="200" value="1"/>
+          <input type="number" id="inputNumber" class="innovative-pagination__input" name="amountInput" min="1" max="200" value="1"/>
         </form>
       </section>
 
