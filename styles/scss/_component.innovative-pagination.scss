@@ -1,0 +1,131 @@
+/*
+  innovative pagination start
+ */
+
+/* css or scss here */
+.innovative-pagination__section {
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  margin-top: 4em;
+  width: 100%;
+}
+
+.innovative-pagination__intro {
+  overflow: hidden;
+  clear: both
+}
+
+.innovative-pagination__form {
+  display: block;
+  position: relative;
+}
+
+// tooltip input
+.innovative-pagination__input {
+  background-color: $accent-base;
+  border: 1px solid $white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-color: $accent-base;
+  color: white;
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+  height: 25px;
+  position: absolute;
+  top: -2.5em;
+  text-align: center;
+  width: 35px;
+  z-index: 5;
+}
+
+
+.innovative-pagination__slider {
+  color: white;
+  position: absolute;
+  width: 500px;
+}
+
+.innovative-pagination__form >input[type=range] {
+  -webkit-appearance: none;
+  position: absolute;
+  width: 500px;
+}
+
+//slider thumb
+.innovative-pagination__form > input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 16px solid $accent-base;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.innovative-pagination__form > input[type=range]::-moz-range-thumb {
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 16px solid $accent-base;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.innovative-pagination__form > input[type=range]::-ms-thumb {
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 16px solid $accent-base;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+// track
+.innovative-pagination__form > input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    width: 500px;
+    height: 6px;
+    background: $grey-med;
+    border: none;
+    border-radius: 10px;
+}
+
+.innovative-pagination__form > input[type=range]::-moz-range-track {
+    -webkit-appearance: none;
+    width: 500px;
+    height: 6px;
+    background: $grey-med;
+    border: none;
+    border-radius: 10px;
+}
+
+.innovative-pagination__form > input[type=range]::-ms-range-track {
+    -webkit-appearance: none;
+    width: 500px;
+    height: 6px;
+    background: $grey-med;
+    border: none;
+    border-radius: 10px;
+}
+
+// progress bar
+.innovative-pagination__form > input[type="range"]::-moz-range-progress {
+  background-color: $primary-base;
+}
+
+.innovative-pagination__form > input[type="range"]::-moz-range-track {
+  background-color: $primary-base;
+}
+
+.innovative-pagination__form > input[type="range"]::-ms-fill-lower {
+  background-color: $primary-base;
+}
+
+.innovative-pagination__form > input[type="range"]::-ms-fill-upper {
+  background-color: $primary-base;
+}
+/*
+innovative pagination end
+*/

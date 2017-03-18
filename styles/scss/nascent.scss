@@ -2,64 +2,52 @@
  * Import various partials. Ordering is important here.
  */
 
-
 //tools (like mixins and placeholders)
 @import "settings.colors";
 
 @import "tools.placeholders";
-
- @import "tools.mixins";
+@import "tools.mixins";
 
 @import "generic.normalize";
+@import "generic.box-sizing";
 
 //base framework-wide styles and class
 @import "shared.styles";
 
-//@import "settings.global";
-
-//@import "generic.reset";
-
-@import "generic.box-sizing";
-
 @import 'component.accordion';
-
 @import 'component.ripple';
-
 @import 'component.scrollspy';
-
 @import 'component.tabs';
-
 @import 'component.footer';
-
 @import 'component.grid';
-
 @import 'component.progress-bar';
-
 @import 'component.tables';
-
 @import 'component.typography';
-
 @import 'component.alerts';
-
 @import 'component.buttons';
-
 @import 'component.dropdowns';
-
 @import 'component.list-groups';
-
+@import 'component.loaders';
 @import 'component.modals';
-
 @import 'component.pagination';
+<<<<<<< HEAD
+=======
 
+@import 'component.innovative-pagination';
+
+>>>>>>> 6105e4a... Draft of innovative pagination element
 @import 'component.breadcrumbs';
-
 @import 'component.carousels';
-
 @import 'component.forms';
-
+@import 'component.flip-popup';
+@import 'component.social-bar';
 @import 'component.badges';
-
+// @import "component.wisam-cards";
 @import 'component.cards';
 
+@import 'component.thereveal';
+
 @import 'component.template-index';
- 
+
+@import 'scrollspy'
+

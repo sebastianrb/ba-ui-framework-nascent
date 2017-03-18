@@ -53,7 +53,7 @@ $modal-gradient: linear-gradient(30deg, $mod-bright, #8bb8ef);
     & :focus {
       outline-color: $primary-base;
       outline-offset: .125rem;
-      outline-width: 1.5px;
+      outline-width: 1px;;
     }
   }
 
@@ -179,10 +179,10 @@ $modal-gradient: linear-gradient(30deg, $mod-bright, #8bb8ef);
   &::before {
     background-color: $lav-base;
     content: '';
-    height: .25em;
+    height: .05em;
     left: 0;
     position: absolute;
-    bottom: -.5em;
+    bottom: -.4em;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 200ms ease-in-out;

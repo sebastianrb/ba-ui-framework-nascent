@@ -1,0 +1,127 @@
+.social-bar {
+    background: radial-gradient(circle, rgba(204, 211, 250, 0.60), $lav-light);
+    border-radius: 4px;
+    width: 45%;
+    min-width: 600px;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 55px 20px 70px;
+    // box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.27) inset;
+}
+
+
+.social-bar__share-count-container {
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.social-bar__social-icons {
+    width: auto;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.social-bar__social-icon-container {
+   width: 85px;
+    height: 90px;
+    margin-right: 14px;
+    background-color: $grey-light;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid $primary-light;
+    -webkit-transition: all .1s;
+    transition: all .1s;
+    position: relative;
+}
+
+.social-bar__icon-count-container {
+    width: 100%;
+    background-color: lighten($secondary-base, 15%);
+    position: absolute;
+    bottom: 0;
+    height: 23px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.social-bar__icon-count {
+    margin: 2px 0 0;
+    width: 100%;
+    text-align: center;
+    color: $primary-base;
+}
+
+.social-bar__social-icon-container:hover {
+    background-color: $secondary-light;
+}
+
+.social-bar__icon {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 2.4rem;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-top: -20px;
+}
+
+.social-bar__icon.fa.fa-facebook-official {
+    color: #3B5998;
+}
+
+.social-bar__icon.fa.fa-twitter {
+    color: #1a8bf0;
+}
+
+.social-bar__icon.fa.fa-google-plus {
+    color: #D84B37;
+}
+
+.social-bar__share-count-container {
+    border-radius: 4px;
+    background-color: lighten($primary-base, 30%);
+    color: $grey-light;
+    text-align: center;
+    position: relative;
+}
+
+.social-bar__share-number {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: bold;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    width: 100%;
+    text-align: center;
+    top: 14px;
+    left: 0;
+    position: absolute;
+}
+
+.social-bar__share-caption {
+    margin: 8px 0 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.social-bar__share-number.slide-right {
+    left: 100%;
+}
+
+.social-bar__share-number.slide-from-left {
+    left: 50%;
+}
+
+.social-bar__share-number--moved-left {
+    left: -100%;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>The Reveal</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/css/nascent.css">
+
+    <!-- just temp style tag for the demo page -->
+    <style>
+      body {
+        font-family: 'Roboto';
+        font-weight: 300;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="generic-wrapper" style="padding: 2em">
+      <h2>The Reveal</h2>
+
+     <!-- the reveal container -->
+      <div class="c-na-reveal">
+        <!-- overlay container -->
+        <div class="c-na-reveal__overlay">
+          <!-- container for each side that will pull away -->
+          <div class="c-na-reveal__split">
+            <div class="c-na-reveal__side c-na-reveal__side--left">
+              <span class="c-na-reveal__text c-na-reveal__text--left">A little mystery never hurt anyone.</span></div>
+            <div class="c-na-reveal__side c-na-reveal__side--right">
+              <!-- hide this from screenreaders so it does not get repeated -->
+              <span class="c-na-reveal__text c-na-reveal__text--right" aria-hidden="true">A little mystery never hurt anyone.</span>
+            </div>
+          </div>
+          <!-- always visible, even over content, so overlay can be toggled -->
+          <div class="c-na-reveal__footer">
+            <button class="c-na-reveal__btn" aria-label="toggle reveal" title="toggle reveal">
+              <span class="c-na-reveal__btntext">&times;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- all of your content goes inside of this container -->
+        <div class="c-na-reveal__content c-na-reveal__content--text">
+          <section class="c-na-reveal__context--text__section">
+            <h1 class="c-na-reveal__content--text__heading">A Blurb About Something</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea <a href="#">magnam quod nam</a> quis voluptatum labore aliquam autem facere asperiores ex, doloremque corporis quasi sapiente? Maxime modi officia, nemo ipsa eligendi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea magnam quod nam quis voluptatum labore aliquam autem facere asperiores ex, doloremque corporis quasi sapiente? Maxime modi officia, nemo ipsa eligendi!</p>
+          </section>
+
+        </div>
+      </div>
+
+    </div> <!-- end .generic-wrapper -->
+    <script src="../javascript/thereveal.js"></script>
+  </body>
+</html>

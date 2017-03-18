@@ -1,0 +1,139 @@
+.c-na-reveal {
+  height: 100%;
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: $white;
+  position: relative;
+  overflow: hidden;
+
+
+  &__overlay {
+    @include flex($dir: column);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+
+    /* styling for when sides are pulling away */
+    &.pull-away .c-na-reveal__side--left {
+      transform: translateX(-100%);
+    }
+
+    &.pull-away .c-na-reveal__side--right {
+      transform: translateX(100%);
+    }
+
+    &.pull-away .c-na-reveal__btntext {
+    transform: rotate(0);
+    color: $lav-light;
+    }
+
+  }
+
+  &__split {
+    height: calc(100% - 4rem);
+    font-size: 3vmax;
+
+    &.lg-txt {
+      font-size: 10vmax;
+    }
+  }
+
+  &__side {
+    width: 50%;
+    height: 100%;
+    background-size: 200% 100%;
+
+    background-image: linear-gradient(90deg, $primary-base, $lav-base);
+
+    color: $lav-light;
+    float: left;
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    transition: transform 1000ms ease-in-out,
+                background-color 500ms ease-in-out;
+
+    &--right {
+      background-position: 100% 0;
+    }
+
+  }
+
+  &__text {
+    display: block;
+    width: 100%;
+  }
+
+  &__text--left {
+    transform: translateX(50%);
+  }
+  &__text--right {
+    transform: translateX(-50%);
+  }
+
+  &__footer {
+    background-color: lighten($primary-dark, 5%);
+    color: $lav-base;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: .125em solid;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 2rem;
+    padding: 0;
+    pointer-events: auto;
+    transition: color 300ms ease-in-out;
+    width: 2rem;
+    color: $lav-base;
+
+    &:hover {
+      color: $secondary-base;
+    }
+
+    &:focus {
+      transform: none;
+      outline: 1px dotted $lav-light;
+      outline-offset: 3px;
+    }
+  }
+
+  &__btntext {
+    display: block;
+    transform: rotate(45deg);
+    transition: transform 500ms ease-in-out;
+  }
+
+  &__content--text {
+    color: $grey-dark;
+    padding: 1rem 2rem 2rem;
+
+    & a {
+      border-bottom: .0625em solid;
+      color: $mod-bright;
+      text-decoration: none;
+      transition: all 400ms ease-in-out;
+    }
+
+    & a:hover,
+    & a:focus {
+      background-color: $secondary-base;
+      color: $white;
+    }
+  }
+
+  &__content--text__heading {
+    display: inline-block;
+    padding-bottom: .25em;
+    border-bottom: .1em solid $mod-bright;
+  }
+}
