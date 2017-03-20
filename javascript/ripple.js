@@ -1,35 +1,5 @@
 /* for version ripple-child */
 (function() {
-  // using this IIFE will keep variables in here out of window's scope
-  // without IIFE, i.e., just code below, all variables would be in window's scope
-
-  /*
-      http://www.w3schools.com/colors/colors_picker.asp
-
-      red: hsla(0, 100%, 50%, 0.5) , rgba(255, 0, 0, 0.5)
-      green: hsla(120, 100%, 50%, 0.5) , rgba(0, 255, 0, 0.5)
-      blue: hsla(240, 100%, 50%, 0.5) , rgba(0, 0, 255, 0.5)
-      yellow: hsla(60, 100%, 50%, 0.5) , rgba(255, 255, 0, 0.5)
-      deep pink: hsla(350, 100%, 70%, 0.5) , rgba(255, 102, 128, 0.5)
-      fuchsia: hsla(300, 100%, 50%, 0.5) , rgba(255, 0, 255, 0.5)
-      orange: hsla(39, 100%, 50%, 0.5) , rgba(255, 165, 0, 0.5)
-      purple: hsla(300, 100%, 30%, 0.5) , rgba(153, 0, 153, 0.5)
-      narragansett blue-green: hsla(168, 100%, 50%, 0.5) , rgba(0, 255, 204, 0.5)
-      carribean blue: hsla(195, 100%, 60%, 0.5) , rgba(51, 204, 255, 0.5)
-      green-yellow: hsla(66, 100%, 55%, 0.5) , rgb(232, 255, 26, 0.5)
-
-      black: hsla(0, 0%, 0%, 0.5) , rgba(0, 0, 0, 0.5)
-      gray: hsla(0, 0%, 50%, 0.5) , rgba(128, 128, 128, 0.5)
-  */
-
-  // https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageX
-  // https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
-  /* https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
-       can be used to get equivalent of jQuery $(el).offset(); as suggested
-      in http://youmightnotneedjquery.com/
-  */
-  // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetWidth
-  // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight
 
   var docBody = document.body;
   docBody.addEventListener('click', _findRippleElement);
