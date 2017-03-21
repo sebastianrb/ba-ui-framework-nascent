@@ -2357,7 +2357,7 @@ body.modal-open {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  background-color: rgba(238, 238, 238, 0.8);
+  background-color: rgba(238, 238, 238, 0.9);
   bottom: 0;
   color: #474747;
   left: 0;
