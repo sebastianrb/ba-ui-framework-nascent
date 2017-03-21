@@ -36,7 +36,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  
+
   &.tight {
     justify-content: center;
   }
@@ -152,9 +152,4 @@
 .c-na-pagination--current {
   color: #fff;
   background: $primary-base;
-}
-
-/* for items that should represent a group of links and display ... */
-.c-na-pagination__link--collection::before {
-  content: '...';
 }

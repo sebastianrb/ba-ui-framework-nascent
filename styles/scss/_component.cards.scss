@@ -10,6 +10,7 @@ $img-pad: .25rem;
   overflow: hidden;
   padding: ($card-padding / 2) $card-padding ($card-padding * 2);
   position: relative;
+  background-color: #fff;
   text-align: center;
   transition: color 200ms ease-in-out;
 
@@ -181,7 +182,7 @@ $img-pad: .25rem;
 
 
   /* horizontal-specific styles */
-  .c-na-user-card--horizontal-ns {
+  .c-na-user-card--hz-ns {
     max-width: 40rem;
     padding: 0;
 

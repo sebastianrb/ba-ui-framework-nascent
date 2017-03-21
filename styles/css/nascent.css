@@ -3,6 +3,7 @@
  */
 /* Framework wide variables for color
  */
+/* needed a bright color */
 .form__text-input,
 .form__text-area {
   border: 2px solid #eee;
@@ -2350,7 +2351,6 @@ body.modal-open {
   overflow: hidden;
 }
 
-/* needed a bright color amongst all of the grey */
 .c-na-modal__overlay {
   align-items: center;
   display: flex;
@@ -2510,7 +2510,7 @@ body.modal-open {
 .c-na-modal__btn::before {
   background-color: #6f83f1;
   content: '';
-  height: .05em;
+  height: .01em;
   left: 0;
   position: absolute;
   bottom: -.4em;
@@ -2714,11 +2714,6 @@ body.modal-open {
 .c-na-pagination--current {
   color: #fff;
   background: #363c6f;
-}
-
-/* for items that should represent a group of links and display ... */
-.c-na-pagination__link--collection::before {
-  content: '...';
 }
 
 /*
@@ -3902,6 +3897,7 @@ section {
   overflow: hidden;
   padding: 0.5rem 1rem 2rem;
   position: relative;
+  background-color: #fff;
   text-align: center;
   transition: color 200ms ease-in-out;
 }
@@ -4040,32 +4036,32 @@ section {
 }
 @media screen and (min-width: 35em) {
   /* horizontal-specific styles */
-  .c-na-user-card--horizontal-ns {
+  .c-na-user-card--hz-ns {
     max-width: 40rem;
     padding: 0;
   }
-  .c-na-user-card--horizontal-ns::before {
+  .c-na-user-card--hz-ns::before {
     left: 7.5rem;
     top: 1.4rem;
   }
-  .c-na-user-card--horizontal-ns .c-na-user-card__body {
+  .c-na-user-card--hz-ns .c-na-user-card__body {
     float: left;
     padding: 1rem 2rem 1rem 1rem;
     width: calc(100% - 15rem);
   }
-  .c-na-user-card--horizontal-ns .c-na-user-card__header {
+  .c-na-user-card--hz-ns .c-na-user-card__header {
     float: left;
     padding: 1.4rem;
     position: relative;
     width: 15rem;
   }
-  .c-na-user-card--horizontal-ns .c-na-user-card__headerbg {
+  .c-na-user-card--hz-ns .c-na-user-card__headerbg {
     display: none;
   }
-  .c-na-user-card--horizontal-ns .c-na-user-card__name {
+  .c-na-user-card--hz-ns .c-na-user-card__name {
     font-size: 1.3rem;
   }
-  .c-na-user-card--horizontal-ns .c-na-user-card__tagline {
+  .c-na-user-card--hz-ns .c-na-user-card__tagline {
     font-size: 1rem;
     margin-top: .5rem;
     padding: .4rem;
@@ -4567,18 +4563,19 @@ footer {
   justify-content: space-between;
   width: 100%;
   padding: .75rem 1.5rem;
-  background-color: #e3e7fc;
+  background-color: #e0cdec;
   border: none;
   color: #25294d;
   font-family: inherit;
-  transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+.na-markup__toggle:hover {
+  background-color: #a670ca;
+  color: #fffffc;
 }
 .na-markup__toggle:focus {
   outline: none;
   box-shadow: inset 0 0 0 1px #363c6f;
-}
-.na-markup__toggle:hover {
-  background-color: #ccd3fa;
 }
 .na-markup__icon, .na-markup__txt {
   font-weight: bold;

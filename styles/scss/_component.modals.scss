@@ -3,7 +3,7 @@ body.modal-open {
   overflow: hidden;
 }
 
-$mod-bright: #563dd9; /* needed a bright color amongst all of the grey */
+// $mod-bright: #563dd9; /* needed a bright color amongst all of the grey */
 $modal-gradient: linear-gradient(30deg, $mod-bright, #8bb8ef);
 
 .c-na-modal {
@@ -179,7 +179,7 @@ $modal-gradient: linear-gradient(30deg, $mod-bright, #8bb8ef);
   &::before {
     background-color: $lav-base;
     content: '';
-    height: .05em;
+    height: .01em;
     left: 0;
     position: absolute;
     bottom: -.4em;

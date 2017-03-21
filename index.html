@@ -1452,31 +1452,287 @@
 
                   <h2>Buttons</h2>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
+                  <p>All buttons (or links styled to look like buttons) should have the class <code>c-na-btn</code> for the base styles.</p>
+                  <section>
+                    <h3>Background and no Border</h3>
+                    <p>To add the background color, append the class <code>c-na-btn--primary-bg</code>, <code>c-na-btn--secondary-bg</code>, or <code>c-na-btn--accent-bg</code> and change those colors in your stylesheet to match your project. By default all elements with the class <code>c-na-btn</code> have a background color of white.</p>
+
+                    <div class="site-btn__groups">
+                      <button class="c-na-btn c-na-btn--primary-bg u-na--dim">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        Download
+                      </button>
+                      <a href="#" class="c-na-btn c-na-btn--accent-bg u-na--dim">Accent</a>
+                      <button class="c-na-btn c-na-btn--primary-bg u-na--dim is-disabled" disabled>disabled</button>
+                    </div>
+
+                    <div class="na-markup">
+                      <button class="na-markup__toggle">
+                        <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                      </button>
+                      <figure class="na-markup__code">
+                        <pre>
+                          <code class="language-html">
+&lt;button class=&quot;c-na-btn c-na-btn--primary-bg u-na--dim&quot;&gt;
+  &lt;i class=&quot;fa fa-download&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  Download
+&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;c-na-btn c-na-btn--accent-bg u-na--dim&quot;&gt;Accent&lt;/a&gt;
+&lt;button class=&quot;c-na-btn c-na-btn--primary-bg u-na--dim is-disabled&quot; disabled&gt;disabled&lt;/button&gt;
+                          </code>
+                        </pre>
+                      </figure>
+                    </div>
+                  </section>
+
+                  <section>
+                    <h3>Underlined</h3>
+                    <p>Append the class <code>c-na-btn--underline</code></p>
+                    <div class="site-btn__groups u-na--uppercase">
+                      <button class="c-na-btn c-na-btn--primary-copy c-na-btn--underline u-na--dim">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        Download
+                      </button>
+                      <a href="#" class="c-na-btn c-na-btn--secondary-copy c-na-btn--underline u-na--dim">A link</a>
+                      <button class="c-na-btn c-na-btn--underline is-disabled u-na--dim" disabled>disabled</button>
+                    </div>
+
+                    <div class="na-markup">
+                      <button class="na-markup__toggle">
+                        <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                      </button>
+                      <figure class="na-markup__code">
+                        <pre>
+                          <code class="language-html">
+&lt;button class=&quot;c-na-btn c-na-btn--primary-copy c-na-btn--underline u-na--dim&quot;&gt;
+  &lt;i class=&quot;fa fa-download&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  Download
+&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;c-na-btn c-na-btn--secondary-copy c-na-btn--underline u-na--dim&quot;&gt;A link&lt;/a&gt;
+&lt;button class=&quot;c-na-btn c-na-btn--underline is-disabled u-na--dim&quot; disabled&gt;disabled&lt;/button&gt;
+                          </code>
+                        </pre>
+                      </figure>
+                    </div>
+                  </section>
+
+                  <section>
+                    <h3>With a thin border</h3>
+                    <p>Append the class <code>c-na-btn--bd-thin</code></p>
+                    <div class="site-btn__groups">
+                      <button class="c-na-btn c-na-btn--bd-thin c-na-btn--accent-copy u-na--dim">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        Download
+                      </button>
+                      <a href="#" class="c-na-btn c-na-btn--bd-thin u-na--dim">A link</a>
+                      <button class="c-na-btn u-na--dim c-na-btn--bd-thin is-disabled" disabled>disabled</button>
+                    </div>
+                    <div class="na-markup">
+                      <button class="na-markup__toggle">
+                        <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                      </button>
+                      <figure class="na-markup__code">
+                        <pre>
+                          <code class="language-html">
+&lt;button class=&quot;c-na-btn c-na-btn--bd-thin c-na-btn--accent-copy u-na--dim&quot;&gt;
+  &lt;i class=&quot;fa fa-download&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  Download
+&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;c-na-btn c-na-btn--bd-thin u-na--dim&quot;&gt;A link&lt;/a&gt;
+&lt;button class=&quot;c-na-btn u-na--dim c-na-btn--bd-thin is-disabled&quot; disabled&gt;disabled&lt;/button&gt;
+                          </code>
+                        </pre>
+                      </figure>
+                    </div>
+                  </section>
+
+                  <section>
+                    <h3>With a normal border</h3>
+                    <p>Append the class <code>c-na-btn--bd</code></p>
+                    <div class="site-btn__groups">
+                      <button class="c-na-btn c-na-btn--secondary-copy c-na-btn--bd u-na--dim">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        Download
+                      </button>
+                      <a href="#" class="c-na-btn c-na-btn--bd u-na--dim">A link</a>
+                      <button class="c-na-btn c-na-btn--bd u-na--dim is-disabled" disabled>disabled</button>
+                    </div>
+
+                    <div class="na-markup">
+                      <button class="na-markup__toggle">
+                        <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                      </button>
+                      <figure class="na-markup__code">
+                        <pre>
+                          <code class="language-html">
+&lt;button class=&quot;c-na-btn c-na-btn--secondary-copy c-na-btn--bd u-na--dim&quot;&gt;
+  &lt;i class=&quot;fa fa-download&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  Download
+&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;c-na-btn c-na-btn--bd u-na--dim&quot;&gt;A link&lt;/a&gt;
+&lt;button class=&quot;c-na-btn c-na-btn--bd u-na--dim is-disabled&quot; disabled&gt;disabled&lt;/button&gt;
+                          </code>
+                        </pre>
+                      </figure>
+                    </div>
+                  </section>
+
+                  <section>
+                    <h3>With a thick border</h3>
+                    <p>Append the class <code>c-na-btn--bd-thick</code></p>
+
+                    <div class="site-btn__groups">
+                      <button class="c-na-btn c-na-btn--primary-copy c-na-btn--bd-thick u-na--dim">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        Download
+                      </button>
+                      <a href="#" class="c-na-btn c-na-btn--secondary-copy c-na-btn--bd-thick u-na--dim">A link</a>
+                      <button class="c-na-btn c-na-btn--bd-thick u-na--dim is-disabled" disabled>disabled</button>
+                    </div>
+                    <div class="na-markup">
+                      <button class="na-markup__toggle">
+                        <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                      </button>
+                      <figure class="na-markup__code">
+                        <pre>
+                          <code class="language-html">
+&lt;button class=&quot;c-na-btn c-na-btn--primary-copy c-na-btn--bd-thick u-na--dim&quot;&gt;
+  &lt;i class=&quot;fa fa-download&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  Download
+&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;c-na-btn c-na-btn--secondary-copy c-na-btn--bd-thick u-na--dim&quot;&gt;A link&lt;/a&gt;
+&lt;button class=&quot;c-na-btn c-na-btn--bd-thick u-na--dim is-disabled&quot; disabled&gt;disabled&lt;/button&gt;
+                          </code>
+                        </pre>
+                      </figure>
+                    </div>
+                  </section>
+
+                  <section>
+                    <h3>Pill-shaped buttons</h3>
+                    <p>Append the class <code>u-na-br--pill</code></p>
+
+                    <div class="site-btn__groups">
+                      <button class="c-na-btn c-na-btn--bd  u-na--dim u-na-br--pill">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        Download
+                      </button>
+                      <a href="#" class="c-na-btn c-na-btn--primary-bg u-na--dim u-na-br--pill">A link</a>
+                      <button class="c-na-btn c-na-btn--primary-bg u-na--dim u-na-br--pill is-disabled" disabled>disabled</button>
+                    </div>
+
+                    <div class="na-markup">
+                      <button class="na-markup__toggle">
+                        <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                      </button>
+                      <figure class="na-markup__code">
+                        <pre>
+                          <code class="language-html">
+                    &lt;button class=&quot;c-na-btn c-na-btn--bd  u-na--dim u-na-br--pill&quot;&gt;
+                      &lt;i class=&quot;fa fa-download&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                      Download
+                    &lt;/button&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;c-na-btn c-na-btn--primary-bg u-na--dim u-na-br--pill&quot;&gt;A link&lt;/a&gt;
+                    &lt;button class=&quot;c-na-btn c-na-btn--primary-bg u-na--dim u-na-br--pill is-disabled&quot; disabled&gt;disabled&lt;/button&gt;
+                          </code>
+                        </pre>
+                      </figure>
+                    </div>
+                  </section>
+
+                  <section>
+                    <h3>With slightly rounded corners</h3>
+                    <p>Append the class <code>u-na-br--rounded</code></p>
+
+                    <div class="site-btn__groups">
+                      <button class="c-na-btn c-na-btn--primary-bg u-na--dim u-na--bd u-na-br--rounded">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        Download
+                      </button>
+                      <a href="#" class="c-na-btn u-na--dim u-na--bd u-na-br--rounded">A link</a>
+                      <button class="c-na-btn u-na--dim u-na--bd-thin u-na-br--rounded is-disabled" disabled>disabled</button>
+                    </div>
+
+                    <div class="na-markup">
+                      <button class="na-markup__toggle">
+                        <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                      </button>
+                      <figure class="na-markup__code">
+                        <pre>
+                          <code class="language-html">
+&lt;button class=&quot;c-na-btn c-na-btn--primary-bg u-na--dim u-na--bd u-na-br--rounded&quot;&gt;
+  &lt;i class=&quot;fa fa-download&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  Download
+&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;c-na-btn u-na--dim u-na--bd u-na-br--rounded&quot;&gt;A link&lt;/a&gt;
+&lt;button class=&quot;c-na-btn u-na--dim u-na--bd-thin u-na-br--rounded is-disabled&quot; disabled&gt;disabled&lt;/button&gt;
+                          </code>
+                        </pre>
+                      </figure>
+                    </div>
+                  </section>
+
+                  <section>
+                    <h3>Larger buttons</h3>
+                    <p>Append the class <code>c-na-btn--lg</code></p>
+
+                    <div class="site-btn__groups">
+                      <button class="c-na-btn c-na-btn--primary-bg c-na-btn--underline c-na-btn--lg u-na--dim">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        Download
+                      </button>
+                      <a href="#" class="c-na-btn  c-na-btn--accent-copy c-na-btn--lg c-na-btn--bd u-na--dim u-na-br--pill">Publish</a>
+                      <button class="c-na-btn c-na-btn--underline  c-na-btn--secondary-copy c-na-btn--lg u-na--dim">Cancel</button>
+                    </div>
+
+                    <div class="na-markup">
+                      <button class="na-markup__toggle">
+                        <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                      </button>
+                      <figure class="na-markup__code">
+                        <pre>
+                          <code class="language-html">
+&lt;button class=&quot;c-na-btn c-na-btn--primary-bg c-na-btn--underline c-na-btn--lg u-na--dim&quot;&gt;
+  &lt;i class=&quot;fa fa-download&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  Download
+&lt;/button&gt;
+&lt;a href=&quot;#&quot; class=&quot;c-na-btn  c-na-btn--accent-copy c-na-btn--lg c-na-btn--bd u-na--dim u-na-br--pill&quot;&gt;Publish&lt;/a&gt;
+&lt;button class=&quot;c-na-btn c-na-btn--underline  c-na-btn--secondary-copy c-na-btn--lg u-na--dim&quot;&gt;Cancel&lt;/button&gt;
+                          </code>
+                        </pre>
+                      </figure>
+                    </div>
+                  </section>
+
+                  <section>
+                    <h3>Full width buttons</h3>
+                    <p>Append the class <code>u-na--fw</code></p>
+
+                    <div class="site-btn__groups">
+                      <button class="c-na-btn c-na-btn--bd-thick c-na-btn--primary-copy c-na-btn--lg u-na-br--rounded u-na--dim u-na--fw">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        Download
+                      </button>
+                      <button class="c-na-btn c-na-btn--underline c-na-btn--primary-copy c-na-btn--lg u-na--dim u-na--fw">Submit Your Order</button>
+                    </div>
+
+                    <div class="na-markup">
+                      <button class="na-markup__toggle">
+                        <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                      </button>
+                      <figure class="na-markup__code">
+                        <pre>
+                          <code class="language-html">
+&lt;button class=&quot;c-na-btn c-na-btn--bd-thick c-na-btn--primary-copy c-na-btn--lg u-na-br--rounded u-na--dim u-na--fw&quot;&gt;
+  &lt;i class=&quot;fa fa-download&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  Download
+&lt;/button&gt;
+&lt;button class=&quot;c-na-btn c-na-btn--underline c-na-btn--primary-copy c-na-btn--lg u-na--dim u-na--fw&quot;&gt;Submit Your Order&lt;/button&gt;
+                          </code>
+                        </pre>
+                      </figure>
+                    </div>
+                  </section>
 
                   <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
@@ -1562,8 +1818,8 @@
                   </div>
 
                   <h3>User Profile Card - Horizontal (vertical on mobile) with Hover Fill-in Effect</h3>
-                  <p>Add the class <code>c-na-user-card--horizontal-ns</code> to the card container.</p>
-                  <article class="c-na-user-card c-na-user-card--horizontal-ns">
+                  <p>Add the class <code>c-na-user-card--hz-ns</code> to the card container.</p>
+                  <article class="c-na-user-card c-na-user-card--hz-ns">
                     <header class="c-na-user-card__header">
                       <div class="c-na-user-card__headerbg"></div>
                       <img class="c-na-user-card__img" src="http://fillmurray.com/400/400" alt="fill murray">
@@ -1602,7 +1858,7 @@
                     <figure class="na-markup__code">
                       <pre>
                         <code class="language-html">
-&lt;article class=&quot;c-na-user-card c-na-user-card--horizontal-ns&quot;&gt;
+&lt;article class=&quot;c-na-user-card c-na-user-card--hz-ns&quot;&gt;
   &lt;header class=&quot;c-na-user-card__header&quot;&gt;
     &lt;div class=&quot;c-na-user-card__headerbg&quot;&gt;&lt;/div&gt;
     &lt;img class=&quot;c-na-user-card__img&quot; src=&quot;http://fillmurray.com/400/400&quot; alt=&quot;fill murray&quot;&gt;
@@ -3014,32 +3270,429 @@
                 <section class="spy-section website-components__component" id="pagination-demo">
 
                   <h2>Pagination</h2>
+                  <p>To highlight the current page, add a class of <code>.c-na-pagination--current</code> to the link of the current page.</p>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
+                  <h3>Basic (default)</h3>
+
+                  <nav class="c-na-pagination">
+                    <ol role="menubar" aria-label="Pagination" class="c-na-pagination__list">
+                      <li class="c-na-pagination__item--dir">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">
+                          <svg viewbox="0 0 20 20" class="c-na-pagination__icon c-na-pagination__icon--prev">
+                            <title>previous page</title>
+                            <path d="M0 0 L10 10 L0 20"></path>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">1</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" aria-label="pages 2-10" class="c-na-pagination__link">
+                          <span aria-hidden="true">&hellip;</span>
+                        </a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">11</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">12</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link c-na-pagination--current">13</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" aria-label="pages 14-16" href="#" class="c-na-pagination__link">
+                          <span aria-hidden="true">&hellip;</span>
+                        </a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">17</a>
+                      </li>
+                      <li class="c-na-pagination__item--dir">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">
+                          <svg viewbox="0 0 20 20" class="c-na-pagination__icon c-na-pagination__icon--next">
+                            <title>next page</title>
+                            <path d="M0 0 L10 10 L0 20"></path>
+                          </svg>
+                        </a>
+                      </li>
+                    </ol>
+                  </nav>
+
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;nav class=&quot;c-na-pagination&quot;&gt;
+  &lt;ol role=&quot;menubar&quot; aria-label=&quot;Pagination&quot; class=&quot;c-na-pagination__list&quot;&gt;
+    &lt;li class=&quot;c-na-pagination__item--dir&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;
+        &lt;svg viewbox=&quot;0 0 20 20&quot; class=&quot;c-na-pagination__icon c-na-pagination__icon--prev&quot;&gt;
+          &lt;title&gt;previous page&lt;/title&gt;
+          &lt;path d=&quot;M0 0 L10 10 L0 20&quot;&gt;&lt;/path&gt;
+        &lt;/svg&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; aria-label=&quot;pages 2-10&quot; class=&quot;c-na-pagination__link&quot;&gt;
+        &lt;span aria-hidden="true"&gt;&hellip;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;11&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;12&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link c-na-pagination--current&quot;&gt;13&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; aria-label=&quot;pages 14-16&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;
+        &lt;span aria-hidden="true"&gt;&hellip;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;17&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item--dir&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;
+        &lt;svg viewbox=&quot;0 0 20 20&quot; class=&quot;c-na-pagination__icon c-na-pagination__icon--next&quot;&gt;
+          &lt;title&gt;next page&lt;/title&gt;
+          &lt;path d=&quot;M0 0 L10 10 L0 20&quot;&gt;&lt;/path&gt;
+        &lt;/svg&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
+
+                  <h3>Basic - tightly grouped </h3>
+                  <p>Add a class of <code>tight</code> to the list group</p>
+                  <nav class="c-na-pagination">
+                    <ol role="menubar" aria-label="Pagination" class="c-na-pagination__list tight">
+                      <li class="c-na-pagination__item--dir">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">
+                          <svg viewbox="0 0 20 20" class="c-na-pagination__icon c-na-pagination__icon--prev">
+                            <title>previous page</title>
+                            <path d="M0 0 L10 10 L0 20"></path>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link c-na-pagination--current">1</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" aria-label="pages 2-10" class="c-na-pagination__link">
+                          <span aria-hidden="true">&hellip;</span>
+                        </a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">11</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">12</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">13</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" aria-label="pages 14-16" href="#" class="c-na-pagination__link">
+                          <span aria-hidden="true">&hellip;</span>
+                        </a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">17</a>
+                      </li>
+                      <li class="c-na-pagination__item--dir">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">
+                          <svg viewbox="0 0 20 20" class="c-na-pagination__icon c-na-pagination__icon--next">
+                            <title>next page</title>
+                            <path d="M0 0 L10 10 L0 20"></path>
+                          </svg>
+                        </a>
+                      </li>
+                    </ol>
+                  </nav>
+
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;nav class=&quot;c-na-pagination&quot;&gt;
+  &lt;ol role=&quot;menubar&quot; aria-label=&quot;Pagination&quot; class=&quot;c-na-pagination__list tight&quot;&gt;
+    &lt;li class=&quot;c-na-pagination__item--dir&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;
+        &lt;svg viewbox=&quot;0 0 20 20&quot; class=&quot;c-na-pagination__icon c-na-pagination__icon--prev&quot;&gt;
+          &lt;title&gt;previous page&lt;/title&gt;
+          &lt;path d=&quot;M0 0 L10 10 L0 20&quot;&gt;&lt;/path&gt;
+        &lt;/svg&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link c-na-pagination--current&quot;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; aria-label=&quot;pages 2-10&quot; class=&quot;c-na-pagination__link&quot;&gt;
+        &lt;span aria-hidden="true"&gt;&hellip;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;11&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;12&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;13&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; aria-label=&quot;pages 14-16&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;
+        &lt;span aria-hidden="true"&gt;&hellip;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;17&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item--dir&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;
+        &lt;svg viewbox=&quot;0 0 20 20&quot; class=&quot;c-na-pagination__icon c-na-pagination__icon--next&quot;&gt;
+          &lt;title&gt;next page&lt;/title&gt;
+          &lt;path d=&quot;M0 0 L10 10 L0 20&quot;&gt;&lt;/path&gt;
+        &lt;/svg&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
+
+                  <h3>Square - with a border</h3>
+                  <p>Use class <code>c-na-pagination--square</code></p>
+
+                  <nav class="c-na-pagination--square">
+                    <ol role="menubar" aria-label="Pagination" class="c-na-pagination__list">
+                      <li class="c-na-pagination__item--dir">
+                        <a role="menuitem" href="#" class="c-na-pagination__link c-na-pagination__link--dir">
+                          <svg viewbox="0 0 20 20" class="c-na-pagination__icon c-na-pagination__icon--prev">
+                            <title>previous page</title>
+                            <path d="M0 0 L10 10 L0 20"></path>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">1</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" aria-label="pages 2-10" class="c-na-pagination__link">
+                          <span aria-hidden="true">&hellip;</span>
+                        </a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">11</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link c-na-pagination--current">12</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">13</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" aria-label="pages 14-16" href="#" class="c-na-pagination__link">
+                          <span aria-hidden="true">&hellip;</span>
+                        </a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">17</a>
+                      </li>
+                      <li class="c-na-pagination__item--dir">
+                        <a role="menuitem" href="#" class="c-na-pagination__link c-na-pagination__link--dir">
+                          <svg viewbox="0 0 20 20" class="c-na-pagination__icon c-na-pagination__icon--next">
+                            <title>next page</title>
+                            <path d="M0 0 L10 10 L0 20"></path>
+                          </svg>
+                        </a>
+                      </li>
+                    </ol>
+                  </nav>
+
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;nav class=&quot;c-na-pagination--square&quot;&gt;
+  &lt;ol role=&quot;menubar&quot; aria-label=&quot;Pagination&quot; class=&quot;c-na-pagination__list&quot;&gt;
+    &lt;li class=&quot;c-na-pagination__item--dir&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link c-na-pagination__link--dir&quot;&gt;
+        &lt;svg viewbox=&quot;0 0 20 20&quot; class=&quot;c-na-pagination__icon c-na-pagination__icon--prev&quot;&gt;
+          &lt;title&gt;previous page&lt;/title&gt;
+          &lt;path d=&quot;M0 0 L10 10 L0 20&quot;&gt;&lt;/path&gt;
+        &lt;/svg&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; aria-label=&quot;pages 2-10&quot; class=&quot;c-na-pagination__link&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;hellip;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;11&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link c-na-pagination--current&quot;&gt;12&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;13&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; aria-label=&quot;pages 14-16&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;hellip;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;17&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item--dir&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link c-na-pagination__link--dir&quot;&gt;
+        &lt;svg viewbox=&quot;0 0 20 20&quot; class=&quot;c-na-pagination__icon c-na-pagination__icon--next&quot;&gt;
+          &lt;title&gt;next page&lt;/title&gt;
+          &lt;path d=&quot;M0 0 L10 10 L0 20&quot;&gt;&lt;/path&gt;
+        &lt;/svg&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
+
+                  <h3>Round</h3>
+                  <p>Use class <code>c-na-pagination--round</code></p>
+
+                  <nav class="c-na-pagination--round">
+                    <ol role="menubar" aria-label="Pagination" class="c-na-pagination__list">
+                      <li class="c-na-pagination__item--dir">
+                        <a role="menuitem" href="#" class="c-na-pagination__link c-na-pagination__link--dir">
+                          <svg viewbox="0 0 20 20" class="c-na-pagination__icon c-na-pagination__icon--prev">
+                            <title>previous page</title>
+                            <path d="M0 0 L10 10 L0 20"></path>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">1</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" aria-label="pages 2-47" class="c-na-pagination__link">
+                          <span aria-hidden="true">&hellip;</span>
+                        </a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link c-na-pagination--current">48</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">49</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">50</a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" aria-label="pages 51-100" href="#" class="c-na-pagination__link">
+                          <span aria-hidden="true">&hellip;</span>
+                        </a>
+                      </li>
+                      <li class="c-na-pagination__item">
+                        <a role="menuitem" href="#" class="c-na-pagination__link">102</a>
+                      </li>
+                      <li class="c-na-pagination__item--dir">
+                        <a role="menuitem" href="#" class="c-na-pagination__link c-na-pagination__link--dir">
+                          <svg viewbox="0 0 20 20" class="c-na-pagination__icon c-na-pagination__icon--next">
+                            <title>next page</title>
+                            <path d="M0 0 L10 10 L0 20"></path>
+                          </svg>
+                        </a>
+                      </li>
+                    </ol>
+                  </nav>
+
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;nav class=&quot;c-na-pagination--round&quot;&gt;
+  &lt;ol role=&quot;menubar&quot; aria-label=&quot;Pagination&quot; class=&quot;c-na-pagination__list&quot;&gt;
+    &lt;li class=&quot;c-na-pagination__item--dir&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link c-na-pagination__link--dir&quot;&gt;
+        &lt;svg viewbox=&quot;0 0 20 20&quot; class=&quot;c-na-pagination__icon c-na-pagination__icon--prev&quot;&gt;
+          &lt;title&gt;previous page&lt;/title&gt;
+          &lt;path d=&quot;M0 0 L10 10 L0 20&quot;&gt;&lt;/path&gt;
+        &lt;/svg&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; aria-label=&quot;pages 2-47&quot; class=&quot;c-na-pagination__link&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;hellip;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link c-na-pagination--current&quot;&gt;48&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;49&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;50&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; aria-label=&quot;pages 51-100&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;hellip;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link&quot;&gt;102&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-na-pagination__item--dir&quot;&gt;
+      &lt;a role=&quot;menuitem&quot; href=&quot;#&quot; class=&quot;c-na-pagination__link c-na-pagination__link--dir&quot;&gt;
+        &lt;svg viewbox=&quot;0 0 20 20&quot; class=&quot;c-na-pagination__icon c-na-pagination__icon--next&quot;&gt;
+          &lt;title&gt;next page&lt;/title&gt;
+          &lt;path d=&quot;M0 0 L10 10 L0 20&quot;&gt;&lt;/path&gt;
+        &lt;/svg&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
 
                   <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
@@ -3318,7 +3971,7 @@
 
                   <h2>The Reveal</h2>
 
-                  <p>The reveal is idea for when you have a small amount of content you'd like to hide behind some sort of mechanism that will reveal the content when prompted. The button at the foot of the component will toggle the "doors" to slide open and closed. It will take up the height of its content, so it is best for small amounts of text content, images, and videos.</p>
+                  <p>The Reveal is ideal for when you have a small amount of content you'd like to hide initially that will be revealed when prompted by user input. The button at the foot of the component will toggle the "doors" to slide open and closed. It will take up the height of its content, so it is best for small amounts of text content, images, and videos.</p>
 
                   <!-- the reveal container -->
                    <div class="c-na-reveal">
