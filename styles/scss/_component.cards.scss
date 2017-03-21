@@ -25,7 +25,7 @@ $img-pad: .25rem;
     transition: transform 420ms ease-in-out;
     width: $circ-size;
     will-change: transform;
-    z-index: -1;
+    z-index: 1;
   }
 
   &:hover::before {
@@ -45,6 +45,11 @@ $img-pad: .25rem;
 
   }
 
+  & > * :not(&__headerbg) {
+    position: relative;
+    z-index: 2;
+  }
+
 
   &__headerbg {
     background: url('../../images/unspcard001.jpeg') no-repeat center center / cover;
@@ -54,8 +59,6 @@ $img-pad: .25rem;
     margin-left: $cp-off;
     margin-right: $cp-off;
     margin-top: $cp-off;
-    position: relative;
-    z-index: -2;
   }
 
   &__img {
@@ -67,6 +70,7 @@ $img-pad: .25rem;
     margin-bottom: 1rem;
     width: $circ-size;
     padding: $img-pad;
+
   }
 
   &__name {

@@ -3928,7 +3928,7 @@ section {
   transition: transform 420ms ease-in-out;
   width: 8rem;
   will-change: transform;
-  z-index: -1;
+  z-index: 1;
 }
 .c-na-user-card:hover::before {
   transform: translateX(-50%) scale(10);
@@ -3942,6 +3942,10 @@ section {
 .c-na-user-card:not(.c-na-user-card--minimal):hover a {
   color: #da00af;
 }
+.c-na-user-card > * :not(.c-na-user-card__headerbg) {
+  position: relative;
+  z-index: 2;
+}
 .c-na-user-card__headerbg {
   background: url("../../images/unspcard001.jpeg") no-repeat center center/cover;
   filter: grayscale(1);
@@ -3950,8 +3954,6 @@ section {
   margin-left: -1rem;
   margin-right: -1rem;
   margin-top: -1rem;
-  position: relative;
-  z-index: -2;
 }
 .c-na-user-card__img {
   background-color: #fffffc;
