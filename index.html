@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nascent UI Framework</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles/css/nascent.css">
+    <style type="text/css">
+        /*section {
+            height: 100px;
+            border: 1px solid black;
+        }*/
+        body {
+          background-color: hsl(234, 35%, 32%);
+        }
+        p.nascent-header__logo-text--top {
+          font-size: 2rem;
+        }
+        section.spy-section {
+          background-color: #eee;
+        }
+        footer {
+          height: auto;
+          background-color: hsl(234, 35%, 22%);
+          color: #eee;
+        }
+        footer p.nascent-footer__text {
+          text-align: center;
+        }
+        footer img {
+          /*width: 100px;*/
+          height: 100px;
+          border-radius: 50px;
+        }
+        footer ul {
+          display: flex;
+          justify-content: space-around;
+          padding: 0;
+        }
+        footer ul li {
+          text-align: center;
+          list-style-type: none;
+          flex: 0 0 200px;
+        }
+    </style>
+</head>
+
+<body class="na-demo-page">
+    <header class="nascent-header" id="top">
+      <div>
+          <div class="nascent-header__logo">
+              <!-- <img class="nascent-header__logo-image" src="images/"> -->
+              <div class="nascent-header__logo-text">
+                  <p class="nascent-header__logo-text--top"><strong>Nascent</strong> - UI Framework</p>
+              </div>
+          </div>
+      </div>
+    </header>
+
+    <main class="na-demo-page-main" data-sticky-fix-at-top="">
+
+        <nav class="spy-nav">
+            <ul class="nav spy-nav__list" data-is-sticky="true">
+                <li class="nav__item"><a class="nav__link" href="#accordions-demo">Accordions</a></li>
+                <li class="nav__item "><a class="nav__link" href="#alerts-demo">Alerts</a></li>
+                <li class="nav__item "><a class="nav__link" href="#badges-demo">Badges</a></li>
+                <li class="nav__item "><a class="nav__link" href="#breadcrumbs-demo">Breadcrumbs</a></li>
+                <li class="nav__item "><a class="nav__link" href="#buttons-demo">Buttons</a></li>
+                <li class="nav__item "><a class="nav__link" href="#cards-demo">Cards</a></li>
+                <li class="nav__item "><a class="nav__link" href="#carousels-demo">Carousels</a></li>
+                <li class="nav__item "><a class="nav__link" href="#checkboxes-demo">Checkboxes &amp; Radios</a></li>
+                <li class="nav__item "><a class="nav__link" href="#dropdowns-demo">Dropdowns</a></li>
+                <li class="nav__item "><a class="nav__link" href="#flip-popup-innovative-demo">Flip Popup <em>(Innovative)</em></a></li>
+                <li class="nav__item "><a class="nav__link" href="#footers-demo">Footers</a></li>
+                <li class="nav__item "><a class="nav__link" href="#forms-demo">Forms</a></li>
+                <li class="nav__item "><a class="nav__link" href="#grids-demo">Grids</a></li>
+                <li class="nav__item "><a class="nav__link" href="#list-groups-demo">List Groups</a></li>
+                <li class="nav__item "><a class="nav__link" href="#loaders-demo">Loaders</a></li>
+                <li class="nav__item "><a class="nav__link" href="#modals-demo">Modals</a></li>
+                <li class="nav__item "><a class="nav__link" href="#naviator-innovative-demo">Naviator <em>(Innovative)</em></a></li>
+                <li class="nav__item "><a class="nav__link" href="#pagination-demo">Pagination</a></li>
+                <li class="nav__item "><a class="nav__link" href="#pagination-innovative-demo">Pagination <em>(Innovative)</em></a></li>
+                <li class="nav__item "><a class="nav__link" href="#progress-bar-demo">Progress Bar</a></li>
+                <li class="nav__item "><a class="nav__link" href="#ripple-demo">Ripple</a></li>
+                <li class="nav__item "><a class="nav__link" href="#scrollspy-demo">Scrollspy</a></li>
+                <li class="nav__item "><a class="nav__link" href="#social-bar-demo">Social Bar</a></li>
+                <li class="nav__item "><a class="nav__link" href="#tables-innovative-demo">Tables <em>(Innovative)</em></a></li>
+                <li class="nav__item "><a class="nav__link" href="#tabs-demo">Tabs</a></li>
+                <li class="nav__item "><a class="nav__link" href="#the-reveal-demo">The Reveal</a></li>
+                <li class="nav__item "><a class="nav__link" href="#typography-demo">Typography</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+
+          <div class="spy-reference-container" data-spy-member="spy01" data-offset-y="0">
+
+            <div id="spy-content-top" class="spy-content-container website-components">
+
+              <section class="spy-section website-components__component" id="accordions-demo">
+
+                <div class="generic-wrapper" style="padding: 2em">
+                  <h2>Accordions</h2>
+                  <p>Accordions are elements that expand or collapse when clicked on. They allow you to hide content that you do not want to consume page space unless the user decides that it is relevant to see.</p>
+
+                  <h2>Accordion Types</h2>
+                  <p>There are two accordion behaviors provided.
+                  <br>To only allow one section to stay open at a time, specify <code>data-accordion-type="accordion"</code> on the &lt;ul> element with the <code>class="c-na-accordion"</code>.
+                  <br>To allow multiple information panels to stay open, specify <code>data-accordion-type="expandable"</code> on the &lt;ul> element with the <code>class="c-na-accordion"</code> attribute. See below for a demo of each type</p>
+                  <h3 style="text-align: center;">Accordion</h3>
+                    <ul class="c-na-accordion" data-accordion-type="accordion">
+                      <li>
+                        <!-- <div class="c-na-accordion__header ripple-element" data-ripple-color="rgba(3,169,244,0.5)" data-ripple-clip="true"><i class="material-icons">filter_drama</i>First<i class="material-icons">keyboard_arrow_down</i></div> -->
+                        <div class="c-na-accordion__header"><i class="material-icons">directions_bike</i>Bicycling<span class="c-na-accordion__arrow"><i class="material-icons">keyboard_arrow_down</i></span></div>
+                        <div class="c-na-accordion__body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                      </li>
+                      <li>
+                        <!-- <div class="c-na-accordion__header ripple-element" data-ripple-color="rgba(3,169,244,0.5)" data-ripple-clip="true"><i class="material-icons">place</i>Second<i class="material-icons">keyboard_arrow_down</i></div> -->
+                        <div class="c-na-accordion__header"><i class="material-icons">directions_run</i>Running<span class="c-na-accordion__arrow"><i class="material-icons">keyboard_arrow_down</i></span></div>
+                        <div class="c-na-accordion__body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                      </li>
+                      <li>
+                        <!-- <div class="c-na-accordion__header ripple-element" data-ripple-color="rgba(3,169,244,0.5)" data-ripple-clip="true"><i class="material-icons">whatshot</i>Third<i class="material-icons">keyboard_arrow_down</i></div> -->
+                        <div class="c-na-accordion__header"><i class="material-icons">fitness_center</i>Weight Training<span class="c-na-accordion__arrow"><i class="material-icons">keyboard_arrow_down</i></span></div>
+                        <div class="c-na-accordion__body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur.</p></div>
+                      </li>
+                    </ul>
+                </div> <!-- end .generic-wrapper -->
+
+                <div class="generic-wrapper" style="padding: 2em">
+                  <h3 style="text-align: center">Accordion - expandable</h3>
+                    <ul class="c-na-accordion" data-accordion-type="expandable">
+                      <li>
+                        <!-- <div class="c-na-accordion__header ripple-element" data-ripple-color="rgba(3,169,244,0.5)" data-ripple-clip="true"><i class="material-icons">filter_drama</i>First<i class="material-icons">keyboard_arrow_down</i></div> -->
+                        <div class="c-na-accordion__header"><i class="material-icons">directions_bike</i>Bicycling<span class="c-na-accordion__arrow"><i class="material-icons">keyboard_arrow_down</i></span></div>
+                        <div class="c-na-accordion__body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                      </li>
+                      <li>
+                        <!-- <div class="c-na-accordion__header ripple-element" data-ripple-color="rgba(3,169,244,0.5)" data-ripple-clip="true"><i class="material-icons">place</i>Second<i class="material-icons">keyboard_arrow_down</i></div> -->
+                        <div class="c-na-accordion__header"><i class="material-icons">directions_run</i>Running<span class="c-na-accordion__arrow"><i class="material-icons">keyboard_arrow_down</i></span></div>
+                        <div class="c-na-accordion__body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                      </li>
+                      <li>
+                        <!-- <div class="c-na-accordion__header ripple-element" data-ripple-color="rgba(3,169,244,0.5)" data-ripple-clip="true"><i class="material-icons">whatshot</i>Third<i class="material-icons">keyboard_arrow_down</i></div> -->
+                        <div class="c-na-accordion__header"><i class="material-icons">fitness_center</i>Weight Training<span class="c-na-accordion__arrow"><i class="material-icons">keyboard_arrow_down</i></span></div>
+                        <div class="c-na-accordion__body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur.</p></div>
+                      </li>
+                    </ul>
+                </div> <!-- end .generic-wrapper -->
+
+                <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+              </section>
+
+                <!-- Alerts code below -->
+                <section id="alerts-demo" class="spy-section website-components__component">
+                  <h2>Alerts</h2>
+                  <p>There are 4 types of alerts: basic, warning, serious (failure of something, something that should not happen, or something serious like a tornado warning for a weather site), and success. No matter which variations you choose from below (borders, no border, with icons, etc.), the type of alert displayed is changed with one simple class on the alert container.</p>
+
+                  <ul>
+                    <li><strong>minimal:</strong> use the class <code>c-na-alert--minimal</code></li>
+                    <li><strong>basic:</strong> use the class <code>c-na-alert--basic</code></li>
+                    <li><strong>warning:</strong> use the class <code>c-na-alert--warning</code></li>
+                    <li><strong>something serious / failure:</strong> use the class <code>c-na-alert--serious</code></li>
+                    <li><strong>success:</strong> use the class <code>c-na-alert--success</code></li>
+                  </ul>
+
+                  <p>
+                    <strong>Note:</strong> By default, alerts have a max-width set so they will never take up the full page. To have them take up the full width of their container, add the class <code>u-na-fw</code> to the alert container.
+                  </p>
+
+                  <p>
+                    <strong>Accessibility:</strong> The alerts are a11y friendly. Out of the box, all of the alerts use colors which meet the color contrast requirements to be considered accessible. They all have <code>role="alert"</code>, and the content will be read by a screenreader even if the content within the alert (<em>the text or links, for example</em>) changes dynamically. The dismiss button uses a native <code>button</code> element, which means it can be dismissed by keyboard events when the button is in focus using the <kbd>ENTER</kbd> key or <kbd>SPACEBAR</kbd> without having to add any more JavaScript to do so. The dismiss button has a <code>title</code> attribute so that when sighted users hover over it, they can be sure what it does. It also has an <code>aria-label</code> of "dismiss alert" for screenreaders that do not read <code>title</code> attributes.. Finally, the dismiss button and links within the alert have a very clear focus state, which is the same as the hover state. (They should vary in the future as they can be both focused and hovered at the same time.)
+                  </p>
+
+                  <p>For the basic and icon alert sections, you will see the default state for each type of alert. Following that will just be two examples showing variations, but every alert type can be customized in the same way.</p>
+
+                  <h3>Basic (no icons)</h3>
+                  <h4>With a border (default)</h4>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--minimal" role="alert">
+                    <p class="c-na-alert__text">
+                      Just between us, I'm a bit color shy.
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--basic" role="alert">
+                    <p class="c-na-alert__text">
+                      It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, look at the roses instead.)
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--warning" role="alert">
+                    <p class="c-na-alert__text">
+                      <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+                      <strong class="c-na-alert--attn">Be careful!</strong> Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">practice those reflexes</a>.
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--serious" role="alert">
+                    <p class="c-na-alert__text">
+                      <strong class="c-na-alert--attn">Oh no!</strong> It turns out the quick brown fox did not jump over the lazy dog. She <em>ran</em> over the poor thing. Witnesses say the fox fled the scene. Be on the lookout.
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--success" role="alert">
+                    <p class="c-na-alert__text">
+                      <strong class="c-na-alert--attn">Great news!</strong> That sly quick fox has been caught thanks to a tip from a bird who wishes to remain anonymous.
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <h4>Without a border</h4>
+                  <p>Add the class <code>u-na--no-bd </code> to your alert element.</p>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--basic u-na--no-bd " role="alert">
+                    <p class="c-na-alert__text">
+                      It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, look at the roses instead.)
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--warning u-na--no-bd " role="alert">
+                    <p class="c-na-alert__text">
+                      <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+                      <strong class="c-na-alert--attn">Be careful!</strong> Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">practice those reflexes</a>
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <h3>With icons</h3>
+
+                  <p>These are quite customizable. In this framework, we're using , but you can use icons from other font systems or you own custom icons. These are just for demonstration. You can remove the border from the alert and remove the background color from the icon container, though they are there by default.</p>
+
+                  <h4>With a border (default) and with a background color for the icon container (default)</h4>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--minimal" role="alert">
+                    <span class="c-na-alert__icon--minimal">
+                      <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+                      <i class="fa fa-lemon-o" aria-hidden="true"></i>
+                    </span>
+                    <p class="c-na-alert__text">
+                      <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+                      <strong class="c-na-alert--attn">When Beyoncé hands us lemons,</strong> we make lemonade.
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--basic" role="alert">
+                    <span class="c-na-alert__icon--basic">
+                      <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+                      <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                    </span>
+                    <p class="c-na-alert__text">
+                      It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, look at the roses instead.)
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--warning" role="alert">
+                    <span class="c-na-alert__icon--warning">
+                      <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+                      <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                    </span>
+                    <p class="c-na-alert__text">
+                      <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+                      <strong class="c-na-alert--attn">Be careful!</strong> Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">practice those reflexes</a>
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--serious" role="alert">
+                    <span class="c-na-alert__icon--serious">
+                      <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+                      <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+                    <p class="c-na-alert__text">
+                      <strong class="c-na-alert--attn">Oh no!</strong> It turns out the quick brown fox did not jump over the lazy dog. She <em>ran</em> over the poor thing. Witnesses say the fox fled the scene. Be on the lookout.
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--success" role="alert">
+                    <span class="c-na-alert__icon--success">
+                      <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+                      <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                    <p class="c-na-alert__text">
+                      <strong class="c-na-alert--attn">Great news!</strong> That sly quick fox has been caught thanks to a tip from a bird who wishes to remain anonymous.
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <h4>Without a border, but with a background color for the icon container</h4>
+                  <p>Add the class <code>u-na--no-bd </code> to your alert container to remove the border.</p>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--warning u-na--no-bd " role="alert">
+                    <span class="c-na-alert__icon--warning">
+                      <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+                      <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                    </span>
+                    <p class="c-na-alert__text">
+                      <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+                      <strong class="c-na-alert--attn">Be careful!</strong> Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so practice those reflexes.
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--minimal u-na--no-bd " role="alert">
+                    <span class="c-na-alert__icon--minimal">
+                      <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+                      <i class="fa fa-lemon-o" aria-hidden="true"></i>
+                    </span>
+                    <p class="c-na-alert__text">
+                      <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+                      <strong class="c-na-alert--attn">When Beyoncé hands us lemons,</strong> we make lemonade.
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <h4>With no border and no background color for the icon container</h4>
+                  <p>Add the class u-na--no-bd  to your alert element to remove the border.</p>
+                  <p>Add the class <code>u-na--no-bg</code> to the icon container (the <code>span</code> with a class of <code>c-na-alert__icon</code>) to remove the background color of the icon container</p>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--serious u-na--no-bd " role="alert">
+                    <span class="c-na-alert__icon--serious u-na--no-bg">
+                      <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+                      <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    </span>
+                    <p class="c-na-alert__text">
+                      <strong class="c-na-alert--attn">Oh no!</strong> It turns out the quick brown fox did not jump over the lazy dog. She <em>ran</em> over the poor thing. Witnesses say the fox fled the scene. Be on the lookout.
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--minimal u-na--no-bd " role="alert">
+                    <span class="c-na-alert__icon--minimal u-na--no-bg">
+                      <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+                      <i class="fa fa-lemon-o" aria-hidden="true"></i>
+                    </span>
+                    <p class="c-na-alert__text">
+                      <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+                      When Beyoncé hands us lemons, we make lemonade.
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--basic u-na--no-bd " role="alert">
+                    <span class="c-na-alert__icon u-na--no-bg">
+                      <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+                      <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                    </span>
+                    <p class="c-na-alert__text">
+                      It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, look at the roses instead.)
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <h3>Alerts that take up the size of their content</h3>
+
+                  <div class="site-alert__wrap">
+                    <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                    <div class="c-na-alert--minimal c-na-alert--small" role="alert">
+                      <p class="c-na-alert__text">
+                        <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+                        <a href="#">Make lemonade</a>.
+                      </p>
+                      <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                    </div>
+
+                    <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                    <div class="c-na-alert--success u-na--no-bd  c-na-alert--small" role="alert">
+                      <p class="c-na-alert__text">
+                        <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+                        <strong class="c-na-alert--attn">Success!</strong> The fox has been caught.
+                      </p>
+                      <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                    </div>
+
+                    <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                    <div class="c-na-alert--warning u-na--no-bd  c-na-alert--small" role="alert">
+                      <span class="c-na-alert__icon--warning">
+                        <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                      </span>
+                      <p class="c-na-alert__text">
+                        <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
+                        <strong class="c-na-alert--attn">Be careful!</strong> Foxes eat people. I think.
+                      </p>
+                      <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                    </div>
+                  </div>
+
+                  <h3>Full width alert</h3>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--success u-na--no-bd  u-na-fw" role="alert">
+                    <span class="c-na-alert__icon--success">
+                      <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+                      <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                    <p class="c-na-alert__text">
+                      <strong class="c-na-alert--attn">Great news!</strong> That sly quick fox has been caught thanks to a tip from a bird who wishes to remain anonymous.
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
+                  <div class="c-na-alert--basic u-na-fw" role="alert">
+                    <span class="c-na-alert__icon u-na--no-bg">
+                      <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
+                      <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                    </span>
+                    <p class="c-na-alert__text">
+                      It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, <a href="#">look at the roses instead</a>.)
+                    </p>
+                    <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+                <!-- Alerts code above -->
+
+                <section class="spy-section website-components__component" id="badges-demo">
+
+                  <h2>Badges</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="breadcrumbs-demo">
+
+                  <h2>Breadcrumbs</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="buttons-demo">
+
+                  <h2>Buttons</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="cards-demo">
+
+                  <h2>Cards</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="carousels-demo">
+
+                  <h2>Carousels</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="checkboxes-demo">
+
+                  <h2>Checkboxes &amp; Radios</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="dropdowns-demo">
+
+                  <h2>Dropdowns</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="flip-popup-innovative-demo">
+                  <h2>Flip Popup (Innovative)</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="footers-demo">
+
+                  <h2>Footers</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="forms-demo">
+
+                  <h2>Forms</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="grids-demo">
+
+                  <h2>Grids</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="list-groups-demo">
+
+                  <h2>List Groups</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="loaders-demo">
+
+                  <h2>Loaders</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="modals-demo">
+
+                  <h2>Modals</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="naviator-innovative-demo">
+
+                  <h2>Naviator (Innovative)</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="pagination-demo">
+
+                  <h2>Pagination</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="pagination-innovative-demo">
+
+                  <h2>Pagination (Innovative)</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="progress-bar-demo">
+
+                  <h2>Progress Bar</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="ripple-demo">
+
+                  <h2>Ripple - an effect</h2>
+
+                  <div class="site-btn__groups">
+
+                  <h3>A Nascent UI Framework &lt;button> with effect clipping</h3>
+                  <button class="c-na-btn c-na-btn--primary-bg u-na--dim u-na--dim ripple-element" data-ripple-clip="true" data-ripple-color="rgba(255, 87, 34, 0.7)">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                    Download
+                  </button>
+
+                  <br><br><br>
+
+                  <h3>A Nascent UI Framework &lt;button> without effect clipping</h3>
+                  <button class="c-na-btn c-na-btn--secondary-copy c-na-btn--bd u-na--dim ripple-element" data-ripple-color="rgba(3,169,244,0.7)">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                    Download
+                  </button>
+
+                  <div style="width: 75%; margin: 1rem auto; text-align: left;">
+                  <h3>Requirements and Notes</h3>
+                  <p>
+                    <ul>
+                      <li>The ripple effect can be set on most any element that can
+                       receive a click event, <strong>as long as it is non-statically positioned.</strong> That requirement is one of two reasons that there
+                        is another version of this effect ( ripple-body-child ) which does
+                        not have that requirement.
+                      </li>
+                      <li>In order for the ripple effect to be set on an element, the
+                       element must be given a <code>class="ripple-element"</code>.
+                      </li>
+                      <li>You must also include the ripple.js, and ripple.css files in
+                       your application for the effect to be applied.</li>
+                      <li>NOTE: with this version of ripple, if and element receiving the
+                        ripple effect has an accessibility outline on focus, that outline
+                        will expand with the scaling of the effect. For this reason, there
+                        is another version of this effect ( ripple-body-child ) which does
+                        not have this side-effect.
+                          <br>Other than that, this method works as expected.
+                      </li>
+                    </ul>
+                  </p>
+                  <h3>Defaults</h3>
+                    <ul>
+                      <li>The default color for the ripple effect is white with
+                       transparency - <code>rgba(255, 255, 255, 0.5)</code>.
+                       <br>You can customize the color with any valid hsla, or
+                        rgba color - see "Customizations" below.
+                      </li>
+                      <li>The <strong>default</strong> effect will:
+                        <br> - be circular;
+                        <br> - emanate from where the mouse was clicked, and extend beyond
+                         the boundaries of the element to which the effect was applied;
+                        <br> - terminate in a size twice that of the largest dimension of
+                        the width and height of the element to which it is applied;
+                        <br>If you're comfortable with CSS properties, you can
+                        easily modify the scale property to produce different effect sizes
+                         and elliptical shapes by changing the values and number of
+                          parameters for the scale property in ripple.js.
+                      </li>
+                    </ul>
+                  <h3>Customizations</h3>
+                    <ol>
+                      <li><strong>Color:</strong> you can specify a custom hsla, or rgba color by including
+                        the custom data attribute
+                         <code>data-ripple-color="hsla(h, s%, l%, a)/rgba(r, g, b, a)"</code>
+                           to the element on which the effect is to be applied.
+                      </li>
+                      <li><strong>Effect Clipping:</strong> you can specify that the effect be clipped, i.e., not extend past the boundaries of the element to which the
+                        effect will be applied, by simply adding the custom data attribute
+                         <code>data-ripple-clip="true"</code> to the element on which the
+                          effect is to be applied.</li>
+                    </ol>
+
+                </div>
+
+                  <p style="text-align: left;"><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="scrollspy-demo">
+
+                  <h2>Scrollspy</h2>
+
+                  <p>Scrollspy, along with a "sticky" navigation (the navigation on the left-hand side of the page), is operating on this demo page.
+                  <br>Typical of scrollspy behavior, is that of some visually apparent state change to the navigation item that corresponds to a "spied-on" section that is in view.
+                  <br>Atypical of scrollspy behavior, is the fact that this version of scrollspy has the "active" navigation item remain in view while scrolling the "spied-on" sections. That is, rather than have the "active" navigation element be above or below the viewport, as you scroll lengthy "spied-on" content, the "active" navigation item will be placed in the viewport if it otherwise wouldn't be.
+                  <br>This is still a bit of a work-in-progress to contend with some functionality side-effects associated with the aforementioned feature.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="social-bar-demo">
+
+                  <h2>Social Bar</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="tables-innovative-demo">
+
+                  <h2>Tables (Innovative)</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="tabs-demo">
+
+                  <h2>Tabs</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu}
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="the-reveal-demo">
+
+                  <h2>The Reveal</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+                <section class="spy-section website-components__component" id="typography-demo">
+
+                  <h2>Typography</h2>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                </section>
+
+            </div>
+            <!-- end div.website-components -->
+        </div>
+
+        <!-- </div> -->
+
+    </main>
+
+    <footer class="nascent-footer" data-sticky-bottom-boundary="">
+        <p class="nascent-footer__text">Site Developed By</p>
+        <ul class="authors">
+            <li class="authors__author">
+                <img class="authors__image" src="http://placehold.it/150x150">
+                <p class="authors__author-name">Sebastian Ramirez-Brunner</p>
+            </li>
+            <li class="authors__author">
+                <img class="authors__image" src="http://placehold.it/150x150">
+                <p class="authors__author-name">Melissa Miller</p>
+            </li>
+            <li class="authors__author">
+                <img class="authors__image" src="http://placehold.it/150x150">
+                <p class="authors__author-name">Hannah Herbst</p>
+            </li>
+            <li class="authors__author">
+                <img class="authors__image" src="http://placehold.it/150x150">
+                <p class="authors__author-name">Bobby Stewart</p>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="javascript/accordion.js"></script>
+    <script src="javascript/ripple.js"></script>
+    <script src="javascript/stickynav.js"></script>
+    <script src="javascript/scrollspy.js"></script>
+
+</body>
+
+</html>
