@@ -1349,31 +1349,203 @@
 
                   <h2>Modals</h2>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
+                  <p>These modals are built with accessibility in mind and mostly layout independent. As long as you have the basic modal overlay and the modal container, you can put whatever content you want inside of a modal, and have as many modals per page as you want.</p>
+                  <h3>Ease of Use</h3>
+                  <p>To use these modals, you need three things:</p>
+                  <ul class="sitedemo-modal_list">
+                    <li>an "overlay" element that will serve as a screen overlay when the modal is open (the background color can be removed) and will also serve as an escape from the modal; clicking anywhere outside of the modal when it is open will close the modal</li>
+                    <li>a container for your actual modal</li>
+                    <li>a button or other element that will trigger your modal to open</li>
+                    <li>an escape route. While clicking outside of the modal will dismiss it, you should have at least one way to dismiss the modal. Indicate that by adding the <code>data-na-modal-dismiss</code> attribute to any elements that should dismiss the modal.</li>
+                  </ul>
+
+                  <p>Your <strong>overlay must</strong> have the <code>data-na-modal</code> attribute. The value can be anything. Your <strong>trigger must</strong> have the <code>data-na-triggers-modal</code> attribute, and its <em>must</em> match the value of <code>data-na-modal</code> on the modal it should trigger. This value can be anything, just make sure they match.</p>
+                  <p>Everything else is optional, and adds to accessibility:</p>
+                  <ul class="sitedemo-modal_list">
+                    <li>set a title for your modal - this can be any text at the top of the modal. Add the <code>data-na-modal-title</code> attribute to whatever elment contains the title you wish to be associated with the modal for screenreaders.</li>
+                    <li>set a description for your modal - this can be any text within the modal that describes the modal's purpose. Add the <code>data-na-modal-desc</code> attribute to whatever element contains the title you wish to be associated with the modal for screen readers.</li>
+                    <li>set an element to recieve initial focus when the modal is opened by adding the <code>data-na-initial-focus</code> attribute. This should only be added to <strong>one</strong> element per modal.</li>
+                  </ul>
+
+                  <h3>Accessiblity and UX features</h3>
+                  <p>Accessibily was the driving force of developing this modal. It has all of the key accessiblity requirements, most of which also improve the user experience for all users:</p>
+                  <ul class="sitedemo-modal_list">
+                    <li>Focus trap - when a modal is open, it is essential the focus be trapped inside of the open modal. This prevents users navigating by tabbing through from breaking outside of the modal and tabbing through content they did not intend it. This modal creates a focus trap to be sure this never happens.</li>
+                    <li>Initial focus - an element can be set to have initial focus, but by default the first focusable element in the modal will be focused when the modal opens. </li>
+                    <li>Saved focus - when a modal is closed, the element on the page that was last focused before the modal opened.</li>
+                    <li>Escape routes - pressing the <kbd>esc</kbd> key, clicking anywhere on the body outside of the modal, and clicking or using the keyboard and pressing the <kbd>spacebar</kbd> or <kbd>enter</kbd> key on any element given the <code>data-na-modal-dismiss</code> attribute will close the modal.</li>
+                    <li>ARIA attributes added dynamically - <code>aria-labelledby</code> and <code>aria-describedby</code> attributes are added dynamically based on any optional title and descriptive elements specified. The <code>role="dialog"</code> attribute and value are also added dynamically in case JavaScript fails to load.</li>
+                    <li>Non-scrolling body - when a modal is open, a temporary class is added to the body of the document so it cannot be scrolled. This allows a user to keep their place and return to where they were before the modal opened.</li>
+                  </ul>
+
+                  <div class="sitedemo-flex--row">
+                    <button data-na-triggers-modal="some-picture" class="c-na-btn c-na-btn--lg sitedemo-modal__trigger c-na-modal__btn c-na-modal--grad-bd">An Image (with Optional Footer)</button>
+                    <button data-na-triggers-modal="confirm-this" class="c-na-btn c-na-btn--lg sitedemo-modal__trigger c-na-modal__btn c-na-modal--grad-bd">Simple Confirmation</button>
+                    <button data-na-triggers-modal="meow" class="c-na-btn c-na-btn--lg sitedemo-modal__trigger c-na-modal__btn c-na-modal--grad-bd">Simple Dismiss</button>
+                  </div>
+
+                  <div data-na-modal="confirm-this" class="c-na-modal__overlay is-closed">
+                   <div class="c-na-modal__container u-na-br--rounded">
+                     <div data-na-modal-title  class="c-na-modal__header">
+                       <p class="c-na-modal__heading">Doing the thing</p>
+                     </div>
+                     <div data-na-modal-desc class="c-na-modal__body">
+                       <p>This will do the thing. Doing the thing cannot be undone. Make sure to read the <a href="#">documentation</a> about the thing first.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, reiciendis consequuntur architecto aspernatur id illum fugiat repudiandae eaque. Rerum sit perferendis maiores explicabo, eius laudantium labore minus dicta voluptates saepe.
+                       </p>
+                       <p><strong>Are you sure you want to do the thing?</strong></p>
+                     </div>
+                     <div class="c-na-modal__prompts c-na-modal__prompts--right">
+                       <button data-na-modal-dismiss class="c-na-btn c-na-btn--bd c-na-modal__btn">Cancel</button>
+                       <button class="c-na-btn c-na-btn--bd c-na-modal__btn c-na-modal--grad-bd">Yes, do the thing</button>
+                     </div>
+                     <button data-na-modal-dismiss class="c-na-modal__close" aria-label="dismiss modal" title="dismiss modal">&times;</button>
+                   </div>
+                  </div>
+
+
+                  <div data-na-modal="meow" class="c-na-modal__overlay is-closed">
+                   <div class="c-na-modal__container">
+                     <div data-na-modal-title class="c-na-modal__header">
+                       <p class="c-na-modal__heading">Success!</p>
+                     </div>
+                     <div data-na-modal-desc class="c-na-modal__body">
+                       <p>The thing you wanted to do was successful! Have a nice day.</p>
+                     </div>
+                     <div class="c-na-modal__prompts c-na-modal__prompts">
+                       <button data-na-modal-dismiss class="c-na-btn c-na-btn--lg c-na-modal__btn c-na-modal--grad-bg u-na-br--rounded">OK, thanks</button>
+                     </div>
+                     <button data-na-modal-dismiss class="c-na-modal__close" aria-label="dismiss modal" title="dismiss modal">&times;</button>
+                   </div>
+                  </div>
+
+                  <div data-na-modal="some-picture" class="c-na-modal__overlay is-closed">
+                   <div class="c-na-modal__container c-na-modal__container--pho">
+                     <div class="c-na-modal__body">
+                       <figure class="c-na-modal__figure">
+                         <img src="https://unsplash.it/600/400" alt="" class="c-na-modal__img">
+                       </figure>
+                     </div>
+                     <div data-na-modal-desc class="c-na-modal__footer">
+                        <p>Fill likes to take long walks on the beach with his camera and sidekick <a href="#">Larry</a>. You could say Larry walks <em>Fill</em></p>
+                        <div class="c-na-modal__user">
+                          <img src="http://www.fillmurray.com/200/200" alt="Fill Murray" class="c-na-modal__user-img">
+                          <p class="c-na-modal__u-name">
+                            <a href="#">@fillmurray</a>
+                          </p>
+                        </div>
+                     </div>
+                     <button data-na-modal-dismiss class="c-na-modal__close" aria-label="dismiss modal" title="dismiss modal">&times;</button>
+                   </div>
+                  </div>
+
+                  <h3>Photo Modal Markup</h3>
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;!-- modal trigger --&gt;
+&lt;button data-na-triggers-modal=&quot;some-picture&quot; class=&quot;c-na-btn c-na-btn--lg sitedemo-modal__trigger c-na-modal__btn c-na-modal--grad-bd&quot;&gt;An Image (with Optional Footer)&lt;/button&gt;
+
+&lt;!-- modal --&gt;
+&lt;div data-na-modal=&quot;some-picture&quot; class=&quot;c-na-modal__overlay is-closed&quot;&gt;
+ &lt;div class=&quot;c-na-modal__container c-na-modal__container--pho&quot;&gt;
+   &lt;div class=&quot;c-na-modal__body&quot;&gt;
+     &lt;figure class=&quot;c-na-modal__figure&quot;&gt;
+       &lt;img src=&quot;https://unsplash.it/600/400&quot; alt=&quot;&quot; class=&quot;c-na-modal__img&quot;&gt;
+     &lt;/figure&gt;
+   &lt;/div&gt;
+   &lt;div data-na-modal-desc class=&quot;c-na-modal__footer&quot;&gt;
+      &lt;p&gt;Fill likes to take long walks on the beach with his camera and sidekick &lt;a href=&quot;#&quot;&gt;Larry&lt;/a&gt;. You could say Larry walks &lt;em&gt;Fill&lt;/em&gt;&lt;/p&gt;
+      &lt;div class=&quot;c-na-modal__user&quot;&gt;
+        &lt;img src=&quot;http://www.fillmurray.com/200/200&quot; alt=&quot;Fill Murray&quot; class=&quot;c-na-modal__user-img&quot;&gt;
+        &lt;p class=&quot;c-na-modal__u-name&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;@fillmurray&lt;/a&gt;
+        &lt;/p&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;!-- dismiss button --&gt;
+   &lt;button data-na-modal-dismiss class=&quot;c-na-modal__close&quot; aria-label=&quot;dismiss modal&quot; title=&quot;dismiss modal&quot;&gt;&amp;times;&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
+
+                  <h3>Confirmation Modal Markup</h3>
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;!-- modal trigger --&gt;
+&lt;button data-na-triggers-modal=&quot;confirm-this&quot; class=&quot;c-na-btn c-na-btn--lg sitedemo-modal__trigger c-na-modal__btn c-na-modal--grad-bd&quot;&gt;Simple Confirmation&lt;/button&gt;
+
+&lt;!-- modal --&gt;
+&lt;div data-na-modal=&quot;confirm-this&quot; class=&quot;c-na-modal__overlay is-closed&quot;&gt;
+ &lt;div class=&quot;c-na-modal__container u-na-br--rounded&quot;&gt;
+   &lt;div data-na-modal-title  class=&quot;c-na-modal__header&quot;&gt;
+     &lt;p class=&quot;c-na-modal__heading&quot;&gt;Doing the thing&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div data-na-modal-desc class=&quot;c-na-modal__body&quot;&gt;
+     &lt;p&gt;This will do the thing. Doing the thing cannot be undone. Make sure to read the &lt;a href=&quot;#&quot;&gt;documentation&lt;/a&gt; about the thing first.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, reiciendis consequuntur architecto aspernatur id illum fugiat repudiandae eaque. Rerum sit perferendis maiores explicabo, eius laudantium labore minus dicta voluptates saepe.
+     &lt;/p&gt;
+     &lt;p&gt;&lt;strong&gt;Are you sure you want to do the thing?&lt;/strong&gt;&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;c-na-modal__prompts c-na-modal__prompts--right&quot;&gt;
+     &lt;!-- cancel / dismiss button --&gt;
+     &lt;button data-na-modal-dismiss class=&quot;c-na-btn c-na-btn--bd c-na-modal__btn&quot;&gt;Cancel&lt;/button&gt;
+     &lt;!-- button to confirm / take action --&gt;
+     &lt;button class=&quot;c-na-btn c-na-btn--bd c-na-modal__btn c-na-modal--grad-bd&quot;&gt;Yes, do the thing&lt;/button&gt;
+   &lt;/div&gt;
+   &lt;!-- dismiss button  --&gt;
+   &lt;button data-na-modal-dismiss class=&quot;c-na-modal__close&quot; aria-label=&quot;dismiss modal&quot; title=&quot;dismiss modal&quot;&gt;&amp;times;&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
+
+                  <h3>Simple Dismiss Modal Markup</h3>
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;!-- modal trigger --&gt;
+&lt;button data-na-triggers-modal=&quot;meow&quot; class=&quot;c-na-btn c-na-btn--lg sitedemo-modal__trigger c-na-modal__btn c-na-modal--grad-bd&quot;&gt;Simple Dismiss&lt;/button&gt;
+
+&lt;!-- modal --&gt;
+&lt;div data-na-modal=&quot;meow&quot; class=&quot;c-na-modal__overlay is-closed&quot;&gt;
+ &lt;div class=&quot;c-na-modal__container&quot;&gt;
+   &lt;div data-na-modal-title class=&quot;c-na-modal__header&quot;&gt;
+     &lt;p class=&quot;c-na-modal__heading&quot;&gt;Success!&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div data-na-modal-desc class=&quot;c-na-modal__body&quot;&gt;
+     &lt;p&gt;The thing you wanted to do was successful! Have a nice day.&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;c-na-modal__prompts c-na-modal__prompts&quot;&gt;
+     &lt;!-- the modal can only be dismissed  --&gt;
+     &lt;button data-na-modal-dismiss class=&quot;c-na-btn c-na-btn--lg c-na-modal__btn c-na-modal--grad-bg u-na-br--rounded&quot;&gt;OK, thanks&lt;/button&gt;
+   &lt;/div&gt;
+   &lt;!-- second dismiss button --&gt;
+   &lt;button data-na-modal-dismiss class=&quot;c-na-modal__close&quot; aria-label=&quot;dismiss modal&quot; title=&quot;dismiss modal&quot;&gt;&amp;times;&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
 
                   <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
