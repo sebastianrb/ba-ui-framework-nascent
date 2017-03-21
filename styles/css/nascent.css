@@ -972,7 +972,121 @@ footer {
 /*
   grid start
  */
-/* css or scss here */
+.container-div-a {
+  box-sizing: border-box;
+}
+
+.gray {
+  background-color: gray;
+  border: 1px solid black;
+  color: white;
+  text-align: center;
+  font-family: 'Inconsolata';
+}
+
+.p-grid {
+  font-family: 'Montserrat';
+}
+
+.row header {
+  font-family: Inconsolata;
+}
+
+.template-body {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  padding: 20px;
+  width: 100%;
+  min-height: 1px;
+  float: left;
+}
+
+.col {
+  min-height: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-right: -4px;
+}
+
+.col.one {
+  width: 8.33333%;
+}
+
+.col.two {
+  width: 16.66667%;
+}
+
+.col.three {
+  width: 25%;
+}
+
+.col.four {
+  width: 33.33333%;
+}
+
+.col.five {
+  width: 41.66667%;
+}
+
+.col.six {
+  width: 50%;
+}
+
+.col.seven {
+  width: 58.33333%;
+}
+
+.col.eight {
+  width: 66.66667%;
+}
+
+.col.nine {
+  width: 75%;
+}
+
+.col.ten {
+  width: 83.33333%;
+}
+
+.col.eleven {
+  width: 91.66667%;
+}
+
+.col.twelve {
+  width: 100%;
+}
+
+/*For mobile, choose this media query if you want everything to be aligned vertically in display: */
+@media (max-width: 768px) {
+  .col {
+    width: 100% !important;
+  }
+}
+/*Also for mobile, choose this media query if you want everything to look as it does for desktop:
+
+@media (max-width: 768px){
+
+  .col.one {width: 8.33333%;}
+  .col.two {width: 16.66667%;}
+  .col.three {width: 25%;}
+  .col.four {width: 33.33333%;}
+  .col.five {width: 41.66667%;}
+  .col.six {width: 50%;}
+  .col.seven {width: 58.33333%;}
+  .col.eight {width: 66.66667%;}
+  .col.nine {width: 75%;}
+  .col.ten {width: 83.33333%;}
+  .col.eleven {width: 91.66667%;}
+  .col.twelve {width: 100%;}
+
+}
+
+*/
 /*
   grid end
  */
@@ -984,47 +1098,58 @@ footer {
 }
 
 .bar {
-  background-color: #641053;
-  border: 1px solid black;
-  bottom: 1px;
-  color: blue;
-  display: inline-block;
-  height: 8px;
   position: relative;
+  box-shadow: 0px 5px 12px 0px rgba(50, 50, 50, 0.75);
+  bottom: 3px;
+  display: inline-block;
+  color: blue;
+  border: 3px solid black;
   width: 80px;
+  height: 20px;
+  background-color: #2a2a2a;
 }
 
 .hidden {
-  background-color: #f2b4e6;
-  border-radius: 20px;
-  height: 8px;
-  opacity: 0.6;
+  opacity: 1;
   position: absolute;
-  right: 30px;
-  top: 33px;
+  top: 25px;
+  height: 20px;
   width: 10px;
+  background-color: white;
+  right: 30px;
   z-index: 1000;
 }
 
 #bar-one {
-  left: 26px;
+  left: 28px;
 }
 
 #bar-two {
-  left: 133px;
+  left: 140px;
 }
 
 #bar-three {
-  left: 240px;
+  left: 251px;
 }
 
 #bar-four {
-  left: 347px;
+  left: 362px;
 }
 
 .circle {
-  color: #6f83f1;
+  bottom: 9px;
+  box-shadow: 0px 5px 12px 0px rgba(50, 50, 50, 0.75);
+  margin: -4px;
+  border: 1px solid black;
+  display: inline-block;
+  min-width: 23px;
+  min-height: 23px;
+  background-color: black;
+  text-align: center;
+  border-radius: 30px;
+  color: white;
   font-size: 20px;
+  position: relative;
   z-index: 1000;
 }
 
@@ -1034,49 +1159,90 @@ footer {
 }
 
 #progress {
-  background-color: #363c6f;
-  border: 1px solid gray;
-  width: 30%;
+  width: 25%;
+  height: 20px;
+  background-color: #bdbdbd;
+  box-shadow: 0px 7px 16px 0px rgba(50, 50, 50, 0.65);
+  border: 5px solid black;
 }
 
 #progress-bar {
-  background-color: #ccd3fa;
-  border-radius: 20px;
-  color: white;
-  height: 10px;
-  line-height: 30px;
-  text-align: center;
   width: 0%;
+  height: 20px;
+  background-color: #363c6f;
+  text-align: center;
+  line-height: 30px;
+  color: white;
 }
 
-.div-table {
-  border: 1px solid #01579b;
+#progress-flag {
+  position: relative;
+  left: 467px;
+  bottom: 34px;
+  background-color: #2a2a2a;
+  color: #ccd3fa;
+  border: 7px solid black;
+  box-shadow: 0px 4px 10px 0px rgba(50, 50, 50, 0.65);
+  height: 21px;
+  min-width: 50px;
+  padding: 4px 3px 0 3px;
+  text-align: center;
   display: inline-block;
 }
 
-.table-class, .td-class {
-  border-bottom: 1px solid #01579b;
-  border-collapse: collapse;
-  padding: 8px 20px 8px;
-  background-color: #e0cdec;
+.c-na-table td {
+  transition: all 600ms ease-in-out;
 }
 
-.table-head .td-class {
-  background-color: #641053;
-  font-weight: bold;
-  color: #e0cdec;
+.c-na-table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  box-shadow: 0px 6px 20px 5px rgba(50, 50, 50, 0.75);
+  font-family: 'Montserrat';
+}
+
+.p-table {
+  font-family: 'Inconsolata';
+}
+
+.th-head {
+  background-color: #5B65BA;
+  border-bottom: 1px solid black;
+}
+
+.table-border {
+  border-bottom: 1px solid black;
+  display: inline-block;
 }
 
 .row-a:hover,
 .row-b:hover,
 .row-c:hover {
-  color: #6f83f1 !important;
+  font-weight: 900 !important;
 }
 
-.column-a:hover,
-.column-b:hover,
-.column-c:hover {
-  color: blue;
+.c-na-table td {
+  text-align: center;
+  padding: 10px;
+}
+
+.column-d {
+  cursor: pointer;
+}
+
+#ta-one,
+#ta-two,
+#ta-three {
+  display: inline-block;
+  position: relative;
+}
+
+.exit-button {
+  border: none;
+  cursor: pointer;
+  float: right;
+  font-color: black;
+  position: relative;
 }
 
 .display-font {
@@ -4093,5 +4259,164 @@ section {
 }
 
 */
+/*
+  scrollspy & sticky nav begin
+ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #353b6e;
+}
+
+header {
+  background-color: #22262a;
+  background-color: #22262a;
+  background-color: #24284c;
+  color: white;
+  padding: 1rem;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+main,
+main.na-demo-page-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*border: 1px solid green;*/
+}
+
+.spy-nav {
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 10rem;
+  flex: 0 0 10rem;
+}
+
+.spy-nav__list {
+  /* padding is what indents the li elements;
+      also of interest, setting padding to 0 gets rid of bullets; */
+  padding: 0;
+  /* margin: 0; is default, but state for explicitness */
+  margin: 0;
+  position: absolute;
+  top: auto;
+  width: 10rem;
+  overflow-y: auto;
+}
+
+.spy-nav__list li {
+  list-style-type: none;
+  text-align: center;
+}
+
+.spy-nav__list li a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0.5rem;
+  /*color: white;*/
+  /*background-color: #aaa;*/
+  transition: all 0.35s ease;
+}
+
+.spy-nav__list li a:hover {
+  background-color: yellow;
+  background-color: #a772cb;
+  color: #eee;
+}
+
+.spy-section {
+  background-color: #eee;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+footer {
+  height: 20rem;
+  background-color: gray;
+  background-color: #24284c;
+}
+
+/* put dynamically added classes at bottom for specificity */
+/* class to be added when we want to fix the nav */
+.affix {
+  position: fixed;
+  top: 0;
+}
+
+.overflow-y {
+  overflow-y: scroll;
+}
+
+/* spy-specific rule sets */
+/* class to be used for initial inactive state for spy anchors */
+.spy-nav__a--inactive {
+  background-color: #aaa;
+  background-color: transparent;
+  color: #eee;
+}
+
+/* class to be added/removed to indicate the active spy section */
+.spy-nav__a--active {
+  background-color: orange;
+  background-color: #e1cfed;
+  color: #3d1e52;
+}
+
+/*
+  scrollspy & sticky nav end
+ */
+.source-code-modal {
+  border: 1px solid gray;
+  display: block;
+  font-family: Inconsolata;
+  max-height: 500px;
+  min-height: 500px;
+  max-width: 500px;
+}
+
+.scm-content-display {
+  border-bottom: 1px solid gray;
+  font-family: Montserrat;
+  height: 420px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.source-code-modal input[type=radio] {
+  display: inline-block;
+  visibility: hidden;
+}
+
+.source-code-modal label {
+  display: inline-block;
+  font-size: 2em;
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-right: 16px;
+}
+
+#scm-button {
+  top: 25px;
+  height: 40px;
+  position: relative;
+}
+
+.navigator-arrows {
+  cursor: pointer;
+  letter-spacing: 20px;
+  line-height: 40px;
+}
+
+.p-navigator {
+  font-family: 'Inconsolata';
+}
 
 /*# sourceMappingURL=nascent.css.map */
