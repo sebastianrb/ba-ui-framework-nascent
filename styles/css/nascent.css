@@ -2424,7 +2424,7 @@ body.modal-open {
 .c-na-modal__btn::before {
   background-color: #6f83f1;
   content: '';
-  height: .01em;
+  height: .1em;
   left: 0;
   position: absolute;
   bottom: -.4em;

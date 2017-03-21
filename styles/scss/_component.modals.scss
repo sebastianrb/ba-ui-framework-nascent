@@ -179,7 +179,7 @@ $modal-gradient: linear-gradient(30deg, $mod-bright, #8bb8ef);
   &::before {
     background-color: $lav-base;
     content: '';
-    height: .01em;
+    height: .1em;
     left: 0;
     position: absolute;
     bottom: -.4em;
