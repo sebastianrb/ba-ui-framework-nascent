@@ -2281,32 +2281,98 @@
                 <section class="spy-section website-components__component" id="loaders-demo">
 
                   <h2>Loaders</h2>
+                  <section class="loader__section">
+                    <h3>Basic Loader</h3>
+                    <p>To include a loader create a div and add the class <strong><code>loader</code></strong> to that div.  Be sure to add the class <strong><code>loader__wrapper</code></strong> to the parent div element.
+                    </p>
+                    <div class="loader__wrapper">
+                      <div class="loader__spinner"></div>
+                    </div>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
+                    <div class="na-markup">
+                      <button class="na-markup__toggle">
+                        <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                      </button>
+                      <figure class="na-markup__code">
+                        <pre>
+                          <code class="language-html">
+&lt;div class=&quot;loader__wrapper&quot;&gt;
+  &lt;div class=&quot;loader__spinner&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+                          </code>
+                        </pre>
+                      </figure>
+                    </div>
+                  </section>
+
+                  <section class="loader__section">
+                    <h3>Loader Loading Dots</h3>
+                    <p>To include a loader create a div and add the class <strong><code>loader__dots</code></strong> to that div.  Be sure to add the class <strong><code>loader__wrapper</code></strong> to the parent div element.
+                    </p>
+                    <div class="loader__wrapper">
+                      <div class="loader__blinking--dots">
+                        <span class="loader__dot1"></span>
+                        <span class="loader__dot2"></span>
+                        <span class="loader__dot3"></span>
+                      </div>
+                    </div>
+
+                    <div class="na-markup">
+                      <button class="na-markup__toggle">
+                        <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                      </button>
+                      <figure class="na-markup__code">
+                        <pre>
+                          <code class="language-html">
+&lt;div class=&quot;loader__wrapper&quot;&gt;
+  &lt;div class=&quot;loader__blinking--dots&quot;&gt;
+    &lt;span class=&quot;loader__dot1&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;loader__dot2&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;loader__dot3&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                          </code>
+                        </pre>
+                      </figure>
+                    </div>
+                  </section>
+
+                  <section class="loader__section">
+                    <h3>Loader Stretch Bars</h3>
+                    <p>
+                      To include a loader create a div and add the class <strong><code>loader__bars</code></strong> to that div.  Be sure to add the class <strong><code>loader__wrapper</code></strong> to the parent div element.For each bar create a div or span and add a class <strong><code>loader_bars(number)</code></strong> to the element such as <strong><code>loader_bars1</code></strong>
+                    </p>
+                    <div class="loader__wrapper">
+                      <div class="loader__bars">
+                        <div class="loader__bar1"></div>
+                        <div class="loader__bar2"></div>
+                        <div class="loader__bar3"></div>
+                        <div class="loader__bar4"></div>
+                        <div class="loader__bar5"></div>
+                      </div>
+                    </div>
+
+                    <div class="na-markup">
+                      <button class="na-markup__toggle">
+                        <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                      </button>
+                      <figure class="na-markup__code">
+                        <pre>
+                          <code class="language-html">
+&lt;div class=&quot;loader__wrapper&quot;&gt;
+  &lt;div class=&quot;loader__bars&quot;&gt;
+    &lt;div class=&quot;loader__bar1&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;loader__bar2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;loader__bar3&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;loader__bar4&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;loader__bar5&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                          </code>
+                        </pre>
+                      </figure>
+                    </div>
+                  </section>
 
                   <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
