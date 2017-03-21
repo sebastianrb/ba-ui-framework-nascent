@@ -6,7 +6,7 @@
 
   document.addEventListener('click', function(e) {
     // check if button is clicked and toggle showing dropdown menu
-    if(e.target.nodeName === 'BUTTON') {
+    if(e.target.classList.contains('dropdown__button')) {
       ul = e.target.nextElementSibling;
       ul.classList.toggle('dropdown__menu--show');
     }
@@ -40,7 +40,7 @@
       ul.classList.toggle('dropdown__menu--show');
     }
 
-    e.preventDefault();
-    e.stopPropagation();
+    // e.preventDefault();
+    // e.stopPropagation();
   });
 })();
