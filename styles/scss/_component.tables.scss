@@ -1,8 +1,8 @@
-.c-na-table td {
+.c-na-table-z td {
   transition: all 600ms ease-in-out;
 }
 
-.c-na-table{
+.c-na-table-z{
   border-collapse: collapse;
   border: 1px solid black;
   box-shadow: 0px 6px 20px 5px rgba(50, 50, 50, 0.75);
@@ -13,24 +13,24 @@
   font-family: 'Inconsolata';
 }
 
-.th-head {
+.th-head-a {
   background-color: #5B65BA;
   border-bottom: 1px solid black;
 }
 
-.table-border{
+.table-border-a{
   border-bottom: 1px solid black;
   display: inline-block;
 }
 
-.row-a:hover,
-.row-b:hover,
-.row-c:hover{
+.row-a-z:hover,
+.row-b-z:hover,
+.row-c-z:hover{
   font-weight: 900 !important;
 }
 
 
-.c-na-table td{
+.c-na-table-z td{
   text-align: center;
   padding: 10px;
 }

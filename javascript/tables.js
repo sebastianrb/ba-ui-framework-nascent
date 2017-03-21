@@ -9,13 +9,13 @@ for (var i = 0; i < rowElements.length; i++ ) {
     rowElements[i].addEventListener('click',  function(e){
         var clickedElement = e.target;
         var clickedElementName = clickedElement.tagName.toLowerCase();
-        if ( clickedElementName === 'input' && clickedElement.checked === true ) {
+        if ( clickedElementName === 'input' && clickedElement.checked === true && clickedElementName.className === "td-input-z") {
             this.style.fontWeight = "bold";
         }
         else{
             this.style.fontWeight = "normal";
         }
-    })
+    });
 }
 
 /*********************/
@@ -50,7 +50,7 @@ function colorSimilar(event) {
 }
 
 for (var i = 0; i < cellElements.length; i++) {
-    cellElements[i].addEventListener('mouseover', colorSimilar)
+    cellElements[i].addEventListener('mouseover', colorSimilar);
 }
 
 /*********************/
