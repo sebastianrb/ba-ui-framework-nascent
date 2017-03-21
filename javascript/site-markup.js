@@ -12,10 +12,14 @@ function siteMarkupHandler() {
     }
   };
 
-  function toggleMarkup(e, state) {
-    var icon = e.target.firstElementChild;
-    var txt = e.target.lastElementChild;
-    console.log(markupD[state].icon)
+  /**
+   * Changes the text to Show / Hide Markup and the icon ( + / — ) depending on the state
+   * @param  {[node]} el  -  The trigger that was clicked
+   * @param  {[string]} state - 'show' or 'hide', which state we're changing FROM, not to
+   */
+  function toggleMarkup(el, state) {
+    var icon = el.firstElementChild;
+    var txt = el.lastElementChild;
     icon.innerHTML = markupD[state].icon;
     txt.innerHTML = markupD[state].text;
   }
@@ -27,12 +31,12 @@ function siteMarkupHandler() {
       code = e.target.nextElementSibling;
 
       if (code.classList.contains('show')) {
-        code.classList.remove('show');
-        toggleMarkup(e, 'show');
+        toggleMarkup(e.target, 'show');
       } else {
-        code.classList.add('show');
-        toggleMarkup(e, 'hide');
+        toggleMarkup(e.target, 'hide');
       }
+
+      code.classList.toggle('show');
     }
   }, false);
 

@@ -10,7 +10,7 @@ $modal-gradient: linear-gradient(30deg, $mod-bright, #8bb8ef);
 
   &__overlay {
     @include flex($align: center, $justify: center);
-    background-color: rgba($grey-light, .8);
+    background-color: rgba($grey-light, .9);
     // background-color: darken(desaturate(rgba($primary-dark, .6), 5%), 15%);
     bottom: 0;
     color: lighten($grey-dark, 15%);
