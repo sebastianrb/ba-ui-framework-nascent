@@ -4515,33 +4515,57 @@
 
                   <h2>Tabs</h2>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
+                  <p>The tabs structure consists of an unordered list of tabs that have hashes corresponding to tab ids. Then when you click on each tab, only the container with the corresponding tab id will become visible</p>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu}
+        <div class="c-na-tabwrapper">
+
+          <!-- Nav tabs -->
+          <ul class="c-na-tabnav nav-tabs" role="tablist">
+            <li role="presentation" class="c-na-tabnav__tab"><a href="#home" class="active" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+            <li role="presentation" class="c-na-tabnav__tab"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+            <li role="presentation" class="c-na-tabnav__tab"><a href="#projects" aria-controls="messages" role="tab" data-toggle="tab">Projects</a></li>
+            <li role="presentation" class="c-na-tabnav__tab"><a href="#about" aria-controls="settings" role="tab" data-toggle="tab">About</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="c-na-tab-content">
+            <div role="tabpanel" class="c-na-tab-content__tab-pane show" id="home"><h3>Home content</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+            <div role="tabpanel" class="c-na-tab-content__tab-pane hide" id="profile"><h3>Profile content</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+            <div role="tabpanel" class="c-na-tab-content__tab-pane hide" id="projects"><h3>Projects content</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+            <div role="tabpanel" class="c-na-tab-content__tab-pane hide" id="about"><h3>About content</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+          </div>
+
+        </div> <!-- end tabwrapper -->
 
                   <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
@@ -4551,6 +4575,9 @@
                   <h2>The Reveal</h2>
 
                   <p>The Reveal is ideal for when you have a small amount of content you'd like to hide initially that will be revealed when prompted by user input. The button at the foot of the component will toggle the "doors" to slide open and closed. It will take up the height of its content, so it is best for small amounts of text content, images, and videos.</p>
+
+                  <p>There is a minor animation glitch that occurs in Google Chrome when this component is placed into this demo page.
+                  <br><a href="mm-components/thereveal.html" target="_blank">View the intended behavior here.</a></p>
 
                   <!-- the reveal container -->
                    <div class="c-na-reveal">
