@@ -6,17 +6,15 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: hsl(234, 35%, 32%);
-}
-
-header {
-  background-color: rgb(34, 38, 42);
-  background-color: hsl(210, 11%, 15%);
-  background-color: hsl(234, 35%, 22%);
-  color: white;
-  padding: 1rem;
-}
+// EDIT THIS! It's affecting all headers!
+// 
+// header {
+//   background-color: rgb(34, 38, 42);
+//   background-color: hsl(210, 11%, 15%);
+//   background-color: hsl(234, 35%, 22%);
+//   color: white;
+//   padding: 1rem;
+// }
 
 .clearfix::after {
   content: '';
@@ -119,4 +117,3 @@ footer {
 /*
   scrollspy & sticky nav end
  */
-

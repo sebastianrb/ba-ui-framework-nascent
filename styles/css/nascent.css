@@ -4405,18 +4405,6 @@ section {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #353b6e;
-}
-
-header {
-  background-color: #22262a;
-  background-color: #22262a;
-  background-color: #24284c;
-  color: white;
-  padding: 1rem;
-}
-
 .clearfix::after {
   content: '';
   display: block;
