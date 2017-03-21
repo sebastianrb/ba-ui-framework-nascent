@@ -1509,14 +1509,11 @@ ol {
   transform: scale(1.4);
 }
 .c-na-alert__btn--close:focus {
-  outline: 0.08rem dotted;
-  outline-offset: -.3em;
+  outline: none;
 }
 
 /* warning-specific styling */
 .c-na-alert--minimal {
-  border-style: solid;
-  border-width: 1px;
   display: flex;
   margin: 0.8em auto;
   max-width: 50rem;
@@ -1539,8 +1536,6 @@ ol {
 
 /* basic-specific styling */
 .c-na-alert--basic {
-  border-style: solid;
-  border-width: 1px;
   display: flex;
   margin: 0.8em auto;
   max-width: 50rem;
@@ -1563,8 +1558,6 @@ ol {
 
 /* warning-specific styling */
 .c-na-alert--warning {
-  border-style: solid;
-  border-width: 1px;
   display: flex;
   margin: 0.8em auto;
   max-width: 50rem;
@@ -1587,8 +1580,6 @@ ol {
 
 /* serious-specific styling */
 .c-na-alert--serious {
-  border-style: solid;
-  border-width: 1px;
   display: flex;
   margin: 0.8em auto;
   max-width: 50rem;
@@ -1611,8 +1602,6 @@ ol {
 
 /* success-specific styling*/
 .c-na-alert--success {
-  border-style: solid;
-  border-width: 1px;
   display: flex;
   margin: 0.8em auto;
   max-width: 50rem;
@@ -4569,31 +4558,35 @@ footer {
 }
 
 .na-markup {
-  max-width: 60rem;
   margin: 1.5rem auto;
+  max-width: 60rem;
 }
 .na-markup__toggle {
-  width: 100%;
-  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #ccd3fa;
+  width: 100%;
+  padding: .75rem 1.5rem;
+  background-color: #e3e7fc;
   border: none;
   color: #25294d;
   font-family: inherit;
-  font-size: 1.2rem;
+  transition: background-color 300ms ease-in-out;
+}
+.na-markup__toggle:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 1px #363c6f;
+}
+.na-markup__toggle:hover {
+  background-color: #ccd3fa;
 }
 .na-markup__icon, .na-markup__txt {
-  pointer-events: none;
   font-weight: bold;
-}
-.na-markup__icon {
-  margin-left: 1rem;
+  pointer-events: none;
 }
 .na-markup__code {
-  margin: 0;
   display: none;
+  margin: 0;
 }
 .na-markup__code.show {
   display: block;

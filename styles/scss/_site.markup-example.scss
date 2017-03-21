@@ -1,33 +1,38 @@
 .na-markup {
-  max-width: 60rem;
   margin: 1.5rem auto;
+  max-width: 60rem;
 
   &__toggle {
-    width: 100%;
-    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: $lav-light;
+    width: 100%;
+    padding: .75rem 1.5rem;
+    background-color: lighten($lav-light, 5%);
     border: none;
     color: $primary-dark;
     font-family: inherit;
-    font-size: 1.2rem;
+    transition: background-color 300ms ease-in-out;
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 0 0 1px $primary-base;
+    }
+
+    &:hover {
+      background-color: $lav-light;
+    }
   }
 
   &__icon,
   &__txt {
-    pointer-events: none;
     font-weight: bold;
-  }
-
-  &__icon {
-    margin-left: 1rem;
+    pointer-events: none;
   }
 
   &__code {
-    margin: 0;
     display: none;
+    margin: 0;
 
     &.show {
       display: block;

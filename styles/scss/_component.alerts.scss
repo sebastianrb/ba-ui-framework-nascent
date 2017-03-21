@@ -24,8 +24,8 @@ $serious-dark: #AD0900;
 
 // basic alert styles
 @mixin fm-alert() {
-  border-style: solid;
-  border-width: 1px;
+  // border-style: solid;
+  // border-width: 1px;
   display: flex;
   margin: 0.8em auto;
   max-width: 50rem;
@@ -94,8 +94,9 @@ $serious-dark: #AD0900;
   }
 
   &:focus {
-    outline: 0.08rem dotted;
-    outline-offset: -.3em;
+    outline: none;
+    // outline: 0.08rem dotted;
+    // outline-offset: -.3em;
   }
 }
 

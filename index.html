@@ -15,15 +15,41 @@
         .na-demo-page {
           background-color: hsl(234, 35%, 32%);
         }
-        .nascent-header {
+        /*.nascent-header {
 
-        }
+        }*/
         p.nascent-header__logo-text--top {
           font-size: 2rem;
         }
-        section.spy-section {
-          background-color: white;
+        .spy-section {
+          /* edited by Melissa; feel free to change */
+          background-color: initial; /* overrides _scrollspy.scss bg color */
+          border: none;
         }
+
+        .spy-section:not(:last-of-type) {
+          /* edited by Melissa; feel free to change */
+          border-bottom: 1px solid;
+          border-color: hsl(234, 35%, 32%); /* overrides _scrollspy.scss border*/
+        }
+
+        /* added by Melissa; feel free to change */
+        .spy-section > h2 {
+          display: inline-block;
+          padding-bottom: .25em;
+          border-bottom: 0.15em solid #563dd9;
+          text-transform: uppercase;
+          letter-spacing: .5px;
+        }
+
+        .main-content {
+          /* SUGGESTION: added by Melissa; added to prevent the page from having overflow on smaller viewports */
+          /* 10rem is the size of the fixed nav; remove if you want */
+          max-width: calc(100% - 10rem);
+          background-color: white;
+          padding: 1rem; /* SUGGESTION: added by Melissa; remove if you want */
+        }
+
         footer {
           height: auto;
           background-color: hsl(234, 35%, 22%);
@@ -47,6 +73,7 @@
           list-style-type: none;
           flex: 0 0 200px;
         }
+
     </style>
 </head>
 
@@ -103,16 +130,14 @@
             <div id="spy-content-top" class="spy-content-container website-components">
 
               <section class="spy-section website-components__component" id="accordions-demo">
-
-                <div class="generic-wrapper" style="padding: 2em">
                   <h2>Accordions</h2>
                   <p>Accordions are elements that expand or collapse when clicked on. They allow you to hide content that you do not want to consume page space unless the user decides that it is relevant to see.</p>
 
-                  <h2>Accordion Types</h2>
+                  <h3>Accordion Types</h3>
                   <p>There are two accordion behaviors provided.
                   <br>To only allow one section to stay open at a time, specify <code>data-accordion-type="accordion"</code> on the &lt;ul> element with the <code>class="c-na-accordion"</code>.
                   <br>To allow multiple information panels to stay open, specify <code>data-accordion-type="expandable"</code> on the &lt;ul> element with the <code>class="c-na-accordion"</code> attribute. See below for a demo of each type</p>
-                  <h3 style="text-align: center;">Accordion</h3>
+                  <h4 style="text-align: center;">Accordion</h4>
                     <ul class="c-na-accordion" data-accordion-type="accordion">
                       <li>
                         <!-- <div class="c-na-accordion__header ripple-element" data-ripple-color="rgba(3,169,244,0.5)" data-ripple-clip="true"><i class="material-icons">filter_drama</i>First<i class="material-icons">keyboard_arrow_down</i></div> -->
@@ -149,10 +174,8 @@
                         cillum dolore eu fugiat nulla pariatur.</p></div>
                       </li>
                     </ul>
-                </div> <!-- end .generic-wrapper -->
 
-                <div class="generic-wrapper" style="padding: 2em">
-                  <h3 style="text-align: center">Accordion - expandable</h3>
+                  <h4 style="text-align: center">Accordion - expandable</h4>
                     <ul class="c-na-accordion" data-accordion-type="expandable">
                       <li>
                         <!-- <div class="c-na-accordion__header ripple-element" data-ripple-color="rgba(3,169,244,0.5)" data-ripple-clip="true"><i class="material-icons">filter_drama</i>First<i class="material-icons">keyboard_arrow_down</i></div> -->
@@ -189,11 +212,9 @@
                         cillum dolore eu fugiat nulla pariatur.</p></div>
                       </li>
                     </ul>
-                </div> <!-- end .generic-wrapper -->
 
                 <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
               </section>
-
                 <!-- Alerts code below -->
                 <section id="alerts-demo" class="spy-section website-components__component">
                   <h2>Alerts</h2>
@@ -218,7 +239,7 @@
                   <p>For the basic and icon alert sections, you will see the default state for each type of alert. Following that will just be two examples showing variations, but every alert type can be customized in the same way.</p>
 
                   <h3>Basic (no icons)</h3>
-                  <h4>With a border (default)</h4>
+                  <h4>Without a border (default)</h4>
 
                   <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
                   <div class="c-na-alert--minimal" role="alert">
@@ -305,11 +326,11 @@
                     </figure>
                   </div>
 
-                  <h4>Without a border</h4>
-                  <p>Add the class <code>u-na--no-bd </code> to your alert element.</p>
+                  <h4>With a border</h4>
+                  <p>Add the class <code>u-na--bd-thin</code> to your alert element.</p>
 
                   <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
-                  <div class="c-na-alert--basic u-na--no-bd " role="alert">
+                  <div class="c-na-alert--basic u-na--bd-thin" role="alert">
                     <p class="c-na-alert__text">
                       It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, look at the roses instead.)
                     </p>
@@ -317,7 +338,7 @@
                   </div>
 
                   <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
-                  <div class="c-na-alert--warning u-na--no-bd " role="alert">
+                  <div class="c-na-alert--warning u-na--bd-thin" role="alert">
                     <p class="c-na-alert__text">
                       <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
                       <strong class="c-na-alert--attn">Be careful!</strong> Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">practice those reflexes</a>
@@ -334,7 +355,7 @@
                       <pre>
                         <code class="language-html">
 &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
-  &lt;div class=&quot;c-na-alert--basic u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;c-na-alert--basic u-na--bd-thin &quot; role=&quot;alert&quot;&gt;
     &lt;p class=&quot;c-na-alert__text&quot;&gt;
       It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, look at the roses instead.)
     &lt;/p&gt;
@@ -342,7 +363,7 @@
   &lt;/div&gt;
 
   &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
-  &lt;div class=&quot;c-na-alert--warning u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;c-na-alert--warning u-na--bd-thin &quot; role=&quot;alert&quot;&gt;
     &lt;p class=&quot;c-na-alert__text&quot;&gt;
       &lt;!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn --&gt;
       &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Be careful!&lt;/strong&gt; Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so &lt;a href=&quot;https://www.youtube.com/watch?v=dQw4w9WgXcQ&quot;&gt;practice those reflexes&lt;/a&gt;
@@ -359,7 +380,7 @@
 
                   <p>These are quite customizable. In this framework, we're using , but you can use icons from other font systems or you own custom icons. These are just for demonstration. You can remove the border from the alert and remove the background color from the icon container, though they are there by default.</p>
 
-                  <h4>With a border (default) and with a background color for the icon container (default)</h4>
+                  <h4>Without a border (default) and with a background color for the icon container (default)</h4>
 
                   <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
                   <div class="c-na-alert--minimal" role="alert">
@@ -496,11 +517,11 @@
                     </figure>
                   </div>
 
-                  <h4>Without a border, but with a background color for the icon container</h4>
-                  <p>Add the class <code>u-na--no-bd </code> to your alert container to remove the border.</p>
+                  <h4>With a thin border and a background color for the icon container</h4>
+                  <p>Add the class <code>u-na--bd-thin </code> to your alert container to remove the border.</p>
 
                   <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
-                  <div class="c-na-alert--warning u-na--no-bd " role="alert">
+                  <div class="c-na-alert--warning u-na--bd-thin " role="alert">
                     <span class="c-na-alert__icon--warning">
                       <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
                       <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
@@ -513,7 +534,7 @@
                   </div>
 
                   <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
-                  <div class="c-na-alert--minimal u-na--no-bd " role="alert">
+                  <div class="c-na-alert--minimal u-na--bd-thin " role="alert">
                     <span class="c-na-alert__icon--minimal">
                       <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
                       <i class="fa fa-lemon-o" aria-hidden="true"></i>
@@ -533,7 +554,7 @@
                       <pre>
                         <code class="language-html">
 &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
-&lt;div class=&quot;c-na-alert--warning u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+&lt;div class=&quot;c-na-alert--warning u-na--bd-thin &quot; role=&quot;alert&quot;&gt;
   &lt;span class=&quot;c-na-alert__icon--warning&quot;&gt;
     &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
     &lt;i class=&quot;fa fa-exclamation-triangle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
@@ -546,7 +567,7 @@
 &lt;/div&gt;
 
 &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
-&lt;div class=&quot;c-na-alert--minimal u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+&lt;div class=&quot;c-na-alert--minimal u-na--bd-thin &quot; role=&quot;alert&quot;&gt;
   &lt;span class=&quot;c-na-alert__icon--minimal&quot;&gt;
     &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
     &lt;i class=&quot;fa fa-lemon-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
@@ -563,11 +584,10 @@
                   </div>
 
                   <h4>With no border and no background color for the icon container</h4>
-                  <p>Add the class u-na--no-bd  to your alert element to remove the border.</p>
                   <p>Add the class <code>u-na--no-bg</code> to the icon container (the <code>span</code> with a class of <code>c-na-alert__icon</code>) to remove the background color of the icon container</p>
 
                   <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
-                  <div class="c-na-alert--serious u-na--no-bd " role="alert">
+                  <div class="c-na-alert--serious" role="alert">
                     <span class="c-na-alert__icon--serious u-na--no-bg">
                       <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
                       <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
@@ -579,7 +599,7 @@
                   </div>
 
                   <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
-                  <div class="c-na-alert--minimal u-na--no-bd " role="alert">
+                  <div class="c-na-alert--minimal" role="alert">
                     <span class="c-na-alert__icon--minimal u-na--no-bg">
                       <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
                       <i class="fa fa-lemon-o" aria-hidden="true"></i>
@@ -592,7 +612,7 @@
                   </div>
 
                   <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
-                  <div class="c-na-alert--basic u-na--no-bd " role="alert">
+                  <div class="c-na-alert--basic" role="alert">
                     <span class="c-na-alert__icon u-na--no-bg">
                       <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
                       <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
@@ -611,7 +631,7 @@
                       <pre>
                         <code class="language-html">
 &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
-&lt;div class=&quot;c-na-alert--serious u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+&lt;div class=&quot;c-na-alert--serious&quot; role=&quot;alert&quot;&gt;
   &lt;span class=&quot;c-na-alert__icon--serious u-na--no-bg&quot;&gt;
     &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
     &lt;i class=&quot;fa fa-exclamation-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
@@ -623,7 +643,7 @@
 &lt;/div&gt;
 
 &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
-&lt;div class=&quot;c-na-alert--minimal u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+&lt;div class=&quot;c-na-alert--minimal&quot; role=&quot;alert&quot;&gt;
   &lt;span class=&quot;c-na-alert__icon--minimal u-na--no-bg&quot;&gt;
     &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
     &lt;i class=&quot;fa fa-lemon-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
@@ -636,7 +656,7 @@
 &lt;/div&gt;
 
 &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
-&lt;div class=&quot;c-na-alert--basic u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+&lt;div class=&quot;c-na-alert--basic&quot; role=&quot;alert&quot;&gt;
   &lt;span class=&quot;c-na-alert__icon u-na--no-bg&quot;&gt;
     &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
     &lt;i class=&quot;fa fa-lightbulb-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
@@ -655,7 +675,7 @@
 
                   <div class="site-alert__wrap">
                     <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
-                    <div class="c-na-alert--minimal c-na-alert--small" role="alert">
+                    <div class="c-na-alert--minimal c-na-alert--small u-na--bd-thin" role="alert">
                       <p class="c-na-alert__text">
                         <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
                         <a href="#">Make lemonade</a>.
@@ -664,7 +684,7 @@
                     </div>
 
                     <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
-                    <div class="c-na-alert--success u-na--no-bd  c-na-alert--small" role="alert">
+                    <div class="c-na-alert--success c-na-alert--small" role="alert">
                       <p class="c-na-alert__text">
                         <!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn -->
                         <strong class="c-na-alert--attn">Success!</strong> The fox has been caught.
@@ -703,7 +723,7 @@
 &lt;/div&gt;
 
 &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
-&lt;div class=&quot;c-na-alert--success u-na--no-bd  c-na-alert--small&quot; role=&quot;alert&quot;&gt;
+&lt;div class=&quot;c-na-alert--success c-na-alert--small&quot; role=&quot;alert&quot;&gt;
   &lt;p class=&quot;c-na-alert__text&quot;&gt;
     &lt;!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn --&gt;
     &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Success!&lt;/strong&gt; The fox has been caught.
@@ -712,7 +732,7 @@
 &lt;/div&gt;
 
 &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
-&lt;div class=&quot;c-na-alert--warning u-na--no-bd  c-na-alert--small&quot; role=&quot;alert&quot;&gt;
+&lt;div class=&quot;c-na-alert--warning c-na-alert--small&quot; role=&quot;alert&quot;&gt;
   &lt;span class=&quot;c-na-alert__icon--warning&quot;&gt;
     &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
     &lt;i class=&quot;fa fa-exclamation-triangle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
@@ -731,7 +751,7 @@
                   <h3>Full width alert</h3>
 
                   <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
-                  <div class="c-na-alert--success u-na--no-bd  u-na-fw" role="alert">
+                  <div class="c-na-alert--success u-na-fw" role="alert">
                     <span class="c-na-alert__icon--success">
                       <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
                       <i class="fa fa-check-circle" aria-hidden="true"></i>
@@ -743,7 +763,7 @@
                   </div>
 
                   <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
-                  <div class="c-na-alert--basic u-na-fw" role="alert">
+                  <div class="c-na-alert--basic u-na--bd-thin u-na-fw" role="alert">
                     <span class="c-na-alert__icon u-na--no-bg">
                       <!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label="the text you want to be read" -->
                       <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
@@ -762,7 +782,7 @@
                       <pre>
                         <code class="language-html">
 &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
-&lt;div class=&quot;c-na-alert--success u-na--no-bd  u-na-fw&quot; role=&quot;alert&quot;&gt;
+&lt;div class=&quot;c-na-alert--success u-na-fw&quot; role=&quot;alert&quot;&gt;
   &lt;span class=&quot;c-na-alert__icon--success&quot;&gt;
     &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
     &lt;i class=&quot;fa fa-check-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
@@ -774,7 +794,7 @@
 &lt;/div&gt;
 
 &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
-&lt;div class=&quot;c-na-alert--basic u-na-fw&quot; role=&quot;alert&quot;&gt;
+&lt;div class=&quot;c-na-alert--basic u-na--bd-thin u-na-fw&quot; role=&quot;alert&quot;&gt;
   &lt;span class=&quot;c-na-alert__icon u-na--no-bg&quot;&gt;
     &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
     &lt;i class=&quot;fa fa-lightbulb-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
