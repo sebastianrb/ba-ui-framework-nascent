@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Source Code Modal</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+  <link href='//fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link href='//fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+  <link rel="stylesheet" href="../styles/css/nascent.css">
+</head>
+<body>
+
+<div class="source-code-modal">
+
+  <div class="scm-content-display">
+
+    <!--- Place HTML code here. (｡◕‿◕｡) --->
+    <div class="scm-html-content">Place HTML code here.</div>
+
+    <!--- Place CSS code here. (｡◕‿◕｡) --->
+    <div class="scm-css-content" id="scm-css-content-b">Place CSS code here.</div>
+
+    <!--- Place JavaScript code here. (｡◕‿◕｡) --->
+    <div class="scm-js-content" id="scm-js-content-b">Place JavaScript code here.</div>
+
+  </div>
+
+
+  <!---Radio buttons for each DIV --->
+  <label for="scm-html-radio" class="scm-html-content">HTML
+    <input type="radio" id="scm-html-radio" class="scm-html-content" name="scm-code" checked></input>
+  </label>
+
+  <label for="scm-css-radio" class="scm-css-content">CSS
+    <input type="radio" id="scm-css-radio" class="scm-css-content" name="scm-code"></input>
+  </label>
+
+  <label for="scm-js-radio" class="scm-js-content">JavaScript
+    <input type="radio" id="scm-js-radio" class="scm-js-content" name="scm-code"></input>
+  </label>
+
+</div>
+
+<!--- End Source Code Modal --->
+
+  <script src="../javascript/source-code-modal.js" type="text/javascript"></script>
+
+</body>
+</html>

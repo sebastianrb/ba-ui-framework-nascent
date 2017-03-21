@@ -1,0 +1,35 @@
+.source-code-modal{
+  border: 1px solid gray;
+  display: block;
+  font-family: Inconsolata;
+  max-height: 500px;
+  min-height: 500px;
+  max-width: 500px;
+}
+
+.scm-content-display{
+  border-bottom: 1px solid gray;
+  font-family: Montserrat;
+  height: 420px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.source-code-modal input[type=radio]{
+  display: inline-block;
+  visibility: hidden;
+}
+
+.source-code-modal label{
+  display: inline-block;
+  font-size: 2em;
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-right: 16px;
+}
+
+#scm-button{
+  top: 25px;
+  height: 40px;
+  position: relative;
+}
