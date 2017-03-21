@@ -2652,31 +2652,41 @@
 
                   <h2>Pagination (Innovative)</h2>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <p class="innovative-pagination__intro">
+                     This is an <strong><code>innovative pagination</code></strong> element. While it might look like a regular slider it is slightly different.
+                   </p>
+                   <p>
+                     As a user moves the slider the numbers in the tooltip will change to reflect the position.  A user can also enter the number on the tooltip and change the position or click the arrows in the tooltip to change the position.  That is what makes this innovative because a user has three ways to change the page (slide the thumb, click the arrows or enter a number)
+                   </p>
+                   <p>
+                    Create a form with two inputs. For the form add a class <strong><code>innovative-pagination__form</code></strong>.  The first input should be an <strong><code>input[type=range]</code></strong>be sure to add the id <strong><code>sliderRange</code></strong>.  The second input should be input[type=number] add the id <strong><code>inputNumber</code></strong>.
+                    Add <strong><code>min</code></strong>, <strong><code>max</code></strong> and <strong><code>value</code></strong> attributes to each element.  All thre values should match for both inputs
                   </p>
+
+                   <p>
+                     in Firefox and IE the slider track color will change to show the progress of the slider.
+                   </p>
+                  <section class="innovative-pagination__section">
+                    <form class="innovative-pagination__form">
+                  		<input type="range" id="sliderRange" class="innovative-pagination__slider" name="amountRange" min="1" max="200" value="1"/>
+                      <input type="number" id="inputNumber" class="innovative-pagination__input" name="amountInput" min="1" max="200" value="1"/>
+                    </form>
+                  </section>
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;form class=&quot;innovative-pagination__form&quot;&gt;
+  &lt;input type=&quot;range&quot; id=&quot;sliderRange&quot; class=&quot;innovative-pagination__slider&quot; name=&quot;amountRange&quot; min=&quot;1&quot; max=&quot;200&quot; value=&quot;1&quot;/&gt;
+  &lt;input type=&quot;number&quot; id=&quot;inputNumber&quot; class=&quot;innovative-pagination__input&quot; name=&quot;amountInput&quot; min=&quot;1&quot; max=&quot;200&quot; value=&quot;1&quot;/&gt;
+&lt;/form&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
 
                   <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
