@@ -7,7 +7,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="styles/css/nascent.css">
+    <!-- index-only styles -->
     <style type="text/css">
+        body {
+          font-family: 'Roboto';
+          font-weight: 400;
+        }
         /*section {
             height: 100px;
             border: 1px solid black;
@@ -15,9 +20,12 @@
         .na-demo-page {
           background-color: hsl(234, 35%, 32%);
         }
-        /*.nascent-header {
 
-        }*/
+        .nascent-header {
+          padding-left: 2rem;
+          color: white;
+        }
+
         p.nascent-header__logo-text--top {
           font-size: 2rem;
         }
@@ -48,6 +56,22 @@
           max-width: calc(100% - 10rem);
           background-color: white;
           padding: 1rem 2rem; /* SUGGESTION: added by Melissa; remove if you want */
+        }
+
+        .site-top-link {
+            padding: .25rem .5rem;
+            color: #bb1f9c;
+            text-decoration: none;
+            transition: all 300ms ease-in-out;
+        }
+
+        .site-top-link i {
+          vertical-align: bottom;
+        }
+
+        .site-top-link:hover {
+          background-color: #363c6f;
+          color: #ccd3fa;
         }
 
         footer {
@@ -213,7 +237,7 @@
                       </li>
                     </ul>
 
-                <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
               </section>
                 <!-- Alerts code below -->
                 <section id="alerts-demo" class="spy-section website-components__component">
@@ -810,7 +834,7 @@
                   </div>
 
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
                 <!-- Alerts code above -->
 
@@ -1110,7 +1134,7 @@
                     </div>
                   </div>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="breadcrumbs-demo">
@@ -1445,7 +1469,7 @@
                     </div>
                   </section>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="buttons-demo">
@@ -1734,7 +1758,7 @@
                     </div>
                   </section>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="cards-demo">
@@ -1962,7 +1986,7 @@
                   </div>
 
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="carousels-demo">
@@ -1995,7 +2019,7 @@
                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                   </p>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="checkboxes-demo">
@@ -2028,7 +2052,7 @@
                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                   </p>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="dropdowns-demo">
@@ -2437,7 +2461,7 @@
                   </div>
                 </section>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="flip-popup-innovative-demo">
@@ -2503,7 +2527,7 @@
                       </figure>
                     </div>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="footers-demo">
@@ -2572,7 +2596,7 @@
                     </figure>
                   </div>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="forms-demo">
@@ -2605,7 +2629,7 @@
                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                   </p>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="grids-demo">
@@ -2657,7 +2681,7 @@
                   </div>
 
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="list-groups-demo">
@@ -2961,7 +2985,7 @@
                     </div>
                   </section>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="loaders-demo">
@@ -3060,7 +3084,7 @@
                     </div>
                   </section>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="modals-demo">
@@ -3265,7 +3289,7 @@
                     </figure>
                   </div>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="navigator-innovative-demo">
@@ -3284,7 +3308,7 @@
                     <a href="javascript: document.body.scrollIntoView(false);" id="anchor-bottom"><i class="fa fa-long-arrow-down" id="full-down" aria-hidden="true"></i></a>
                   </div> -->
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="pagination-demo">
@@ -3714,7 +3738,7 @@
                     </figure>
                   </div>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="pagination-innovative-demo">
@@ -3757,7 +3781,7 @@
                     </figure>
                   </div>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="progress-bar-demo">
@@ -3790,7 +3814,7 @@
                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                   </p>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="ripple-demo">
@@ -3870,7 +3894,7 @@
 
                 </div>
 
-                  <p style="text-align: left;"><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p style="text-align: left;"><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="scrollspy-demo">
@@ -3883,7 +3907,7 @@
                   <br>This is still a bit of a work-in-progress to contend with some functionality side-effects associated with the aforementioned feature.
                   </p>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="social-bar-demo">
@@ -3960,7 +3984,7 @@
                       </figure>
                     </div>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="tables-innovative-demo">
@@ -4095,7 +4119,7 @@
 
                   </div>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="tabs-demo">
@@ -4130,7 +4154,7 @@
 
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu}
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="the-reveal-demo">
@@ -4214,7 +4238,7 @@
                      </figure>
                    </div>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
                 <section class="spy-section website-components__component" id="typography-demo">
@@ -4247,7 +4271,7 @@
                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                   </p>
 
-                  <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
+                  <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
 
             </div>
@@ -4294,7 +4318,7 @@
     <script src="javascript/alerts.js"></script>
     <script src="javascript/carousel-fade.js"></script>
     <script src="javascript/carousel-slide.js"></script>
-    <script src="javascript/dropdowns.js"></script>
+    <!-- <script src="javascript/dropdowns.js"></script> -->
     <script src="javascript/innovative-pagination.js"></script>
     <script src="javascript/modal.js"></script>
     <script src="javascript/progress-bar.js"></script>
