@@ -15,8 +15,6 @@
     <div class="generic-wrapper" style="padding: 2em">
       <h2>Progress Bar</h2>
 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
       <div class="progress-bar">
         <span class="bar"></span><span class="hidden" id="bar-one"></span>
         <span class="circle"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
@@ -27,7 +25,7 @@
         <span class="bar"></span><span class="hidden" id="bar-four"></span>
         <span class="circle"><i class="fa fa-check-circle" aria-hidden="true"></i></span>
         <br><br><br>
-        <button onclick="showProgress()">Click Me</button>
+        <button id="progress_btn_1">Click Me</button>
       </div>
 
       <div class="percentage-bar">
@@ -37,7 +35,7 @@
         <div id="progress-flag">0%</div>
 
         <br>
-        <button onclick="showProgressByPercent()">Click Me</button>
+        <button id="progress_btn_2">Click Me</button>
       </div>
     </div> <!-- end .generic-wrapper -->
 

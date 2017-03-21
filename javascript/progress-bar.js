@@ -71,3 +71,7 @@ function showProgressByPercent() {
         }
     }
 }
+
+document.getElementById("progress_btn_1").addEventListener("click", showProgress);
+
+document.getElementById("progress_btn_2").addEventListener("click", showProgressByPercent)
