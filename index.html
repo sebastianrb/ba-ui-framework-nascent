@@ -13,6 +13,16 @@
           font-family: 'Roboto';
           font-weight: 400;
         }
+
+        ::selection {
+          background-color: #a670ca;
+          color: #fcfcfc;
+        }
+
+        ::moz-selection {
+          background-color: #a670ca;
+          color: #fcfcfc;
+        }
         /*section {
             height: 100px;
             border: 1px solid black;
@@ -24,6 +34,17 @@
         .nascent-header {
           padding-left: 2rem;
           color: white;
+        }
+
+        .nascent-header__logo {
+          display: flex;
+          align-items: center;
+        }
+
+        .nascent-header__logo-image {
+          height: 5rem;
+          width: 5rem;
+          margin-right: 1rem;
         }
 
         p.nascent-header__logo-text--top {
@@ -105,7 +126,7 @@
     <header class="nascent-header" id="top">
       <div>
           <div class="nascent-header__logo">
-              <!-- <img class="nascent-header__logo-image" src="images/"> -->
+              <img class="nascent-header__logo-image" src="images/ba-logo-purple.png">
               <div class="nascent-header__logo-text">
                   <p class="nascent-header__logo-text--top"><strong>Nascent</strong> - UI Framework</p>
               </div>
