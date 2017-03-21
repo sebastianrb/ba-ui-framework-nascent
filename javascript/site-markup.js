@@ -1,6 +1,6 @@
 function siteMarkupHandler() {
   'use strict';
-  console.log(true)
+
   var markupD = {
     show: {
       text: 'Show Markup',
@@ -22,6 +22,7 @@ function siteMarkupHandler() {
 
   document.body.addEventListener('click', function(e) {
     var code;
+    
     if (e.target.classList.contains('na-markup__toggle')) {
       code = e.target.nextElementSibling;
 

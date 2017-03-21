@@ -258,6 +258,50 @@
                     <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
                   </div>
 
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+  &lt;div class=&quot;c-na-alert--basic&quot; role=&quot;alert&quot;&gt;
+    &lt;p class=&quot;c-na-alert__text&quot;&gt;
+      It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, look at the roses instead.)
+    &lt;/p&gt;
+    &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+  &lt;div class=&quot;c-na-alert--warning&quot; role=&quot;alert&quot;&gt;
+    &lt;p class=&quot;c-na-alert__text&quot;&gt;
+      &lt;!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn --&gt;
+      &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Be careful!&lt;/strong&gt; Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so &lt;a href=&quot;https://www.youtube.com/watch?v=dQw4w9WgXcQ&quot;&gt;practice those reflexes&lt;/a&gt;.
+    &lt;/p&gt;
+    &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+  &lt;div class=&quot;c-na-alert--serious&quot; role=&quot;alert&quot;&gt;
+    &lt;p class=&quot;c-na-alert__text&quot;&gt;
+      &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Oh no!&lt;/strong&gt; It turns out the quick brown fox did not jump over the lazy dog. She &lt;em&gt;ran&lt;/em&gt; over the poor thing. Witnesses say the fox fled the scene. Be on the lookout.
+    &lt;/p&gt;
+    &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+  &lt;div class=&quot;c-na-alert--success&quot; role=&quot;alert&quot;&gt;
+    &lt;p class=&quot;c-na-alert__text&quot;&gt;
+      &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Great news!&lt;/strong&gt; That sly quick fox has been caught thanks to a tip from a bird who wishes to remain anonymous.
+    &lt;/p&gt;
+    &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+  &lt;/div&gt;
+</code>
+                      </pre>
+                    </figure>
+                  </div>
+
                   <h4>Without a border</h4>
                   <p>Add the class <code>u-na--no-bd </code> to your alert element.</p>
 
@@ -286,13 +330,22 @@
                     <figure class="na-markup__code">
                       <pre>
                         <code class="language-html">
-&lt;div class=&quot;c-na-alert--warning u-na--no-bd &quot; role=&quot;alert&quot;&gt;
-  &lt;p class=&quot;c-na-alert__text&quot;&gt;
-    &lt;!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn --&gt;
-    &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Be careful!&lt;/strong&gt; Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so &lt;a href=&quot;https://www.youtube.com/watch?v=dQw4w9WgXcQ&quot;&gt;practice those reflexes&lt;/a&gt;
-  &lt;/p&gt;
-  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
-&lt;/div&gt;
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+  &lt;div class=&quot;c-na-alert--basic u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+    &lt;p class=&quot;c-na-alert__text&quot;&gt;
+      It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, look at the roses instead.)
+    &lt;/p&gt;
+    &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+  &lt;div class=&quot;c-na-alert--warning u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+    &lt;p class=&quot;c-na-alert__text&quot;&gt;
+      &lt;!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn --&gt;
+      &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Be careful!&lt;/strong&gt; Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so &lt;a href=&quot;https://www.youtube.com/watch?v=dQw4w9WgXcQ&quot;&gt;practice those reflexes&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+  &lt;/div&gt;
                         </code>
                       </pre>
                     </figure>
@@ -367,6 +420,79 @@
                     <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
                   </div>
 
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--minimal&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;c-na-alert__icon--minimal&quot;&gt;
+    &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
+    &lt;i class=&quot;fa fa-lemon-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    &lt;!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn --&gt;
+    &lt;strong class=&quot;c-na-alert--attn&quot;&gt;When Beyonc&eacute; hands us lemons,&lt;/strong&gt; we make lemonade.
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--basic&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;c-na-alert__icon--basic&quot;&gt;
+    &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
+    &lt;i class=&quot;fa fa-lightbulb-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, look at the roses instead.)
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--warning&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;c-na-alert__icon--warning&quot;&gt;
+    &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
+    &lt;i class=&quot;fa fa-exclamation-triangle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    &lt;!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn --&gt;
+    &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Be careful!&lt;/strong&gt; Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so &lt;a href=&quot;https://www.youtube.com/watch?v=dQw4w9WgXcQ&quot;&gt;practice those reflexes&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--serious&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;c-na-alert__icon--serious&quot;&gt;
+    &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
+    &lt;i class=&quot;fa fa-exclamation-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Oh no!&lt;/strong&gt; It turns out the quick brown fox did not jump over the lazy dog. She &lt;em&gt;ran&lt;/em&gt; over the poor thing. Witnesses say the fox fled the scene. Be on the lookout.
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--success&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;c-na-alert__icon--success&quot;&gt;
+    &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
+    &lt;i class=&quot;fa fa-check-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Great news!&lt;/strong&gt; That sly quick fox has been caught thanks to a tip from a bird who wishes to remain anonymous.
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
+
                   <h4>Without a border, but with a background color for the icon container</h4>
                   <p>Add the class <code>u-na--no-bd </code> to your alert container to remove the border.</p>
 
@@ -394,6 +520,43 @@
                       <strong class="c-na-alert--attn">When Beyoncé hands us lemons,</strong> we make lemonade.
                     </p>
                     <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
+                  </div>
+
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--warning u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;c-na-alert__icon--warning&quot;&gt;
+    &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
+    &lt;i class=&quot;fa fa-exclamation-triangle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    &lt;!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn --&gt;
+    &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Be careful!&lt;/strong&gt; Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so practice those reflexes.
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--minimal u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;c-na-alert__icon--minimal&quot;&gt;
+    &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
+    &lt;i class=&quot;fa fa-lemon-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    &lt;!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn --&gt;
+    &lt;strong class=&quot;c-na-alert--attn&quot;&gt;When Beyonc&eacute; hands us lemons,&lt;/strong&gt; we make lemonade.
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+                        </code>
+                      </pre>
+                    </figure>
                   </div>
 
                   <h4>With no border and no background color for the icon container</h4>
@@ -437,6 +600,54 @@
                     <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
                   </div>
 
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--serious u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;c-na-alert__icon--serious u-na--no-bg&quot;&gt;
+    &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
+    &lt;i class=&quot;fa fa-exclamation-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Oh no!&lt;/strong&gt; It turns out the quick brown fox did not jump over the lazy dog. She &lt;em&gt;ran&lt;/em&gt; over the poor thing. Witnesses say the fox fled the scene. Be on the lookout.
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--minimal u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;c-na-alert__icon--minimal u-na--no-bg&quot;&gt;
+    &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
+    &lt;i class=&quot;fa fa-lemon-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    &lt;!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn --&gt;
+    When Beyonc&eacute; hands us lemons, we make lemonade.
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--basic u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;c-na-alert__icon u-na--no-bg&quot;&gt;
+    &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
+    &lt;i class=&quot;fa fa-lightbulb-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, look at the roses instead.)
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
+
                   <h3>Alerts that take up the size of their content</h3>
 
                   <div class="site-alert__wrap">
@@ -472,6 +683,48 @@
                     </div>
                   </div>
 
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--minimal c-na-alert--small&quot; role=&quot;alert&quot;&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    &lt;!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn --&gt;
+    &lt;a href=&quot;#&quot;&gt;Make lemonade&lt;/a&gt;.
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--success u-na--no-bd  c-na-alert--small&quot; role=&quot;alert&quot;&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    &lt;!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn --&gt;
+    &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Success!&lt;/strong&gt; The fox has been caught.
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--warning u-na--no-bd  c-na-alert--small&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;c-na-alert__icon--warning&quot;&gt;
+    &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
+    &lt;i class=&quot;fa fa-exclamation-triangle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    &lt;!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn --&gt;
+    &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Be careful!&lt;/strong&gt; Foxes eat people. I think.
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
+
                   <h3>Full width alert</h3>
 
                   <!-- make sure your alert container has a role of alert to make it more accessible to screenreaders -->
@@ -497,6 +750,43 @@
                     </p>
                     <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
                   </div>
+
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--success u-na--no-bd  u-na-fw&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;c-na-alert__icon--success&quot;&gt;
+    &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
+    &lt;i class=&quot;fa fa-check-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Great news!&lt;/strong&gt; That sly quick fox has been caught thanks to a tip from a bird who wishes to remain anonymous.
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- make sure your alert container has a role of alert to make it more accessible to screenreaders --&gt;
+&lt;div class=&quot;c-na-alert--basic u-na-fw&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;c-na-alert__icon u-na--no-bg&quot;&gt;
+    &lt;!-- to have the icon read by screenreaders, remove the aria-hidden attribute and add aria-label=&quot;the text you want to be read&quot; --&gt;
+    &lt;i class=&quot;fa fa-lightbulb-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    It's a beautiful day outside. Try to get some fresh air if you can. Stop and smell the roses! (Unless you're allergic to flowers, in which case, &lt;a href=&quot;#&quot;&gt;look at the roses instead&lt;/a&gt;.)
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
+
+
                   <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
                 <!-- Alerts code above -->
@@ -834,31 +1124,50 @@
 
                   <h2>Grids</h2>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
+                  <div id="container-div-a">
+
+                    <p class="p-grid">This grid shows a 12-column layout ready for responsive design. While designed for desktop, the CSS holds instructions on two separate queries for mobile design, depending on your preferences for a mobile layout! &#9786;</p>
+
+                    <div id="row gray">
+                      <div class="col one gray">8.33333%</div><div class="col eleven gray">91.66667%</div>
+                      <div class="col two gray">16.66667%</div><div class="col ten gray">83.33333%</div>
+                      <div class="col three gray">25%</div><div class="col nine gray">75%</div>
+                      <div class="col four gray">33.33333%</div><div class="col eight gray">66.66667%</div>
+                      <div class="col five gray">41.66667%</div><div class="col seven gray">58.33333%</div>
+                      <div class="col six gray">50%</div><div class="col six gray">50%</div>
+                      <div class="col seven gray">58.33333%</div><div class="col five gray">41.66667%</div>
+                      <div class="col four gray">33.33333%</div><div class="col eight gray">66.66667%</div>
+                      <div class="col three gray">25%</div><div class="col nine gray">75%</div>
+                      <div class="col two gray">16.66667%</div><div class="col ten gray">83.33333%</div>
+                      <div class="col one gray">8.33333%</div><div class="col eleven gray">91.66667%</div>
+                    </div>
+                  </div>
+
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;div id=&quot;row gray&quot;&gt;
+      &lt;div class=&quot;col one gray&quot;&gt;8.33333%&lt;/div&gt;&lt;div class=&quot;col eleven gray&quot;&gt;91.66667%&lt;/div&gt;
+      &lt;div class=&quot;col two gray&quot;&gt;16.66667%&lt;/div&gt;&lt;div class=&quot;col ten gray&quot;&gt;83.33333%&lt;/div&gt;
+      &lt;div class=&quot;col three gray&quot;&gt;25%&lt;/div&gt;&lt;div class=&quot;col nine gray&quot;&gt;75%&lt;/div&gt;
+      &lt;div class=&quot;col four gray&quot;&gt;33.33333%&lt;/div&gt;&lt;div class=&quot;col eight gray&quot;&gt;66.66667%&lt;/div&gt;
+      &lt;div class=&quot;col five gray&quot;&gt;41.66667%&lt;/div&gt;&lt;div class=&quot;col seven gray&quot;&gt;58.33333%&lt;/div&gt;
+      &lt;div class=&quot;col six gray&quot;&gt;50%&lt;/div&gt;&lt;div class=&quot;col six gray&quot;&gt;50%&lt;/div&gt;
+      &lt;div class=&quot;col seven gray&quot;&gt;58.33333%&lt;/div&gt;&lt;div class=&quot;col five gray&quot;&gt;41.66667%&lt;/div&gt;
+      &lt;div class=&quot;col four gray&quot;&gt;33.33333%&lt;/div&gt;&lt;div class=&quot;col eight gray&quot;&gt;66.66667%&lt;/div&gt;
+      &lt;div class=&quot;col three gray&quot;&gt;25%&lt;/div&gt;&lt;div class=&quot;col nine gray&quot;&gt;75%&lt;/div&gt;
+      &lt;div class=&quot;col two gray&quot;&gt;16.66667%&lt;/div&gt;&lt;div class=&quot;col ten gray&quot;&gt;83.33333%&lt;/div&gt;
+      &lt;div class=&quot;col one gray&quot;&gt;8.33333%&lt;/div&gt;&lt;div class=&quot;col eleven gray&quot;&gt;91.66667%&lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
+
 
                   <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
