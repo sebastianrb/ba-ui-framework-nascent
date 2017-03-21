@@ -4,11 +4,11 @@ function siteMarkupHandler() {
   var markupD = {
     show: {
       text: 'Show Markup',
-      icon: '+'
+      icon: '&plus;'
     },
     hide: {
       text: 'Hide Markup',
-      icon: '-'
+      icon: '&mdash;'
     }
   };
 
@@ -16,8 +16,8 @@ function siteMarkupHandler() {
     var icon = e.target.firstElementChild;
     var txt = e.target.lastElementChild;
     console.log(markupD[state].icon)
-    icon.textContent = markupD[state].icon;
-    txt.textContent = markupD[state].text;
+    icon.innerHTML = markupD[state].icon;
+    txt.innerHTML = markupD[state].text;
   }
 
   document.body.addEventListener('click', function(e) {
