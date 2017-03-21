@@ -8,7 +8,7 @@ function siteMarkupHandler() {
     },
     hide: {
       text: 'Hide Markup',
-      icon: '—'
+      icon: '-'
     }
   };
 
@@ -22,7 +22,7 @@ function siteMarkupHandler() {
 
   document.body.addEventListener('click', function(e) {
     var code;
-    
+
     if (e.target.classList.contains('na-markup__toggle')) {
       code = e.target.nextElementSibling;
 
