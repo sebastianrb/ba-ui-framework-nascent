@@ -12,6 +12,7 @@
         body {
           font-family: 'Roboto';
           font-weight: 400;
+          background-color: #fff;
         }
 
         ::selection {
@@ -27,7 +28,7 @@
             height: 100px;
             border: 1px solid black;
         }*/
-        .na-demo-page {
+        .nascent-header {
           background-color: hsl(234, 35%, 32%);
         }
 
@@ -54,6 +55,10 @@
           /* edited by Melissa; feel free to change */
           background-color: initial; /* overrides _scrollspy.scss bg color */
           border: none;
+          /* setting a max-width so on large screens, the text-per-line is still a comfortable length */
+          max-width: 65rem;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         .spy-section:not(:last-of-type) {
@@ -75,6 +80,8 @@
           /* SUGGESTION: added by Melissa; added to prevent the page from having overflow on smaller viewports */
           /* 10rem is the size of the fixed nav; remove if you want */
           max-width: calc(100% - 10rem);
+          margin-left: auto;
+          margin-right: auto;
           background-color: white;
           padding: 1rem 2rem; /* SUGGESTION: added by Melissa; remove if you want */
         }
@@ -96,25 +103,29 @@
           color: #ccd3fa;
         }
 
-        footer {
+        .nascent-footer {
           height: auto;
           background-color: hsl(234, 35%, 22%);
           color: #eee;
         }
-        footer p.nascent-footer__text {
+
+        .nascent-footer__text {
           text-align: center;
         }
-        footer img {
+
+        .nascent-footer img {
           /*width: 100px;*/
           height: 100px;
           border-radius: 50px;
         }
-        footer ul {
+
+        .nascent-footer ul {
           display: flex;
           justify-content: space-around;
           padding: 0;
         }
-        footer ul li {
+
+        .nascent-footer li {
           text-align: center;
           list-style-type: none;
           flex: 0 0 200px;
