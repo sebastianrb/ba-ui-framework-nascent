@@ -2059,31 +2059,105 @@
 
                   <h2>Checkboxes &amp; Radios</h2>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
+                  <form class="form">
+                      <div class="form__row">
+                        <label class="form__label form__label--radio-caption">Radio Input</label>
+                        <label class="form__label form__label--radio-wrapper" for="radio-input-1">
+                          <span class="form__radio-span">Option 1</span>
+                          <input type="radio" name="radio-input" class="form__radio-input" id="radio-input-1">
+                          <div class="form__radio-button-div">
+                            <div class="form__radio-button-check"></div>
+                          </div>
+                        </label>
+                        <label class="form__label form__label--radio-wrapper" for="radio-input-2">
+                          <span class="form__radio-span">Option 2</span>
+                          <input type="radio" name="radio-input" class="form__radio-input" id="radio-input-2">
+                          <div class="form__radio-button-div">
+                            <div class="form__radio-button-check"></div>
+                          </div>
+                        </label>
+                        <label class="form__label form__label--radio-wrapper" for="radio-input-3">
+                          <span class="form__radio-span">Option 3</span>
+                          <input type="radio" name="radio-input" class="form__radio-input" id="radio-input-3">
+                          <div class="form__radio-button-div">
+                            <div class="form__radio-button-check"></div>
+                          </div>
+                        </label>
+                      </div>
+                  </form>
+
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;form class=&quot;form&quot;&gt;
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label class=&quot;form__label form__label--radio-caption&quot;&gt;Radio Input&lt;/label&gt;
+    &lt;label class=&quot;form__label form__label--radio-wrapper&quot; for=&quot;radio-input-1&quot;&gt;
+      &lt;span class=&quot;form__radio-span&quot;&gt;Option 1&lt;/span&gt;
+      &lt;input type=&quot;radio&quot; name=&quot;radio-input&quot; class=&quot;form__radio-input&quot; id=&quot;radio-input-1&quot;&gt;
+      &lt;div class=&quot;form__radio-button-div&quot;&gt;
+        &lt;div class=&quot;form__radio-button-check&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form__label form__label--radio-wrapper&quot; for=&quot;radio-input-2&quot;&gt;
+      &lt;span class=&quot;form__radio-span&quot;&gt;Option 2&lt;/span&gt;
+      &lt;input type=&quot;radio&quot; name=&quot;radio-input&quot; class=&quot;form__radio-input&quot; id=&quot;radio-input-2&quot;&gt;
+      &lt;div class=&quot;form__radio-button-div&quot;&gt;
+        &lt;div class=&quot;form__radio-button-check&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form__label form__label--radio-wrapper&quot; for=&quot;radio-input-3&quot;&gt;
+      &lt;span class=&quot;form__radio-span&quot;&gt;Option 3&lt;/span&gt;
+      &lt;input type=&quot;radio&quot; name=&quot;radio-input&quot; class=&quot;form__radio-input&quot; id=&quot;radio-input-3&quot;&gt;
+      &lt;div class=&quot;form__radio-button-div&quot;&gt;
+        &lt;div class=&quot;form__radio-button-check&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
+
+                  <form class="form">
+                      <div class="form__row">
+                        <label class="form__label form__label--checkbox-wrapper" for="checkbox-input">
+                          <span class="form__checkbox-span">Checkbox Input</span>
+                          <input type="checkbox" name="checkbox-input" class="form__checkbox-input" id="checkbox-input">
+                          <div class="form__checkbox-div">
+                            <div class="form__checkbox-check"></div>
+                          </div>
+                        </label>
+                      </div>
+                  </form>
+
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;form class=&quot;form&quot;&gt;
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label class=&quot;form__label form__label--checkbox-wrapper&quot; for=&quot;checkbox-input&quot;&gt;
+      &lt;span class=&quot;form__checkbox-span&quot;&gt;Checkbox Input&lt;/span&gt;
+      &lt;input type=&quot;checkbox&quot; name=&quot;checkbox-input&quot; class=&quot;form__checkbox-input&quot; id=&quot;checkbox-input&quot;&gt;
+      &lt;div class=&quot;form__checkbox-div&quot;&gt;
+        &lt;div class=&quot;form__checkbox-check&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
 
                   <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
@@ -4361,7 +4435,7 @@
     <script src="javascript/tabs.js"></script>
     <script src="javascript/thereveal.js"></script>
 
-    <script src="javascript/typography.js"></script>
+    <!-- <script src="javascript/typography.js"></script> -->
 </body>
 
 </html>

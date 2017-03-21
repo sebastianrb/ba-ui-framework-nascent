@@ -4,7 +4,7 @@
   // find all modals
   var modalEls = Array.prototype.slice.call(document.querySelectorAll('[data-na-modal]'));
   // find all triggers so event listeners can be added
-  var modalTriggers = document.querySelectorAll('[data-na-triggers-modal]');
+  var modalTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-na-triggers-modal]'));
   // will store reference to whatever element was in focus when modal opened
   var savedFocus = null;
   var currentModal = null; // save reference to active modal to close easily
