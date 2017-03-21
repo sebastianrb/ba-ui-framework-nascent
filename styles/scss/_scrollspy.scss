@@ -7,7 +7,6 @@
 }
 
 // EDIT THIS! It's affecting all headers!
-// 
 // header {
 //   background-color: rgb(34, 38, 42);
 //   background-color: hsl(210, 11%, 15%);
@@ -31,6 +30,7 @@ main.na-demo-page-main {
 }
 
 .spy-nav {
+  background-color: $primary-base;
   position: relative;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 10rem;
