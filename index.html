@@ -2827,7 +2827,7 @@
 
                   <h2>Footers</h2>
 
-                  <footer>
+                  <footer class="nascent-footer-hh">
                     <div class="div-component">
                       <h1>Contributors:</h1><hr></hr>
                       <p class="contributor-row">
@@ -2843,8 +2843,11 @@
                       <div class="portrait">
                         <img src="http://lorempixel.com/100/100/cats" /><br><span>Melissa Miller</span>
                       </div>
-                      </p>
+                      <div class="portrait">
+                        <img src="http://lorempixel.com/100/100/cats"/><br><span>Sebastian Ramirez-Brunner</span>
+                      </div>
                       <p class="p-signature">Bov Academy: Hackathon March 2017</p>
+                      </p>
                     </div>
                   </footer>
 
@@ -3681,14 +3684,15 @@
                   <p class="p-navigator">This navigator element will allow you to scroll either partially up and down the page,
                   or down to bottom/back to top.</p>
 
-                  <!-- NOTE TO HANNAH: this is not behaving as expected on the page; it is fixed to the window and on top of the site at all times -->
-                  <!-- <div class="navigator-arrows">
+                  <div class="navigator-arrows">
+
                     <i class="fa fa-caret-up" id="partial-up" aria-hidden="true" onclick="scrollBy(0, -200)"></i>
                     <a href="#top" id="anchor-top"><i class="fa fa-long-arrow-up" id="full-up" aria-hidden="true"></i></a>
                     <br>
-                    <i class="fa fa-caret-down" id="partial-down" aria-hidden="true" onclick="scrollBy(0, 200)"></i>
-                    <a href="javascript: document.body.scrollIntoView(false);" id="anchor-bottom"><i class="fa fa-long-arrow-down" id="full-down" aria-hidden="true"></i></a>
-                  </div> -->
+                    <i class="fa fa-caret-down" id="partial-down" aria-hidden="true"></i>
+                    <a href="#bottom_foot" id="anchor-bottom"><i class="fa fa-long-arrow-down" id="full-down" aria-hidden="true"></i></a>
+
+                  </div>
 
                   <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
@@ -4170,31 +4174,28 @@
 
                   <h2>Progress Bar</h2>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
+                  <div class="progress-bar">
+                    <span class="bar"></span><span class="hidden" id="bar-one"></span>
+                    <span class="circle"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                    <span class="bar"></span><span class="hidden" id="bar-two"></span>
+                    <span class="circle"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                    <span class="bar"></span><span class="hidden" id="bar-three"></span>
+                    <span class="circle"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                    <span class="bar"></span><span class="hidden" id="bar-four"></span>
+                    <span class="circle"><i class="fa fa-check-circle" aria-hidden="true"></i></span>
+                    <br><br><br>
+                    <button id="progress_btn_1">Click Me</button>
+                  </div>
+
+                  <div class="percentage-bar">
+                    <div id="progress">
+                      <div id="progress-bar"></div>
+                    </div>
+                    <div id="progress-flag">0%</div>
+
+                    <br>
+                    <button id="progress_btn_2">Click Me</button>
+                  </div>
 
                   <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
@@ -4375,9 +4376,11 @@
 
                   <p>The following table allows you to check off items for later reference, helpful for when you have a very long list. </p>
 
-                  <div class="table-border">
-                    <table class="c-na-table">
-                      <thead class="th-head">
+                  <p class="p-table">The following table allows you to check off items for later reference, helpful for when you have a very long list. </p>
+
+                  <div class="table-border-a">
+                    <table class="c-na-table-z">
+                      <thead class="th-head-a">
                       <tr>
                         <td class="td-input"></td>
                         <td class="column-a-0a no-lite">Course 1</td>
@@ -4386,20 +4389,20 @@
                       </tr>
                       </thead>
                       <tbody>
-                      <tr class="row-a tr-selected">
-                        <td class="td-input"><input type="checkbox"></input></td>
+                      <tr class="row-a-z tr-selected">
+                        <td class="td-input-z"><input type="checkbox"></input></td>
                         <td class="column-a-1">Specification 1</td>
                         <td class="column-b-1">Specification 1</td>
                         <td class="column-c-1">Specification 1</td>
                       </tr>
-                      <tr class="row-b tr-selected">
-                        <td class="td-input"><input type="checkbox"></input></td>
+                      <tr class="row-b-z tr-selected">
+                        <td class="td-input-z"><input type="checkbox"></input></td>
                         <td class="column-a-1">Specification 2</td>
                         <td class="column-b-1">Specification 2</td>
                         <td class="column-c-1">Specification 2</td>
                       </tr>
-                      <tr class="row-c tr-selected">
-                        <td class="td-input"><input type="checkbox"></input></td>
+                      <tr class="row-c-z tr-selected">
+                        <td class="td-input-z"><input type="checkbox"></input></td>
                         <td class="column-a-1">Specification 3</td>
                         <td class="column-b-1">Specification 3</td>
                         <td class="column-c-1">Specification 3</td>
@@ -4411,33 +4414,33 @@
                     </table>
                   </div>
 
-                  <p>This table allows you to hide rows by checking them off. To show the content again, simply uncheck the checkbox.</p>
+                  <p class="p-table">This table allows you to hide rows by checking them off. To show the content again, simply uncheck the checkbox.</p>
 
-                  <div class="table-border">
-                    <table class="c-na-table">
-                      <thead class="th-head">
+                  <div class="table-border-a">
+                    <table class="c-na-table-z">
+                      <thead class="th-head-a">
                       <tr>
-                        <td class="td-input"></td>
+                        <td class="td-input-z"></td>
                         <td class="column-a-0b no-lite">Course 1</td>
                         <td class="column-b-0b no-lite">Course 2</td>
                         <td class="column-c-0b no-lite">Course 3</td>
                       </tr>
                       </thead>
                       <tbody>
-                      <tr class="row-a tr-deselected">
-                        <td class="td-input"><input type="checkbox"></input></td>
+                      <tr class="row-a-z tr-deselected">
+                        <td class="td-input-z"><input type="checkbox"></input></td>
                         <td class="column-a-2">Specification 1</td>
                         <td class="column-b-2">Specification 1</td>
                         <td class="column-c-2">Specification 1</td>
                       </tr>
-                      <tr class="row-b tr-deselected">
-                        <td class="td-input"><input type="checkbox"></input></td>
+                      <tr class="row-b-z tr-deselected">
+                        <td class="td-input-z"><input type="checkbox"></input></td>
                         <td class="column-a-2">Specification 2</td>
                         <td class="column-b-2">Specification 2</td>
                         <td class="column-c-2">Specification 2</td>
                       </tr>
-                      <tr class="row-c tr-deselected">
-                        <td class="td-input"><input type="checkbox"></input></td>
+                      <tr class="row-c-z tr-deselected">
+                        <td class="td-input-z"><input type="checkbox"></input></td>
                         <td class="column-a-2">Specification 3</td>
                         <td class="column-b-2">Specification 3</td>
                         <td class="column-c-2">Specification 3</td>
@@ -4449,13 +4452,13 @@
                     </table>
                   </div>
 
-                  <p>This table enables users to leave a comment in one of the cells.</p>
+                  <p class="p-table">This table enables users to leave a comment in one of the cells.</p>
 
                   <div class="table-three table-border">
-                    <table class="c-na-table">
-                      <thead class="th-head">
+                    <table class="c-na-table-z">
+                      <thead class="th-head-a">
                       <tr>
-                        <td class="td-input"></td>
+                        <td class="td-input-z"></td>
                         <td class="column-a-0c no-lite">Course 1</td>
                         <td class="column-b-0c no-lite">Course 2</td>
                         <td class="column-c-0c no-lite">Course 3</td>
@@ -4463,8 +4466,8 @@
                       </tr>
                       </thead>
                       <tbody>
-                      <tr class="row-a">
-                        <td class="td-input"><input type="checkbox"></input></td>
+                      <tr class="row-a-z">
+                        <td class="td-input-z"><input type="checkbox"></input></td>
                         <td class="column-a-3">Specification 1</td>
                         <td class="column-b-3">Specification 1</td>
                         <td class="column-c-3">Specification 1</td>
@@ -4473,8 +4476,8 @@
                           <textarea row="4" col="20"></textarea>
                         </div></td>
                       </tr>
-                      <tr class="row-b">
-                        <td class="td-input"><input type="checkbox"></input></td>
+                      <tr class="row-b-z">
+                        <td class="td-input-z"><input type="checkbox"></input></td>
                         <td class="column-a-3">Specification 2</td>
                         <td class="column-b-3">Specification 2</td>
                         <td class="column-c-3">Specification 2</td>
@@ -4483,8 +4486,8 @@
                           <textarea row="4" col="20"></textarea>
                         </div></td>
                       </tr>
-                      <tr class="row-c">
-                        <td class="td-input"><input type="checkbox"></input></td>
+                      <tr class="row-c-z">
+                        <td class="td-input-z"><input type="checkbox"></input></td>
                         <td class="column-a-3">Specification 3</td>
                         <td class="column-b-3">Specification 3</td>
                         <td class="column-c-3">Specification 3</td>
@@ -4500,6 +4503,10 @@
                     </table>
 
                   </div>
+
+
+            </div>
+
 
                   <p><a href="#spy-content-top" class="site-top-link"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
@@ -4664,7 +4671,7 @@
 
     </main>
 
-    <footer class="nascent-footer" data-sticky-bottom-boundary="">
+    <footer class="nascent-footer" data-sticky-bottom-boundary="" id="bottom_foot" >
         <p class="nascent-footer__text">Nascent Framework Developed By</p>
         <ul class="authors">
             <li class="authors__author">
@@ -4701,6 +4708,7 @@
     <script src="javascript/dropdowns.js"></script>
     <script src="javascript/innovative-pagination.js"></script>
     <script src="javascript/modal.js"></script>
+    <script src="javascript/navigator.js"></script>
     <script src="javascript/progress-bar.js"></script>
     <script src="javascript/ripple.js"></script>
     <script src="javascript/social-bar.js"></script>
