@@ -278,6 +278,27 @@
                     <button class="c-na-alert__btn--close" aria-label="dismiss alert" title="dismiss alert">&times;</button>
                   </div>
 
+                  <!-- begin markup display -->
+                  <div class="na-markup">
+                    <button class="na-markup__toggle">
+                      <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                    </button>
+                    <figure class="na-markup__code">
+                      <pre>
+                        <code class="language-html">
+&lt;div class=&quot;c-na-alert--warning u-na--no-bd &quot; role=&quot;alert&quot;&gt;
+  &lt;p class=&quot;c-na-alert__text&quot;&gt;
+    &lt;!-- to give text important by making it bold and uppercase, add the class c-na-alert--attn --&gt;
+    &lt;strong class=&quot;c-na-alert--attn&quot;&gt;Be careful!&lt;/strong&gt; Some little birdies are reporting a fox on the loose. She's said to be pretty quick on her feet, so &lt;a href=&quot;https://www.youtube.com/watch?v=dQw4w9WgXcQ&quot;&gt;practice those reflexes&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;button class=&quot;c-na-alert__btn--close&quot; aria-label=&quot;dismiss alert&quot; title=&quot;dismiss alert&quot;&gt;&amp;times;&lt;/button&gt;
+&lt;/div&gt;
+                        </code>
+                      </pre>
+                    </figure>
+                  </div>
+                  <!-- end markup display -->
+
                   <h3>With icons</h3>
 
                   <p>These are quite customizable. In this framework, we're using , but you can use icons from other font systems or you own custom icons. These are just for demonstration. You can remove the border from the alert and remove the background color from the icon container, though they are there by default.</p>
@@ -1363,7 +1384,11 @@
         </ul>
     </footer>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+    <script src="javascript/site-markup.js"></script>
     <script src="javascript/accordion.js"></script>
+    <script src="javascript/alerts.js"></script>
     <script src="javascript/ripple.js"></script>
     <script src="javascript/stickynav.js"></script>
     <script src="javascript/scrollspy.js"></script>

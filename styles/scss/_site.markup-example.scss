@@ -1,0 +1,43 @@
+.na-markup {
+  max-width: 60rem;
+  margin: 1.5rem auto;
+
+  &__toggle {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $lav-light;
+    border: none;
+    color: $primary-dark;
+    font-family: inherit;
+    font-size: 1.2rem;
+  }
+
+  &__icon,
+  &__txt {
+    pointer-events: none;
+    font-weight: bold;
+  }
+
+  &__icon {
+    margin-left: 1rem;
+  }
+
+  &__code {
+    margin: 0;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+
+    pre {
+      margin-top: 0;
+      padding: 0 .5rem;
+      max-height: 30rem;
+      overflow: auto;
+    }
+  }
+}

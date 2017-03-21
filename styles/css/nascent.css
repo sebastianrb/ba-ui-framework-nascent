@@ -17,6 +17,145 @@
   letter-spacing: 1px;
 }
 
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #e8e8e8;
+  background: none;
+  text-shadow: 0 1px #7b7b7b;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #0d2087;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #0d2087;
+}
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #25294d;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+.token.punctuation {
+  color: #fefefe;
+}
+
+.token.interpolation-punctuation {
+  color: mistyrose;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #e0cdec;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #bb1f9c;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #ffb0c8;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #a670ca;
+}
+
+.token.function {
+  color: #FF6565;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -4417,6 +4556,43 @@ footer {
 
 .p-navigator {
   font-family: 'Inconsolata';
+}
+
+.na-markup {
+  max-width: 60rem;
+  margin: 1.5rem auto;
+}
+.na-markup__toggle {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ccd3fa;
+  border: none;
+  color: #25294d;
+  font-family: inherit;
+  font-size: 1.2rem;
+}
+.na-markup__icon, .na-markup__txt {
+  pointer-events: none;
+  font-weight: bold;
+}
+.na-markup__icon {
+  margin-left: 1rem;
+}
+.na-markup__code {
+  margin: 0;
+  display: none;
+}
+.na-markup__code.show {
+  display: block;
+}
+.na-markup__code pre {
+  margin-top: 0;
+  padding: 0 .5rem;
+  max-height: 30rem;
+  overflow: auto;
 }
 
 /*# sourceMappingURL=nascent.css.map */

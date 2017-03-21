@@ -6,7 +6,7 @@
 */
 
 // reference to the container for all alert demos
-  var alertCont = document.getElementById('alerts');
+  var alertCont = document.getElementById('alerts-demo');
 
   function dismissAlert(alert) {
     alert.classList.add('dismissing-alert');
@@ -17,7 +17,7 @@
 
   // listen on the alert container to avoid adding listeners to each button
   alertCont.addEventListener('click', function(e) {
-    if (e.target.nodeName === 'BUTTON') {
+    if (e.target.classList.contains('c-na-alert__btn--close')) {
       // pass the alert element to the dismiss function so we don't have to do e.target in the function
       dismissAlert(e.target.parentNode);
     }

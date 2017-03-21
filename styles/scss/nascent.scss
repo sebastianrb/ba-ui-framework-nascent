@@ -3,13 +3,14 @@
  */
 
 //tools (like mixins and placeholders)
-@import "settings.colors";
+@import 'settings.colors';
 
-@import "tools.placeholders";
-@import "tools.mixins";
+@import 'tools.placeholders';
+@import 'tools.mixins';
+@import 'tools.prism';
 
-@import "generic.normalize";
-@import "generic.box-sizing";
+@import 'generic.normalize';
+@import 'generic.box-sizing';
 
 //base framework-wide styles and class
 @import "shared.styles";
@@ -48,3 +49,5 @@
 
 @import 'component.source-code-modal';
 @import 'component.navigator';
+
+@import 'site.markup-example'
