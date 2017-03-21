@@ -1637,31 +1637,82 @@
 
                   <h2>The Reveal</h2>
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
+                  <p>The reveal is idea for when you have a small amount of content you'd like to hide behind some sort of mechanism that will reveal the content when prompted. The button at the foot of the component will toggle the "doors" to slide open and closed. It will take up the height of its content, so it is best for small amounts of text content, images, and videos.</p>
+
+                  <!-- the reveal container -->
+                   <div class="c-na-reveal">
+                     <!-- overlay container -->
+                     <div class="c-na-reveal__overlay">
+                       <!-- container for each side that will pull away -->
+                       <div class="c-na-reveal__split">
+                         <div class="c-na-reveal__side c-na-reveal__side--left">
+                           <span class="c-na-reveal__text c-na-reveal__text--left">A little mystery never hurt anyone.</span></div>
+                         <div class="c-na-reveal__side c-na-reveal__side--right">
+                           <!-- hide this from screenreaders so it does not get repeated -->
+                           <span class="c-na-reveal__text c-na-reveal__text--right" aria-hidden="true">A little mystery never hurt anyone.</span>
+                         </div>
+                       </div>
+                       <!-- always visible, even over content, so overlay can be toggled -->
+                       <div class="c-na-reveal__footer">
+                         <button class="c-na-reveal__btn" aria-label="toggle reveal" title="toggle reveal">
+                           <span class="c-na-reveal__btntext">&times;</span>
+                         </button>
+                       </div>
+                     </div>
+
+                     <!-- all of your content goes inside of this container -->
+                     <div class="c-na-reveal__content c-na-reveal__content--text">
+                       <section class="c-na-reveal__context--text__section">
+                         <h1 class="c-na-reveal__content--text__heading">A Blurb About Something</h1>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea <a href="#">magnam quod nam</a> quis voluptatum labore aliquam autem facere asperiores ex, doloremque corporis quasi sapiente? Maxime modi officia, nemo ipsa eligendi!</p>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea magnam quod nam quis voluptatum labore aliquam autem facere asperiores ex, doloremque corporis quasi sapiente? Maxime modi officia, nemo ipsa eligendi!</p>
+                       </section>
+
+                     </div>
+                   </div>
+
+                   <div class="na-markup">
+                     <button class="na-markup__toggle">
+                       <span class="na-markup__icon">&plus;</span><span class="na-markup__txt">Show Markup</span>
+                     </button>
+                     <figure class="na-markup__code">
+                       <pre>
+                         <code class="language-html">
+&lt;!-- the reveal container --&gt;
+&lt;div class=&quot;c-na-reveal&quot;&gt;
+  &lt;!-- overlay container --&gt;
+  &lt;div class=&quot;c-na-reveal__overlay&quot;&gt;
+    &lt;!-- container for each side that will pull away --&gt;
+    &lt;div class=&quot;c-na-reveal__split&quot;&gt;
+      &lt;div class=&quot;c-na-reveal__side c-na-reveal__side--left&quot;&gt;
+        &lt;span class=&quot;c-na-reveal__text c-na-reveal__text--left&quot;&gt;A little mystery never hurt anyone.&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;c-na-reveal__side c-na-reveal__side--right&quot;&gt;
+        &lt;!-- hide this from screenreaders so it does not get repeated --&gt;
+        &lt;span class=&quot;c-na-reveal__text c-na-reveal__text--right&quot; aria-hidden=&quot;true&quot;&gt;A little mystery never hurt anyone.&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- always visible, even over content, so overlay can be toggled --&gt;
+    &lt;div class=&quot;c-na-reveal__footer&quot;&gt;
+      &lt;button class=&quot;c-na-reveal__btn&quot; aria-label=&quot;toggle reveal&quot; title=&quot;toggle reveal&quot;&gt;
+        &lt;span class=&quot;c-na-reveal__btntext&quot;&gt;&amp;times;&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- all of your content goes inside of this container --&gt;
+  &lt;div class=&quot;c-na-reveal__content c-na-reveal__content--text&quot;&gt;
+    &lt;section class=&quot;c-na-reveal__context--text__section&quot;&gt;
+      &lt;h1 class=&quot;c-na-reveal__content--text__heading&quot;&gt;A Blurb About Something&lt;/h1&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea &lt;a href=&quot;#&quot;&gt;magnam quod nam&lt;/a&gt; quis voluptatum labore aliquam autem facere asperiores ex, doloremque corporis quasi sapiente? Maxime modi officia, nemo ipsa eligendi!&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea magnam quod nam quis voluptatum labore aliquam autem facere asperiores ex, doloremque corporis quasi sapiente? Maxime modi officia, nemo ipsa eligendi!&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+  
+&lt;/div&gt;
+                         </code>
+                       </pre>
+                     </figure>
+                   </div>
 
                   <p><a href="#spy-content-top"><i class="material-icons">arrow_upward</i>Go to top</a></p>
                 </section>
