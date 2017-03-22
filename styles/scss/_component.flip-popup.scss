@@ -139,7 +139,7 @@
 
 .card-container--bottom {
      top: auto;
-     bottom: -50px;
+     bottom: -15px;
 }
 
 
@@ -204,7 +204,8 @@
     transition: z-index .8s;
 }
 
-.bio-info__list li:hover .bio-info__popup {
+.bio-info__list li:hover .bio-info__popup,
+.bio-info__list li:hover .card-container--bottom:hover  {
     top: -450%;
     left: -50%;
     width: 200%;
@@ -214,7 +215,9 @@
     transition-delay: 0s;
     -webkit-transition: all .35s cubic-bezier(0.76, 0.16, 0.1, 0.86);
     transition: all .35s cubic-bezier(0.76, 0.16, 0.1, 0.86);
+
 }
+
 
 .bio-info__list li:hover .bio-info__popup .bio-info__popup-button-text{
     opacity: 0;
