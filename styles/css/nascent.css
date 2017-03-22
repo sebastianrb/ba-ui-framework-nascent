@@ -3481,7 +3481,9 @@ section {
 
 .card-container--bottom {
   top: auto;
-  bottom: -50px;
+  bottom: 0;
+  pointer-events: auto;
+  transition: all 1s cubic-bezier(0.76, 0.16, 0.1, 0.86);
 }
 
 .flip-card {
@@ -3532,6 +3534,7 @@ section {
   width: 100%;
   font-size: 1.2em;
   padding: 13px;
+  transition: color .2s;
 }
 
 /*animation states*/
@@ -3540,8 +3543,7 @@ section {
   transition: z-index .8s;
 }
 
-.bio-info__list li:hover .bio-info__popup,
-.bio-info__list li:hover .card-container--bottom:hover {
+.bio-info__list li:hover .bio-info__popup {
   top: -450%;
   left: -50%;
   width: 200%;
@@ -3551,6 +3553,15 @@ section {
   transition-delay: 0s;
   -webkit-transition: all 0.35s cubic-bezier(0.76, 0.16, 0.1, 0.86);
   transition: all 0.35s cubic-bezier(0.76, 0.16, 0.1, 0.86);
+}
+
+.bio-info__list li:hover .card-container--bottom {
+  bottom: -50px;
+  transition: none;
+}
+
+.bio-info__list li:hover .card-container--bottom:hover .flip-card__header-text {
+  color: #a670ca;
 }
 
 .bio-info__list li:hover .bio-info__popup .bio-info__popup-button-text {
@@ -3579,8 +3590,16 @@ section {
   transition-delay: .3s;
 }
 
-.no-pointer-events {
-  pointer-events: none;
+.hovered {
+  top: -450%;
+  left: -50%;
+  width: 200%;
+  height: 1000%;
+  /*    opacity: 1;*/
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition: all 0.35s cubic-bezier(0.76, 0.16, 0.1, 0.86);
+  transition: all 0.35s cubic-bezier(0.76, 0.16, 0.1, 0.86);
 }
 
 .social-bar {
